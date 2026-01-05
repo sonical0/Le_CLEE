@@ -1,0 +1,20 @@
+.site-footer {
+  margin-top: 56px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(17, 16, 35, 0.08);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  color: var(--ink);
+}
+
+.foot-title {
+  margin: 0 0 8px;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+.foot-contact a {
+  font-weight: 700;
+  color: var(--violet);
+}
