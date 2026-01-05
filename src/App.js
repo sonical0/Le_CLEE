@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles/base.css';
+import './styles/components/button.css';
+import './styles/components/header.css';
+import './styles/components/footer.css';
+import './styles/page.css';
+
+import Header from './components/Header';
+import Hero from './components/Hero';
+import Pillars from './components/Pillars';
+import QuoteBand from './components/QuoteBand';
+import CTABand from './components/CTABand';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="layout">
+        <div className="corner-triangle" aria-hidden="true" />
+
+        <Header />
+
+        <main>
+          <Hero />
+          <Pillars />
+          <QuoteBand />
+          <CTABand />
+        </main>
+
+        <Footer />
+      </div>
     </div>
   );
 }
