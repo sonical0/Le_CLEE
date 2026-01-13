@@ -7,7 +7,7 @@ body {
 }
 
 /* ========================================
-   HERO SECTION - VIE DU CLEE
+   HERO SECTION - VIE DU CLEE SPECIFIC
 ======================================== */
 
 .hero-vie-clee {
@@ -36,45 +36,7 @@ body {
 }
 
 .hero-vie-clee .hero-title {
-  font-family: var(--titre-font-family);
   font-size: clamp(36px, 5vw, 56px);
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 20px;
-  line-height: 1.2;
-}
-
-.hero-vie-clee .hero-description {
-  font-size: 18px;
-  color: rgba(255, 255, 255, 0.95);
-  line-height: 1.7;
-  font-weight: 300;
-}
-
-/* ========================================
-   SECTION HEADER
-======================================== */
-
-.section-header {
-  margin-bottom: 60px;
-  text-align: center;
-  animation: fadeIn 0.6s ease;
-}
-
-.section-title {
-  font-family: var(--text-font-h1-font-family);
-  font-weight: 700;
-  font-size: clamp(32px, 5vw, 48px);
-  color: var(--primary-900);
-  margin-bottom: 12px;
-  letter-spacing: -0.5px;
-}
-
-.section-subtitle {
-  font-size: 17px;
-  color: var(--primary-600);
-  max-width: 700px;
-  margin: 0 auto;
 }
 
 /* ========================================
@@ -239,17 +201,6 @@ body {
   gap: 8px;
 }
 
-.tag {
-  display: inline-block;
-  background: var(--primary-100);
-  color: var(--primary-800);
-  padding: 4px 12px;
-  border-radius: 50px;
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.3px;
-}
-
 /* ========================================
    BLOG SECTION
 ======================================== */
@@ -372,18 +323,6 @@ body {
   text-align: center;
 }
 
-.btn-outline {
-  background: transparent;
-  color: var(--primary-900);
-  border: 2px solid var(--primary-900);
-  padding: 14px 32px;
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
 .btn-outline:hover {
   background: var(--primary-900);
   color: #ffffff;
@@ -495,70 +434,14 @@ body {
 }
 
 /* ========================================
-   FOOTER
+   FOOTER SPECIFIC OVERRIDES
 ======================================== */
-
-.footer {
-  background: var(--primary-900);
-  color: rgba(255, 255, 255, 0.9);
-  padding: 60px 0 30px;
-}
 
 .footer-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 40px;
   margin-bottom: 40px;
-}
-
-.footer-title {
-  font-size: 24px;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 16px;
-}
-
-.footer-subtitle {
-  font-size: 18px;
-  font-weight: 600;
-  color: #ffffff;
-  margin-bottom: 16px;
-}
-
-.footer-text {
-  font-size: 15px;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.footer-links {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-links li {
-  margin-bottom: 10px;
-}
-
-.footer-links a {
-  color: rgba(255, 255, 255, 0.8);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.footer-links a:hover {
-  color: #ffffff;
-}
-
-.footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 24px;
-  text-align: center;
-}
-
-.footer-bottom p {
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.7);
 }
 
 /* ========================================
@@ -652,93 +535,8 @@ body {
 }
 
 /* ========================================
-   CONTACT MODAL
+   CONTACT FORM SPECIFIC
 ======================================== */
-
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
-  animation: fadeIn 0.3s ease;
-}
-
-.modal.active {
-  display: block;
-}
-
-.modal-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(19, 25, 39, 0.7);
-  backdrop-filter: blur(4px);
-  cursor: pointer;
-}
-
-.modal-container {
-  position: relative;
-  max-width: 600px;
-  margin: 40px auto;
-  background: #ffffff;
-  border-radius: 20px;
-  box-shadow: var(--600);
-  animation: slideDown 0.4s ease;
-  max-height: calc(100vh - 80px);
-  overflow-y: auto;
-  z-index: 10000;
-}
-
-.modal-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 28px 32px;
-  border-bottom: 1px solid var(--grey-200);
-}
-
-.modal-title {
-  font-family: var(--text-font-h1-font-family);
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--primary-900);
-}
-
-.modal-close {
-  background: none;
-  border: none;
-  font-size: 32px;
-  color: var(--grey-600);
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  transition: all 0.2s ease;
-}
-
-.modal-close:hover {
-  background: var(--grey-100);
-  color: var(--grey-900);
-}
-
-.modal-body {
-  padding: 32px;
-}
-
-.modal-description {
-  font-size: 16px;
-  color: var(--grey-700);
-  margin-bottom: 28px;
-  line-height: 1.6;
-}
 
 /* Contact Form Styles */
 .contact-form {
@@ -753,60 +551,10 @@ body {
   gap: 16px;
 }
 
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.form-label {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--grey-900);
-}
-
-.required {
-  color: #e74c3c;
-}
-
-.form-input,
-.form-select,
-.form-textarea {
-  padding: 12px 16px;
-  border: 2px solid var(--grey-300);
-  border-radius: 10px;
-  font-size: 15px;
-  font-family: inherit;
-  color: var(--grey-900);
-  transition: all 0.2s ease;
-  background: #ffffff;
-}
-
-.form-input:focus,
-.form-select:focus,
-.form-textarea:focus {
-  outline: none;
-  border-color: var(--primary-600);
-  box-shadow: 0 0 0 3px rgba(94, 126, 159, 0.1);
-}
-
-.form-input::placeholder,
-.form-textarea::placeholder {
-  color: var(--grey-400);
-}
-
-.form-select {
-  cursor: pointer;
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%236B7280' d='M1.41 0L6 4.58 10.59 0 12 1.41l-6 6-6-6z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 16px center;
-  padding-right: 40px;
-}
-
-.form-textarea {
-  resize: vertical;
-  min-height: 120px;
+.modal-description {
+  font-size: 16px;
+  color: var(--grey-700);
+  margin-bottom: 28px;
   line-height: 1.6;
 }
 
@@ -909,23 +657,6 @@ body {
 ======================================== */
 
 @media (max-width: 768px) {
-  .modal-container {
-    margin: 20px;
-    max-height: calc(100vh - 40px);
-  }
-
-  .modal-header {
-    padding: 20px 24px;
-  }
-
-  .modal-title {
-    font-size: 24px;
-  }
-
-  .modal-body {
-    padding: 24px;
-  }
-
   .form-row {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -937,23 +668,6 @@ body {
 }
 
 @media (max-width: 480px) {
-  .modal-container {
-    margin: 10px;
-    border-radius: 16px;
-  }
-
-  .modal-header {
-    padding: 16px 20px;
-  }
-
-  .modal-title {
-    font-size: 22px;
-  }
-
-  .modal-body {
-    padding: 20px;
-  }
-
   .contact-form {
     gap: 16px;
   }
