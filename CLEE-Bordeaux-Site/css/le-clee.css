@@ -3,7 +3,7 @@
    Styles spécifiques aux pages Le CLEE
 ======================================== */
 
-/* Hero Section */
+/* Hero Section - Variante page Le CLEE */
 .hero {
     background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-700) 100%);
     padding: 140px 0 60px;
@@ -28,24 +28,6 @@
 .hero .container {
     position: relative;
     z-index: 1;
-}
-
-.hero-title {
-    font-family: var(--text-font-h1-font-family);
-    font-size: 48px;
-    font-weight: var(--text-font-h1-font-weight);
-    line-height: var(--text-font-h1-line-height);
-    margin-bottom: 20px;
-    animation: fadeInUp 0.8s ease;
-}
-
-.hero-description {
-    font-size: 20px;
-    line-height: 1.6;
-    color: var(--primary-100);
-    max-width: 700px;
-    margin: 0 auto;
-    animation: fadeInUp 0.8s ease 0.2s both;
 }
 
 /* Breadcrumb */
@@ -771,44 +753,29 @@
     flex-wrap: wrap;
 }
 
-/* Buttons */
-.btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 14px 28px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.btn-primary {
+/* Variantes boutons spécifiques hero */
+.hero .btn-primary,
+.cta-section .btn-primary {
     background: white;
     color: var(--primary-900);
 }
 
-.btn-primary:hover {
+.hero .btn-primary:hover,
+.cta-section .btn-primary:hover {
     background: var(--primary-50);
-    transform: translateY(-2px);
-    box-shadow: var(--400);
 }
 
-.btn-secondary {
+.hero .btn-secondary,
+.cta-section .btn-secondary {
     background: transparent;
     color: white;
     border: 2px solid white;
 }
 
-.btn-secondary:hover {
+.hero .btn-secondary:hover,
+.cta-section .btn-secondary:hover {
     background: white;
     color: var(--primary-900);
-}
-
-.btn-icon {
-    font-size: 20px;
 }
 
 /* Responsive Design */

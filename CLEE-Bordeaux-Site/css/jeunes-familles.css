@@ -2,7 +2,7 @@
    JEUNES & FAMILLES - PAGES STYLES
    ================================================== */
 
-/* Hero Section */
+/* Hero Section - Variante Jeunes & Familles */
 .hero {
     background: linear-gradient(135deg, var(--primary-600) 0%, var(--primary-700) 100%);
     padding: 80px 0 60px;
@@ -27,20 +27,6 @@
 
 .breadcrumb a:hover {
     opacity: 0.8;
-}
-
-.hero-title {
-    font-size: 48px;
-    font-weight: 700;
-    margin-bottom: 16px;
-    line-height: 1.2;
-}
-
-.hero-description {
-    font-size: 20px;
-    opacity: 0.95;
-    max-width: 800px;
-    line-height: 1.6;
 }
 
 /* Section Communes */

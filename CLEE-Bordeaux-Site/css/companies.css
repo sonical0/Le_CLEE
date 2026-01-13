@@ -34,21 +34,7 @@
   z-index: 1;
 }
 
-.hero-title {
-  font-family: var(--titre-font-family);
-  font-weight: var(--titre-font-weight);
-  font-size: 56px;
-  line-height: 1.2;
-  margin-bottom: 24px;
-  animation: fadeInUp 0.8s ease;
-}
-
-.hero-description {
-  font-size: 20px;
-  line-height: 1.7;
-  opacity: 0.95;
-  animation: fadeInUp 0.8s ease 0.2s both;
-}
+/* Surcharge des styles boutons pour la section CTA */
 
 /* ========================================
    SECTION TITLES
@@ -633,30 +619,6 @@
 .lien-card:hover .lien-cta {
   color: var(--primary-600);
   transform: translateX(4px);
-}
-
-/* ========================================
-   ANIMATIONS
-======================================== */
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 /* ========================================
