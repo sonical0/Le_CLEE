@@ -476,12 +476,19 @@ button {
     background-color: #ffffff;
     padding: 24px;
     box-shadow: var(--300);
-    transform: translateY(-120%);
-    transition: transform 0.3s ease;
-    gap: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    gap: 8px;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+    z-index: 999;
   }
   
   .nav-links.active {
+    opacity: 1;
+    visibility: visible;
     transform: translateY(0);
   }
   
@@ -489,6 +496,7 @@ button {
     width: 100%;
     text-align: center;
     padding: 16px;
+    display: block;
   }
 
   .container {
