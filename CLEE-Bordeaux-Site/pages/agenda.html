@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agenda des événements CLEE Bordeaux Avenir - Découvrez tous les événements de l'année">
+    <title>CLEE Bordeaux Avenir - Agenda</title>
+    <link rel="stylesheet" href="../css/globals.css">
+    <link rel="stylesheet" href="../css/agenda.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="navigation" role="navigation" aria-label="Navigation principale">
+            <div class="container">
+                <a href="index.html" class="logo" aria-label="Retour à l'accueil">
+                    CLEE Bordeaux Avenir
+                </a>
+                
+                <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="companies.html" class="nav-link">Entreprises & Partenaires</a></li>
+                    <li><a href="establishments.html" class="nav-link">Établissements & Formations</a></li>
+                    <li><a href="vie-clee.html" class="nav-link">Vie du CLEE</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Agenda 2026</h1>
+            <p class="hero-description">
+                Découvrez tous les événements, rencontres et activités organisés par le CLEE Bordeaux Avenir tout au long de l'année.
+            </p>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters-container">
+                <div class="filter-group">
+                    <label for="month-filter" class="filter-label">Mois</label>
+                    <select id="month-filter" class="filter-select">
+                        <option value="all">Tous les mois</option>
+                        <option value="0">Janvier</option>
+                        <option value="1">Février</option>
+                        <option value="2">Mars</option>
+                        <option value="3">Avril</option>
+                        <option value="4">Mai</option>
+                        <option value="5">Juin</option>
+                        <option value="6">Juillet</option>
+                        <option value="7">Août</option>
+                        <option value="8">Septembre</option>
+                        <option value="9">Octobre</option>
+                        <option value="10">Novembre</option>
+                        <option value="11">Décembre</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="type-filter" class="filter-label">Type d'événement</label>
+                    <select id="type-filter" class="filter-select">
+                        <option value="all">Tous les types</option>
+                        <option value="conference">Conférence</option>
+                        <option value="atelier">Atelier</option>
+                        <option value="forum">Forum</option>
+                        <option value="rencontre">Rencontre</option>
+                        <option value="salon">Salon</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="search-filter" class="filter-label">Rechercher</label>
+                    <input type="text" id="search-filter" class="filter-input" placeholder="Rechercher un événement...">
+                </div>
+
+                <button id="reset-filters" class="btn btn-secondary">
+                    Réinitialiser les filtres
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="events-section">
+        <div class="container">
+            <div class="view-toggle">
+                <button class="view-btn active" data-view="calendar">
+                    <span class="icon">📅</span>
+                    Vue calendrier
+                </button>
+                <button class="view-btn" data-view="list">
+                    <span class="icon">📋</span>
+                    Vue liste
+                </button>
+            </div>
+
+            <!-- Calendar View -->
+            <div id="calendar-view" class="calendar-view">
+                <div class="calendar-header">
+                    <button id="prev-month" class="calendar-nav-btn">‹</button>
+                    <h2 id="current-month" class="calendar-month"></h2>
+                    <button id="next-month" class="calendar-nav-btn">›</button>
+                </div>
+                <div id="calendar-grid" class="calendar-grid"></div>
+            </div>
+
+            <!-- List View -->
+            <div id="list-view" class="list-view" style="display: none;">
+                <div id="events-list" class="events-list"></div>
+            </div>
+
+            <!-- No Results Message -->
+            <div id="no-results" class="no-results" style="display: none;">
+                <div class="no-results-icon">🔍</div>
+                <h3>Aucun événement trouvé</h3>
+                <p>Essayez de modifier vos filtres de recherche</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Modal -->
+    <div id="event-modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">×</button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">CLEE Bordeaux Avenir</h3>
+                    <p class="footer-text">
+                        Renforcer les ponts entre le monde éducatif et le tissu économique local.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="companies.html">Entreprises & Partenaires</a></li>
+                        <li><a href="establishments.html">Établissements & Formations</a></li>
+                        <li><a href="vie-clee.html">Vie du CLEE</a></li>
+                        <li><a href="agenda.html">Agenda</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact</h3>
+                    <ul class="footer-links">
+                        <li><a href="mailto:contact@clee-bordeaux.fr">contact@clee-bordeaux.fr</a></li>
+                        <li><a href="tel:+33556000000">05 56 00 00 00</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 CLEE Bordeaux Avenir. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/common.js"></script>
+    <script src="../js/agenda.js"></script>
+</body>
+</html>
