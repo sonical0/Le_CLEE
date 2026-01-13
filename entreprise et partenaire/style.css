@@ -1,0 +1,344 @@
+.entreprise {
+  background-color: #ffffff;
+  width: 100%;
+  min-width: 1440px;
+  min-height: 1977px;
+  display: flex;
+  flex-direction: column;
+}
+
+.entreprise .navigation {
+  width: 1409px;
+  height: 100px;
+  position: relative;
+}
+
+.entreprise .button {
+  display: inline-flex;
+  padding: 16px 24px;
+  position: absolute;
+  width: 17.81%;
+  height: 56.00%;
+  top: 22.75%;
+  left: 28.41%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1.5px solid;
+  border-color: var(--primary-800);
+  align-items: center;
+  justify-content: center;
+}
+
+.entreprise .text {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 8px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.entreprise .text-wrapper {
+  position: relative;
+  display: flex;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: var(--button-font-giant-font-family);
+  font-weight: var(--button-font-giant-font-weight);
+  color: var(--primary-700);
+  font-size: var(--button-font-giant-font-size);
+  text-align: center;
+  letter-spacing: var(--button-font-giant-letter-spacing);
+  line-height: var(--button-font-giant-line-height);
+  white-space: nowrap;
+  align-items: center;
+  justify-content: center;
+  font-style: var(--button-font-giant-font-style);
+}
+
+.entreprise .div {
+  display: inline-flex;
+  padding: 16px 24px;
+  position: absolute;
+  width: 18.52%;
+  height: 56.00%;
+  top: 22.75%;
+  left: 47.22%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1.5px solid;
+  border-color: var(--primary-800);
+  align-items: center;
+  justify-content: center;
+}
+
+.entreprise .button-2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: var(--navbar-text-font-family);
+  font-weight: var(--navbar-text-font-weight);
+  color: var(--primary-700);
+  font-size: var(--navbar-text-font-size);
+  text-align: center;
+  letter-spacing: var(--navbar-text-letter-spacing);
+  line-height: var(--navbar-text-line-height);
+  white-space: nowrap;
+  font-style: var(--navbar-text-font-style);
+}
+
+.entreprise .button-3 {
+  display: inline-flex;
+  padding: 16px 24px;
+  position: absolute;
+  width: 21.36%;
+  height: 56.00%;
+  top: 22.75%;
+  left: 66.68%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1.5px solid;
+  border-color: var(--primary-800);
+  align-items: center;
+  justify-content: center;
+}
+
+.entreprise .button-4 {
+  display: inline-flex;
+  padding: 16px 24px;
+  position: absolute;
+  width: 11.07%;
+  height: 56.00%;
+  top: 22.75%;
+  left: 89.09%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1.5px solid;
+  border-color: var(--primary-800);
+  align-items: center;
+  justify-content: center;
+}
+
+.entreprise .sans-titre-removebg {
+  position: absolute;
+  top: calc(50.00% - 34px);
+  left: 47px;
+  width: 237px;
+  height: 67px;
+  object-fit: cover;
+}
+
+.entreprise .cartes-intractive {
+  margin-left: 47px;
+  width: 1340px;
+  height: 1047px;
+  position: relative;
+  margin-top: 94px;
+}
+
+.entreprise .map-maker-lycee {
+  position: absolute;
+  top: 312px;
+  left: 534px;
+  width: 739px;
+  height: 735px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.entreprise .text-wrapper-2 {
+  position: absolute;
+  top: 0;
+  left: 351px;
+  width: 738px;
+  height: 91px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--titre-font-family);
+  font-weight: var(--titre-font-weight);
+  color: #000000;
+  font-size: var(--titre-font-size);
+  text-align: center;
+  letter-spacing: var(--titre-letter-spacing);
+  line-height: var(--titre-line-height);
+  font-style: var(--titre-font-style);
+}
+
+.entreprise .p {
+  position: absolute;
+  top: 215px;
+  left: 534px;
+  width: 739px;
+  height: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--text-normal-font-family);
+  font-weight: var(--text-normal-font-weight);
+  color: #000000;
+  font-size: var(--text-normal-font-size);
+  text-align: center;
+  letter-spacing: var(--text-normal-letter-spacing);
+  line-height: var(--text-normal-line-height);
+  white-space: nowrap;
+  font-style: var(--text-normal-font-style);
+}
+
+.entreprise .frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 534px;
+  height: 805px;
+  overflow: hidden;
+}
+
+.entreprise .entreprise-a-nom {
+  position: absolute;
+  top: 190px;
+  left: 16px;
+  width: 479px;
+  height: 629px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--text-normal-font-family);
+  font-weight: var(--text-normal-font-weight);
+  color: #000000;
+  font-size: var(--text-normal-font-size);
+  letter-spacing: var(--text-normal-letter-spacing);
+  line-height: var(--text-normal-line-height);
+  font-style: var(--text-normal-font-style);
+}
+
+.entreprise .text-wrapper-3 {
+  position: absolute;
+  top: 214px;
+  left: calc(50.00% - 255px);
+  width: 510px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--text-normal-font-family);
+  font-weight: var(--text-normal-font-weight);
+  color: #000000;
+  font-size: var(--text-normal-font-size);
+  text-align: center;
+  letter-spacing: var(--text-normal-letter-spacing);
+  line-height: var(--text-normal-line-height);
+  font-style: var(--text-normal-font-style);
+}
+
+.entreprise .frame-2 {
+  display: flex;
+  width: 1440px;
+  height: 736px;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 151px 174px 0px;
+}
+
+.entreprise .frame-3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 31px 0px;
+  padding: 26px 22px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.entreprise .pourquoi-devenir {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 559px;
+  height: 343px;
+  margin-top: -1.00px;
+  font-family: "Barlow Condensed-Medium", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 48px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.entreprise .span {
+  font-weight: var(--titre-font-weight);
+  font-family: var(--titre-font-family);
+  font-style: var(--titre-font-style);
+  letter-spacing: var(--titre-letter-spacing);
+  line-height: var(--titre-line-height);
+  font-size: var(--titre-font-size);
+}
+
+.entreprise .text-wrapper-4 {
+  font-weight: 500;
+}
+
+.entreprise .text-wrapper-5 {
+  font-family: var(--text-normal-font-family);
+  font-size: var(--text-normal-font-size);
+  font-style: var(--text-normal-font-style);
+  font-weight: var(--text-normal-font-weight);
+  letter-spacing: var(--text-normal-letter-spacing);
+  line-height: var(--text-normal-line-height);
+}
+
+.entreprise .comment-accueillir {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 489px;
+  height: 344px;
+  margin-top: -1.00px;
+  font-family: "Barlow Condensed-Medium", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 48px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.entreprise .button-5 {
+  display: inline-flex;
+  height: 120px;
+  padding: 16px 24px;
+  position: relative;
+  background-color: var(--primary-800);
+  border-radius: 12px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+.entreprise .button-6 {
+  position: relative;
+  display: flex;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: var(--button-font-giant-font-family);
+  font-weight: var(--button-font-giant-font-weight);
+  color: #ffffff;
+  font-size: var(--button-font-giant-font-size);
+  text-align: center;
+  letter-spacing: var(--button-font-giant-letter-spacing);
+  line-height: var(--button-font-giant-line-height);
+  white-space: nowrap;
+  align-items: center;
+  justify-content: center;
+  font-style: var(--button-font-giant-font-style);
+}

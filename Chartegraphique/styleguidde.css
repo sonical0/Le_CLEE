@@ -1,0 +1,66 @@
+:root {
+  --primary-900: rgba(31, 52, 72, 1);
+  --primary-800: rgba(49, 73, 96, 1);
+  --primary-700: rgba(64, 92, 118, 1);
+  --primary-600: rgba(80, 112, 142, 1);
+  --primary-500: rgba(94, 126, 159, 1);
+  --primary-400: rgba(117, 146, 176, 1);
+  --primary-300: rgba(140, 166, 194, 1);
+  --primary-200: rgba(170, 192, 216, 1);
+  --primary-100: rgba(198, 218, 238, 1);
+  --primary-50: rgba(229, 240, 255, 1);
+  --grey-50: rgba(249, 250, 251, 1);
+  --grey-900: rgba(19, 25, 39, 1);
+  --navbar-text-font-family: "Roboto", Helvetica;
+  --navbar-text-font-weight: 600;
+  --navbar-text-font-size: 18px;
+  --navbar-text-letter-spacing: 0px;
+  --navbar-text-line-height: 24px;
+  --navbar-text-font-style: normal;
+  --text-normal-font-family: "Roboto", Helvetica;
+  --text-normal-font-weight: 400;
+  --text-normal-font-size: 32px;
+  --text-normal-letter-spacing: 0px;
+  --text-normal-line-height: normal;
+  --text-normal-font-style: normal;
+  --titre-font-family: "Barlow Condensed", Helvetica;
+  --titre-font-weight: 500;
+  --titre-font-size: 48px;
+  --titre-letter-spacing: 0px;
+  --titre-line-height: normal;
+  --titre-font-style: normal;
+  --text-font-h1-font-family: "Inter", Helvetica;
+  --text-font-h1-font-weight: 600;
+  --text-font-h1-font-size: 48px;
+  --text-font-h1-letter-spacing: 0px;
+  --text-font-h1-line-height: 58px;
+  --text-font-h1-font-style: normal;
+  --text-font-b1-body-font-family: "Inter", Helvetica;
+  --text-font-b1-body-font-weight: 400;
+  --text-font-b1-body-font-size: 16px;
+  --text-font-b1-body-letter-spacing: 0px;
+  --text-font-b1-body-line-height: 24px;
+  --text-font-b1-body-font-style: normal;
+  --text-font-h5-font-family: "Inter", Helvetica;
+  --text-font-h5-font-weight: 600;
+  --text-font-h5-font-size: 24px;
+  --text-font-h5-letter-spacing: 0px;
+  --text-font-h5-line-height: 28px;
+  --text-font-h5-font-style: normal;
+  --100: 0px 4px 4px -2px rgba(19, 25, 39, 0.08), 0px 2px 4px -2px
+    rgba(19, 25, 39, 0.12);
+  --200: 0px 8px 8px -4px rgba(19, 25, 39, 0.08), 0px 4px 6px -4px
+    rgba(19, 25, 39, 0.12);
+  --300: 0px 8px 16px -6px rgba(19, 25, 39, 0.08), 0px 6px 8px -6px
+    rgba(19, 25, 39, 0.12);
+  --400: 0px 8px 24px -4px rgba(19, 25, 39, 0.08), 0px 6px 12px -6px
+    rgba(19, 25, 39, 0.12);
+  --500: 0px 10px 32px -4px rgba(19, 25, 39, 0.1), 0px 6px 14px -6px
+    rgba(19, 25, 39, 0.12);
+  --600: 0px 12px 42px -4px rgba(19, 25, 39, 0.12), 0px 8px 18px -6px
+    rgba(19, 25, 39, 0.12);
+  --700: 0px 14px 64px -4px rgba(19, 25, 39, 0.12), 0px 8px 22px -6px
+    rgba(19, 25, 39, 0.12);
+  --800: 0px 18px 88px -4px rgba(19, 25, 39, 0.14), 0px 8px 28px -6px
+    rgba(19, 25, 39, 0.12);
+}
