@@ -15,17 +15,39 @@ const NavigationModule = (() => {
       document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', closeMenu);
       });
+      
+      // Close menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+          closeMenu();
+        }
+      });
+      
+      // Close menu on escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeMenu();
+        }
+      });
     }
   };
 
   const toggleMenu = () => {
-    navLinks.classList.toggle('active');
+    const isActive = navLinks.classList.toggle('active');
     menuToggle.classList.toggle('active');
+    
+    // Prevent body scroll when menu is open on mobile
+    if (isActive && window.innerWidth <= 992) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
   };
 
   const closeMenu = () => {
     navLinks.classList.remove('active');
     menuToggle.classList.remove('active');
+    document.body.style.overflow = '';
   };
 
   return { init };
