@@ -179,43 +179,12 @@
                 <p class="section-subtitle">Rejoignez-nous lors de nos prochains événements et rencontres</p>
             </div>
             
-            <div class="agenda-timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="event-date">26-28 Janvier</div>
-                        <h3 class="event-title">Salon Aquitec</h3>
-                        <p class="event-location">📍 Parc des expositions de Bordeaux</p>
-                        <p class="event-desc">Découvrez les dernières innovations technologiques et les opportunités d'emploi.</p>
-                        <a href="#" class="event-link">En savoir plus →</a>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="event-date">15 Mars</div>
-                        <h3 class="event-title">Salon de l'orientation</h3>
-                        <p class="event-location">📍 Centre de congrès de Bordeaux</p>
-                        <p class="event-desc">Un événement pour explorer vos formations et débouchés professionnels.</p>
-                        <a href="#" class="event-link">En savoir plus →</a>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="event-date">28 Mars</div>
-                        <h3 class="event-title">Rencontre École - Entreprise</h3>
-                        <p class="event-location">📍 Campus CLEE</p>
-                        <p class="event-desc">Une rencontre privilégiée entre jeunes talents et recruteurs.</p>
-                        <a href="#" class="event-link">En savoir plus →</a>
-                    </div>
-                </div>
+            <div class="agenda-timeline" id="upcoming-events">
+                <!-- Les événements seront chargés dynamiquement depuis agenda.js -->
             </div>
             
             <div class="section-action">
-                <a href="#" class="btn btn-outline">Voir l'agenda complet</a>
+                <a href="agenda.html" class="btn btn-outline">Voir l'agenda complet </a>
             </div>
         </div>
     </section>
@@ -277,7 +246,7 @@
                         <h4 class="footer-subtitle">Ressources</h4>
                         <ul>
                             <li><a href="#">Actualités</a></li>
-                            <li><a href="#">Agenda</a></li>
+                            <li><a href="pages/agenda.html">Agenda</a></li>
                             <li><a href="#">Documentation</a></li>
                         </ul>
                     </div>
@@ -300,5 +269,53 @@
     </footer>
 
     <script src="../js/common.js"></script>
+    <script src="../js/agenda.js"></script>
+    <script>
+        // Charger les 3 prochains événements sur la page d'accueil
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof eventsData !== 'undefined') {
+                const upcomingEventsContainer = document.getElementById('upcoming-events');
+                if (upcomingEventsContainer) {
+                    const today = new Date();
+                    const monthNames = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
+                    
+                    // Filtrer et trier les événements futurs
+                    const upcomingEvents = eventsData
+                        .filter(event => event.date >= today)
+                        .sort((a, b) => a.date - b.date)
+                        .slice(0, 3);
+                    
+                    // Afficher les événements
+                    upcomingEvents.forEach(event => {
+                        const day = event.date.getDate();
+                        const month = monthNames[event.date.getMonth()];
+                        
+                        const eventHTML = `
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <div class="event-date">${day} ${month}</div>
+                                    <h3 class="event-title">${event.title}</h3>
+                                    <p class="event-location">📍 ${event.location}</p>
+                                    <p class="event-desc">${event.description}</p>
+                                    <a href="agenda.html" class="event-link">En savoir plus →</a>
+                                </div>
+                            </div>
+                        `;
+                        upcomingEventsContainer.innerHTML += eventHTML;
+                    });
+                    
+                    // Si aucun événement à venir
+                    if (upcomingEvents.length === 0) {
+                        upcomingEventsContainer.innerHTML = `
+                            <div style="text-align: center; padding: 40px; color: var(--grey-600);">
+                                <p>Aucun événement à venir pour le moment. Consultez notre <a href="agenda.html" style="color: var(--primary-600);">agenda complet</a>.</p>
+                            </div>
+                        `;
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 </html>
