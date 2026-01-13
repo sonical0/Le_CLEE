@@ -152,17 +152,22 @@
 
 .comment-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 32px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .comment-card {
   background-color: #ffffff;
-  padding: 40px 32px;
+  padding: 48px 36px;
   border-radius: 16px;
   box-shadow: var(--200);
   text-align: center;
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .comment-card:hover {
@@ -171,9 +176,10 @@
 }
 
 .comment-icon {
-  font-size: 48px;
-  margin-bottom: 16px;
+  font-size: 56px;
+  margin-bottom: 20px;
   display: block;
+  filter: grayscale(30%);
 }
 
 .comment-number {
@@ -387,6 +393,7 @@
   gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 50px;
 }
 
 .cta-section .btn-primary {
@@ -570,13 +577,15 @@
 
 .liens-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 32px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .lien-card {
   background-color: #ffffff;
-  padding: 40px 32px;
+  padding: 48px 36px;
   border-radius: 16px;
   box-shadow: var(--200);
   text-align: center;
@@ -584,6 +593,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 1px solid var(--grey-100);
 }
 
 .lien-card:hover {
@@ -592,8 +602,9 @@
 }
 
 .lien-icon {
-  font-size: 48px;
-  margin-bottom: 20px;
+  font-size: 56px;
+  margin-bottom: 24px;
+  color: var(--primary-800);
 }
 
 .lien-title {
