@@ -5,12 +5,12 @@
 Les **6 pages principales** du site :
 
 ```
-1. 🏠 Accueil                        → index.html
-2. 🏢 Le CLEE                        → le-clee.html
-3. 🤝 Entreprises & Partenaires      → companies.html
-4. 🎓 Établissements & Formations    → establishments.html
-5. 👨‍👩‍👧 Jeunes & Familles               → jeunes-familles.html
-6. 🌟 Vie du CLEE                    → vie-clee.html
+1. Accueil                        → index.html
+2. Le CLEE                        → le-clee.html
+3. Entreprises & Partenaires      → companies.html
+4. Établissements & Formations    → establishments.html
+5. Jeunes & Familles              → jeunes-familles.html
+6. Vie du CLEE                    → vie-clee.html
 ```
 
 ## Arborescence Complète des Pages
@@ -18,22 +18,22 @@ Les **6 pages principales** du site :
 ```
 pages/
 │
-├── 📄 index.html                      # PAGE PRINCIPALE : Accueil
+├── index.html                      # PAGE PRINCIPALE : Accueil
 │
-├── 📄 le-clee.html                    # PAGE PRINCIPALE : Le CLEE
+├── le-clee.html                    # PAGE PRINCIPALE : Le CLEE
 │   ├── bureau-membres.html            # Sous-page : Bureau et membres
 │   ├── nos-actions.html               # Sous-page : Nos actions
 │   └── documents-officiels.html       # Sous-page : Documents officiels
 │
-├── 📄 companies.html                  # PAGE PRINCIPALE : Entreprises & Partenaires
+├── companies.html                  # PAGE PRINCIPALE : Entreprises & Partenaires
 │
-├── 📄 establishments.html             # PAGE PRINCIPALE : Établissements & Formations
+├── establishments.html             # PAGE PRINCIPALE : Établissements & Formations
 │   ├── orientation-insertion.html     # Sous-page : Orientation et insertion
 │   └── pfmp.html                      # Sous-page : PFMP (Périodes de Formation en Milieu Professionnel)
 │
-├── 📄 jeunes-familles.html            # PAGE PRINCIPALE : Jeunes & Familles
+├── jeunes-familles.html            # PAGE PRINCIPALE : Jeunes & Familles
 │
-└── 📄 vie-clee.html                   # PAGE PRINCIPALE : Vie du CLEE
+└── vie-clee.html                   # PAGE PRINCIPALE : Vie du CLEE
     ├── vie-clee-eleves.html           # Sous-page : Vie du CLEE - Élèves
     └── agenda.html                    # Sous-page : Agenda/Événements
 ```
