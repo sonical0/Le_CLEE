@@ -164,7 +164,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 ## WordPress Theme Parity Verification
 
-**Critical**: Every static HTML page MUST have a corresponding WordPress template. Verify periodically:
+**Critical**: Every static HTML page MUST have a corresponding WordPress template. **This verification should be performed automatically at the start of any work session involving page creation or modification.**
+
+**Automated Verification Steps**:
+1. List all files in `pages/` directory
+2. List all template files in `php/clee-bordeaux-theme/`
+3. Compare and report any missing WordPress templates
+4. If gaps are found, create missing templates following the established pattern
 
 ```bash
 # Static pages (14 total)
@@ -189,7 +195,8 @@ pages/vie-clee.html           → php/clee-bordeaux-theme/page-vie-clee.php
 2. Create WordPress template `php/clee-bordeaux-theme/page-[slug].php`
 3. Add asset enqueuing in `functions.php`
 4. Add corresponding CSS/JS files to both root and theme assets
-5. Update this checklist in copilot-instructions.md
+5. Update README.txt with new slug
+6. Update this checklist in copilot-instructions.md
 
 **Missing template detection**: If a page exists in `pages/` without a corresponding WordPress template, it won't be accessible in WordPress.
 

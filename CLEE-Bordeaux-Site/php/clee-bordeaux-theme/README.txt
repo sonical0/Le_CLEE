@@ -7,6 +7,7 @@ Installation:
    - agenda
    - bureau-membres
    - companies
+   - contact
    - documents-officiels
    - establishments
    - jeunes-familles
