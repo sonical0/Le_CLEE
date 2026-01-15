@@ -1,4 +1,9 @@
 <?php get_header(); ?>
+<?php clee_breadcrumb([
+  ['title' => 'Accueil', 'url' => home_url('/')],
+  ['title' => 'Vie du CLEE', 'url' => home_url('/vie-clee/')],
+  ['title' => 'Agenda']
+]); ?>
 <section class="hero">
 <div class="container">
 <h1 class="hero-title">Agenda 2026</h1>

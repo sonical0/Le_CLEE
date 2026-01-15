@@ -1,4 +1,8 @@
 <?php get_header(); ?>
+<?php clee_breadcrumb([
+  ['title' => 'Accueil', 'url' => home_url('/')],
+  ['title' => 'Entreprises & Partenaires']
+]); ?>
 <section class="hero-entreprises">
 <div class="container">
 <div class="hero-content">

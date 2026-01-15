@@ -55,3 +55,28 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('clee-jeunes', get_template_directory_uri() . '/assets/css/jeunes-familles.css', ['clee-globals'], '1.0');
   }
 });
+
+// Breadcrumb helper function
+function clee_breadcrumb($items) {
+  if (empty($items)) return;
+  
+  echo '<div class="breadcrumb-container">';
+  echo '<div class="container">';
+  echo '<nav class="breadcrumb" aria-label="Fil d\'ariane">';
+  
+  $total = count($items);
+  foreach ($items as $index => $item) {
+    $is_last = ($index === $total - 1);
+    
+    if ($is_last) {
+      echo '<span>' . esc_html($item['title']) . '</span>';
+    } else {
+      echo '<a href="' . esc_url($item['url']) . '">' . esc_html($item['title']) . '</a>';
+      echo '<span>/</span>';
+    }
+  }
+  
+  echo '</nav>';
+  echo '</div>';
+  echo '</div>';
+}

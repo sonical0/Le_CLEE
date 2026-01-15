@@ -30,28 +30,6 @@
     z-index: 1;
 }
 
-/* Breadcrumb */
-.breadcrumb {
-    font-size: 14px;
-    margin-bottom: 20px;
-    opacity: 0.9;
-}
-
-.breadcrumb a {
-    color: white;
-    text-decoration: none;
-    transition: opacity 0.3s ease;
-}
-
-.breadcrumb a:hover {
-    opacity: 0.8;
-    text-decoration: underline;
-}
-
-.breadcrumb span {
-    margin: 0 8px;
-}
-
 /* Section Intro */
 .section-intro {
     padding: 80px 0;

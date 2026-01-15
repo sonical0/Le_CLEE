@@ -1,4 +1,9 @@
 <?php get_header(); ?>
+<?php clee_breadcrumb([
+  ['title' => 'Accueil', 'url' => home_url('/')],
+  ['title' => 'Le CLEE', 'url' => home_url('/le-clee/')],
+  ['title' => 'Documents Officiels']
+]); ?>
 <section class="hero">
 <div class="container">
 <div class="breadcrumb">

@@ -1,4 +1,8 @@
 <?php get_header(); ?>
+<?php clee_breadcrumb([
+  ['title' => 'Accueil', 'url' => home_url('/')],
+  ['title' => 'Contact']
+]); ?>
 
 <!-- Hero Section -->
 <section class="hero">

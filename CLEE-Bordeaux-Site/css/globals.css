@@ -319,6 +319,44 @@ button {
 }
 
 /* ========================================
+   BREADCRUMB (SHARED)
+======================================== */
+
+.breadcrumb-container {
+  background-color: var(--primary-900);
+  padding: 12px 0;
+  margin-top: 80px; /* Décalage pour le header fixe */
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.breadcrumb a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.breadcrumb a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.breadcrumb span {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumb span:last-child {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* ========================================
    BUTTONS (SHARED)
 ======================================== */
 
