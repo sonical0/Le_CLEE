@@ -1,8 +1,26 @@
-<?php get_header(); ?>
-<?php clee_breadcrumb([
-  ['title' => 'Accueil', 'url' => home_url('/')],
-  ['title' => 'Le CLEE']
-]); ?>
+<?php
+/**
+ * Template for: Le CLEE
+ * Fully editable via Gutenberg
+ */
+get_header();
+
+clee_breadcrumb([
+    ['title' => 'Accueil', 'url' => home_url('/')],
+    ['title' => get_the_title(), 'url' => '']
+]);
+
+while (have_posts()) : the_post();
+    ?>
+    <main class="page-content">
+        <div class="container">
+            <?php the_content(); ?>
+        </div>
+    </main>
+    <?php
+endwhile;
+
+get_footer();
 <section class="hero">
 <div class="container">
 <h1 class="hero-title">Le CLEE Bordeaux Avenir</h1>

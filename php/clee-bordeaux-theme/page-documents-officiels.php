@@ -1,4 +1,25 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Template for: Documents Officiels
+ * Fully editable via Gutenberg in WordPress admin
+ */
+get_header();
+
+clee_breadcrumb([
+    ['title' => 'Accueil', 'url' => home_url('/')],
+    ['title' => 'Le CLEE', 'url' => get_permalink(get_page_by_path('le-clee'))],
+    ['title' => get_the_title(), 'url' => '']
+]);
+
+while (have_posts()) : the_post();
+    ?>
+    <main class="page-content">
+        <?php the_content(); ?>
+    </main>
+    <?php
+endwhile;
+
+get_footer();
 <?php clee_breadcrumb([
   ['title' => 'Accueil', 'url' => home_url('/')],
   ['title' => 'Le CLEE', 'url' => home_url('/le-clee/')],
