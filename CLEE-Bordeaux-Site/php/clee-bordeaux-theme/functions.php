@@ -36,7 +36,8 @@ add_action('wp_enqueue_scripts', function () {
 
   if (is_page('vie-clee')) {
     wp_enqueue_style('clee-vie-clee', get_template_directory_uri() . '/assets/css/vie-clee.css', ['clee-globals'], '1.0');
-    wp_enqueue_script('clee-vie-clee', get_template_directory_uri() . '/assets/js/vie-clee.js', ['clee-common'], '1.0', true);
+    wp_enqueue_script('clee-agenda-data', get_template_directory_uri() . '/assets/js/agenda.js', ['clee-common'], '1.0', true);
+    wp_enqueue_script('clee-vie-clee', get_template_directory_uri() . '/assets/js/vie-clee.js', ['clee-agenda-data'], '1.0', true);
   }
 
   if (is_page('contact')) {

@@ -20,102 +20,11 @@
 <h2 class="section-title">Derniers Événements</h2>
 <p class="section-subtitle">Découvrez les événements passés et à venir organisés par le CLEE</p>
 </div>
-<div class="evenements-grid">
-<article class="evenement-card featured">
-<div class="evenement-badge">À venir</div>
-<div class="evenement-image">
-<img alt="Forum des métiers 2026" src="https://picsum.photos/600/400?random=1"/>
-<div class="evenement-date-overlay">
-<span class="date-day">15</span>
-<span class="date-month">Mars</span>
+<div class="evenements-grid" id="evenements-grid">
+<!-- Les événements seront chargés dynamiquement depuis agenda.js -->
 </div>
-</div>
-<div class="evenement-content">
-<div class="evenement-meta">
-<span class="evenement-location">📍 Bordeaux Business School</span>
-<span class="evenement-time">🕐 9h00 - 17h00</span>
-</div>
-<h3 class="evenement-title">Forum des Métiers 2026</h3>
-<p class="evenement-description">
-                            Rencontrez plus de 50 entreprises partenaires et découvrez les opportunités de stages et d'alternance. 
-                            Une journée dédiée aux échanges entre étudiants et professionnels.
-                        </p>
-<div class="evenement-tags">
-<span class="tag">Networking</span>
-<span class="tag">Recrutement</span>
-<span class="tag">Étudiants</span>
-</div>
-</div>
-</article>
-<article class="evenement-card">
-<div class="evenement-image">
-<img alt="Conférence Innovation" src="https://picsum.photos/600/400?random=2"/>
-<div class="evenement-date-overlay past">
-<span class="date-day">20</span>
-<span class="date-month">Jan</span>
-</div>
-</div>
-<div class="evenement-content">
-<div class="evenement-meta">
-<span class="evenement-location">📍 En ligne</span>
-<span class="evenement-time">🕐 14h00 - 16h00</span>
-</div>
-<h3 class="evenement-title">Conférence : L'Innovation au service de l'Emploi</h3>
-<p class="evenement-description">
-                            Retour sur la conférence animée par des experts RH et entrepreneurs sur les nouvelles tendances du marché du travail.
-                        </p>
-<div class="evenement-tags">
-<span class="tag">Conférence</span>
-<span class="tag">Innovation</span>
-</div>
-</div>
-</article>
-<article class="evenement-card">
-<div class="evenement-image">
-<img alt="Atelier CV" src="https://picsum.photos/600/400?random=3"/>
-<div class="evenement-date-overlay">
-<span class="date-day">28</span>
-<span class="date-month">Fév</span>
-</div>
-</div>
-<div class="evenement-content">
-<div class="evenement-meta">
-<span class="evenement-location">📍 EPSI Bordeaux</span>
-<span class="evenement-time">🕐 10h00 - 12h00</span>
-</div>
-<h3 class="evenement-title">Atelier : Réussir son CV et sa Lettre de Motivation</h3>
-<p class="evenement-description">
-                            Atelier pratique pour apprendre à valoriser son profil et se démarquer auprès des recruteurs.
-                        </p>
-<div class="evenement-tags">
-<span class="tag">Atelier</span>
-<span class="tag">Carrière</span>
-</div>
-</div>
-</article>
-<article class="evenement-card">
-<div class="evenement-image">
-<img alt="Visite d'entreprise" src="https://picsum.photos/600/400?random=4"/>
-<div class="evenement-date-overlay past">
-<span class="date-day">10</span>
-<span class="date-month">Jan</span>
-</div>
-</div>
-<div class="evenement-content">
-<div class="evenement-meta">
-<span class="evenement-location">📍 Station F Bordeaux</span>
-<span class="evenement-time">🕐 14h00 - 18h00</span>
-</div>
-<h3 class="evenement-title">Visite d'Entreprise : Les Startups Tech à Bordeaux</h3>
-<p class="evenement-description">
-                            Immersion dans l'écosystème startup bordelais avec visite de 3 entreprises innovantes.
-                        </p>
-<div class="evenement-tags">
-<span class="tag">Visite</span>
-<span class="tag">Tech</span>
-</div>
-</div>
-</article>
+<div class="section-action">
+<a href="<?php echo esc_url(get_permalink(get_page_by_path('agenda'))); ?>" class="btn btn-outline btn-large">Voir l'agenda complet</a>
 </div>
 </div>
 </section>

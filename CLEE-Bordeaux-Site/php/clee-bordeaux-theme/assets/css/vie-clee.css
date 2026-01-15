@@ -201,6 +201,15 @@ body {
   gap: 8px;
 }
 
+.evenements-section .section-action {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.evenements-section .section-action .btn {
+  min-width: 240px;
+}
+
 /* ========================================
    BLOG SECTION
 ======================================== */
