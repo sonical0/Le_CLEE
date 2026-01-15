@@ -14,7 +14,7 @@
         <nav class="navigation" role="navigation" aria-label="Navigation principale">
             <div class="container">
                 <a href="index.html" class="logo" aria-label="Retour à l'accueil">
-                    CLEE Bordeaux Avenir
+                    <img src="../assets/images/logo-clee.png" alt="CLEE Bordeaux Avenir">
                 </a>
                 
                 <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
@@ -24,14 +24,26 @@
                 </button>
                 
                 <ul class="nav-links">
-                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="le-clee.html" class="nav-link">Le CLEE</a></li>
                     <li><a href="companies.html" class="nav-link">Entreprises & Partenaires</a></li>
                     <li><a href="establishments.html" class="nav-link">Établissements & Formations</a></li>
+                    <li><a href="jeunes-familles.html" class="nav-link">Jeunes & Familles</a></li>
                     <li><a href="vie-clee.html" class="nav-link active">Vie du CLEE</a></li>
                 </ul>
             </div>
         </nav>
     </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-container">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Fil d'ariane">
+                <a href="index.html">Accueil</a>
+                <span>/</span>
+                <span>Vie du CLEE</span>
+            </nav>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero-vie-clee">
@@ -54,105 +66,12 @@
                 <p class="section-subtitle">Découvrez les événements passés et à venir organisés par le CLEE</p>
             </div>
             
-            <div class="evenements-grid">
-                <article class="evenement-card featured">
-                    <div class="evenement-badge">À venir</div>
-                    <div class="evenement-image">
-                        <img src="https://picsum.photos/600/400?random=1" alt="Forum des métiers 2026">
-                        <div class="evenement-date-overlay">
-                            <span class="date-day">15</span>
-                            <span class="date-month">Mars</span>
-                        </div>
-                    </div>
-                    <div class="evenement-content">
-                        <div class="evenement-meta">
-                            <span class="evenement-location">📍 Bordeaux Business School</span>
-                            <span class="evenement-time">🕐 9h00 - 17h00</span>
-                        </div>
-                        <h3 class="evenement-title">Forum des Métiers 2026</h3>
-                        <p class="evenement-description">
-                            Rencontrez plus de 50 entreprises partenaires et découvrez les opportunités de stages et d'alternance. 
-                            Une journée dédiée aux échanges entre étudiants et professionnels.
-                        </p>
-                        <div class="evenement-tags">
-                            <span class="tag">Networking</span>
-                            <span class="tag">Recrutement</span>
-                            <span class="tag">Étudiants</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="evenement-card">
-                    <div class="evenement-image">
-                        <img src="https://picsum.photos/600/400?random=2" alt="Conférence Innovation">
-                        <div class="evenement-date-overlay past">
-                            <span class="date-day">20</span>
-                            <span class="date-month">Jan</span>
-                        </div>
-                    </div>
-                    <div class="evenement-content">
-                        <div class="evenement-meta">
-                            <span class="evenement-location">📍 En ligne</span>
-                            <span class="evenement-time">🕐 14h00 - 16h00</span>
-                        </div>
-                        <h3 class="evenement-title">Conférence : L'Innovation au service de l'Emploi</h3>
-                        <p class="evenement-description">
-                            Retour sur la conférence animée par des experts RH et entrepreneurs sur les nouvelles tendances du marché du travail.
-                        </p>
-                        <div class="evenement-tags">
-                            <span class="tag">Conférence</span>
-                            <span class="tag">Innovation</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="evenement-card">
-                    <div class="evenement-image">
-                        <img src="https://picsum.photos/600/400?random=3" alt="Atelier CV">
-                        <div class="evenement-date-overlay">
-                            <span class="date-day">28</span>
-                            <span class="date-month">Fév</span>
-                        </div>
-                    </div>
-                    <div class="evenement-content">
-                        <div class="evenement-meta">
-                            <span class="evenement-location">📍 EPSI Bordeaux</span>
-                            <span class="evenement-time">🕐 10h00 - 12h00</span>
-                        </div>
-                        <h3 class="evenement-title">Atelier : Réussir son CV et sa Lettre de Motivation</h3>
-                        <p class="evenement-description">
-                            Atelier pratique pour apprendre à valoriser son profil et se démarquer auprès des recruteurs.
-                        </p>
-                        <div class="evenement-tags">
-                            <span class="tag">Atelier</span>
-                            <span class="tag">Carrière</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="evenement-card">
-                    <div class="evenement-image">
-                        <img src="https://picsum.photos/600/400?random=4" alt="Visite d'entreprise">
-                        <div class="evenement-date-overlay past">
-                            <span class="date-day">10</span>
-                            <span class="date-month">Jan</span>
-                        </div>
-                    </div>
-                    <div class="evenement-content">
-                        <div class="evenement-meta">
-                            <span class="evenement-location">📍 Station F Bordeaux</span>
-                            <span class="evenement-time">🕐 14h00 - 18h00</span>
-                        </div>
-                        <h3 class="evenement-title">Visite d'Entreprise : Les Startups Tech à Bordeaux</h3>
-                        <p class="evenement-description">
-                            Immersion dans l'écosystème startup bordelais avec visite de 3 entreprises innovantes.
-                        </p>
-                        <div class="evenement-tags">
-                            <span class="tag">Visite</span>
-                            <span class="tag">Tech</span>
-                        </div>
-                    </div>
-                </article>
+            <div class="evenements-grid" id="evenements-grid">
+                <!-- Les événements seront chargés dynamiquement depuis agenda.js -->
+            </div>
+            
+            <div class="section-action">
+                <a href="agenda.html" class="btn btn-outline btn-large">Voir l'agenda complet</a>
             </div>
         </div>
     </section>
@@ -322,10 +241,10 @@
                     </div>
                 </div>
                 <div class="contact-cta-action">
-                    <button class="btn btn-primary btn-large btn-contact" id="contactBtn">
+                    <a href="contact.html" class="btn btn-primary btn-large btn-contact">
                         <span class="btn-icon">✉️</span>
                         <span class="btn-text">Nous contacter</span>
-                    </button>
+                    </a>
                     <p class="contact-note">Nous vous répondrons sous 48h</p>
                 </div>
             </div>
@@ -343,28 +262,47 @@
                 
                 <div class="footer-links">
                     <div class="footer-column">
-                        <h4 class="footer-subtitle">Navigation</h4>
+                        <h4 class="footer-subtitle">Le CLEE</h4>
                         <ul>
-                            <li><a href="index.html">Accueil</a></li>
-                            <li><a href="companies.html">Entreprises</a></li>
-                            <li><a href="establishments.html">Formations</a></li>
-                            <li><a href="vie-clee.html">Vie du CLEE</a></li>
+                            <li><a href="le-clee.html">Qui sommes-nous</a></li>
+                            <li><a href="bureau-membres.html">Bureau & Membres</a></li>
+                            <li><a href="nos-actions.html">Nos Actions</a></li>
+                            <li><a href="documents-officiels.html">Documents Officiels</a></li>
                         </ul>
                     </div>
                     
                     <div class="footer-column">
-                        <h4 class="footer-subtitle">Ressources</h4>
+                        <h4 class="footer-subtitle">Entreprises & Partenaires</h4>
                         <ul>
-                            <li><a href="#">Actualités</a></li>
+                            <li><a href="companies.html#devenir-partenaire">Devenir partenaire</a></li>
+                            <li><a href="companies.html#carte-partenaires">Carte des entreprises</a></li>
+                            <li><a href="companies.html#temoignages">Témoignages</a></li>
+                            <li><a href="companies.html#guides-ressources">Guides & ressources</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-subtitle">Jeunes & Familles</h4>
+                        <ul>
+                            <li><a href="pfmp.html">Tout savoir sur la PFMP</a></li>
+                            <li><a href="orientation-insertion.html">Conseils orientation</a></li>
+                            <li><a href="vie-clee-eleves.html">Vie du CLEE pour les élèves</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-subtitle">Navigation</h4>
+                        <ul>
+                            <li><a href="establishments.html">Établissements & Formations</a></li>
+                            <li><a href="vie-clee.html">Vie du CLEE</a></li>
                             <li><a href="agenda.html">Agenda</a></li>
-                            <li><a href="#">Documentation</a></li>
                         </ul>
                     </div>
                     
                     <div class="footer-column">
                         <h4 class="footer-subtitle">Contact</h4>
                         <ul>
-                            <li><a href="#">Nous contacter</a></li>
+                            <li><a href="contact.html">Nous contacter</a></li>
                             <li><a href="#">LinkedIn</a></li>
                             <li><a href="#">Mentions légales</a></li>
                         </ul>
@@ -496,6 +434,7 @@
 
     <!-- Scripts -->
     <script src="../js/common.js"></script>
+    <script src="../js/agenda.js"></script>
     <script src="../js/vie-clee.js"></script>
 </body>
 </html>
