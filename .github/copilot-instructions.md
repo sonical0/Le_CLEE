@@ -195,8 +195,9 @@ pages/vie-clee.html           → php/clee-bordeaux-theme/page-vie-clee.php
 2. Create WordPress template `php/clee-bordeaux-theme/page-[slug].php`
 3. Add asset enqueuing in `functions.php`
 4. Add corresponding CSS/JS files to both root and theme assets
-5. Update README.txt with new slug
-6. Update this checklist in copilot-instructions.md
+5. Update `php/clee-bordeaux-theme/README.txt` with new slug
+6. Update `CLEE-Bordeaux-Site/PAGES-STRUCTURE.md` with page hierarchy
+7. Update this checklist in `.github/copilot-instructions.md`
 
 **Missing template detection**: If a page exists in `pages/` without a corresponding WordPress template, it won't be accessible in WordPress.
 

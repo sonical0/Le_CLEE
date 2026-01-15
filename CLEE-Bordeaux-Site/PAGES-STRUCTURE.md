@@ -71,9 +71,15 @@ pages/
 | Vie du CLEE - Élèves | `vie-clee-eleves.html` | Vie étudiante et animations spécifiques |
 | Agenda | `agenda.html` | Calendrier des événements (peut-être intégré dans vie-clee.html) |
 
+#### Page Utilitaire
+| Page | Fichier | Description |
+|------|---------|-------------|
+| Contact | `contact.html` | Formulaire de contact (accessible depuis footer et CTAs)
+
 ---
 
-**Total : 13 pages HTML**
+**Total : 14 pages HTML**
 - 6 pages principales (dans la navigation)
 - 7 sous-pages (accessibles depuis les pages principales)
+- 1 page utilitaire (contact - accessible depuis footer/CTAs)
 

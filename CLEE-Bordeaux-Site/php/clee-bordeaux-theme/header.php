@@ -10,7 +10,7 @@
 <nav aria-label="Navigation principale" class="navigation" role="navigation">
 <div class="container">
 <a aria-label="Retour à l'accueil" class="logo" href="<?php echo esc_url(home_url('/')); ?>">
-                    CLEE Bordeaux Avenir
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-clee.png" alt="CLEE Bordeaux Avenir">
                 </a>
 <button aria-expanded="false" aria-label="Ouvrir le menu" class="menu-toggle">
 <span></span>
