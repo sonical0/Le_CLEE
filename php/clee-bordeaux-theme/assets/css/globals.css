@@ -422,6 +422,35 @@ button {
   margin-bottom: 40px;
 }
 
+.footer-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.footer-logo img {
+  width: 120px;
+  height: auto;
+}
+
+.footer-logo p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+.footer-description {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
 .footer-title {
   font-family: var(--titre-font-family);
   font-size: 24px;
