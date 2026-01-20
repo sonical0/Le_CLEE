@@ -191,10 +191,14 @@ $establishments_query = new WP_Query($args);
     <?php
     // Check if any establishments have coordinates
     $has_map_data = false;
-    foreach ($establishments_query->posts as $establishment) {
-        if (get_field('latitude', $establishment->ID) && get_field('longitude', $establishment->ID)) {
-            $has_map_data = true;
-            break;
+    if ($establishments_query->have_posts()) {
+        foreach ($establishments_query->posts as $establishment) {
+            $lat = get_field('latitude', $establishment->ID);
+            $lng = get_field('longitude', $establishment->ID);
+            if (!empty($lat) && !empty($lng)) {
+                $has_map_data = true;
+                break;
+            }
         }
     }
     

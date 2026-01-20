@@ -180,10 +180,14 @@ $partners_query = new WP_Query($args);
     <?php
     // Check if any partners have coordinates
     $has_map_data = false;
-    foreach ($partners_query->posts as $partner) {
-        if (get_field('latitude', $partner->ID) && get_field('longitude', $partner->ID)) {
-            $has_map_data = true;
-            break;
+    if ($partners_query->have_posts()) {
+        foreach ($partners_query->posts as $partner) {
+            $lat = get_field('latitude', $partner->ID);
+            $lng = get_field('longitude', $partner->ID);
+            if (!empty($lat) && !empty($lng)) {
+                $has_map_data = true;
+                break;
+            }
         }
     }
     

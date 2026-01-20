@@ -37,6 +37,18 @@ function clee_breadcrumb($items) {
 }
 
 /**
+ * Get page permalink by slug (safe version)
+ * Returns home URL if page doesn't exist
+ */
+function clee_get_page_link($slug) {
+    $page = get_page_by_path($slug);
+    if ($page) {
+        return get_permalink($page);
+    }
+    return home_url('/');
+}
+
+/**
  * Format date in French
  */
 function clee_format_date($date, $format = 'j F Y') {
