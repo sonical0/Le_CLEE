@@ -46,7 +46,7 @@
 <ul>
 <li><a href="#">Nous contacter</a></li>
 <li><a href="#">LinkedIn</a></li>
-<li><a href="#">Mentions légales</a></li>
+<li><a href="<?php echo esc_url(home_url('/mentions-legales/')); ?>">Mentions légales</a></li>
 </ul>
 </div>
 </div>
