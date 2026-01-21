@@ -7,8 +7,8 @@
 ======================================== */
 
 .hero-entreprises {
-  padding-top: 140px;
-  padding-bottom: 60px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   background: linear-gradient(135deg, var(--primary-800) 0%, var(--primary-600) 100%);
   color: #ffffff;
   text-align: center;

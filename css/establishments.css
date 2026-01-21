@@ -7,8 +7,8 @@
 ======================================== */
 
 .hero-etablissement {
-  padding-top: 120px;
-  padding-bottom: 80px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   background: linear-gradient(135deg, var(--primary-50) 0%, #ffffff 100%);
 }
 

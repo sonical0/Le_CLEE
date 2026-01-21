@@ -46,7 +46,7 @@ add_action('wp_enqueue_scripts', function () {
   }
 
   // Groups reusing the same stylesheet
-  $uses_le_clee_css = ['le-clee', 'bureau-membres', 'nos-actions', 'documents-officiels'];
+  $uses_le_clee_css = ['le-clee', 'bureau-membres', 'nos-actions', 'documents-officiels', 'mentions-legales'];
   if (is_page($uses_le_clee_css)) {
     wp_enqueue_style('clee-le-clee', get_template_directory_uri() . '/assets/css/le-clee.css', ['clee-globals'], '1.0');
   }
