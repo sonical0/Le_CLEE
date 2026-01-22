@@ -7,6 +7,9 @@ add_action('after_setup_theme', function () {
 
 // Enqueue CSS/JS
 add_action('wp_enqueue_scripts', function () {
+  // Font Awesome
+  wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css', [], '6.5.1');
+  
   // Global
   wp_enqueue_style('clee-globals', get_template_directory_uri() . '/assets/css/globals.css', [], '1.0');
   wp_enqueue_script('clee-common', get_template_directory_uri() . '/assets/js/common.js', [], '1.0', true);

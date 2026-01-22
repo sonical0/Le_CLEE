@@ -12,6 +12,10 @@
 Le CLEE Bordeaux Avenir œuvre pour renforcer les liens entre le monde éducatif et professionnel, 
 accompagner les jeunes dans leur orientation et faciliter leur insertion dans le monde du travail.
 </p>
+
+<div class="footer-medef-logo">
+<img src="<?php echo get_template_directory_uri(); ?>/assets/images/medef-gironde.png" alt="MEDEF Gironde - Mouvement des Entreprises de France">
+</div>
 </div>
 
 <div class="footer-links">
