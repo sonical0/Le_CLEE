@@ -1,5 +1,25 @@
 <?php get_header(); ?>
 <?php clee_breadcrumb([
+    ['title' => 'Accueil', 'url' => home_url('/')],
+    ['title' => 'Vie du CLÉE']
+]); ?>
+<section class="hero-vie-clee">
+<div class="container">
+<div class="hero-content">
+<h1 class="hero-title">Vie du CLÉE</h1>
+<p class="hero-description">
+                                        Découvrez les derniers événements, actualités et initiatives qui animent notre communauté. 
+                                        Le CLÉE est un réseau vivant qui connecte étudiants, écoles et entreprises.
+                                </p>
+</div>
+</div>
+</section>
+<section class="evenements-section" id="evenements">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title">Derniers Événements</h2>
+<?php get_header(); ?>
+<?php clee_breadcrumb([
   ['title' => 'Accueil', 'url' => home_url('/')],
   ['title' => 'Vie du CLEE']
 ]); ?>

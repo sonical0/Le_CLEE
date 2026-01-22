@@ -1,3 +1,23 @@
+CLÉE Bordeaux Theme (auto-converted)
+
+Installation:
+1) Copy this folder to: wp-content/themes/clee-bordeaux-theme
+2) Activate the theme in WordPress admin.
+3) Create pages with the following slugs to match templates:
+   - agenda
+   - bureau-membres
+   - companies
+   - connexion
+   - contact
+   - documents-officiels
+   - establishments
+   - inscription
+   - jeunes-familles
+   - le-clee
+   - mentions-legales
+   - nos-actions
+   - orientation-insertion
+   - pfmp
 CLEE Bordeaux Theme (auto-converted)
 
 Installation:
