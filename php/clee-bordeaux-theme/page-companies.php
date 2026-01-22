@@ -56,6 +56,9 @@
 </li>
 </ul>
 </div>
+<div class="pourquoi-medef">
+<img alt="MEDEF Gironde - Mouvement des Entreprises de France" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/medef-gironde.png'); ?>"/>
+</div>
 </div>
 </div>
 </section>

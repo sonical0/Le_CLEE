@@ -833,3 +833,43 @@
     width: 100%;
   }
 }
+
+/* ========================================
+   MEDEF LOGO STYLES
+======================================== */
+
+.pourquoi-medef {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.pourquoi-medef img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.08));
+}
+
+@media (max-width: 1024px) {
+  .pourquoi-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .pourquoi-medef {
+    padding: 20px;
+  }
+  
+  .pourquoi-medef img {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pourquoi-medef img {
+    max-width: 250px;
+  }
+}
