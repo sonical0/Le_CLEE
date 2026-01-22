@@ -23,6 +23,7 @@
 <li><a class="nav-link" href="<?php echo esc_url(home_url('/establishments/')); ?>">Établissements &amp; Formations</a></li>
 <li><a class="nav-link" href="<?php echo esc_url(home_url('/jeunes-familles/')); ?>">Jeunes &amp; Familles</a></li>
 <li><a class="nav-link" href="<?php echo esc_url(home_url('/vie-clee/')); ?>">Vie du CLEE</a></li>
+<li><a class="nav-link nav-link-auth" href="<?php echo esc_url(home_url('/connexion/')); ?>">Connexion</a></li>
 </ul>
 </div>
 </nav>

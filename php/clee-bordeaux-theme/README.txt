@@ -7,11 +7,14 @@ Installation:
    - agenda
    - bureau-membres
    - companies
+   - connexion
    - contact
    - documents-officiels
    - establishments
+   - inscription
    - jeunes-familles
    - le-clee
+   - mentions-legales
    - nos-actions
    - orientation-insertion
    - pfmp
