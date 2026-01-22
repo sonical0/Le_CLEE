@@ -18,6 +18,26 @@
         <div class="intro-content">
             <div class="legal-intro">
                 <p>Conformément aux dispositions de la loi n°2004-575 du 21 juin 2004 pour la Confiance en l'économie numérique, il est porté à la connaissance des utilisateurs et visiteurs, ci-après <strong>"l'Utilisateur"</strong>, du site nexus, ci-après le <strong>"Site"</strong>, les présentes mentions légales.</p>
+<?php get_header(); ?>
+<?php clee_breadcrumb([
+  ['title' => 'Accueil', 'url' => home_url('/')],
+  ['title' => 'Mentions légales']
+]); ?>
+
+<section class="hero">
+    <div class="container">
+        <div class="legal-header">
+            <h1 class="hero-title animate-on-scroll">Mentions légales</h1>
+            <p class="legal-date">En vigueur au 01/06/2026</p>
+        </div>
+    </div>
+</section>
+
+<section class="section-intro">
+    <div class="container">
+        <div class="intro-content">
+            <div class="legal-intro">
+                <p>Conformément aux dispositions de la loi n°2004-575 du 21 juin 2004 pour la Confiance en l'économie numérique, il est porté à la connaissance des utilisateurs et visiteurs, ci-après <strong>"l'Utilisateur"</strong>, du site nexus, ci-après le <strong>"Site"</strong>, les présentes mentions légales.</p>
                 <p style="margin-top: 15px;">La connexion et la navigation sur le Site par l'Utilisateur implique acceptation intégrale et sans réserve des présentes mentions légales.</p>
                 <p style="margin-top: 15px;">Ces dernières sont accessibles sur le Site à la rubrique <strong>"Mentions légales"</strong>.</p>
             </div>

@@ -1,5 +1,25 @@
 <?php get_header(); ?>
 <?php clee_breadcrumb([
+    ['title' => 'Accueil', 'url' => home_url('/')],
+    ['title' => 'Le CLÉE', 'url' => home_url('/le-clee/')],
+    ['title' => 'Nos Actions']
+]); ?>
+<section class="hero">
+<div class="container">
+<div class="breadcrumb">
+<a href="<?php echo esc_url(home_url('/le-clee/')); ?>">Le CLÉE</a>
+<span>/</span>
+<span>Nos Actions</span>
+</div>
+<h1 class="hero-title">Nos Actions</h1>
+<p class="hero-description">
+                                Découvrez les différentes initiatives que nous mettons en œuvre pour favoriser 
+                                la relation école-entreprise
+                        </p>
+</div>
+</section>
+<?php get_header(); ?>
+<?php clee_breadcrumb([
   ['title' => 'Accueil', 'url' => home_url('/')],
   ['title' => 'Le CLEE', 'url' => home_url('/le-clee/')],
   ['title' => 'Nos Actions']

@@ -1,5 +1,25 @@
 <?php get_header(); ?>
 <?php clee_breadcrumb([
+    ['title' => 'Accueil', 'url' => home_url('/')],
+    ['title' => 'Jeunes & Familles', 'url' => home_url('/jeunes-familles/')],
+    ['title' => 'Orientation & Insertion']
+]); ?>
+<section class="hero">
+<div class="container">
+<div class="breadcrumb">
+<a href="<?php echo esc_url(home_url('/')); ?>">Accueil</a>
+<span>/</span>
+<a href="<?php echo esc_url(home_url('/jeunes-familles/')); ?>">Jeunes &amp; Familles</a>
+<span>/</span>
+<span>Conseils Orientation &amp; Insertion</span>
+</div>
+<h1 class="hero-title">Conseils Orientation &amp; Insertion</h1>
+<p class="hero-description">
+                                Tous les conseils pratiques pour réussir votre parcours professionnel et votre insertion
+                        </p>
+</div>
+<?php get_header(); ?>
+<?php clee_breadcrumb([
   ['title' => 'Accueil', 'url' => home_url('/')],
   ['title' => 'Jeunes & Familles', 'url' => home_url('/jeunes-familles/')],
   ['title' => 'Orientation & Insertion']
