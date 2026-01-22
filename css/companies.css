@@ -2,6 +2,13 @@
    PAGE-SPECIFIC STYLES - COMPANIES PAGE
 ======================================== */
 
+:root {
+  --color-industrie: #176ea1;
+  --color-tertiaire: #c63634;
+  --color-numerique: #589842;
+  --color-batiment: #d8861b;
+}
+
 /* ========================================
    HERO SECTION - ENTREPRISES
 ======================================== */
@@ -243,6 +250,38 @@
   transform: translateY(-2px);
 }
 
+.filtre-btn[data-filter="industrie"],
+.filtre-btn[data-filter="industrie"]:hover,
+.filtre-btn[data-filter="industrie"].active {
+  background-color: var(--color-industrie);
+  border-color: var(--color-industrie);
+  color: #ffffff;
+}
+
+.filtre-btn[data-filter="numerique"],
+.filtre-btn[data-filter="numerique"]:hover,
+.filtre-btn[data-filter="numerique"].active {
+  background-color: var(--color-numerique);
+  border-color: var(--color-numerique);
+  color: #ffffff;
+}
+
+.filtre-btn[data-filter="tertiaire"],
+.filtre-btn[data-filter="tertiaire"]:hover,
+.filtre-btn[data-filter="tertiaire"].active {
+  background-color: var(--color-tertiaire);
+  border-color: var(--color-tertiaire);
+  color: #ffffff;
+}
+
+.filtre-btn[data-filter="batiment"],
+.filtre-btn[data-filter="batiment"]:hover,
+.filtre-btn[data-filter="batiment"].active {
+  background-color: var(--color-batiment);
+  border-color: var(--color-batiment);
+  color: #ffffff;
+}
+
 .partenaires-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -292,6 +331,26 @@
   font-size: 12px;
   font-weight: 600;
   color: var(--primary-800);
+}
+
+.partenaire-card[data-sector="industrie"] .partenaire-badge {
+  background: var(--color-industrie);
+  color: #ffffff;
+}
+
+.partenaire-card[data-sector="numerique"] .partenaire-badge {
+  background: var(--color-numerique);
+  color: #ffffff;
+}
+
+.partenaire-card[data-sector="tertiaire"] .partenaire-badge {
+  background: var(--color-tertiaire);
+  color: #ffffff;
+}
+
+.partenaire-card[data-sector="batiment"] .partenaire-badge {
+  background: var(--color-batiment);
+  color: #ffffff;
 }
 
 .partenaire-content {

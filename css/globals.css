@@ -1,5 +1,5 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600&family=Inter:wght@400;600;700&family=Roboto:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kodchasan:wght@200;300;400;500;600;700&display=swap");
 
 /* ========================================
    CSS VARIABLES (Design Tokens)
@@ -31,7 +31,7 @@
   --grey-50: rgba(249, 250, 251, 1);
   
   /* Typography - Navbar */
-  --navbar-text-font-family: "Roboto", Helvetica, Arial, sans-serif;
+  --navbar-text-font-family: "Kodchasan", Helvetica, Arial, sans-serif;
   --navbar-text-font-weight: 600;
   --navbar-text-font-size: 18px;
   --navbar-text-letter-spacing: 0px;
@@ -39,7 +39,7 @@
   --navbar-text-font-style: normal;
   
   /* Typography - Text Normal */
-  --text-normal-font-family: "Roboto", Helvetica, Arial, sans-serif;
+  --text-normal-font-family: "Kodchasan", Helvetica, Arial, sans-serif;
   --text-normal-font-weight: 400;
   --text-normal-font-size: 32px;
   --text-normal-letter-spacing: 0px;
@@ -47,7 +47,7 @@
   --text-normal-font-style: normal;
   
   /* Typography - Titre */
-  --titre-font-family: "Barlow Condensed", Helvetica, Arial, sans-serif;
+  --titre-font-family: "Kodchasan", Helvetica, Arial, sans-serif;
   --titre-font-weight: 500;
   --titre-font-size: 48px;
   --titre-letter-spacing: 0px;
@@ -55,7 +55,7 @@
   --titre-font-style: normal;
   
   /* Typography - Button Giant */
-  --button-font-giant-font-family: "Inter", Helvetica, Arial, sans-serif;
+  --button-font-giant-font-family: "Kodchasan", Helvetica, Arial, sans-serif;
   --button-font-giant-font-weight: 600;
   --button-font-giant-font-size: 18px;
   --button-font-giant-letter-spacing: 0px;
@@ -63,7 +63,7 @@
   --button-font-giant-font-style: normal;
   
   /* Typography - H1 */
-  --text-font-h1-font-family: "Inter", Helvetica, Arial, sans-serif;
+  --text-font-h1-font-family: "Kodchasan", Helvetica, Arial, sans-serif;
   --text-font-h1-font-weight: 600;
   --text-font-h1-font-size: 48px;
   --text-font-h1-letter-spacing: 0px;
@@ -71,7 +71,7 @@
   --text-font-h1-font-style: normal;
   
   /* Typography - Body 1 */
-  --text-font-b1-body-font-family: "Inter", Helvetica, Arial, sans-serif;
+  --text-font-b1-body-font-family: "Kodchasan", Helvetica, Arial, sans-serif;
   --text-font-b1-body-font-weight: 400;
   --text-font-b1-body-font-size: 16px;
   --text-font-b1-body-letter-spacing: 0px;
@@ -79,7 +79,7 @@
   --text-font-b1-body-font-style: normal;
   
   /* Typography - H5 */
-  --text-font-h5-font-family: "Inter", Helvetica, Arial, sans-serif;
+  --text-font-h5-font-family: "Kodchasan", Helvetica, Arial, sans-serif;
   --text-font-h5-font-weight: 600;
   --text-font-h5-font-size: 24px;
   --text-font-h5-letter-spacing: 0px;
@@ -292,19 +292,20 @@ button {
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 8px;
+  gap: 4px;
   align-items: center;
 }
 
 .nav-link {
   font-family: var(--navbar-text-font-family);
   font-weight: var(--navbar-text-font-weight);
-  font-size: var(--navbar-text-font-size);
+  font-size: 16px;
   color: var(--primary-700);
   text-decoration: none;
-  padding: 12px 20px;
+  padding: 10px 14px;
   border-radius: 8px;
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 .nav-link:hover {
@@ -545,7 +546,7 @@ button {
    RESPONSIVE DESIGN
 ======================================== */
 
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .menu-toggle {
     display: flex;
     z-index: calc(var(--z-fixed) + 1);

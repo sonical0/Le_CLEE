@@ -1,5 +1,25 @@
 <?php get_header(); ?>
 <?php clee_breadcrumb([
+    ['title' => 'Accueil', 'url' => home_url('/')],
+    ['title' => 'Jeunes & Familles', 'url' => home_url('/jeunes-familles/')],
+    ['title' => 'Vie du CLÉE pour les élèves']
+]); ?>
+<section class="hero">
+<div class="container">
+<div class="breadcrumb">
+<a href="<?php echo esc_url(home_url('/')); ?>">Accueil</a>
+<span>/</span>
+<a href="<?php echo esc_url(home_url('/jeunes-familles/')); ?>">Jeunes &amp; Familles</a>
+<span>/</span>
+<span>Vie du CLÉE pour les Élèves</span>
+</div>
+<h1 class="hero-title">Vie du CLÉE pour les Élèves</h1>
+<p class="hero-description">
+                                Découvrez les événements, projets et initiatives portés par les élèves de notre réseau
+                        </p>
+</div>
+<?php get_header(); ?>
+<?php clee_breadcrumb([
   ['title' => 'Accueil', 'url' => home_url('/')],
   ['title' => 'Jeunes & Familles', 'url' => home_url('/jeunes-familles/')],
   ['title' => 'Vie du CLEE pour les élèves']

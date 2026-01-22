@@ -11,6 +11,7 @@ Les **6 pages principales** du site :
 4. Établissements & Formations    → establishments.html
 5. Jeunes & Familles              → jeunes-familles.html
 6. Vie du CLEE                    → vie-clee.html
+7. Connexion                      → connexion.html (lien spécial dans la navbar)
 ```
 
 ## Arborescence Complète des Pages
@@ -33,9 +34,12 @@ pages/
 │
 ├── jeunes-familles.html            # PAGE PRINCIPALE : Jeunes & Familles
 │
-└── vie-clee.html                   # PAGE PRINCIPALE : Vie du CLEE
-    ├── vie-clee-eleves.html           # Sous-page : Vie du CLEE - Élèves
-    └── agenda.html                    # Sous-page : Agenda/Événements
+├── vie-clee.html                   # PAGE PRINCIPALE : Vie du CLEE
+│   ├── vie-clee-eleves.html           # Sous-page : Vie du CLEE - Élèves
+│   └── agenda.html                    # Sous-page : Agenda/Événements
+│
+├── connexion.html                  # PAGE PRINCIPALE : Connexion (authentification)
+└── inscription.html                # Sous-page : Inscription (créer un compte)
 ```
 
 ## Résumé des Pages
@@ -49,6 +53,7 @@ pages/
 | 4 | **Établissements & Formations** | `establishments.html` | Annuaire des établissements et formations |
 | 5 | **Jeunes & Familles** | `jeunes-familles.html` | Ressources pour les jeunes et les familles |
 | 6 | **Vie du CLEE** | `vie-clee.html` | Actualités, événements et vie de la communauté |
+| 7 | **Connexion** | `connexion.html` | Page de connexion à l'espace personnel |
 
 ### Sous-pages (Non présentes dans la navigation principale)
 
@@ -70,16 +75,22 @@ pages/
 |------|---------|-------------|
 | Vie du CLEE - Élèves | `vie-clee-eleves.html` | Vie étudiante et animations spécifiques |
 | Agenda | `agenda.html` | Calendrier des événements (peut-être intégré dans vie-clee.html) |
-
-#### Page Utilitaire
+Rattachées à "Connexion"
 | Page | Fichier | Description |
 |------|---------|-------------|
-| Contact | `contact.html` | Formulaire de contact (accessible depuis footer et CTAs)
+| Inscription | `inscription.html` | Formulaire d'inscription pour créer un compte |
+
+#### Pages Utilitaires
+| Page | Fichier | Description |
+|------|---------|-------------|
+| Contact | `contact.html` | Formulaire de contact (accessible depuis footer et CTAs) |
+| Mentions légales | `mentions-legales.html` | Mentions légales et conditions d'utilisation |
 
 ---
 
-**Total : 14 pages HTML**
-- 6 pages principales (dans la navigation)
-- 7 sous-pages (accessibles depuis les pages principales)
+**Total : 17 pages HTML**
+- 7 pages principales (dans la navigation)
+- 8 sous-pages (accessibles depuis les pages principales)
+- 2 pages utilitaires (contact et mentions légales - accessiblesges principales)
 - 1 page utilitaire (contact - accessible depuis footer/CTAs)
 
