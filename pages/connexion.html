@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Connexion à votre espace CLEE Bordeaux Avenir">
+    <title>Connexion - CLEE Bordeaux Avenir</title>
+    <link rel="stylesheet" href="../css/globals.css">
+    <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="navigation" role="navigation" aria-label="Navigation principale">
+            <div class="container">
+                <a href="index.html" class="logo" aria-label="Retour à l'accueil">
+                    <img src="../assets/images/logo-clee.png" alt="CLEE Bordeaux Avenir">
+                </a>
+                
+                <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <ul class="nav-links">
+                    <li><a href="le-clee.html" class="nav-link">Le CLEE</a></li>
+                    <li><a href="companies.html" class="nav-link">Entreprises & Partenaires</a></li>
+                    <li><a href="establishments.html" class="nav-link">Établissements & Formations</a></li>
+                    <li><a href="jeunes-familles.html" class="nav-link">Jeunes & Familles</a></li>
+                    <li><a href="vie-clee.html" class="nav-link">Vie du CLEE</a></li>
+                    <li><a href="connexion.html" class="nav-link nav-link-auth">Connexion</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="auth-page">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-card">
+                    <div class="auth-header">
+                        <h1 class="auth-title">Connexion</h1>
+                        <p class="auth-subtitle">Accédez à votre espace personnel</p>
+                    </div>
+
+                    <form class="auth-form" id="loginForm">
+                        <div class="form-group">
+                            <label for="email" class="form-label">Adresse e-mail</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                class="form-input" 
+                                placeholder="exemple@email.com"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password" class="form-label">Mot de passe</label>
+                            <input 
+                                type="password" 
+                                id="password" 
+                                name="password" 
+                                class="form-input" 
+                                placeholder="••••••••"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="remember">
+                                <span>Se souvenir de moi</span>
+                            </label>
+                            <a href="#" class="auth-link">Mot de passe oublié ?</a>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large btn-full">
+                            <span class="btn-text">Se connecter</span>
+                        </button>
+
+                        <div class="auth-divider">
+                            <span>ou</span>
+                        </div>
+
+                        <div class="auth-footer">
+                            <p>Pas encore de compte ? <a href="inscription.html" class="auth-link">S'inscrire</a></p>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="auth-info">
+                    <h2 class="info-title">Pourquoi créer un compte ?</h2>
+                    <ul class="info-list">
+                        <li>
+                            <strong>Accès aux offres</strong>
+                            <p>Consultez les offres de stages et d'alternance en exclusivité</p>
+                        </li>
+                        <li>
+                            <strong>Gestion de profil</strong>
+                            <p>Créez et gérez votre profil professionnel</p>
+                        </li>
+                        <li>
+                            <strong>Événements</strong>
+                            <p>Inscrivez-vous aux événements et forums organisés par le CLEE</p>
+                        </li>
+                        <li>
+                            <strong>Réseau</strong>
+                            <p>Connectez-vous avec des entreprises et des établissements partenaires</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">CLEE Bordeaux Avenir</h3>
+                    <p class="footer-text">
+                        Renforcer les liens entre l'éducation et l'économie pour construire l'avenir de Bordeaux.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="le-clee.html">Le CLEE</a></li>
+                        <li><a href="companies.html">Entreprises</a></li>
+                        <li><a href="establishments.html">Établissements</a></li>
+                        <li><a href="jeunes-familles.html">Jeunes & Familles</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Informations</h4>
+                    <ul class="footer-links">
+                        <li><a href="agenda.html">Agenda</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="mentions-legales.html">Mentions légales</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Contact</h4>
+                    <ul class="footer-contact">
+                        <li>123 Avenue de Bordeaux</li>
+                        <li>33000 Bordeaux</li>
+                        <li>contact@clee-bordeaux.fr</li>
+                        <li>05 56 00 00 00</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 CLEE Bordeaux Avenir. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/common.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+</html>

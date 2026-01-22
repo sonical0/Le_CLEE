@@ -45,6 +45,12 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('clee-contact', get_template_directory_uri() . '/assets/js/contact.js', ['clee-common'], '1.0', true);
   }
 
+  // Authentication pages
+  if (is_page(['connexion', 'inscription'])) {
+    wp_enqueue_style('clee-auth', get_template_directory_uri() . '/assets/css/auth.css', ['clee-globals'], '1.0');
+    wp_enqueue_script('clee-auth', get_template_directory_uri() . '/assets/js/auth.js', ['clee-common'], '1.0', true);
+  }
+
   // Groups reusing the same stylesheet
   $uses_le_clee_css = ['le-clee', 'bureau-membres', 'nos-actions', 'documents-officiels', 'mentions-legales'];
   if (is_page($uses_le_clee_css)) {
