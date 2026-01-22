@@ -20,35 +20,35 @@
 <h2 class="section-title">Pourquoi devenir partenaire ?</h2>
 <ul class="benefits-list">
 <li class="benefit-item">
-<div class="benefit-icon">💼</div>
+<div class="benefit-icon benefit-icon-1"><i class="fa-solid fa-briefcase"></i></div>
 <div class="benefit-text">
 <h3 class="benefit-title">Contribuer à la formation des jeunes</h3>
 <p>Participez activement à la transmission de savoirs et de compétences</p>
 </div>
 </li>
 <li class="benefit-item">
-<div class="benefit-icon">🔍</div>
+<div class="benefit-icon benefit-icon-2"><i class="fa-solid fa-magnifying-glass"></i></div>
 <div class="benefit-text">
 <h3 class="benefit-title">Repérer des talents</h3>
 <p>Identifiez et recrutez les futurs talents de votre secteur</p>
 </div>
 </li>
 <li class="benefit-item">
-<div class="benefit-icon">⭐</div>
+<div class="benefit-icon benefit-icon-3"><i class="fa-solid fa-star"></i></div>
 <div class="benefit-text">
 <h3 class="benefit-title">Valoriser vos métiers</h3>
 <p>Faites découvrir votre secteur d'activité et ses opportunités</p>
 </div>
 </li>
 <li class="benefit-item">
-<div class="benefit-icon">🤝</div>
+<div class="benefit-icon benefit-icon-4"><i class="fa-solid fa-handshake"></i></div>
 <div class="benefit-text">
 <h3 class="benefit-title">Participer à un réseau local</h3>
 <p>Intégrez un réseau d'entreprises engagées sur le territoire</p>
 </div>
 </li>
 <li class="benefit-item">
-<div class="benefit-icon">📈</div>
+<div class="benefit-icon benefit-icon-5"><i class="fa-solid fa-chart-line"></i></div>
 <div class="benefit-text">
 <h3 class="benefit-title">Soutenir l'attractivité de votre filière</h3>
 <p>Contribuez au développement et à la visibilité de votre secteur</p>
