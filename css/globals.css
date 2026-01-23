@@ -700,6 +700,7 @@ button {
   margin: 0 auto;
   position: relative;
   z-index: 1;
+  padding-top: 20px;
 }
 
 .hero-title {
