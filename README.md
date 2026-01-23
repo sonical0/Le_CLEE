@@ -74,8 +74,9 @@ Le projet utilise une architecture en cascade qui élimine **~40% de code dupliq
 ```
 CLEE-Bordeaux-Site/
 │
-├── pages/                          # 17 pages HTML statiques
-│   ├── index.html                  # Accueil
+├── index.html                      # PAGE PRINCIPALE : Accueil (racine du projet)
+│
+├── pages/                          # 16 pages HTML statiques
 │   ├── le-clee.html                # Présentation du CLEE
 │   ├── companies.html              # Entreprises & Partenaires
 │   ├── establishments.html         # Établissements & Formations
@@ -115,19 +116,6 @@ CLEE-Bordeaux-Site/
 │
 ├── assets/                       # Ressources médias
 │   └── images/                    # Logos, illustrations, photos
-│
-└── php/                          # Thème WordPress
-    └── clee-bordeaux-theme/
-        ├── functions.php          # Enqueuing conditionnel des assets
-        ├── header.php             # Template header WordPress
-        ├── footer.php             # Template footer WordPress
-        ├── front-page.php         # Template page d'accueil
-        ├── page-*.php             # Templates pages (× 13)
-        ├── style.css              # Stylesheet requis par WordPress
-        ├── README.txt             # Instructions d'installation
-        └── assets/                # Copie miroir de css/ + js/ (sync requis)
-            ├── css/
-            ├── js/
             └── images/
 ```
 
