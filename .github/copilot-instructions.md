@@ -2,7 +2,8 @@
 
 ## Project Overview
 Multi-page static website for CLEE Bordeaux Avenir (school-business partnership organization) with **modular architecture**:
-- Static HTML pages in `pages/` directory (17 pages total)
+- Index page (accueil) at project root: `index.html`
+- Static HTML pages in `pages/` directory (16 pages)
 - Shared and page-specific stylesheets in `css/` directory
 - Shared and page-specific JavaScript in `js/` directory
 
@@ -13,7 +14,8 @@ The codebase uses a **modular architecture** to eliminate code duplication throu
 ### Project Structure
 ```
 CLEE-Bordeaux-Site/
-├── pages/           # Static HTML pages (17 pages)
+├── index.html       # Homepage at root for easy deployment (Vercel, Netlify, etc.)
+├── pages/           # Static HTML pages (16 pages)
 ├── css/             # Stylesheets (globals + page-specific)
 ├── js/              # JavaScript (common.js + page-specific)
 └── assets/          # Images and media files
@@ -48,7 +50,12 @@ js/
 
 **Critical Rules for Static HTML**:
 ```html
-<!-- Every HTML page MUST include -->
+<!-- index.html (at root) includes -->
+<link rel="stylesheet" href="css/globals.css">
+<link rel="stylesheet" href="css/home.css">
+<script src="js/common.js"></script>
+
+<!-- Pages in pages/ directory include -->
 <link rel="stylesheet" href="../css/globals.css">
 <link rel="stylesheet" href="../css/[page-specific].css">
 <script src="../js/common.js"></script>
@@ -57,7 +64,8 @@ js/
 
 ### Page Hierarchy (17 pages total)
 See [PAGES-STRUCTURE.md](PAGES-STRUCTURE.md) for complete structure:
-- **6 main navigation pages**: index, le-clee, companies, establishments, jeunes-familles, vie-clee
+- **1 homepage at root**: index.html (Accueil)
+- **6 main navigation pages**: le-clee, companies, establishments, jeunes-familles, vie-clee, connexion
 - **9 sub-pages**: bureau-membres, nos-actions, documents-officiels, orientation-insertion, pfmp, vie-clee-eleves, agenda, connexion, inscription
 - **2 utility pages**: contact (accessible via footer/CTAs, not in main nav), mentions-legales (legal notice in footer)
 - All pages share identical navigation header/footer structure
@@ -123,7 +131,11 @@ document.addEventListener('DOMContentLoaded', () => {
    - Follow IIFE pattern
    - Initialize in DOMContentLoaded
 
-4. **File paths**: All HTML files in `pages/` reference assets with `../css/` and `../js/`
+4. **File paths**: 
+   - `index.html` at root references: `css/`, `js/`, `assets/`
+   - All HTML files in `pages/` reference assets with `../css/`, `../js/`, `../assets/`
+   - Links from `index.html` to pages: `pages/[page-name].html`
+   - Links from pages to index: `../index.html`
 
 ## Responsive Design
 - Desktop: 1024px+

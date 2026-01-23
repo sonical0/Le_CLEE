@@ -5,21 +5,24 @@
 Les **6 pages principales** du site :
 
 ```
-1. Accueil                        → index.html
-2. Le CLEE                        → le-clee.html
-3. Entreprises & Partenaires      → companies.html
-4. Établissements & Formations    → establishments.html
-5. Jeunes & Familles              → jeunes-familles.html
-6. Vie du CLEE                    → vie-clee.html
-7. Connexion                      → connexion.html (lien spécial dans la navbar)
+1. Accueil                        → index.html (racine du projet)
+2. Le CLÉE                        → pages/le-clee.html
+3. Entreprises & Partenaires      → pages/companies.html
+4. Établissements & Formations    → pages/establishments.html
+5. Jeunes & Familles              → pages/jeunes-familles.html
+6. Vie du CLÉE                    → pages/vie-clee.html
+7. Connexion                      → pages/connexion.html (lien spécial dans la navbar)
 ```
+
+**Note importante** : Le fichier `index.html` est situé à la racine du projet pour faciliter le déploiement sur les plateformes comme Vercel, Netlify, GitHub Pages, etc. Toutes les autres pages HTML sont dans le répertoire `pages/`.
 
 ## Arborescence Complète des Pages
 
 ```
+./
+└── index.html                      # PAGE PRINCIPALE : Accueil (racine du projet)
+
 pages/
-│
-├── index.html                      # PAGE PRINCIPALE : Accueil
 │
 ├── le-clee.html                    # PAGE PRINCIPALE : Le CLEE
 │   ├── bureau-membres.html            # Sous-page : Bureau et membres
@@ -39,7 +42,9 @@ pages/
 │   └── agenda.html                    # Sous-page : Agenda/Événements
 │
 ├── connexion.html                  # PAGE PRINCIPALE : Connexion (authentification)
-└── inscription.html                # Sous-page : Inscription (créer un compte)
+├── inscription.html                # Sous-page : Inscription (créer un compte)
+├── contact.html                    # Page utilitaire : Formulaire de contact
+└── mentions-legales.html           # Page utilitaire : Mentions légales
 ```
 
 ## Résumé des Pages
@@ -47,13 +52,13 @@ pages/
 ### Pages Principales (Navigation)
 | # | Page | Fichier | Description |
 |---|------|---------|-------------|
-| 1 | **Accueil** | `index.html` | Page d'accueil du site |
-| 2 | **Le CLEE** | `le-clee.html` | Présentation du CLEE, sa mission et ses objectifs |
-| 3 | **Entreprises & Partenaires** | `companies.html` | Espace dédié aux entreprises partenaires |
-| 4 | **Établissements & Formations** | `establishments.html` | Annuaire des établissements et formations |
-| 5 | **Jeunes & Familles** | `jeunes-familles.html` | Ressources pour les jeunes et les familles |
-| 6 | **Vie du CLEE** | `vie-clee.html` | Actualités, événements et vie de la communauté |
-| 7 | **Connexion** | `connexion.html` | Page de connexion à l'espace personnel |
+| 1 | **Accueil** | `index.html` (racine) | Page d'accueil du site |
+| 2 | **Le CLÉE** | `pages/le-clee.html` | Présentation du CLÉE, sa mission et ses objectifs |
+| 3 | **Entreprises & Partenaires** | `pages/companies.html` | Espace dédié aux entreprises partenaires |
+| 4 | **Établissements & Formations** | `pages/establishments.html` | Annuaire des établissements et formations |
+| 5 | **Jeunes & Familles** | `pages/jeunes-familles.html` | Ressources pour les jeunes et les familles |
+| 6 | **Vie du CLÉE** | `pages/vie-clee.html` | Actualités, événements et vie de la communauté |
+| 7 | **Connexion** | `pages/connexion.html` | Page de connexion à l'espace personnel |
 
 ### Sous-pages (Non présentes dans la navigation principale)
 
