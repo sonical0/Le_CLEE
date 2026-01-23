@@ -3,8 +3,9 @@
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)](https://developer.mozilla.org/fr/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)](https://developer.mozilla.org/fr/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)](https://developer.mozilla.org/fr/docs/Web/JavaScript)
-[![WordPress](https://img.shields.io/badge/WordPress-21759B?style=flat&logo=wordpress&logoColor=white)](https://wordpress.org/)
 [![Responsive](https://img.shields.io/badge/Responsive-Mobile%20First-blue)](https://web.dev/responsive-web-design-basics/)
+
+> **Note importante** : Ce projet se concentre désormais exclusivement sur le développement statique HTML/CSS/JS. La version WordPress (anciennement dans `php/`) a été retirée pour simplifier la maintenance et améliorer les performances. Le site est maintenant déployable sur n'importe quel serveur web ou hébergement statique (GitHub Pages, Netlify, Vercel, etc.).
 
 ## À propos du projet
 
@@ -66,24 +67,6 @@
 
 ## Architecture technique
 
-### Spécificité majeure : **Double implémentation**
-
-Ce projet est unique car il propose **deux versions synchronisées** du même site :
-
-```
-VERSION STATIQUE (HTML/CSS/JS pur)
-→ pages/ + css/ + js/
-→ Prototypage rapide, performance maximale
-→ Déploiement sur n'importe quel serveur web
-
-VERSION WORDPRESS (Thème custom)
-→ php/clee-bordeaux-theme/
-→ Gestion de contenu dynamique via CMS
-→ Auto-converti depuis la version statique
-```
-
-**Avantage** : Développement sur la version statique (rapide, léger), puis synchronisation automatique vers WordPress pour la production.
-
 ### Architecture modulaire : Globals + Spécifiques
 
 Le projet utilise une architecture en cascade qui élimine **~40% de code dupliqué** :
@@ -91,21 +74,24 @@ Le projet utilise une architecture en cascade qui élimine **~40% de code dupliq
 ```
 CLEE-Bordeaux-Site/
 │
-├── pages/                          # 14 pages HTML statiques
+├── pages/                          # 17 pages HTML statiques
 │   ├── index.html                  # Accueil
 │   ├── le-clee.html                # Présentation du CLEE
 │   ├── companies.html              # Entreprises & Partenaires
 │   ├── establishments.html         # Établissements & Formations
 │   ├── jeunes-familles.html        # Jeunes & Familles
 │   ├── vie-clee.html               # Vie du CLEE
-│   ├── bureau-membres.html        # Sous-page : Bureau et membres
-│   ├── nos-actions.html           # Sous-page : Nos actions
-│   ├── documents-officiels.html   # Sous-page : Documents officiels
-│   ├── orientation-insertion.html # Sous-page : Orientation & insertion
-│   ├── pfmp.html                  # Sous-page : Périodes de Formation en Milieu Professionnel
-│   ├── vie-clee-eleves.html       # Sous-page : Vie du CLEE - Élèves
-│   ├── agenda.html                # Sous-page : Agenda/Événements
-│   └── contact.html               # Formulaire de contact
+│   ├── bureau-membres.html         # Sous-page : Bureau et membres
+│   ├── nos-actions.html            # Sous-page : Nos actions
+│   ├── documents-officiels.html    # Sous-page : Documents officiels
+│   ├── orientation-insertion.html  # Sous-page : Orientation & insertion
+│   ├── pfmp.html                   # Sous-page : PFMP
+│   ├── vie-clee-eleves.html        # Sous-page : Vie du CLEE - Élèves
+│   ├── agenda.html                 # Sous-page : Agenda/Événements
+│   ├── connexion.html              # Authentification : Connexion
+│   ├── inscription.html            # Authentification : Inscription
+│   ├── contact.html                # Formulaire de contact
+│   └── mentions-legales.html       # Mentions légales
 │
 ├── css/                          # Stylesheets modulaires
 │   ├── globals.css                # PARTAGÉ : Variables CSS + composants (header, footer, boutons)
@@ -116,7 +102,8 @@ CLEE-Bordeaux-Site/
 │   ├── le-clee.css                # Le CLEE (partagé par 4 pages)
 │   ├── vie-clee.css               # Vie du CLEE
 │   ├── agenda.css                 # Agenda/Événements
-│   └── contact.css                # Contact
+│   ├── contact.css                # Contact
+│   └── auth.css                   # Connexion/Inscription (partagé)
 │
 ├── js/                           # Scripts modulaires
 │   ├── common.js                  # PARTAGÉ : Modules (navigation, animations, scroll)
