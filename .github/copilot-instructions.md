@@ -246,3 +246,53 @@ When modifying pages, verify:
 - CSS shared caching improves load times across pages
 - All animations use GPU acceleration (transform/opacity)
 - WordPress theme mirrors all static functionality with dynamic routing
+
+## Writing Style & Formatting Rules
+
+### Emojis Usage Policy
+**CRITICAL**: Do NOT use emojis in documentation, code comments, or commit messages unless explicitly requested by the user.
+
+**Reasoning**:
+- Emojis add visual clutter without adding meaningful information
+- Professional documentation should be text-based for accessibility and searchability
+- Emojis render inconsistently across different platforms and terminals
+- They make diffs harder to read in version control
+- Screen readers may announce emojis in distracting ways
+
+**Exceptions** (only when explicitly requested):
+- Marketing or user-facing content where visual appeal is a priority
+- Social media posts or casual communication channels
+- User explicitly asks to add emojis for decoration
+
+**Instead of emojis, use**:
+- Clear, descriptive text
+- Bold or italic formatting for emphasis
+- Proper section headers with Markdown syntax
+- Bullet points and numbered lists for structure
+- Code blocks and syntax highlighting for technical content
+
+**Examples**:
+
+❌ **Bad** (Don't do this):
+```markdown
+## 🚀 Features
+- ✅ Fast performance
+- 🎨 Beautiful design
+```
+
+✅ **Good** (Do this):
+```markdown
+## Features
+- Fast performance
+- Beautiful design
+```
+
+This rule applies to:
+- README.md files
+- Code comments
+- Git commit messages
+- Documentation files (.md, .txt)
+- Inline comments in HTML/CSS/JS
+- AI agent responses
+
+**Note**: Badges (like ![Build Status]) and icons in UI/UX design are acceptable as they serve functional purposes.

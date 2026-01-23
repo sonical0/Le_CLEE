@@ -7,6 +7,9 @@ add_action('after_setup_theme', function () {
 
 // Enqueue CSS/JS
 add_action('wp_enqueue_scripts', function () {
+  // Font Awesome
+  wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css', [], '6.5.1');
+  
   // Global
   wp_enqueue_style('clee-globals', get_template_directory_uri() . '/assets/css/globals.css', [], '1.0');
   wp_enqueue_script('clee-common', get_template_directory_uri() . '/assets/js/common.js', [], '1.0', true);
@@ -45,8 +48,14 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('clee-contact', get_template_directory_uri() . '/assets/js/contact.js', ['clee-common'], '1.0', true);
   }
 
+  // Authentication pages
+  if (is_page(['connexion', 'inscription'])) {
+    wp_enqueue_style('clee-auth', get_template_directory_uri() . '/assets/css/auth.css', ['clee-globals'], '1.0');
+    wp_enqueue_script('clee-auth', get_template_directory_uri() . '/assets/js/auth.js', ['clee-common'], '1.0', true);
+  }
+
   // Groups reusing the same stylesheet
-  $uses_le_clee_css = ['le-clee', 'bureau-membres', 'nos-actions', 'documents-officiels'];
+  $uses_le_clee_css = ['le-clee', 'bureau-membres', 'nos-actions', 'documents-officiels', 'mentions-legales'];
   if (is_page($uses_le_clee_css)) {
     wp_enqueue_style('clee-le-clee', get_template_directory_uri() . '/assets/css/le-clee.css', ['clee-globals'], '1.0');
   }

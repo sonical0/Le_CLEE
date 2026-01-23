@@ -2,13 +2,20 @@
    PAGE-SPECIFIC STYLES - COMPANIES PAGE
 ======================================== */
 
+:root {
+  --color-industrie: #176ea1;
+  --color-tertiaire: #c63634;
+  --color-numerique: #589842;
+  --color-batiment: #d8861b;
+}
+
 /* ========================================
    HERO SECTION - ENTREPRISES
 ======================================== */
 
 .hero-entreprises {
-  padding-top: 140px;
-  padding-bottom: 60px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   background: linear-gradient(135deg, var(--primary-800) 0%, var(--primary-600) 100%);
   color: #ffffff;
   text-align: center;
@@ -89,19 +96,42 @@
   min-width: 56px;
   width: 56px;
   height: 56px;
-  background: linear-gradient(135deg, var(--primary-800), var(--primary-600));
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
   flex-shrink: 0;
   transition: all 0.3s ease;
+  color: white;
+}
+
+.benefit-icon i {
+  font-size: 24px;
+}
+
+.benefit-icon-1 {
+  background: #d8861b;
+}
+
+.benefit-icon-2 {
+  background: #176ea1;
+}
+
+.benefit-icon-3 {
+  background: #589842;
+}
+
+.benefit-icon-4 {
+  background: #c63634;
+}
+
+.benefit-icon-5 {
+  background: #d8861b;
 }
 
 .benefit-item:hover .benefit-icon {
   transform: translateY(-4px);
-  box-shadow: var(--400);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .benefit-text {
@@ -243,6 +273,38 @@
   transform: translateY(-2px);
 }
 
+.filtre-btn[data-filter="industrie"],
+.filtre-btn[data-filter="industrie"]:hover,
+.filtre-btn[data-filter="industrie"].active {
+  background-color: var(--color-industrie);
+  border-color: var(--color-industrie);
+  color: #ffffff;
+}
+
+.filtre-btn[data-filter="numerique"],
+.filtre-btn[data-filter="numerique"]:hover,
+.filtre-btn[data-filter="numerique"].active {
+  background-color: var(--color-numerique);
+  border-color: var(--color-numerique);
+  color: #ffffff;
+}
+
+.filtre-btn[data-filter="tertiaire"],
+.filtre-btn[data-filter="tertiaire"]:hover,
+.filtre-btn[data-filter="tertiaire"].active {
+  background-color: var(--color-tertiaire);
+  border-color: var(--color-tertiaire);
+  color: #ffffff;
+}
+
+.filtre-btn[data-filter="batiment"],
+.filtre-btn[data-filter="batiment"]:hover,
+.filtre-btn[data-filter="batiment"].active {
+  background-color: var(--color-batiment);
+  border-color: var(--color-batiment);
+  color: #ffffff;
+}
+
 .partenaires-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -292,6 +354,26 @@
   font-size: 12px;
   font-weight: 600;
   color: var(--primary-800);
+}
+
+.partenaire-card[data-sector="industrie"] .partenaire-badge {
+  background: var(--color-industrie);
+  color: #ffffff;
+}
+
+.partenaire-card[data-sector="numerique"] .partenaire-badge {
+  background: var(--color-numerique);
+  color: #ffffff;
+}
+
+.partenaire-card[data-sector="tertiaire"] .partenaire-badge {
+  background: var(--color-tertiaire);
+  color: #ffffff;
+}
+
+.partenaire-card[data-sector="batiment"] .partenaire-badge {
+  background: var(--color-batiment);
+  color: #ffffff;
 }
 
 .partenaire-content {
@@ -486,8 +568,20 @@
 
 .guides-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(6, 1fr);
   gap: 32px;
+}
+
+.guide-card {
+  grid-column: span 2;
+}
+
+.guide-card:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.guide-card:nth-child(5) {
+  grid-column: 4 / span 2;
 }
 
 .guide-card {
@@ -709,7 +803,15 @@
   }
   
   .guides-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .guides-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
   
   .liens-section {
@@ -772,5 +874,57 @@
   
   .filtre-btn {
     width: 100%;
+  }
+}
+
+/* ========================================
+   MEDEF LOGO STYLES
+======================================== */
+
+.pourquoi-medef {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  padding: 40px;
+}
+
+.pourquoi-medef img {
+  width: 280px;
+  height: auto;
+  max-height: 100px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.08));
+  transition: transform 0.3s ease;
+}
+
+.pourquoi-medef img.logo-large {
+  width: 350px;
+  max-height: 120px;
+}
+
+.pourquoi-medef img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+  .pourquoi-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .pourquoi-medef {
+    padding: 20px;
+  }
+  
+  .pourquoi-medef img {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pourquoi-medef img {
+    max-width: 250px;
   }
 }

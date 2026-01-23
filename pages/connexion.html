@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Agenda des événements CLÉE Bordeaux Avenir - Découvrez tous les événements de l'année">
-    <title>CLÉE Bordeaux Avenir - Agenda</title>
+    <meta name="description" content="Connexion à votre espace CLÉE Bordeaux Avenir">
+    <title>Connexion - CLÉE Bordeaux Avenir</title>
     <link rel="stylesheet" href="../css/globals.css">
-    <link rel="stylesheet" href="../css/agenda.css">
+    <link rel="stylesheet" href="../css/auth.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -35,123 +35,87 @@
         </nav>
     </header>
 
-    <!-- Breadcrumb -->
-    <div class="breadcrumb-container">
+    <!-- Main Content -->
+    <main class="auth-page">
         <div class="container">
-            <nav class="breadcrumb" aria-label="Fil d'ariane">
-                <a href="index.html">Accueil</a>
-                <span>/</span>
-                <a href="vie-clee.html">Vie du CLÉE</a>
-                <span>/</span>
-                <span>Agenda</span>
-            </nav>
-        </div>
-    </div>
+            <div class="auth-container">
+                <div class="auth-card">
+                    <div class="auth-header">
+                        <h1 class="auth-title">Connexion</h1>
+                        <p class="auth-subtitle">Accédez à votre espace personnel</p>
+                    </div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1 class="hero-title">Agenda 2026</h1>
-            <p class="hero-description">
-                Découvrez tous les événements, rencontres et activités organisés par le CLÉE Bordeaux Avenir tout au long de l'année.
-            </p>
-        </div>
-    </section>
+                    <form class="auth-form" id="loginForm">
+                        <div class="form-group">
+                            <label for="email" class="form-label">Adresse e-mail</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                class="form-input" 
+                                placeholder="exemple@email.com"
+                                required
+                            >
+                        </div>
 
-    <!-- Filters Section -->
-    <section class="filters-section">
-        <div class="container">
-            <div class="filters-container">
-                <div class="filter-group">
-                    <label for="month-filter" class="filter-label">Mois</label>
-                    <select id="month-filter" class="filter-select">
-                        <option value="all">Tous les mois</option>
-                        <option value="0">Janvier</option>
-                        <option value="1">Février</option>
-                        <option value="2">Mars</option>
-                        <option value="3">Avril</option>
-                        <option value="4">Mai</option>
-                        <option value="5">Juin</option>
-                        <option value="6">Juillet</option>
-                        <option value="7">Août</option>
-                        <option value="8">Septembre</option>
-                        <option value="9">Octobre</option>
-                        <option value="10">Novembre</option>
-                        <option value="11">Décembre</option>
-                    </select>
-                </div>
-                
-                <div class="filter-group">
-                    <label for="type-filter" class="filter-label">Type d'événement</label>
-                    <select id="type-filter" class="filter-select">
-                        <option value="all">Tous les types</option>
-                        <option value="conference">Conférence</option>
-                        <option value="atelier">Atelier</option>
-                        <option value="forum">Forum</option>
-                        <option value="rencontre">Rencontre</option>
-                        <option value="salon">Salon</option>
-                        <option value="autre">Autre</option>
-                    </select>
+                        <div class="form-group">
+                            <label for="password" class="form-label">Mot de passe</label>
+                            <input 
+                                type="password" 
+                                id="password" 
+                                name="password" 
+                                class="form-input" 
+                                placeholder="••••••••"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="remember">
+                                <span>Se souvenir de moi</span>
+                            </label>
+                            <a href="#" class="auth-link">Mot de passe oublié ?</a>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large btn-full">
+                            <span class="btn-text">Se connecter</span>
+                        </button>
+
+                        <div class="auth-divider">
+                            <span>ou</span>
+                        </div>
+
+                        <div class="auth-footer">
+                            <p>Pas encore de compte ? <a href="inscription.html" class="auth-link">S'inscrire</a></p>
+                        </div>
+                    </form>
                 </div>
 
-                <div class="filter-group">
-                    <label for="search-filter" class="filter-label">Rechercher</label>
-                    <input type="text" id="search-filter" class="filter-input" placeholder="Rechercher un événement...">
+                <div class="auth-info">
+                    <h2 class="info-title">Pourquoi créer un compte ?</h2>
+                    <ul class="info-list">
+                        <li>
+                            <strong>Accès aux offres</strong>
+                            <p>Consultez les offres de stages et d'alternance en exclusivité</p>
+                        </li>
+                        <li>
+                            <strong>Gestion de profil</strong>
+                            <p>Créez et gérez votre profil professionnel</p>
+                        </li>
+                        <li>
+                            <strong>Événements</strong>
+                            <p>Inscrivez-vous aux événements et forums organisés par le CLÉE</p>
+                        </li>
+                        <li>
+                            <strong>Réseau</strong>
+                            <p>Connectez-vous avec des entreprises et des établissements partenaires</p>
+                        </li>
+                    </ul>
                 </div>
-
-                <button id="reset-filters" class="btn btn-secondary">
-                    Réinitialiser les filtres
-                </button>
             </div>
         </div>
-    </section>
-
-    <!-- Events Section -->
-    <section class="events-section">
-        <div class="container">
-            <div class="view-toggle">
-                <button class="view-btn active" data-view="calendar">
-                    <span class="icon">📅</span>
-                    Vue calendrier
-                </button>
-                <button class="view-btn" data-view="list">
-                    <span class="icon">📋</span>
-                    Vue liste
-                </button>
-            </div>
-
-            <!-- Calendar View -->
-            <div id="calendar-view" class="calendar-view">
-                <div class="calendar-header">
-                    <button id="prev-month" class="calendar-nav-btn">‹</button>
-                    <h2 id="current-month" class="calendar-month"></h2>
-                    <button id="next-month" class="calendar-nav-btn">›</button>
-                </div>
-                <div id="calendar-grid" class="calendar-grid"></div>
-            </div>
-
-            <!-- List View -->
-            <div id="list-view" class="list-view" style="display: none;">
-                <div id="events-list" class="events-list"></div>
-            </div>
-
-            <!-- No Results Message -->
-            <div id="no-results" class="no-results" style="display: none;">
-                <div class="no-results-icon">🔍</div>
-                <h3>Aucun événement trouvé</h3>
-                <p>Essayez de modifier vos filtres de recherche</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Event Modal -->
-    <div id="event-modal" class="modal">
-        <div class="modal-overlay"></div>
-        <div class="modal-content">
-            <button class="modal-close">×</button>
-            <div id="modal-body"></div>
-        </div>
-    </div>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -166,10 +130,8 @@
                     <p class="footer-description">
                         Le CLÉE Bordeaux Avenir œuvre pour renforcer les liens entre le monde éducatif et professionnel, 
                         accompagner les jeunes dans leur orientation et faciliter leur insertion dans le monde du travail.
-                    </p>                    
-                    <div class="footer-medef-logo">
-                        <img src="../assets/images/medef-gironde.png" alt="MEDEF Gironde - Mouvement des Entreprises de France">
-                    </div>                    
+                    </p>
+                    
                     <div class="footer-medef-logo">
                         <img src="../assets/images/medef-gironde.png" alt="MEDEF Gironde - Mouvement des Entreprises de France">
                     </div>
@@ -231,7 +193,7 @@
     </footer>
 
     <script src="../js/common.js"></script>
-    <script src="../js/agenda.js"></script>
+    <script src="../js/auth.js"></script>
 </body>
 </html>
 
