@@ -40,12 +40,143 @@ body {
 }
 
 /* ========================================
+   ACTUALITÉS SECTION
+======================================== */
+
+.actualites {
+  padding: 100px 0;
+  background-color: var(--grey-50);
+}
+
+.actualites-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 28px;
+  margin-bottom: 40px;
+}
+
+.actualite-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--100);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid var(--grey-100);
+}
+
+.actualite-card:hover {
+  box-shadow: var(--400);
+  transform: translateY(-12px);
+}
+
+.actualite-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: linear-gradient(135deg, var(--primary-800), var(--primary-700));
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  z-index: 2;
+  text-transform: uppercase;
+}
+
+.actualite-image {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--grey-100), var(--grey-50));
+}
+
+.actualite-card.featured .actualite-image {
+  height: 340px;
+}
+
+.actualite-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.actualite-card:hover .actualite-image img {
+  transform: scale(1.08);
+}
+
+.actualite-content {
+  padding: 28px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.actualite-meta {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.actualite-date {
+  color: var(--primary-700);
+}
+
+.actualite-category {
+  background: var(--primary-50);
+  color: var(--primary-700);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.actualite-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary-900);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.actualite-text {
+  font-size: 15px;
+  color: var(--primary-600);
+  line-height: 1.6;
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+.actualite-link {
+  color: var(--primary-700);
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.actualite-link:hover {
+  color: var(--primary-900);
+  gap: 10px;
+}
+
+/* ========================================
    ÉVÉNEMENTS SECTION
 ======================================== */
 
 .evenements-section {
-  padding: 80px 0;
-  background: var(--grey-50);
+  display: none; /* Section cachée temporairement à la demande */
 }
 
 .evenements-grid {
@@ -458,6 +589,19 @@ body {
 ======================================== */
 
 @media (max-width: 1024px) {
+  .actualites-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .actualite-card.featured {
+    grid-column: 1 / -1;
+  }
+
+  .actualite-card.featured .actualite-image {
+    height: 280px;
+  }
+
   .evenement-card.featured {
     grid-column: span 1;
   }
@@ -470,6 +614,23 @@ body {
 }
 
 @media (max-width: 768px) {
+  .actualites {
+    padding: 60px 0;
+  }
+
+  .actualites-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .actualite-card.featured {
+    grid-column: 1;
+  }
+
+  .actualite-image,
+  .actualite-card.featured .actualite-image {
+    height: 240px;
+  }
+
   .hero-vie-clee {
     padding-top: 100px;
     padding-bottom: 50px;
