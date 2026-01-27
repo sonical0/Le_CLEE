@@ -32,11 +32,43 @@
                 </button>
                 
                 <ul class="nav-links">
-                    <li><a href="le-clee.html" class="nav-link">Le CLÉE</a></li>
-                    <li><a href="companies.html" class="nav-link">Entreprises & Partenaires</a></li>
-                    <li><a href="establishments.html" class="nav-link active">Établissements & Formations</a></li>
-                    <li><a href="jeunes-familles.html" class="nav-link">Jeunes & Familles</a></li>
-                    <li><a href="vie-clee.html" class="nav-link">Vie du CLÉE</a></li>                    <li><a href="connexion.html" class="nav-link nav-link-auth">Connexion</a></li>                </ul>
+                    <li class="nav-item nav-dropdown">
+                        <a href="le-clee.html" class="nav-link">Le CLÉE</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="le-clee.html">Qui sommes-nous ?</a></li>
+                            <li><a href="bureau-membres.html">Bureau et membres</a></li>
+                            <li><a href="nos-actions.html">Nos actions</a></li>
+                            <li><a href="documents-officiels.html">Documents officiels</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a href="companies.html" class="nav-link">Entreprises & Partenaires</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="companies.html">Devenir partenaire</a></li>
+                            <li><a href="companies.html#sponsors">Nos sponsors</a></li>
+                            <li><a href="companies.html#actions">Actions pour les entreprises</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="establishments.html" class="nav-link active">Établissements & Formations</a>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a href="jeunes-familles.html" class="nav-link">Jeunes & Familles</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="pfmp.html">Tout savoir sur les stages</a></li>
+                            <li><a href="orientation-insertion.html">Conseils orientation</a></li>
+                            <li><a href="vie-clee-eleves.html">Vie du CLÉE pour les élèves</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a href="vie-clee.html" class="nav-link">Vie du CLÉE</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="agenda.html">Agenda</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="connexion.html" class="nav-link nav-link-auth">Connexion</a>
+                    </li>
             </div>
         </nav>
     </header>
@@ -51,6 +83,33 @@
             </nav>
         </div>
     </div>
+
+    
+    <!-- Filtres par secteur -->
+    <!-- Barre de recherche et filtres formations -->
+    <section class="formations-search-section" id="filtres">
+        <div class="container">
+            <h2 class="section-title">Rechercher une formation</h2>
+            <form class="formations-search-bar" autocomplete="off">
+                <input type="text" id="formation-search-input" placeholder="Rechercher par nom de formation, mot-clé..." aria-label="Recherche formation">
+                <select id="formation-secteur-filter" aria-label="Filtrer par secteur">
+                    <option value="tous">Tous les secteurs</option>
+                    <option value="industrie">Industrie</option>
+                    <option value="numerique">Numérique</option>
+                    <option value="tertiaire">Tertiaire</option>
+                    <option value="batiment">Bâtiment</option>
+                </select>
+                <select id="formation-niveau-filter" aria-label="Filtrer par niveau">
+                    <option value="tous">Tous les niveaux</option>
+                    <option value="CAP">CAP</option>
+                    <option value="BAC PRO">BAC PRO</option>
+                    <option value="BTS">BTS</option>
+                </select>
+                <button type="submit" class="btn btn-primary">Filtrer</button>
+            </form>
+        </div>
+    </section>
+
 
     <!-- Hero Section avec carte interactive -->
     <section class="hero-etablissement">
@@ -157,43 +216,6 @@
         </div>
     </section>
 
-    <!-- Filtres par secteur -->
-    <section class="filtres-secteurs" id="filtres">
-        <div class="container">
-            <h2 class="section-title">Formations par secteur</h2>
-            <div class="secteurs-grid">
-                <button class="secteur-btn active" data-secteur="tous">
-                    <div class="secteur-icon" style="background: linear-gradient(135deg, #314960 0%, #405C76 100%);">📚</div>
-                    <span class="secteur-name">Toutes les formations</span>
-                    <span class="secteur-count">12</span>
-                </button>
-                
-                <button class="secteur-btn" data-secteur="industrie">
-                    <div class="secteur-icon" style="background: linear-gradient(135deg, var(--color-industrie) 0%, var(--color-industrie) 100%);">⚙️</div>
-                    <span class="secteur-name">Industrie</span>
-                    <span class="secteur-count">4</span>
-                </button>
-                
-                <button class="secteur-btn" data-secteur="numerique">
-                    <div class="secteur-icon" style="background: linear-gradient(135deg, var(--color-numerique) 0%, var(--color-numerique) 100%);">💻</div>
-                    <span class="secteur-name">Numérique</span>
-                    <span class="secteur-count">3</span>
-                </button>
-                
-                <button class="secteur-btn" data-secteur="tertiaire">
-                    <div class="secteur-icon" style="background: linear-gradient(135deg, var(--color-tertiaire) 0%, var(--color-tertiaire) 100%);">📋</div>
-                    <span class="secteur-name">Tertiaire</span>
-                    <span class="secteur-count">3</span>
-                </button>
-                
-                <button class="secteur-btn" data-secteur="batiment">
-                    <div class="secteur-icon" style="background: linear-gradient(135deg, var(--color-batiment) 0%, var(--color-batiment) 100%);">🏗️</div>
-                    <span class="secteur-name">Bâtiment</span>
-                    <span class="secteur-count">2</span>
-                </button>
-            </div>
-        </div>
-    </section>
 
     <!-- Formations disponibles -->
     <section class="formations-section" id="formations">

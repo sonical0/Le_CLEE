@@ -1,3 +1,49 @@
+// Menu déroulant navigation (fermeture au mouseleave, apparition vers le bas)
+const DropdownMenuModule = (() => {
+  function closeDropdown(dropdown) {
+    dropdown.classList.remove('dropdown-open');
+    const menu = dropdown.querySelector('.dropdown-menu');
+    if (menu) menu.style.display = '';
+  }
+  function openDropdown(dropdown) {
+    dropdown.classList.add('dropdown-open');
+    const menu = dropdown.querySelector('.dropdown-menu');
+    if (menu) menu.style.display = 'block';
+  }
+  function handleDropdownEvents() {
+    document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+      let timeout;
+      dropdown.addEventListener('mouseenter', () => {
+        clearTimeout(timeout);
+        openDropdown(dropdown);
+      });
+      dropdown.addEventListener('mouseleave', () => {
+        timeout = setTimeout(() => closeDropdown(dropdown), 120);
+      });
+      // Accessibilité : focus/blur
+      dropdown.addEventListener('focusin', () => {
+        clearTimeout(timeout);
+        openDropdown(dropdown);
+      });
+      dropdown.addEventListener('focusout', () => {
+        timeout = setTimeout(() => closeDropdown(dropdown), 120);
+      });
+      // Empêcher le scroll du menu déroulant
+      const menu = dropdown.querySelector('.dropdown-menu');
+      if (menu) {
+        menu.addEventListener('wheel', e => e.preventDefault(), { passive: false });
+      }
+    });
+  }
+  function init() {
+    handleDropdownEvents();
+  }
+  return { init };
+})();
+
+document.addEventListener('DOMContentLoaded', () => {
+  DropdownMenuModule.init();
+});
 // ========================================
 // SHARED UTILITIES & MODULES
 // ========================================

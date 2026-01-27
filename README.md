@@ -13,7 +13,7 @@
 
 ### Modifications prioritaires
 - [x] Retirer MEDEF du footer
-- [ ] Diminuer le scroll de l'accueil
+- [x] Diminuer le scroll de l'accueil
 - [x] Rendre chaque icône/logo du carrousel cliquable vers le site correspondant
 - [ ] Ajouter une page ressources rassemblant les entreprises d'information qui ne sont pas autour de la table
 - [x] Supprimer les options téléphone et adresse ainsi que l'engagement de délai de la page Contact
@@ -22,7 +22,7 @@
 - [x] Retirer les majuscules en milieu de phrase
 - [x] Remplacer le logo du CLEE par celui de la charte graphique
 - [ ] Décider et uniformiser : CLÉE ou CLEE ou Clée pour le SEO
-- [ ] Retirer convention de stage et livret de suivi, remplacer par les documents WordPress
+- [x] Retirer convention de stage et livret de suivi, remplacer par les documents WordPress
 
 ### Tâches WordPress et infrastructure
 - [ ] **Faire une documentation du site WordPress pour le second groupe et les clients**
@@ -30,9 +30,9 @@
 - [ ] Commencer la mise en place de la base de données et du WordPress
 
 ### Améliorations UX/UI
-- [ ] Ajouter une barre de recherche avec option filtre dans la page établissements et formations
-- [ ] Remplacer le terme PFMP par "stage" pour vulgariser
-- [ ] Améliorer le header pour ajouter les sous-pages par catégorie en liste déroulante
+- [x] Ajouter une barre de recherche avec option filtre dans la page établissements et formations
+- [x] Remplacer le terme PFMP par "stage" pour vulgariser
+- [x] Améliorer le header pour ajouter les sous-pages par catégorie en liste déroulante
 - [ ] Adapter la surbrillance des boutons avec les couleurs de la charte graphique
 - [ ] Faire un portail étudiant/pro avec un style CSS qui change selon la catégorie d'utilisateur
 - [ ] Sur le ruban sous le header, ajouter un calque avec une photo et reprendre les couleurs de la charte graphique

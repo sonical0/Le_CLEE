@@ -24,12 +24,43 @@
                 </button>
                 
                 <ul class="nav-links">
-                    <li><a href="pages/le-clee.html" class="nav-link">Le CLÉE</a></li>
-                    <li><a href="pages/companies.html" class="nav-link">Entreprises & Partenaires</a></li>
-                    <li><a href="pages/establishments.html" class="nav-link">Établissements & Formations</a></li>
-                    <li><a href="pages/jeunes-familles.html" class="nav-link">Jeunes & Familles</a></li>
-                    <li><a href="pages/vie-clee.html" class="nav-link">Vie du CLÉE</a></li>
-                    <li><a href="pages/connexion.html" class="nav-link nav-link-auth">Connexion</a></li>
+                    <li class="nav-item nav-dropdown">
+                        <a href="pages/le-clee.html" class="nav-link">Le CLÉE</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="pages/le-clee.html">Qui sommes-nous ?</a></li>
+                            <li><a href="pages/bureau-membres.html">Bureau et membres</a></li>
+                            <li><a href="pages/nos-actions.html">Nos actions</a></li>
+                            <li><a href="pages/documents-officiels.html">Documents officiels</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a href="pages/companies.html" class="nav-link">Entreprises & Partenaires</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="pages/companies.html">Devenir partenaire</a></li>
+                            <li><a href="pages/companies.html#sponsors">Nos sponsors</a></li>
+                            <li><a href="pages/companies.html#actions">Actions pour les entreprises</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/establishments.html" class="nav-link">Établissements & Formations</a>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a href="pages/jeunes-familles.html" class="nav-link">Jeunes & Familles</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="pages/pfmp.html">Tout savoir sur les stages</a></li>
+                            <li><a href="pages/orientation-insertion.html">Conseils orientation</a></li>
+                            <li><a href="pages/vie-clee-eleves.html">Vie du CLÉE pour les élèves</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a href="pages/vie-clee.html" class="nav-link">Vie du CLÉE</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="pages/agenda.html">Agenda</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/connexion.html" class="nav-link nav-link-auth">Connexion</a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -58,6 +89,25 @@
     </section>
 
 
+
+
+    <!-- Agenda Section -->
+    <section class="agenda" id="agenda">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Événements à venir</h2>
+                <p class="section-subtitle">Rejoignez-nous lors de nos prochains événements et rencontres</p>
+            </div>
+            
+            <div class="agenda-timeline" id="upcoming-events">
+                <!-- Les événements seront chargés dynamiquement depuis agenda.js -->
+            </div>
+            
+            <div class="section-action">
+                <a href="pages/agenda.html" class="btn btn-outline">Voir l'agenda complet </a>
+            </div>
+        </div>
+    </section>
 
     <!-- Chiffres Clés Section -->
     <section class="chiffres-cles" id="chiffres">
@@ -97,23 +147,6 @@
         </div>
     </section>
 
-    <!-- Agenda Section -->
-    <section class="agenda" id="agenda">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Événements à venir</h2>
-                <p class="section-subtitle">Rejoignez-nous lors de nos prochains événements et rencontres</p>
-            </div>
-            
-            <div class="agenda-timeline" id="upcoming-events">
-                <!-- Les événements seront chargés dynamiquement depuis agenda.js -->
-            </div>
-            
-            <div class="section-action">
-                <a href="pages/agenda.html" class="btn btn-outline">Voir l'agenda complet </a>
-            </div>
-        </div>
-    </section>
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
