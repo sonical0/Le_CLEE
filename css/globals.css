@@ -1,3 +1,32 @@
+/* Nav-link par thématique (hover 30% opacité) */
+.nav-link-bleu:hover,
+.nav-link-bleu:focus {
+  background: rgba(23, 110, 161, 0.3) !important;
+}
+.nav-link-orange:hover,
+.nav-link-orange:focus {
+  background: rgba(216, 134, 27, 0.3) !important;
+}
+.nav-link-rouge:hover,
+.nav-link-rouge:focus {
+  background: rgba(198, 54, 52, 0.3) !important;
+}
+.nav-link-vert:hover,
+.nav-link-vert:focus {
+  background: rgba(88, 152, 66, 0.3) !important;
+}
+/* ========================================
+   COULEURS CHARTES BOUTONS NAVBAR
+======================================== */
+
+:root {
+  --orange-clee: #d8861b;
+  --bleu-clee: #176ea1;
+  --vert-clee: #589842;
+  --rouge-clee: #c63634;
+}
+
+/* Boutons navbar par thématique */
 /* Menu déroulant navigation */
 .nav-dropdown {
   position: relative;

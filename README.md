@@ -9,6 +9,12 @@
 
 ---
 
+
+## Règle de contribution
+
+À chaque modification du projet, il est obligatoire de mettre à jour le fichier `README.md` (documentation, tâches, instructions) et le fichier `CHANGELOG.md` (historique des changements).
+Chaque contribution ou correction doit être reflétée dans ces deux fichiers pour garantir la traçabilité et la clarté du projet.
+
 ## Liste de tâches - Retour entretien CLEE
 
 ### Modifications prioritaires
@@ -92,7 +98,6 @@
 - **Témoignages** d'anciens élèves
 
 ### Vie du CLEE
-- **Calendrier événementiel** interactif
 - **Actualités** du réseau école-entreprise
 - **Espace élèves** avec ressources dédiées
 - **Galerie photos/vidéos** des événements
@@ -102,98 +107,40 @@
 - **Bureau et membres** de l'organisation
 - **Actions et projets** en cours
 - **Documents officiels** (statuts, rapports, PV)
-
----
-
-## Architecture technique
-
-### Architecture modulaire : Globals + Spécifiques
-
-Le projet utilise une architecture en cascade qui élimine **~40% de code dupliqué** :
-
-```
-CLEE-Bordeaux-Site/
 │
 ├── index.html                      # PAGE PRINCIPALE : Accueil (racine du projet)
-│
-├── pages/                          # 16 pages HTML statiques
-│   ├── le-clee.html                # Présentation du CLEE
 │   ├── companies.html              # Entreprises & Partenaires
 │   ├── establishments.html         # Établissements & Formations
-│   ├── jeunes-familles.html        # Jeunes & Familles
-│   ├── vie-clee.html               # Vie du CLEE
-│   ├── bureau-membres.html         # Sous-page : Bureau et membres
-│   ├── nos-actions.html            # Sous-page : Nos actions
-│   ├── documents-officiels.html    # Sous-page : Documents officiels
-│   ├── orientation-insertion.html  # Sous-page : Orientation & insertion
-│   ├── pfmp.html                   # Sous-page : PFMP
 │   ├── vie-clee-eleves.html        # Sous-page : Vie du CLEE - Élèves
 │   ├── agenda.html                 # Sous-page : Agenda/Événements
-│   ├── connexion.html              # Authentification : Connexion
 │   ├── inscription.html            # Authentification : Inscription
 │   ├── contact.html                # Formulaire de contact
-│   └── mentions-legales.html       # Mentions légales
-│
 ├── css/                          # Stylesheets modulaires
-│   ├── globals.css                # PARTAGÉ : Variables CSS + composants (header, footer, boutons)
 │   ├── home.css                   # Page d'accueil
 │   ├── companies.css              # Entreprises
 │   ├── establishments.css         # Établissements
 │   ├── jeunes-familles.css        # Jeunes & Familles (partagé par 4 pages)
 │   ├── le-clee.css                # Le CLEE (partagé par 4 pages)
-│   ├── vie-clee.css               # Vie du CLEE
-│   ├── agenda.css                 # Agenda/Événements
-│   ├── contact.css                # Contact
-│   └── auth.css                   # Connexion/Inscription (partagé)
 │
 ├── js/                           # Scripts modulaires
 │   ├── common.js                  # PARTAGÉ : Modules (navigation, animations, scroll)
 │   ├── companies.js               # Filtres entreprises
 │   ├── establishments.js          # Carte interactive + formations
-│   ├── agenda.js                  # Calendrier événements
 │   ├── vie-clee.js                # Affichage événements
 │   └── contact.js                 # Gestion formulaire
 │
 ├── assets/                       # Ressources médias
-│   └── images/                    # Logos, illustrations, photos
-            └── images/
-```
-
-### Principe : Chaque page charge UNIQUEMENT ce dont elle a besoin
 
 ```html
-<!-- Exemple : companies.html -->
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <!-- Styles partagés (header, footer, variables) -->
     <link rel="stylesheet" href="../css/globals.css">
     
-    <!-- Styles spécifiques à cette page -->
-    <link rel="stylesheet" href="../css/companies.css">
-</head>
-<body>
-    <!-- Contenu de la page -->
     
     <!-- Scripts partagés (navigation, animations) -->
-    <script src="../js/common.js"></script>
-    
-    <!-- Scripts spécifiques à cette page -->
-    <script src="../js/companies.js"></script>
 </body>
 </html>
-```
-
-**Bénéfices** :
-- Pas de duplication de code (header/footer définis 1 seule fois)
 - Mise en cache optimale (globals.css chargé une fois pour toutes les pages)
 - Maintenance simplifiée (modifier globals.css = impact sur tout le site)
-- Réduction ~40% de la taille totale du projet
-
----
-
 ## Design System centralisé
-
 Toutes les variables de design sont définies dans [css/globals.css](css/globals.css) :
 
 ### Palette de couleurs
@@ -210,32 +157,19 @@ Toutes les variables de design sont définies dans [css/globals.css](css/globals
   --primary-300: rgba(184, 199, 214, 1);
   --primary-200: rgba(214, 224, 235, 1);
   --primary-100: rgba(229, 236, 245, 1);
-  --primary-50: rgba(229, 240, 255, 1);    /* Bleu très clair */
-  
-  /* Couleurs secondaires (Orange) */
-  --secondary-900: rgba(140, 46, 0, 1);    /* Orange foncé */
   --secondary-500: rgba(255, 136, 73, 1);  /* Orange */
   --secondary-50: rgba(255, 240, 229, 1);  /* Orange clair */
-  
-  /* Échelle de gris */
-  --grey-900: rgba(31, 41, 51, 1);         /* Presque noir */
-  --grey-50: rgba(249, 250, 251, 1);       /* Presque blanc */
 }
-```
 
 ### Typographie
 
 ```css
 :root {
-  /* Polices */
   --navbar-text-font-family: "Roboto", sans-serif;
   --titre-font-family: "Barlow Condensed", sans-serif;
   --body-text-font-family: "Roboto", sans-serif;
   
-  /* Tailles */
-  --text-xs: 0.75rem;   /* 12px */
   --text-sm: 0.875rem;  /* 14px */
-  --text-base: 1rem;    /* 16px */
   --text-lg: 1.125rem;  /* 18px */
   --text-xl: 1.25rem;   /* 20px */
   --text-2xl: 1.5rem;   /* 24px */

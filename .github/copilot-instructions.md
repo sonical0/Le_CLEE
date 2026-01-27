@@ -122,6 +122,10 @@ document.addEventListener('DOMContentLoaded', () => {
    - Copy navigation structure from existing pages
    - Update [PAGES-STRUCTURE.md](PAGES-STRUCTURE.md) with the new page
 
+2. **Documentation & Historique**
+  - À chaque modification du projet, **mettre à jour obligatoirement** le fichier `README.md` (documentation, tâches, instructions) et le fichier `CHANGELOG.md` (historique des changements).
+  - Toute contribution ou correction doit être reflétée dans ces deux fichiers pour garantir la traçabilité et la clarté du projet.
+
 2. **Modifying shared styles** (header, footer, buttons):
    - Edit `css/globals.css` ONLY
    - Changes apply to all pages automatically
