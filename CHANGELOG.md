@@ -1,10 +1,23 @@
+# [27/01/2026] - Règle de documentation obligatoire
+
+## Ajout d'une règle de contribution
+
+- Il est désormais obligatoire de mettre à jour le `README.md` et le `CHANGELOG.md` à chaque modification du projet.
+- Toute contribution ou correction doit être reflétée dans ces deux fichiers pour garantir la traçabilité et la clarté du projet.
+
 # Changelog - CLEE Bordeaux Avenir
+
+# Changelog - CLEE Bordeaux Avenir
+
+## [27/01/2026] - Règle de documentation obligatoire
+
+### Ajout d'une règle de contribution
+- Il est désormais obligatoire de mettre à jour le `README.md` et le `CHANGELOG.md` à chaque modification du projet.
+- Toute contribution ou correction doit être reflétée dans ces deux fichiers pour garantir la traçabilité et la clarté du projet.
 
 ## [23/01/2026] - Déplacement de index.html à la racine
 
 ### Changements structurels
-
-#### Réorganisation de l'architecture
 - Déplacement de `pages/index.html` vers la racine du projet: `./index.html`
 - Mise à jour de tous les liens et chemins dans les 17 pages HTML
 - Modification des chemins CSS/JS dans index.html (de `../css/` vers `css/`)
@@ -23,7 +36,6 @@
 - .github/copilot-instructions.md : Règles de chemins mises à jour
 
 ### Structure actuelle du projet
-
 ```
 CLEE-Bordeaux-Site/
 ├── index.html       # Page d'accueil à la racine
@@ -50,7 +62,6 @@ CLEE-Bordeaux-Site/
 - Ajout d'une note explicative sur le changement de stratégie
 
 ### Avantages du passage au full-static
-
 1. **Performance** : Temps de chargement optimaux sans base de données
 2. **Sécurité** : Aucune vulnérabilité WordPress à gérer
 3. **Déploiement** : Compatible avec tous les hébergeurs statiques (GitHub Pages, Netlify, Vercel, etc.)
@@ -58,7 +69,6 @@ CLEE-Bordeaux-Site/
 5. **Coûts** : Hébergement gratuit possible avec les services statiques
 
 ### Structure actuelle du projet
-
 ```
 CLEE-Bordeaux-Site/
 ├── index.html       # Page d'accueil à la racine
@@ -69,7 +79,6 @@ CLEE-Bordeaux-Site/
 ```
 
 ### Options de déploiement
-
 Le site peut maintenant être déployé facilement sur :
 - GitHub Pages
 - Netlify
@@ -79,7 +88,6 @@ Le site peut maintenant être déployé facilement sur :
 - Tout serveur web (Apache, Nginx)
 
 ### Migration future
-
 Si un CMS devient nécessaire à l'avenir, les options incluent :
 - Headless CMS (Strapi, Contentful, Sanity)
 - Générateurs de sites statiques (Hugo, Jekyll, 11ty)

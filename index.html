@@ -24,12 +24,43 @@
                 </button>
                 
                 <ul class="nav-links">
-                    <li><a href="pages/le-clee.html" class="nav-link">Le CLÉE</a></li>
-                    <li><a href="pages/companies.html" class="nav-link">Entreprises & Partenaires</a></li>
-                    <li><a href="pages/establishments.html" class="nav-link">Établissements & Formations</a></li>
-                    <li><a href="pages/jeunes-familles.html" class="nav-link">Jeunes & Familles</a></li>
-                    <li><a href="pages/vie-clee.html" class="nav-link">Vie du CLÉE</a></li>
-                    <li><a href="pages/connexion.html" class="nav-link nav-link-auth">Connexion</a></li>
+                    <li class="nav-item nav-dropdown">
+                        <a href="pages/le-clee.html" class="nav-link nav-link-bleu">Le CLÉE</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="pages/le-clee.html">Qui sommes-nous ?</a></li>
+                            <li><a href="pages/bureau-membres.html">Bureau et membres</a></li>
+                            <li><a href="pages/nos-actions.html">Nos actions</a></li>
+                            <li><a href="pages/documents-officiels.html">Documents officiels</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a href="pages/companies.html" class="nav-link nav-link-bleu">Entreprises & Partenaires</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="pages/companies.html">Devenir partenaire</a></li>
+                            <li><a href="pages/companies.html#sponsors">Nos sponsors</a></li>
+                            <li><a href="pages/companies.html#actions">Actions pour les entreprises</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/establishments.html" class="nav-link nav-link-orange">Établissements & Formations</a>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a href="pages/jeunes-familles.html" class="nav-link nav-link-rouge">Jeunes & Familles</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="pages/pfmp.html">Tout savoir sur les stages</a></li>
+                            <li><a href="pages/orientation-insertion.html">Conseils orientation</a></li>
+                            <li><a href="pages/vie-clee-eleves.html">Vie du CLÉE pour les élèves</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a href="pages/vie-clee.html" class="nav-link nav-link-vert">Vie du CLÉE</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="pages/agenda.html">Agenda</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/connexion.html" class="nav-link nav-link-auth">Connexion</a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -57,73 +88,23 @@
         </div>
     </section>
 
-    <!-- Actualités Section -->
-    <section class="actualites" id="actualites">
+
+
+
+    <!-- Agenda Section -->
+    <section class="agenda" id="agenda">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Actualités récentes</h2>
-                <p class="section-subtitle">Restez informé des dernières nouvelles et événements du CLÉE</p>
+                <h2 class="section-title">Événements à venir</h2>
+                <p class="section-subtitle">Rejoignez-nous lors de nos prochains événements et rencontres</p>
             </div>
             
-            <div class="actualites-grid">
-                <article class="actualite-card featured">
-                    <div class="actualite-badge">À la une</div>
-                    <div class="actualite-image">
-                        <img src="https://picsum.photos/600/350?random=1" alt="Forum des métiers 2025">
-                    </div>
-                    <div class="actualite-content">
-                        <div class="actualite-meta">
-                            <span class="actualite-date">Janvier 2026</span>
-                            <span class="actualite-category">Événement</span>
-                        </div>
-                        <h3 class="actualite-title">Forum des métiers 2025</h3>
-                        <p class="actualite-text">
-                            Un record de participation avec plus de 500 jeunes et 80 entreprises. Une occasion unique de 
-                            découvrir les métiers et opportunités du territoire.
-                        </p>
-                        <a href="#" class="actualite-link">Lire l'article complet →</a>
-                    </div>
-                </article>
-                
-                <article class="actualite-card">
-                    <div class="actualite-image">
-                        <img src="https://picsum.photos/600/350?random=2" alt="Nouveau partenariat">
-                    </div>
-                    <div class="actualite-content">
-                        <div class="actualite-meta">
-                            <span class="actualite-date">Décembre 2025</span>
-                            <span class="actualite-category">Partenariat</span>
-                        </div>
-                        <h3 class="actualite-title">Nouveau partenariat stratégique</h3>
-                        <p class="actualite-text">
-                            Une entreprise majeure du bassin rejoint le CLÉE pour multiplier les opportunités de stages et 
-                            d'apprentissages.
-                        </p>
-                        <a href="#" class="actualite-link">En savoir plus →</a>
-                    </div>
-                </article>
-                
-                <article class="actualite-card">
-                    <div class="actualite-image">
-                        <img src="https://picsum.photos/600/350?random=3" alt="Visite pédagogique">
-                    </div>
-                    <div class="actualite-content">
-                        <div class="actualite-meta">
-                            <span class="actualite-date">Novembre 2025</span>
-                            <span class="actualite-category">Visite</span>
-                        </div>
-                        <h3 class="actualite-title">Visite pédagogique en entreprise</h3>
-                        <p class="actualite-text">
-                            Les élèves découvrent les métiers, l'innovation et la culture d'entreprise lors de visites 
-                            immersives.
-                        </p>
-                        <a href="#" class="actualite-link">Voir les photos →</a>
-                    </div>
-                </article>
+            <div class="agenda-timeline" id="upcoming-events">
+                <!-- Les événements seront chargés dynamiquement depuis agenda.js -->
             </div>
             
             <div class="section-action">
-                <a href="#" class="btn btn-outline">Voir toutes les actualités</a>
+                <a href="pages/agenda.html" class="btn btn-outline">Voir l'agenda complet </a>
             </div>
         </div>
     </section>
@@ -166,23 +147,6 @@
         </div>
     </section>
 
-    <!-- Agenda Section -->
-    <section class="agenda" id="agenda">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Événements à venir</h2>
-                <p class="section-subtitle">Rejoignez-nous lors de nos prochains événements et rencontres</p>
-            </div>
-            
-            <div class="agenda-timeline" id="upcoming-events">
-                <!-- Les événements seront chargés dynamiquement depuis agenda.js -->
-            </div>
-            
-            <div class="section-action">
-                <a href="pages/agenda.html" class="btn btn-outline">Voir l'agenda complet </a>
-            </div>
-        </div>
-    </section>
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
@@ -229,10 +193,6 @@
                         Le CLÉE Bordeaux Avenir œuvre pour renforcer les liens entre le monde éducatif et professionnel, 
                         accompagner les jeunes dans leur orientation et faciliter leur insertion dans le monde du travail.
                     </p>
-                    
-                    <div class="footer-medef-logo">
-                        <img src="assets/images/medef-gironde.png" alt="MEDEF Gironde - Mouvement des Entreprises de France">
-                    </div>
                 </div>
                 
                 <div class="footer-links">
@@ -258,7 +218,7 @@
                     <div class="footer-column">
                         <h4 class="footer-subtitle">Pour les jeunes</h4>
                         <ul>
-                            <li><a href="pages/pfmp.html">Tout savoir sur la PFMP</a></li>
+                            <li><a href="pages/pfmp.html">Tout savoir sur les stages</a></li>
                             <li><a href="pages/orientation-insertion.html">Conseils orientation</a></li>
                             <li><a href="pages/vie-clee-eleves.html">Vie du CLÉE pour les élèves</a></li>
                         </ul>

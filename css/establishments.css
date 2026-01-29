@@ -1,3 +1,49 @@
+/* Barre de recherche et filtres formations */
+.formations-search-section {
+  background: var(--primary-50);
+  padding: 2.5rem 0 1.5rem 0;
+  border-bottom: 1px solid var(--primary-100, #e5eaf2);
+}
+.formations-search-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+.formations-search-bar input[type="text"] {
+  flex: 2 1 220px;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--primary-200, #cfd8e3);
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #fff;
+}
+.formations-search-bar select {
+  flex: 1 1 160px;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--primary-200, #cfd8e3);
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #fff;
+}
+.formations-search-bar button {
+  flex: 0 0 auto;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  margin-left: 0.5rem;
+}
+@media (max-width: 768px) {
+  .formations-search-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+  .formations-search-bar button {
+    margin-left: 0;
+  }
+}
 /* ========================================
    PAGE-SPECIFIC STYLES - ESTABLISHMENTS PAGE
 ======================================== */
