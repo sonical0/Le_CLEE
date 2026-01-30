@@ -24,11 +24,44 @@
                 </button>
                 
                 <ul class="nav-links">
-                    <li><a href="le-clee.html" class="nav-link">Le CLÉE</a></li>
-                    <li><a href="companies.html" class="nav-link">Entreprises & Partenaires</a></li>
-                    <li><a href="establishments.html" class="nav-link">Établissements & Formations</a></li>
-                    <li><a href="jeunes-familles.html" class="nav-link">Jeunes & Familles</a></li>
-                    <li><a href="vie-clee.html" class="nav-link active">Vie du CLÉE</a></li>                    <li><a href="connexion.html" class="nav-link nav-link-auth">Connexion</a></li>                </ul>
+                    <li class="nav-item nav-dropdown">
+                        <a href="le-clee.html" class="nav-link nav-link-bleu">Le CLÉE</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="le-clee.html">Qui sommes-nous ?</a></li>
+                            <li><a href="bureau-membres.html">Bureau et membres</a></li>
+                            <li><a href="nos-actions.html">Nos actions</a></li>
+                            <li><a href="documents-officiels.html">Documents officiels</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a href="companies.html" class="nav-link nav-link-bleu">Entreprises & Partenaires</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="companies.html">Devenir partenaire</a></li>
+                            <li><a href="companies.html#sponsors">Nos sponsors</a></li>
+                            <li><a href="companies.html#actions">Actions pour les entreprises</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="establishments.html" class="nav-link nav-link-orange">Établissements & Formations</a>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a href="jeunes-familles.html" class="nav-link nav-link-rouge">Jeunes & Familles</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="pfmp.html">Tout savoir sur les stages</a></li>
+                            <li><a href="orientation-insertion.html">Conseils orientation</a></li>
+                            <li><a href="vie-clee-eleves.html">Vie du CLÉE pour les élèves</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a href="vie-clee.html" class="nav-link nav-link-vert active">Vie du CLÉE</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="agenda.html">Agenda</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="connexion.html" class="nav-link nav-link-auth">Connexion</a>
+                    </li>
+                </ul
             </div>
         </nav>
     </header>
@@ -53,6 +86,77 @@
                     Découvrez les derniers événements, actualités et initiatives qui animent notre communauté. 
                     Le CLÉE est un réseau vivant qui connecte étudiants, écoles et entreprises.
                 </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Actualités Section -->
+    <section class="actualites" id="actualites">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Actualités récentes</h2>
+                <p class="section-subtitle">Restez informé des dernières nouvelles et événements du CLÉE</p>
+            </div>
+            
+            <div class="actualites-grid">
+                <article class="actualite-card featured">
+                    <div class="actualite-badge">À la une</div>
+                    <div class="actualite-image">
+                        <img src="https://picsum.photos/600/350?random=1" alt="Forum des métiers 2025">
+                    </div>
+                    <div class="actualite-content">
+                        <div class="actualite-meta">
+                            <span class="actualite-date">Janvier 2026</span>
+                            <span class="actualite-category">Événement</span>
+                        </div>
+                        <h3 class="actualite-title">Forum des métiers 2025</h3>
+                        <p class="actualite-text">
+                            Un record de participation avec plus de 500 jeunes et 80 entreprises. Une occasion unique de 
+                            découvrir les métiers et opportunités du territoire.
+                        </p>
+                        <a href="#" class="actualite-link">Lire l'article complet →</a>
+                    </div>
+                </article>
+                
+                <article class="actualite-card">
+                    <div class="actualite-image">
+                        <img src="https://picsum.photos/600/350?random=2" alt="Nouveau partenariat">
+                    </div>
+                    <div class="actualite-content">
+                        <div class="actualite-meta">
+                            <span class="actualite-date">Décembre 2025</span>
+                            <span class="actualite-category">Partenariat</span>
+                        </div>
+                        <h3 class="actualite-title">Nouveau partenariat stratégique</h3>
+                        <p class="actualite-text">
+                            Une entreprise majeure du bassin rejoint le CLÉE pour multiplier les opportunités de stages et 
+                            d'apprentissages.
+                        </p>
+                        <a href="#" class="actualite-link">En savoir plus →</a>
+                    </div>
+                </article>
+                
+                <article class="actualite-card">
+                    <div class="actualite-image">
+                        <img src="https://picsum.photos/600/350?random=3" alt="Visite pédagogique">
+                    </div>
+                    <div class="actualite-content">
+                        <div class="actualite-meta">
+                            <span class="actualite-date">Novembre 2025</span>
+                            <span class="actualite-category">Visite</span>
+                        </div>
+                        <h3 class="actualite-title">Visite pédagogique en entreprise</h3>
+                        <p class="actualite-text">
+                            Les élèves découvrent les métiers, l'innovation et la culture d'entreprise lors de visites 
+                            immersives.
+                        </p>
+                        <a href="#" class="actualite-link">Voir les photos →</a>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="section-action">
+                <a href="#" class="btn btn-outline">Voir toutes les actualités</a>
             </div>
         </div>
     </section>
@@ -223,20 +327,6 @@
                                 <p>contact@CLÉE-bordeaux.fr</p>
                             </div>
                         </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">📞</div>
-                            <div class="feature-text">
-                                <h4>Téléphone</h4>
-                                <p>05 56 XX XX XX</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">📍</div>
-                            <div class="feature-text">
-                                <h4>Adresse</h4>
-                                <p>Bordeaux, Nouvelle-Aquitaine</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="contact-cta-action">
@@ -289,7 +379,7 @@
                     <div class="footer-column">
                         <h4 class="footer-subtitle">Pour les jeunes</h4>
                         <ul>
-                            <li><a href="pfmp.html">Tout savoir sur la PFMP</a></li>
+                            <li><a href="pfmp.html">Tout savoir sur les stages</a></li>
                             <li><a href="orientation-insertion.html">Conseils orientation</a></li>
                             <li><a href="vie-clee-eleves.html">Vie du CLÉE pour les élèves</a></li>
                         </ul>
