@@ -5,6 +5,7 @@
 Les **6 pages principales** du site :
 
 ```
+0. Portail de sélection (NEW)     → pages/portail.html (choix du profil utilisateur)
 1. Accueil                        → index.html (racine du projet)
 2. Le CLÉE                        → pages/le-clee.html
 3. Entreprises & Partenaires      → pages/companies.html
@@ -16,6 +17,8 @@ Les **6 pages principales** du site :
 
 **Note importante** : Le fichier `index.html` est situé à la racine du projet pour faciliter le déploiement sur les plateformes comme Vercel, Netlify, GitHub Pages, etc. Toutes les autres pages HTML sont dans le répertoire `pages/`.
 
+**Nouveau système de portail** : Les utilisateurs sont d'abord redirigés vers [portail.html](pages/portail.html) pour choisir leur profil (Étudiant ou Professionnel). Ce choix détermine le thème visuel appliqué à toutes les pages. Voir [PORTAIL-GUIDE.md](PORTAIL-GUIDE.md) pour plus de détails.
+
 ## Arborescence Complète des Pages
 
 ```
@@ -24,6 +27,7 @@ Les **6 pages principales** du site :
 
 pages/
 │
+├── portail.html                    # PAGE SYSTÈME : Sélection du profil utilisateur (NEW)
 ├── le-clee.html                    # PAGE PRINCIPALE : Le CLEE
 │   ├── bureau-membres.html            # Sous-page : Bureau et membres
 │   ├── nos-actions.html               # Sous-page : Nos actions

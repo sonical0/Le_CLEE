@@ -7,6 +7,17 @@
 
 > **Note importante** : Ce projet se concentre désormais exclusivement sur le développement statique HTML/CSS/JS. La version WordPress (anciennement dans `php/`) a été retirée pour simplifier la maintenance et améliorer les performances. Le site est maintenant déployable sur n'importe quel serveur web ou hébergement statique (GitHub Pages, Netlify, Vercel, etc.).
 
+## Nouveautés : Système de Portail Multi-Profils
+
+**Nouveau !** Le site dispose maintenant d'un **système de portail** permettant aux utilisateurs de choisir leur profil (Étudiant ou Professionnel) avec un thème visuel adapté :
+
+- **Mode Étudiant** : Design coloré et énergique avec dégradés vifs (orange, cyan, vert, rouge)
+- **Mode Professionnel** : Design sobre et élégant avec palette bleue/grise
+
+Consultez [PORTAIL-GUIDE.md](PORTAIL-GUIDE.md) pour plus de détails et [TEST-PORTAIL.md](TEST-PORTAIL.md) pour tester le système.
+
+---
+
 ## À propos du projet
 
 **CLEE Bordeaux Avenir** est une organisation qui renforce les ponts entre le monde éducatif et le tissu économique local. Ce projet est le site web institutionnel de l'organisation, conçu pour faciliter les interactions entre :
@@ -23,6 +34,12 @@
 ---
 
 ## Fonctionnalités principales
+
+### Système de Portail (Nouveau)
+- **Sélection de profil** : Étudiant ou Professionnel
+- **Thème adaptatif** : Couleurs et style personnalisés selon le profil
+- **Persistance** : Le choix est sauvegardé dans le navigateur
+- **Badge de changement** : Possibilité de basculer entre les profils
 
 ### Page d'accueil
 - **Hero section** dynamique avec appel à l'action
