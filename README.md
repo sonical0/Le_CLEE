@@ -40,7 +40,7 @@ Chaque contribution ou correction doit être reflétée dans ces deux fichiers p
 - [x] Remplacer le terme PFMP par "stage" pour vulgariser
 - [x] Améliorer le header pour ajouter les sous-pages par catégorie en liste déroulante
 - [ ] Adapter la surbrillance des boutons avec les couleurs de la charte graphique
-- [ ] Faire un portail étudiant/pro avec un style CSS qui change selon la catégorie d'utilisateur
+- [x] Faire un portail étudiant/pro avec un style CSS qui change selon la catégorie d'utilisateur
 - [ ] Sur le ruban sous le header, ajouter un calque avec une photo et reprendre les couleurs de la charte graphique
 - [ ] **ATTENTION : Respecter les règles d'accessibilité pour les couleurs**
 
@@ -69,6 +69,12 @@ Chaque contribution ou correction doit être reflétée dans ces deux fichiers p
 ---
 
 ## Fonctionnalités principales
+
+### Système de Portail (Nouveau)
+- **Sélection de profil** : Étudiant ou Professionnel
+- **Thème adaptatif** : Couleurs et style personnalisés selon le profil
+- **Persistance** : Le choix est sauvegardé dans le navigateur
+- **Badge de changement** : Possibilité de basculer entre les profils
 
 ### Page d'accueil
 - **Hero section** dynamique avec appel à l'action
