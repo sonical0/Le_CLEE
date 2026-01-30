@@ -101,6 +101,7 @@
 - **Chiffres clés** : Couleur bleue uniforme
 - **Hero** : Dégradé bleu sobre
 - **Navigation** : Liens bleus au survol
+- **Badge flottant** : Badge bleu "Mode Professionnel" avec icône mallette
 
 ### Mode Étudiant
 - **Couleurs** : Orange (#FF6B35), Cyan (#00A7E1), Vert (#5CB85C), Rouge (#E74C3C)
@@ -109,7 +110,7 @@
 - **Chiffres clés** : Chaque chiffre une couleur différente
 - **Hero** : Dégradé orange → jaune → cyan avec cercles flottants
 - **Navigation** : Liens orange au survol avec soulignement animé
-- **Badge flottant** : Bouton en bas à droite pour changer de profil
+- **Badge flottant** : Badge orange "Mode Étudiant" avec icône diplôme
 
 ---
 

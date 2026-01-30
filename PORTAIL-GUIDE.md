@@ -17,6 +17,7 @@ Le site CLÉE Bordeaux Avenir dispose désormais d'un **système de portail** pe
 #### **Mode Professionnel (par défaut)**
 - Palette sobre : bleus et gris (#1F3448, #5E7E9F)
 - Design élégant et corporate
+- Badge bleu "Mode Professionnel" avec icône mallette
 - Idéal pour les entreprises et partenaires
 
 #### **Mode Étudiant**
@@ -27,7 +28,8 @@ Le site CLÉE Bordeaux Avenir dispose désormais d'un **système de portail** pe
   - Rouge : #E74C3C
 - Dégradés colorés et animations dynamiques
 - Design énergique et engageant
-- Badge flottant "Mode Étudiant" avec possibilité de changer de profil
+- Badge orange "Mode Étudiant" avec icône diplôme
+- Possibilité de changer de profil via le badge
 
 ## Architecture Technique
 
@@ -73,7 +75,7 @@ Le système utilise **localStorage** avec deux clés :
 1. **Première visite** : Redirection automatique vers [portail.html](pages/portail.html)
 2. **Choix du profil** : Clic sur la carte correspondante
 3. **Navigation** : Le thème reste actif sur toutes les pages
-4. **Changement** : Clic sur le badge flottant "Mode Étudiant" pour revenir au portail
+4. **Changement** : Clic sur le badge flottant ("Mode Étudiant" ou "Mode Professionnel") en bas à droite pour revenir au portail
 
 ### Pour les développeurs
 

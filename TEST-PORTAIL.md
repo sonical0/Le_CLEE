@@ -83,10 +83,14 @@ Puis ouvrez votre navigateur : **http://localhost:8000**
    - Boutons bleus sans dégradés vifs
    - Section-title en bleu foncé (pas de dégradé)
    - Chiffres clés avec couleur uniforme
-   - **PAS de badge flottant** (mode pro par défaut)
+   - Badge flottant bleu "Mode Professionnel" en bas à droite
 
 3. **Naviguez entre les pages** :
    - Le thème professionnel doit rester actif
+   - Le badge "Mode Professionnel" doit apparaître sur toutes les pages
+
+4. **Cliquez sur le badge "Mode Professionnel"** :
+   - Vous devriez revenir au portail
 
 ### 4. Test de la Persistance
 
@@ -172,7 +176,8 @@ Cette page permet de **basculer instantanément** entre les thèmes sans changer
 - [ ] Première visite → redirection automatique vers portail
 - [ ] Sélection profil étudiant → thème coloré appliqué
 - [ ] Sélection profil professionnel → thème sobre appliqué
-- [ ] Badge "Mode Étudiant" visible et cliquable
+- [ ] Badge "Mode Étudiant" visible et cliquable en mode étudiant
+- [ ] Badge "Mode Professionnel" visible et cliquable en mode professionnel
 - [ ] Navigation entre pages → thème persiste
 - [ ] Fermeture/réouverture navigateur → thème persiste
 - [ ] Clic sur badge → retour au portail
