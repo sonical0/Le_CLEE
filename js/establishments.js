@@ -1,3 +1,67 @@
+// Module de recherche et filtre des formations
+const FormationsFilterModule = (() => {
+  const searchInputSelector = '#formation-search-input';
+  const secteurFilterSelector = '#formation-secteur-filter';
+  const niveauFilterSelector = '#formation-niveau-filter';
+  const formationsGridSelector = '.formations-grid';
+  const formationCardSelector = '.formation-card';
+
+  function normalize(str) {
+    return str
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/\p{Diacritic}/gu, '')
+      .replace(/[^a-z0-9\s-]/g, '');
+  }
+
+  function filterFormations() {
+    const searchValue = normalize(document.querySelector(searchInputSelector).value.trim());
+    const secteurValue = document.querySelector(secteurFilterSelector).value;
+    const niveauValue = document.querySelector(niveauFilterSelector).value;
+    const cards = document.querySelectorAll(formationCardSelector);
+
+    cards.forEach(card => {
+      const title = normalize(card.querySelector('.formation-title').textContent);
+      const desc = normalize(card.querySelector('.formation-description').textContent);
+      const secteur = card.getAttribute('data-secteur');
+      const niveau = card.querySelector('.formation-niveau').textContent.trim();
+
+      let visible = true;
+      if (searchValue && !(title.includes(searchValue) || desc.includes(searchValue))) {
+        visible = false;
+      }
+      if (secteurValue !== 'tous' && secteur !== secteurValue) {
+        visible = false;
+      }
+      if (niveauValue !== 'tous' && niveau !== niveauValue) {
+        visible = false;
+      }
+      card.style.display = visible ? '' : 'none';
+    });
+  }
+
+  function init() {
+    const searchInput = document.querySelector(searchInputSelector);
+    const secteurFilter = document.querySelector(secteurFilterSelector);
+    const niveauFilter = document.querySelector(niveauFilterSelector);
+    const form = document.querySelector('.formations-search-bar');
+    if (!searchInput || !secteurFilter || !niveauFilter || !form) return;
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      filterFormations();
+    });
+    [searchInput, secteurFilter, niveauFilter].forEach(el => {
+      el.addEventListener('input', filterFormations);
+    });
+  }
+
+  return { init };
+})();
+
+document.addEventListener('DOMContentLoaded', () => {
+  FormationsFilterModule.init();
+});
 // ========================================
 // PAGE-SPECIFIC MODULE - ESTABLISHMENTS PAGE
 // ========================================

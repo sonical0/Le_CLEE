@@ -568,8 +568,20 @@
 
 .guides-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(6, 1fr);
   gap: 32px;
+}
+
+.guide-card {
+  grid-column: span 2;
+}
+
+.guide-card:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.guide-card:nth-child(5) {
+  grid-column: 4 / span 2;
 }
 
 .guide-card {
@@ -791,7 +803,15 @@
   }
   
   .guides-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .guides-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
   
   .liens-section {
@@ -862,18 +882,30 @@
 ======================================== */
 
 .pourquoi-medef {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
   padding: 40px;
+  align-items: center;
+  justify-items: center;
 }
 
 .pourquoi-medef img {
-  width: 100%;
-  max-width: 400px;
+  width: 280px;
   height: auto;
+  max-height: 100px;
   object-fit: contain;
   filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.08));
+  transition: transform 0.3s ease;
+}
+
+.pourquoi-medef img.logo-large {
+  width: 350px;
+  max-height: 120px;
+}
+
+.pourquoi-medef img:hover {
+  transform: scale(1.05);
 }
 
 @media (max-width: 1024px) {
@@ -892,6 +924,10 @@
 }
 
 @media (max-width: 768px) {
+  .pourquoi-medef {
+    grid-template-columns: 1fr;
+  }
+  
   .pourquoi-medef img {
     max-width: 250px;
   }

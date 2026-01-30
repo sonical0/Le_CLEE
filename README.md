@@ -1,30 +1,57 @@
-# CLÉE Bordeaux Avenir - Site Web Institutionnel
-
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)](https://developer.mozilla.org/fr/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)](https://developer.mozilla.org/fr/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)](https://developer.mozilla.org/fr/docs/Web/JavaScript)
-[![WordPress](https://img.shields.io/badge/WordPress-21759B?style=flat&logo=wordpress&logoColor=white)](https://wordpress.org/)
-[![Responsive](https://img.shields.io/badge/Responsive-Mobile%20First-blue)](https://web.dev/responsive-web-design-basics/)
-
-## À propos du projet
-
-**CLÉE Bordeaux Avenir** est une organisation qui renforce les ponts entre le monde éducatif et le tissu économique local. Ce projet est le site web institutionnel de l'organisation, conçu pour faciliter les interactions entre :
-
-- **Entreprises partenaires** : Accès aux talents, participation aux formations, opportunités de stages
-- **Établissements scolaires** : Lycées professionnels, centres de formation, réseau de formations
-- **Jeunes et familles** : Orientation, insertion professionnelle, stages (PFMP), ressources
-- **Vie associative** : Événements, actualités, actions du CLÉE
-
-### Mission du CLÉE
-
-> "Créer des opportunités de stages, d'apprentissages et préparer les jeunes talents aux défis de demain en connectant le monde éducatif et économique de la région bordelaise."
 # CLEE Bordeaux Avenir - Site Web Institutionnel
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)](https://developer.mozilla.org/fr/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)](https://developer.mozilla.org/fr/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)](https://developer.mozilla.org/fr/docs/Web/JavaScript)
-[![WordPress](https://img.shields.io/badge/WordPress-21759B?style=flat&logo=wordpress&logoColor=white)](https://wordpress.org/)
 [![Responsive](https://img.shields.io/badge/Responsive-Mobile%20First-blue)](https://web.dev/responsive-web-design-basics/)
+
+> **Note importante** : Ce projet se concentre désormais exclusivement sur le développement statique HTML/CSS/JS. La version WordPress (anciennement dans `php/`) a été retirée pour simplifier la maintenance et améliorer les performances. Le site est maintenant déployable sur n'importe quel serveur web ou hébergement statique (GitHub Pages, Netlify, Vercel, etc.).
+
+---
+
+
+## Règle de contribution
+
+À chaque modification du projet, il est obligatoire de mettre à jour le fichier `README.md` (documentation, tâches, instructions) et le fichier `CHANGELOG.md` (historique des changements).
+Chaque contribution ou correction doit être reflétée dans ces deux fichiers pour garantir la traçabilité et la clarté du projet.
+
+## Liste de tâches - Retour entretien CLEE
+
+### Modifications prioritaires
+- [x] Retirer MEDEF du footer
+- [x] Diminuer le scroll de l'accueil
+- [x] Rendre chaque icône/logo du carrousel cliquable vers le site correspondant
+- [ ] Ajouter une page ressources rassemblant les entreprises d'information qui ne sont pas autour de la table
+- [x] Supprimer les options téléphone et adresse ainsi que l'engagement de délai de la page Contact
+- [ ] Objet du formulaire de contact à customiser côté administrateur
+- [x] Déplacer l'agenda directement dans la page Vie du CLEE pour éviter le publipostage sur plusieurs pages
+- [x] Retirer les majuscules en milieu de phrase
+- [x] Remplacer le logo du CLEE par celui de la charte graphique
+- [ ] Décider et uniformiser : CLÉE ou CLEE ou Clée pour le SEO
+- [x] Retirer convention de stage et livret de suivi, remplacer par les documents WordPress
+
+### Tâches WordPress et infrastructure
+- [ ] **Faire une documentation du site WordPress pour le second groupe et les clients**
+- [ ] Définir les rôles avec différents droits d'accès et décisions
+- [ ] Commencer la mise en place de la base de données et du WordPress
+
+### Améliorations UX/UI
+- [x] Ajouter une barre de recherche avec option filtre dans la page établissements et formations
+- [x] Remplacer le terme PFMP par "stage" pour vulgariser
+- [x] Améliorer le header pour ajouter les sous-pages par catégorie en liste déroulante
+- [ ] Adapter la surbrillance des boutons avec les couleurs de la charte graphique
+- [x] Faire un portail étudiant/pro avec un style CSS qui change selon la catégorie d'utilisateur
+- [ ] Sur le ruban sous le header, ajouter un calque avec une photo et reprendre les couleurs de la charte graphique
+- [ ] **ATTENTION : Respecter les règles d'accessibilité pour les couleurs**
+
+### Mentions légales et contenu
+- [ ] Déplacer le bloc crédit photos dans les mentions légales
+
+### Validation et présentation
+- [ ] Mettre en place la maquette sur Cercle pour que les clients puissent la consulter avec leurs associés
+- [ ] **13 mars : Nouvelle présentation de la maquette**
+
+---
 
 ## À propos du projet
 
@@ -42,6 +69,12 @@
 ---
 
 ## Fonctionnalités principales
+
+### Système de Portail (Nouveau)
+- **Sélection de profil** : Étudiant ou Professionnel
+- **Thème adaptatif** : Couleurs et style personnalisés selon le profil
+- **Persistance** : Le choix est sauvegardé dans le navigateur
+- **Badge de changement** : Possibilité de basculer entre les profils
 
 ### Page d'accueil
 - **Hero section** dynamique avec appel à l'action
@@ -71,7 +104,6 @@
 - **Témoignages** d'anciens élèves
 
 ### Vie du CLEE
-- **Calendrier événementiel** interactif
 - **Actualités** du réseau école-entreprise
 - **Espace élèves** avec ressources dédiées
 - **Galerie photos/vidéos** des événements
@@ -81,124 +113,40 @@
 - **Bureau et membres** de l'organisation
 - **Actions et projets** en cours
 - **Documents officiels** (statuts, rapports, PV)
-
----
-
-## Architecture technique
-
-### Spécificité majeure : **Double implémentation**
-
-Ce projet est unique car il propose **deux versions synchronisées** du même site :
-
-```
-VERSION STATIQUE (HTML/CSS/JS pur)
-→ pages/ + css/ + js/
-→ Prototypage rapide, performance maximale
-→ Déploiement sur n'importe quel serveur web
-
-VERSION WORDPRESS (Thème custom)
-→ php/clee-bordeaux-theme/
-→ Gestion de contenu dynamique via CMS
-→ Auto-converti depuis la version statique
-```
-
-**Avantage** : Développement sur la version statique (rapide, léger), puis synchronisation automatique vers WordPress pour la production.
-
-### Architecture modulaire : Globals + Spécifiques
-
-Le projet utilise une architecture en cascade qui élimine **~40% de code dupliqué** :
-
-```
-CLEE-Bordeaux-Site/
 │
-├── pages/                          # 14 pages HTML statiques
-│   ├── index.html                  # Accueil
-│   ├── le-clee.html                # Présentation du CLEE
+├── index.html                      # PAGE PRINCIPALE : Accueil (racine du projet)
 │   ├── companies.html              # Entreprises & Partenaires
 │   ├── establishments.html         # Établissements & Formations
-│   ├── jeunes-familles.html        # Jeunes & Familles
-│   ├── vie-clee.html               # Vie du CLEE
-│   ├── bureau-membres.html        # Sous-page : Bureau et membres
-│   ├── nos-actions.html           # Sous-page : Nos actions
-│   ├── documents-officiels.html   # Sous-page : Documents officiels
-│   ├── orientation-insertion.html # Sous-page : Orientation & insertion
-│   ├── pfmp.html                  # Sous-page : Périodes de Formation en Milieu Professionnel
-│   ├── vie-clee-eleves.html       # Sous-page : Vie du CLEE - Élèves
-│   ├── agenda.html                # Sous-page : Agenda/Événements
-│   └── contact.html               # Formulaire de contact
-│
+│   ├── vie-clee-eleves.html        # Sous-page : Vie du CLEE - Élèves
+│   ├── agenda.html                 # Sous-page : Agenda/Événements
+│   ├── inscription.html            # Authentification : Inscription
+│   ├── contact.html                # Formulaire de contact
 ├── css/                          # Stylesheets modulaires
-│   ├── globals.css                # PARTAGÉ : Variables CSS + composants (header, footer, boutons)
 │   ├── home.css                   # Page d'accueil
 │   ├── companies.css              # Entreprises
 │   ├── establishments.css         # Établissements
 │   ├── jeunes-familles.css        # Jeunes & Familles (partagé par 4 pages)
 │   ├── le-clee.css                # Le CLEE (partagé par 4 pages)
-│   ├── vie-clee.css               # Vie du CLEE
-│   ├── agenda.css                 # Agenda/Événements
-│   └── contact.css                # Contact
 │
 ├── js/                           # Scripts modulaires
 │   ├── common.js                  # PARTAGÉ : Modules (navigation, animations, scroll)
 │   ├── companies.js               # Filtres entreprises
 │   ├── establishments.js          # Carte interactive + formations
-│   ├── agenda.js                  # Calendrier événements
 │   ├── vie-clee.js                # Affichage événements
 │   └── contact.js                 # Gestion formulaire
 │
 ├── assets/                       # Ressources médias
-│   └── images/                    # Logos, illustrations, photos
-│
-└── php/                          # Thème WordPress
-    └── clee-bordeaux-theme/
-        ├── functions.php          # Enqueuing conditionnel des assets
-        ├── header.php             # Template header WordPress
-        ├── footer.php             # Template footer WordPress
-        ├── front-page.php         # Template page d'accueil
-        ├── page-*.php             # Templates pages (× 13)
-        ├── style.css              # Stylesheet requis par WordPress
-        ├── README.txt             # Instructions d'installation
-        └── assets/                # Copie miroir de css/ + js/ (sync requis)
-            ├── css/
-            ├── js/
-            └── images/
-```
-
-### Principe : Chaque page charge UNIQUEMENT ce dont elle a besoin
 
 ```html
-<!-- Exemple : companies.html -->
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <!-- Styles partagés (header, footer, variables) -->
     <link rel="stylesheet" href="../css/globals.css">
     
-    <!-- Styles spécifiques à cette page -->
-    <link rel="stylesheet" href="../css/companies.css">
-</head>
-<body>
-    <!-- Contenu de la page -->
     
     <!-- Scripts partagés (navigation, animations) -->
-    <script src="../js/common.js"></script>
-    
-    <!-- Scripts spécifiques à cette page -->
-    <script src="../js/companies.js"></script>
 </body>
 </html>
-```
-
-**Bénéfices** :
-- Pas de duplication de code (header/footer définis 1 seule fois)
 - Mise en cache optimale (globals.css chargé une fois pour toutes les pages)
 - Maintenance simplifiée (modifier globals.css = impact sur tout le site)
-- Réduction ~40% de la taille totale du projet
-
----
-
 ## Design System centralisé
-
 Toutes les variables de design sont définies dans [css/globals.css](css/globals.css) :
 
 ### Palette de couleurs
@@ -215,32 +163,19 @@ Toutes les variables de design sont définies dans [css/globals.css](css/globals
   --primary-300: rgba(184, 199, 214, 1);
   --primary-200: rgba(214, 224, 235, 1);
   --primary-100: rgba(229, 236, 245, 1);
-  --primary-50: rgba(229, 240, 255, 1);    /* Bleu très clair */
-  
-  /* Couleurs secondaires (Orange) */
-  --secondary-900: rgba(140, 46, 0, 1);    /* Orange foncé */
   --secondary-500: rgba(255, 136, 73, 1);  /* Orange */
   --secondary-50: rgba(255, 240, 229, 1);  /* Orange clair */
-  
-  /* Échelle de gris */
-  --grey-900: rgba(31, 41, 51, 1);         /* Presque noir */
-  --grey-50: rgba(249, 250, 251, 1);       /* Presque blanc */
 }
-```
 
 ### Typographie
 
 ```css
 :root {
-  /* Polices */
   --navbar-text-font-family: "Roboto", sans-serif;
   --titre-font-family: "Barlow Condensed", sans-serif;
   --body-text-font-family: "Roboto", sans-serif;
   
-  /* Tailles */
-  --text-xs: 0.75rem;   /* 12px */
   --text-sm: 0.875rem;  /* 14px */
-  --text-base: 1rem;    /* 16px */
   --text-lg: 1.125rem;  /* 18px */
   --text-xl: 1.25rem;   /* 20px */
   --text-2xl: 1.5rem;   /* 24px */

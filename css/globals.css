@@ -1,3 +1,99 @@
+/* Nav-link par thématique (hover 30% opacité) */
+.nav-link-bleu:hover,
+.nav-link-bleu:focus {
+  background: rgba(23, 110, 161, 0.3) !important;
+}
+.nav-link-orange:hover,
+.nav-link-orange:focus {
+  background: rgba(216, 134, 27, 0.3) !important;
+}
+.nav-link-rouge:hover,
+.nav-link-rouge:focus {
+  background: rgba(198, 54, 52, 0.3) !important;
+}
+.nav-link-vert:hover,
+.nav-link-vert:focus {
+  background: rgba(88, 152, 66, 0.3) !important;
+}
+/* ========================================
+   COULEURS CHARTES BOUTONS NAVBAR
+======================================== */
+
+:root {
+  --orange-clee: #d8861b;
+  --bleu-clee: #176ea1;
+  --vert-clee: #589842;
+  --rouge-clee: #c63634;
+}
+
+/* Boutons navbar par thématique */
+/* Menu déroulant navigation */
+.nav-dropdown {
+  position: relative;
+}
+.nav-dropdown > .nav-link {
+  cursor: pointer;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  min-width: 220px;
+  background: rgba(31, 52, 72, 0.90); /* 10% plus sombre que --primary-900 */
+  color: #fff;
+  font-family: var(--navbar-text-font-family);
+  font-size: 1rem;
+  border-radius: 0 12px 8px 8px; /* coin arrondi en haut à droite */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 0.22s cubic-bezier(.4,0,.2,1), transform 0.22s cubic-bezier(.4,0,.2,1);
+  padding: 1.1rem 0 0.5rem 0; /* padding top accentué */
+}
+.nav-dropdown:hover > .dropdown-menu,
+.nav-dropdown:focus-within > .dropdown-menu {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.dropdown-menu li {
+  list-style: none;
+}
+.dropdown-menu a {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--navbar-text-font-family);
+  font-size: 1rem;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+.dropdown-menu a:hover,
+.dropdown-menu a:focus {
+  background: rgba(49, 73, 96, 0.95); /* 10% plus sombre que --primary-800 */
+  color: #fff;
+}
+@media (max-width: 1023px) {
+  .dropdown-menu {
+    position: static;
+    min-width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+    background: rgba(31, 52, 72, 0.98);
+    transform: none;
+    opacity: 1;
+    display: none;
+  }
+  .nav-dropdown:hover > .dropdown-menu,
+  .nav-dropdown:focus-within > .dropdown-menu {
+    display: block;
+  }
+}
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Kodchasan:wght@200;300;400;500;600;700&display=swap");
 
@@ -700,6 +796,7 @@ button {
   margin: 0 auto;
   position: relative;
   z-index: 1;
+  padding-top: 20px;
 }
 
 .hero-title {
@@ -967,6 +1064,65 @@ button {
 }
 
 /* ========================================
+   THEME BADGE (Profile Switcher)
+======================================== */
+
+.theme-badge {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-family: var(--navbar-text-font-family);
+  font-size: 0.875rem;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-badge:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.theme-badge-pro {
+  background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-500) 100%);
+  color: white;
+}
+
+.theme-badge-pro:hover {
+  background: linear-gradient(135deg, #1A3348 0%, #7A9EBF 100%);
+}
+
+.theme-badge-student {
+  background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+  color: white;
+}
+
+.theme-badge-student:hover {
+  background: linear-gradient(135deg, #E85A25 0%, #E0820A 100%);
+}
+
+@media (max-width: 768px) {
+  .theme-badge {
+    bottom: 10px;
+    right: 10px;
+    padding: 10px 16px;
+    font-size: 0.75rem;
+  }
+  
+  .theme-badge svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* ========================================
    PRINT STYLES
 ======================================== */
 
@@ -974,7 +1130,8 @@ button {
   .header,
   .footer,
   .btn,
-  .menu-toggle {
+  .menu-toggle,
+  .theme-badge {
     display: none;
   }
   

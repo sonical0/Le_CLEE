@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CLÉE Bordeaux Avenir - Choisissez votre profil">
+    <title>CLÉE Bordeaux Avenir - Portail d'accès</title>
+    <link rel="stylesheet" href="../css/globals.css">
+    <link rel="stylesheet" href="../css/portail.css">
+</head>
+<body class="portail-body">
+    <!-- Logo Header -->
+    <div class="portail-header">
+        <img src="../assets/images/logo-clee.png" alt="CLÉE Bordeaux Avenir" class="portail-logo">
+        <h1 class="portail-main-title">Bienvenue sur le portail CLÉE Bordeaux Avenir</h1>
+    </div>
+
+    <!-- Selection Section -->
+    <section class="portail-selection">
+        <div class="container">
+            <h2 class="portail-title">Choisissez votre profil</h2>
+            <p class="portail-subtitle">Sélectionnez votre appartenance pour accéder à une expérience adaptée</p>
+            
+            <div class="profile-cards">
+                <!-- Carte Étudiant -->
+                <div class="profile-card profile-etudiant" data-profile="etudiant">
+                    <div class="profile-icon">
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 3L1 9L5 11.18V17.18L12 21L19 17.18V11.18L21 10.09V17H23V9L12 3Z" fill="currentColor"/>
+                            <path d="M12 13.5L7 10.5L12 7.5L17 10.5L12 13.5Z" fill="currentColor" opacity="0.7"/>
+                        </svg>
+                    </div>
+                    <h3 class="profile-title">Jeune / Étudiant</h3>
+                    <p class="profile-description">
+                        Accédez aux formations, stages, PFMP, conseils d'orientation et événements dédiés aux jeunes
+                    </p>
+                    <ul class="profile-features">
+                        <li>Offres de stages et d'apprentissage</li>
+                        <li>Guide PFMP et orientation</li>
+                        <li>Événements étudiants</li>
+                        <li>Ressources pédagogiques</li>
+                    </ul>
+                    <button class="btn-profile btn-etudiant" data-profile="etudiant">
+                        <span>Accéder à l'espace étudiant</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Carte Professionnel -->
+                <div class="profile-card profile-pro" data-profile="professionnel">
+                    <div class="profile-icon">
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 7H16V5C16 3.9 15.1 3 14 3H10C8.9 3 8 3.9 8 5V7H4C2.9 7 2 7.9 2 9V19C2 20.1 2.9 21 4 21H20C21.1 21 22 20.1 22 19V9C22 7.9 21.1 7 20 7ZM10 5H14V7H10V5Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="profile-title">Professionnel / Entreprise</h3>
+                    <p class="profile-description">
+                        Devenez partenaire, proposez des stages, participez aux événements et renforcez votre engagement territorial
+                    </p>
+                    <ul class="profile-features">
+                        <li>Espace partenaire entreprise</li>
+                        <li>Dépôt d'offres de stage</li>
+                        <li>Participation aux forums</li>
+                        <li>Réseau professionnel</li>
+                    </ul>
+                    <button class="btn-profile btn-pro" data-profile="professionnel">
+                        <span>Accéder à l'espace professionnel</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="portail-footer-note">
+                <p>Vous pourrez modifier votre choix à tout moment depuis les paramètres</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/portail.js"></script>
+</body>
+</html>
