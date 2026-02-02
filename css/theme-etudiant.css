@@ -194,27 +194,36 @@
 }
 
 [data-theme="etudiant"] .chiffre-card {
-    border: 3px solid transparent;
-    background: white;
+    background: white !important;
+    border: 2px solid transparent;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* Retirer le ::before du thème de base */
 [data-theme="etudiant"] .chiffre-card::before {
+    display: none !important;
+}
+
+/* Créer un nouveau ::after pour la bordure gradient */
+[data-theme="etudiant"] .chiffre-card::after {
     content: '';
     position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
+    inset: -2px;
     background: var(--gradient-primary);
+    border-radius: 16px;
     z-index: -1;
-    border-radius: 12px;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
-[data-theme="etudiant"] .chiffre-card:hover::before {
+[data-theme="etudiant"] .chiffre-card:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 12px 24px rgba(255, 107, 53, 0.3) !important;
+}
+
+[data-theme="etudiant"] .chiffre-card:hover::after {
     opacity: 1;
 }
 
