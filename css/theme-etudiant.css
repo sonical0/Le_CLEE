@@ -319,7 +319,13 @@
     pointer-events: none;
 }
 
-/* Responsive mode étudiant */
+/* ========================================
+   RESPONSIVE MODE ÉTUDIANT
+======================================== */
+
+/* Dropdowns masqués automatiquement par globals.css en responsive */
+/* Pas besoin de redéfinir ici - héritage de @media (max-width: 1023px) */
+
 @media (max-width: 768px) {
     [data-theme="etudiant"] .hero::before,
     [data-theme="etudiant"] .hero::after {
