@@ -7,11 +7,11 @@ Les **6 pages principales** du site :
 ```
 0. Portail de sélection (NEW)     → pages/portail.html (choix du profil utilisateur)
 1. Accueil                        → index.html (racine du projet)
-2. Le CLÉE                        → pages/le-clee.html
+2. Le CLEE                        → pages/le-clee.html
 3. Entreprises & Partenaires      → pages/companies.html
 4. Établissements & Formations    → pages/establishments.html
 5. Jeunes & Familles              → pages/jeunes-familles.html
-6. Vie du CLÉE                    → pages/vie-clee.html
+6. Vie du CLEE                    → pages/vie-clee.html
 7. Connexion                      → pages/connexion.html (lien spécial dans la navbar)
 ```
 
@@ -57,11 +57,11 @@ pages/
 | # | Page | Fichier | Description |
 |---|------|---------|-------------|
 | 1 | **Accueil** | `index.html` (racine) | Page d'accueil du site |
-| 2 | **Le CLÉE** | `pages/le-clee.html` | Présentation du CLÉE, sa mission et ses objectifs |
+| 2 | **Le CLEE** | `pages/le-clee.html` | Présentation du CLEE, sa mission et ses objectifs |
 | 3 | **Entreprises & Partenaires** | `pages/companies.html` | Espace dédié aux entreprises partenaires |
 | 4 | **Établissements & Formations** | `pages/establishments.html` | Annuaire des établissements et formations |
 | 5 | **Jeunes & Familles** | `pages/jeunes-familles.html` | Ressources pour les jeunes et les familles |
-| 6 | **Vie du CLÉE** | `pages/vie-clee.html` | Actualités, événements et vie de la communauté |
+| 6 | **Vie du CLEE** | `pages/vie-clee.html` | Actualités, événements et vie de la communauté |
 | 7 | **Connexion** | `pages/connexion.html` | Page de connexion à l'espace personnel |
 
 ### Sous-pages (Non présentes dans la navigation principale)

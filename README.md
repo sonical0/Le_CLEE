@@ -27,7 +27,7 @@ Chaque contribution ou correction doit être reflétée dans ces deux fichiers p
 - [x] Déplacer l'agenda directement dans la page Vie du CLEE pour éviter le publipostage sur plusieurs pages
 - [x] Retirer les majuscules en milieu de phrase
 - [x] Remplacer le logo du CLEE par celui de la charte graphique
-- [ ] Décider et uniformiser : CLÉE ou CLEE ou Clée pour le SEO
+- [ ] Décider et uniformiser : CLEE ou CLEE ou Clée pour le SEO
 - [x] Retirer convention de stage et livret de suivi, remplacer par les documents WordPress
 
 ### Tâches WordPress et infrastructure
