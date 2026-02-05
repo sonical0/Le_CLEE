@@ -67,6 +67,8 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
 - [x] Améliorer le header pour ajouter les sous-pages par catégorie en liste déroulante
 - [x] Adapter la surbrillance des boutons avec les couleurs de la charte graphique
 - [x] Faire un portail étudiant/pro avec un style CSS qui change selon la catégorie d'utilisateur
+- [x] Améliorer la lisibilité de la section "Notre impact" en mode étudiant avec surbrillance adoucie
+- [x] Ajouter une barre de recherche sur la page Entreprises & Partenaires
 - [ ] Sur le ruban sous le header, ajouter un calque avec une photo et reprendre les couleurs de la charte graphique
 - [ ] **ATTENTION : Respecter les règles d'accessibilité pour les couleurs**
 
@@ -96,24 +98,26 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
 
 ## Fonctionnalités principales
 
-### Système de Portail (Nouveau)
+### Système de Portail
 - **Sélection de profil** : Étudiant ou Professionnel
 - **Thème adaptatif** : Couleurs et style personnalisés selon le profil
-- **Persistance** : Le choix est sauvegardé dans le navigateur
-- **Badge de changement** : Possibilité de basculer entre les profils
-- **Agenda Étudiant** : Dates de l'agenda mises en avant avec un fond orange et un texte blanc
-- **Notre impact Étudiant** : Surbrillance adoucie pour une meilleure lisibilité
+- **Persistance** : Le choix est sauvegardé dans le navigateur (localStorage)
+- **Badge de changement** : Possibilité de basculer entre les profils à tout moment
+- **Mode Étudiant - Améliorations visuelles** :
+  - Dates de l'agenda mises en avant avec fond orange et texte blanc pour plus de visibilité
+  - Section "Notre impact" avec surbrillance adoucie (dégradé clair) pour une meilleure lisibilité des chiffres
+  - Boutons CTA avec couleurs de la charte graphique et ombres optimisées au survol
 
 ### Page d'accueil
-- **Hero section** dynamique avec appel à l'action
-- **Actualités** du CLEE et événements récents
-- **Chiffres clés** animés (compteurs dynamiques)
-- **Agenda** des prochains événements
-- **Section contact** rapide
+- **Hero section** dynamique avec appel à l'action et boutons CTA optimisés (couleurs charte graphique, ombres au survol)
+- **Actualités** du CLEE et événements récents (section agenda désormais dans vie-clee.html)
+- **Chiffres clés** animés (compteurs dynamiques) avec surbrillance améliorée en mode étudiant
+- **Section contact** rapide avec texte mis à jour
 
 ### Espace Entreprises & Partenaires
 - **Catalogue des entreprises partenaires** avec système de filtrage multi-critères
-- **Recherche par nom** pour retrouver rapidement une entreprise
+- **Barre de recherche en temps réel** pour retrouver rapidement une entreprise par son nom
+- **Filtrage dynamique** des cartes partenaires avec feedback visuel instantané
 - **Avantages du partenariat** clairement détaillés
 - **Processus de candidature** guidé
 - **Témoignages** d'entreprises partenaires
@@ -128,13 +132,16 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
 
 ### Espace Jeunes & Familles
 - **Ressources d'orientation** professionnelle
+- **Guide d'insertion** dans le monde du trava (contenu amélioré et clarifié)
 - **Guide d'insertion** dans le monde du travail
 - **Informations stages** et apprentissage
 - **Témoignages** d'anciens élèves
-
+- Interface simplifiée avec contenu pertinent et actualisé
 ### Vie du CLEE
 - **Actualités** du réseau école-entreprise
-- **Espace élèves** avec ressources dédiées
+- **Agenda complet** des événements (anciennement sur index.html)
+- **Galerie photos/vidéos** des événements
+- Interface simplifiée (modal de contact supprimée)s
 - **Galerie photos/vidéos** des événements
 
 ### Présentation institutionnelle
@@ -1066,6 +1073,31 @@ Ce projet est la propriété de CLEE Bordeaux Avenir. Toute reproduction, distri
 
 ---
 
-**Dernière mise à jour** : 15 janvier 2026  
-**Version** : 2.0  
+**Dernière mise à jour** : 5 février 2026  
+**Version** : 2.1  
 **Statut** : Production Ready
+
+---
+
+## Historique des versions principales
+
+### Version 2.1 (Février 2026) - Améliorations UX et recherche
+- Ajout barre de recherche partenaires en temps réel
+- Améliorations du thème étudiant (agenda, section impact, boutons CTA)
+- Refactorisation et simplification du contenu (jeunes-familles, vie-clee)
+- Suppression de la section agenda de l'accueil (déplacée vers vie-clee)
+- Amélioration des hovers et feedback visuel
+
+### Version 2.0 (Janvier 2026) - Refonte complète
+- Architecture modulaire (Globals + Spécifiques)
+- Double implémentation (Static + WordPress)
+- Réduction ~40% de code dupliqué
+- Design system centralisé (CSS variables)
+- Modules JavaScript IIFE
+- 17 pages complètes
+- Système de portail étudiant/professionnel
+- Carte interactive établissements
+- Système de filtrage avancé
+- Responsive complet (mobile-first)
+- Accessibilité WCAG 2.1 AA
+- Performance optimisée (Lighthouse 95+)
