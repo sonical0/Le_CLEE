@@ -65,7 +65,7 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
 - [x] Ajouter une barre de recherche avec option filtre dans la page établissements et formations
 - [x] Remplacer le terme PFMP par "stage" pour vulgariser
 - [x] Améliorer le header pour ajouter les sous-pages par catégorie en liste déroulante
-- [ ] Adapter la surbrillance des boutons avec les couleurs de la charte graphique
+- [x] Adapter la surbrillance des boutons avec les couleurs de la charte graphique
 - [x] Faire un portail étudiant/pro avec un style CSS qui change selon la catégorie d'utilisateur
 - [ ] Sur le ruban sous le header, ajouter un calque avec une photo et reprendre les couleurs de la charte graphique
 - [ ] **ATTENTION : Respecter les règles d'accessibilité pour les couleurs**
@@ -101,6 +101,8 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
 - **Thème adaptatif** : Couleurs et style personnalisés selon le profil
 - **Persistance** : Le choix est sauvegardé dans le navigateur
 - **Badge de changement** : Possibilité de basculer entre les profils
+- **Agenda Étudiant** : Dates de l'agenda mises en avant avec un fond orange et un texte blanc
+- **Notre impact Étudiant** : Surbrillance adoucie pour une meilleure lisibilité
 
 ### Page d'accueil
 - **Hero section** dynamique avec appel à l'action
@@ -111,6 +113,7 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
 
 ### Espace Entreprises & Partenaires
 - **Catalogue des entreprises partenaires** avec système de filtrage multi-critères
+- **Recherche par nom** pour retrouver rapidement une entreprise
 - **Avantages du partenariat** clairement détaillés
 - **Processus de candidature** guidé
 - **Témoignages** d'entreprises partenaires

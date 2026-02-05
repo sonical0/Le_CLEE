@@ -28,12 +28,23 @@ const CompaniesPageModule = (() => {
   };
 
   let currentFilter = 'all'; // Track active filter
+  let currentSearch = '';
+
+  const normalize = (value) => {
+    if (!value) return '';
+    return value
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/\p{Diacritic}/gu, '')
+      .replace(/[^a-z0-9\s-]/g, '');
+  };
 
   const init = async () => {
     await loadAndRenderCards();
     initFilters();
     initToggleButton();
     initMobileSelect();
+    initSearch();
     initVoirPlus();
   };
 
@@ -88,12 +99,16 @@ const CompaniesPageModule = (() => {
 
   const filterCards = (filter) => {
     const cards = document.querySelectorAll('.partenaire-card');
+    const searchValue = normalize(currentSearch);
     
     cards.forEach(card => {
       const sector = card.getAttribute('data-sector');
       const isHidden = card.classList.contains('partenaire-card-hidden');
+      const title = normalize(card.querySelector('.partenaire-title')?.textContent || '');
+      const activity = normalize(card.querySelector('.partenaire-activity')?.textContent || '');
+      const matchesSearch = !searchValue || title.includes(searchValue) || activity.includes(searchValue);
 
-      if ((filter === 'all' || sector === filter) && !isHidden) {
+      if ((filter === 'all' || sector === filter) && matchesSearch && !isHidden) {
         card.style.display = 'flex';
         setTimeout(() => card.style.opacity = '1', 0);
       } else {
@@ -168,6 +183,23 @@ const CompaniesPageModule = (() => {
           updateActiveButton(activeButton, filterButtons);
         }
       });
+    }
+  };
+
+  const initSearch = () => {
+    const searchInput = document.getElementById('partenairesSearch');
+    const searchButton = document.getElementById('partenairesSearchBtn');
+
+    if (!searchInput) return;
+
+    const applySearch = () => {
+      currentSearch = searchInput.value.trim();
+      filterCards(currentFilter);
+    };
+
+    searchInput.addEventListener('input', applySearch);
+    if (searchButton) {
+      searchButton.addEventListener('click', applySearch);
     }
   };
 

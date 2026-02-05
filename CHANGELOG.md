@@ -1,5 +1,28 @@
 # Changelog - CLEE Bordeaux Avenir
 
+## [05/02/2026] - Lisibilité hover Notre impact (thème étudiant)
+
+### Ajustement de la surbrillance
+- Remplacement du fond orange par un dégradé clair sur les cartes "Notre impact"
+- Ombre adoucie pour améliorer la lisibilité des chiffres
+
+## [05/02/2026] - Agenda accueil thème étudiant
+
+### Ajustement des dates de l'agenda
+- Mise en avant des dates avec un fond orange et un texte blanc dans le thème Étudiant
+
+## [05/02/2026] - Surbrillance des boutons d'accueil
+
+### Amélioration du hover des CTA
+- Application des couleurs de la charte graphique sur les boutons du hero de l'accueil
+- Ajustement des ombres pour renforcer la hiérarchie visuelle au survol
+
+## [05/02/2026] - Barre de recherche partenaires
+
+### Ajout d'une recherche sur la page partenaires
+- Ajout d'une barre de recherche entre l'introduction et les filtres des entreprises
+- Filtrage des cartes par nom via le champ de recherche
+
 ## [05/02/2026] - Simplification de la page Nos Actions et documentation des commits
 
 ### Refactorisation du contenu
