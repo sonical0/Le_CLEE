@@ -1,19 +1,34 @@
-# [27/01/2026] - Règle de documentation obligatoire
-
-## Ajout d'une règle de contribution
-
-- Il est désormais obligatoire de mettre à jour le `README.md` et le `CHANGELOG.md` à chaque modification du projet.
-- Toute contribution ou correction doit être reflétée dans ces deux fichiers pour garantir la traçabilité et la clarté du projet.
-
 # Changelog - CLEE Bordeaux Avenir
 
-# Changelog - CLEE Bordeaux Avenir
+## [05/02/2026] - Simplification de la page Nos Actions et documentation des commits
+
+### Refactorisation du contenu
+- Suppression des métadonnées (fréquence et impact) de toutes les cartes d'actions dans nos-actions.html
+- Retrait de la 6ème carte "Accompagnement des stages" pour simplifier la présentation
+- Correction d'une faute de frappe dans le CTA ("et vous souhaitez" au lieu de "et souhaitez")
+
+### Documentation du projet
+- Ajout de la convention **Conventional Commits** dans `.github/copilot-instructions.md`
+- Définition des types de commit (feat, fix, refactor, docs, style, chore, perf, test)
+- Règles claires pour la génération des messages de commit (anglais par défaut, français sur demande)
+- Exemples de messages de commit conformes à la convention
+
+### Avantages
+- Interface plus épurée et facile à lire pour les visiteurs
+- Standardisation des messages de commit pour une meilleure traçabilité Git
+- Documentation claire pour les futurs contributeurs
+
+---
 
 ## [27/01/2026] - Règle de documentation obligatoire
 
 ### Ajout d'une règle de contribution
 - Il est désormais obligatoire de mettre à jour le `README.md` et le `CHANGELOG.md` à chaque modification du projet.
 - Toute contribution ou correction doit être reflétée dans ces deux fichiers pour garantir la traçabilité et la clarté du projet.
+
+# Changelog - CLEE Bordeaux Avenir
+
+## [27/01/2026] - Règle de documentation obligatoire
 
 ## [23/01/2026] - Déplacement de index.html à la racine
 

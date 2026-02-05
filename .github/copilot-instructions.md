@@ -63,7 +63,7 @@ js/
 ```
 
 ### Page Hierarchy (17 pages total)
-See [PAGES-STRUCTURE.md](PAGES-STRUCTURE.md) for complete structure:
+See [PAGES-STRUCTURE.md](../PAGES-STRUCTURE.md) for complete structure:
 - **1 homepage at root**: index.html (Accueil)
 - **6 main navigation pages**: le-clee, companies, establishments, jeunes-familles, vie-clee, connexion
 - **9 sub-pages**: bureau-membres, nos-actions, documents-officiels, orientation-insertion, pfmp, vie-clee-eleves, agenda, connexion, inscription
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
    - Include both globals.css and page-specific CSS in the HTML
    - Include common.js for shared functionality
    - Copy navigation structure from existing pages
-   - Update [PAGES-STRUCTURE.md](PAGES-STRUCTURE.md) with the new page
+   - Update [PAGES-STRUCTURE.md](../PAGES-STRUCTURE.md) with the new page
 
 2. **Documentation & Historique**
   - À chaque modification du projet, **mettre à jour obligatoirement** le fichier `README.md` (documentation, tâches, instructions) et le fichier `CHANGELOG.md` (historique des changements).
@@ -231,3 +231,45 @@ This rule applies to:
 - AI agent responses
 
 **Note**: Badges (like ![Build Status]) and icons in UI/UX design are acceptable as they serve functional purposes.
+
+## Git Commit Message Convention
+
+### Conventional Commits Format
+All commit messages must follow the **Conventional Commits** specification:
+
+**Format**: `type(scope): description`
+
+**Common types**:
+- `feat`: new feature or functionality
+- `fix`: bug fix
+- `refactor`: code refactoring without behavior change
+- `style`: formatting, whitespace, punctuation (no code change)
+- `docs`: documentation changes
+- `chore`: maintenance tasks, dependencies, build process
+- `perf`: performance improvements
+- `test`: adding or modifying tests
+
+**Rules**:
+- Description must be detailed and clear
+- Default language: **English**
+- Use **French** only when explicitly requested by the user
+- Include scope in parentheses when applicable (e.g., `(nos-actions)`, `(contact)`, `(navbar)`)
+- Use present tense and imperative mood
+- Lowercase first letter after colon
+
+**Examples**:
+```
+feat(portail): add student theme switcher with localStorage persistence
+fix(navbar): correct dropdown menu z-index on mobile devices
+refactor(nos-actions): remove frequency/impact metadata from action cards
+docs(readme): update installation instructions for Node.js 18+
+style(globals): normalize whitespace and indentation in CSS variables
+chore(deps): update dependencies to latest stable versions
+```
+
+**When generating commit messages**:
+1. Analyze all changed files from `git diff`
+2. Identify the primary type of change
+3. Determine the most relevant scope
+4. Write a concise but descriptive summary of what was done
+5. Use English by default unless French is explicitly requested
