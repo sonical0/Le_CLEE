@@ -88,6 +88,14 @@ All styling uses CSS variables defined in `globals.css`:
 
 **Never use hardcoded colors** - always reference CSS variables or add new ones to globals.css.
 
+**Color modification tracking**: When modifying colors in any CSS file (including theme files), always add a comment indicating the original color from the graphic charter for comparison purposes.
+```css
+/* Example format */
+box-shadow: 0 8px 24px rgba(255, 153, 102, 0.35);
+                                                   /* Charte originelle: rgba(255, 107, 53, 0.4) */
+```
+This ensures traceability and allows easy reversion to original charter colors if needed.
+
 ## JavaScript Module Pattern
 
 All shared functionality uses **IIFE modules** in `common.js`:

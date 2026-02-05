@@ -23,20 +23,20 @@ const eventsData = [
     type: "atelier",
     date: new Date(2026, 1, 5), // 5 février 2026
     time: "14:00 - 17:00",
-    location: "Salle de conférence - Bâtiment A",
+    location: "Salle de conférence - bâtiment A",
     description: "Apprenez à optimiser votre CV et préparez-vous aux entretiens d'embauche avec nos experts RH. Conseils personnalisés et simulations d'entretiens.",
-    organizer: "Service Carrières EPSI",
+    organizer: "service carrières EPSI",
     participants: "30 places disponibles"
   },
   {
     id: 3,
-    title: "Conférence: Intelligence Artificielle et Métiers du Numérique",
+    title: "Conférence: intelligence artificielle et métiers du numérique",
     type: "conference",
     date: new Date(2026, 1, 15), // 15 février 2026
     time: "18:30 - 20:30",
-    location: "Amphithéâtre Principal",
+    location: "amphithéâtre principal",
     description: "Découvrez comment l'IA transforme les métiers du numérique avec des experts du secteur. Table ronde et échanges avec le public.",
-    organizer: "CLEE Bordeaux & Tech Leaders",
+    organizer: "CLEE Bordeaux & Tech leaders",
     participants: "200 places disponibles"
   },
   {
@@ -45,7 +45,7 @@ const eventsData = [
     type: "rencontre",
     date: new Date(2026, 2, 10), // 10 mars 2026
     time: "16:00 - 19:00",
-    location: "Espace Networking",
+    location: "espace networking",
     description: "Une après-midi de networking informel pour créer des liens entre étudiants et professionnels. Speed-meetings et échanges autour d'un cocktail.",
     organizer: "CLEE Bordeaux Avenir",
     participants: "150 participants"
@@ -56,7 +56,7 @@ const eventsData = [
     type: "salon",
     date: new Date(2026, 2, 25), // 25 mars 2026
     time: "10:00 - 18:00",
-    location: "Parc des Expositions",
+    location: "parc des expositions",
     description: "Le plus grand salon dédié aux métiers du numérique en Nouvelle-Aquitaine. Stands d'entreprises, conférences et ateliers thématiques.",
     organizer: "CLEE Bordeaux & Partenaires",
     participants: "2000 visiteurs attendus"
@@ -69,7 +69,7 @@ const eventsData = [
     time: "14:00 - 18:00",
     location: "Incubateur EPSI",
     description: "Pour les étudiants porteurs de projets: conseils en création d'entreprise, pitch training et rencontre avec des entrepreneurs à succès.",
-    organizer: "EPSI Innovation Lab",
+    organizer: "EPSI innovation lab",
     participants: "25 places disponibles"
   },
   {
@@ -89,7 +89,7 @@ const eventsData = [
     type: "conference",
     date: new Date(2026, 4, 12), // 12 mai 2026
     time: "18:00 - 20:00",
-    location: "Amphithéâtre Principal",
+    location: "amphithéâtre principal",
     description: "Experts en cybersécurité vous présentent les menaces actuelles et les bonnes pratiques pour protéger les systèmes d'information.",
     organizer: "CLEE Bordeaux & CyberExperts",
     participants: "180 places disponibles"
@@ -111,7 +111,7 @@ const eventsData = [
     type: "forum",
     date: new Date(2026, 5, 20), // 20 juin 2026
     time: "10:00 - 16:00",
-    location: "Hall Principal",
+    location: "hall principal",
     description: "Trouvez votre stage d'été! Rencontre avec des entreprises proposant des missions estivales pour les étudiants.",
     organizer: "CLEE Bordeaux Avenir",
     participants: "300 étudiants attendus"
@@ -122,9 +122,9 @@ const eventsData = [
     type: "atelier",
     date: new Date(2026, 8, 15), // 15 septembre 2026
     time: "13:00 - 17:00",
-    location: "Salle Innovation",
+    location: "salle innovation",
     description: "Découvrez la méthodologie Design Thinking à travers un atelier pratique. Résolvez un cas concret en équipe avec des professionnels.",
-    organizer: "EPSI Innovation Lab",
+    organizer: "EPSI innovation lab",
     participants: "35 places disponibles"
   },
   {
@@ -133,7 +133,7 @@ const eventsData = [
     type: "conference",
     date: new Date(2026, 8, 25), // 25 septembre 2026
     time: "18:00 - 20:00",
-    location: "Amphithéâtre Principal",
+    location: "amphithéâtre principal",
     description: "Comment l'IA générative révolutionne le développement logiciel. Démonstrations pratiques et cas d'usage.",
     organizer: "CLEE Bordeaux & Tech Innovators",
     participants: "200 places disponibles"
@@ -144,7 +144,7 @@ const eventsData = [
     type: "salon",
     date: new Date(2026, 9, 8), // 8 octobre 2026
     time: "09:00 - 18:00",
-    location: "Parc des Expositions",
+    location: "parc des expositions",
     description: "Le rendez-vous incontournable pour trouver son alternance. Plus de 100 entreprises présentes avec des offres concrètes.",
     organizer: "CLEE Bordeaux & CCI Bordeaux",
     participants: "3000 visiteurs attendus"
@@ -155,7 +155,7 @@ const eventsData = [
     type: "atelier",
     date: new Date(2026, 9, 22), // 22 octobre 2026
     time: "14:00 - 18:00",
-    location: "Salle Projet",
+    location: "salle projet",
     description: "Maîtrisez les méthodes agiles (Scrum, Kanban) avec des praticiens certifiés. Exercices pratiques et certification.",
     organizer: "EPSI Formation Continue",
     participants: "20 places disponibles"
@@ -166,9 +166,9 @@ const eventsData = [
     type: "rencontre",
     date: new Date(2026, 10, 10), // 10 novembre 2026
     time: "17:00 - 20:00",
-    location: "Espace Coworking",
+    location: "espace coworking",
     description: "Découvrez l'écosystème startup de Bordeaux. Pitch de startups locales et opportunités de stages/emplois dans ces structures innovantes.",
-    organizer: "CLEE Bordeaux & French Tech Bordeaux",
+    organizer: "CLEE Bordeaux & French tech Bordeaux",
     participants: "100 participants"
   },
   {
@@ -177,7 +177,7 @@ const eventsData = [
     type: "forum",
     date: new Date(2026, 10, 25), // 25 novembre 2026
     time: "09:00 - 18:00",
-    location: "Centre de Congrès",
+    location: "centre de congrès",
     description: "Le plus grand forum emploi tech de la région! 80+ entreprises, conférences métiers et ateliers coaching carrière.",
     organizer: "CLEE Bordeaux Avenir",
     participants: "1500 participants attendus"
@@ -188,7 +188,7 @@ const eventsData = [
     type: "conference",
     date: new Date(2026, 11, 3), // 3 décembre 2026
     time: "18:30 - 21:00",
-    location: "Amphithéâtre Principal",
+    location: "amphithéâtre principal",
     description: "Plongez dans l'univers de la blockchain et du Web3. Experts et entrepreneurs partagent leurs visions et projets.",
     organizer: "CLEE Bordeaux & Blockchain Experts",
     participants: "150 places disponibles"
