@@ -2,7 +2,7 @@
 
 ## Vue d'ensemble
 
-Le site CLÉE Bordeaux Avenir dispose désormais d'un **système de portail** permettant aux utilisateurs de choisir leur profil (Étudiant ou Professionnel) avec une expérience visuelle adaptée à chaque catégorie.
+Le site CLEE Bordeaux Avenir dispose désormais d'un **système de portail** permettant aux utilisateurs de choisir leur profil (Étudiant ou Professionnel) avec une expérience visuelle adaptée à chaque catégorie.
 
 ## Fonctionnalités
 
