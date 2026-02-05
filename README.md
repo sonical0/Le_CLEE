@@ -15,6 +15,32 @@
 À chaque modification du projet, il est obligatoire de mettre à jour le fichier `README.md` (documentation, tâches, instructions) et le fichier `CHANGELOG.md` (historique des changements).
 Chaque contribution ou correction doit être reflétée dans ces deux fichiers pour garantir la traçabilité et la clarté du projet.
 
+## Convention de commit
+
+Le projet utilise la convention **Conventional Commits** pour standardiser les messages de commit :
+
+**Format** : `type(scope): description`
+
+**Types courants** :
+- `feat`: nouvelle fonctionnalité
+- `fix`: correction de bug
+- `refactor`: refactorisation sans changement de comportement
+- `style`: formatage, espaces, ponctuation
+- `docs`: modifications de documentation
+- `chore`: maintenance, dépendances, build
+- `perf`: amélioration de performance
+- `test`: ajout ou modification de tests
+
+**Exemples** :
+```
+feat(portail): add student theme switcher with localStorage persistence
+fix(navbar): correct dropdown menu z-index on mobile devices
+refactor(nos-actions): remove frequency/impact metadata from action cards
+docs(readme): update installation instructions
+```
+
+Voir `.github/copilot-instructions.md` pour plus de détails.
+
 ## Liste de tâches - Retour entretien CLEE
 
 ### Modifications prioritaires
