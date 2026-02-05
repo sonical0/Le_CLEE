@@ -41,8 +41,12 @@
                             <li><a href="companies.html#actions">Actions pour les entreprises</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item nav-dropdown">
                         <a href="establishments.html" class="nav-link nav-link-orange">Établissements & Formations</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="establishments.html">Établissements et formations</a></li>
+                            <li><a href="pfmp.html">Stages et/ou PFMP</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item nav-dropdown">
                         <a href="jeunes-familles.html" class="nav-link nav-link-rouge">Jeunes & Familles</a>
@@ -189,7 +193,7 @@
                 
                 <div class="comment-card">
                     <h3 class="comment-title">Ouvrir vos portes</h3>
-                    <p class="comment-text">Organisez des visites d'entreprise et découverte de vos activités</p>
+                    <p class="comment-text">Organisez des visites d'entreprise et de découverte de vos activités</p>
                 </div>
                 
                 <div class="comment-card">
@@ -206,101 +210,79 @@
 
     <section class="partenaires-section" id="carte-partenaires">
         <div class="container">
-            <h2 class="section-title">Carte des entreprises partenaires</h2>
-            <p class="section-subtitle">Découvrez les entreprises engagées avec le CLEE Bordeaux Avenir</p>
+            <h2 class="section-title">Entreprises partenaires</h2>
+            <p class="section-subtitle">Découvrez les entreprises engagées dans le CLEE Bordeaux Avenir</p>
             
+            <!-- Filtre pour desktop -->
             <div class="filtre-container">
                 <button class="filtre-btn active" data-filter="all">Tous les secteurs</button>
-                <button class="filtre-btn" data-filter="industrie">Industrie</button>
-                <button class="filtre-btn" data-filter="numerique">Numérique</button>
-                <button class="filtre-btn" data-filter="tertiaire">Tertiaire</button>
-                <button class="filtre-btn" data-filter="batiment">Bâtiment</button>
+                <button class="filtre-btn filtre-principal" data-filter="industrie">Industrie</button>
+                <button class="filtre-btn filtre-principal" data-filter="batiment-tp">Bâtiment / Travaux publics</button>
+                <button class="filtre-btn filtre-principal" data-filter="hotellerie-restauration">Hôtellerie / Restauration</button>
+                <button class="filtre-btn filtre-principal" data-filter="agriculture">Agriculture</button>
+                <button class="filtre-btn filtre-principal" data-filter="sante-social">Santé / Social</button>
+                <button class="filtre-btn filtre-principal" data-filter="vente-commerce">Vente / Commerce</button>
+                
+                <!-- Filtres secondaires (cachés par défaut) -->
+                <button class="filtre-btn filtre-secondaire" data-filter="aeroport">Aéroport</button>
+                <button class="filtre-btn filtre-secondaire" data-filter="animation-sport">Animation / Sport</button>
+                <button class="filtre-btn filtre-secondaire" data-filter="animaux-elevage">Animaux / Elevage</button>
+                <button class="filtre-btn filtre-secondaire" data-filter="artisanat">Artisanat</button>
+                <button class="filtre-btn filtre-secondaire" data-filter="automobile">Automobile</button>
+                <button class="filtre-btn filtre-secondaire" data-filter="energie">Energie</button>
+                <button class="filtre-btn filtre-secondaire" data-filter="maintenance-entretien">Maintenance / Entretien</button>
+                <button class="filtre-btn filtre-secondaire" data-filter="mode-esthetique">Mode / Esthétique</button>
+                <button class="filtre-btn filtre-secondaire" data-filter="nature-environnement">Nature / Environnement</button>
+                <button class="filtre-btn filtre-secondaire" data-filter="securite-defense">Sécurité / Défense</button>
+                <button class="filtre-btn filtre-secondaire" data-filter="services-administratifs">Services administratifs</button>
+                <button class="filtre-btn filtre-secondaire" data-filter="services-funeraires">Services funéraires</button>
+                <button class="filtre-btn filtre-secondaire" data-filter="spectacles-divertissement">Spectacles / Divertissement</button>
+                <button class="filtre-btn filtre-secondaire" data-filter="transport-magasinage">Transport / Magasinage</button>
+                
+                <button class="filtre-toggle-btn" id="toggleFiltres">
+                    <span class="toggle-text">Plus de filtres</span>
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </button>
             </div>
             
-            <div class="partenaires-grid">
-                <div class="partenaire-card" data-sector="industrie">
-                    <div class="partenaire-image">
-                        <img src="https://picsum.photos/400/250?random=10" alt="Entreprise Industrie">
-                        <div class="partenaire-badge">Industrie</div>
-                    </div>
-                    <div class="partenaire-content">
-                        <h3 class="partenaire-title">Entreprise Industrie</h3>
-                        <p class="partenaire-activity"><strong>Activité :</strong> Fabrication industrielle</p>
-                        <p class="partenaire-engagement"><strong>Type d'engagement :</strong> Accueil de stagiaires, Interventions</p>
-                        <p class="partenaire-contact"><strong>Contact :</strong> contact@entreprise-industrie.fr</p>
-                        <a href="#contact" class="partenaire-cta">Contacter →</a>
-                    </div>
-                </div>
-                
-                <div class="partenaire-card" data-sector="numerique">
-                    <div class="partenaire-image">
-                        <img src="https://picsum.photos/400/250?random=11" alt="Tech Solutions">
-                        <div class="partenaire-badge">Numérique</div>
-                    </div>
-                    <div class="partenaire-content">
-                        <h3 class="partenaire-title">Tech Solutions</h3>
-                        <p class="partenaire-activity"><strong>Activité :</strong> Solutions informatiques</p>
-                        <p class="partenaire-engagement"><strong>Type d'engagement :</strong> Projets pédagogiques, Visites d'entreprise</p>
-                        <p class="partenaire-contact"><strong>Contact :</strong> contact@techsolutions.fr</p>
-                        <a href="#contact" class="partenaire-cta">Contacter →</a>
-                    </div>
-                </div>
-                
-                <div class="partenaire-card" data-sector="tertiaire">
-                    <div class="partenaire-image">
-                        <img src="https://picsum.photos/400/250?random=12" alt="Cabinet Conseil">
-                        <div class="partenaire-badge">Tertiaire</div>
-                    </div>
-                    <div class="partenaire-content">
-                        <h3 class="partenaire-title">Cabinet Conseil</h3>
-                        <p class="partenaire-activity"><strong>Activité :</strong> Gestion administrative</p>
-                        <p class="partenaire-engagement"><strong>Type d'engagement :</strong> Accueil de stagiaires</p>
-                        <p class="partenaire-contact"><strong>Contact :</strong> contact@cabinet-conseil.fr</p>
-                        <a href="#contact" class="partenaire-cta">Contacter →</a>
-                    </div>
-                </div>
-                
-                <div class="partenaire-card" data-sector="batiment">
-                    <div class="partenaire-image">
-                        <img src="https://picsum.photos/400/250?random=13" alt="BTP Bordeaux">
-                        <div class="partenaire-badge">Bâtiment</div>
-                    </div>
-                    <div class="partenaire-content">
-                        <h3 class="partenaire-title">BTP Bordeaux</h3>
-                        <p class="partenaire-activity"><strong>Activité :</strong> Construction et rénovation</p>
-                        <p class="partenaire-engagement"><strong>Type d'engagement :</strong> Accueil de stagiaires, Interventions</p>
-                        <p class="partenaire-contact"><strong>Contact :</strong> contact@btpbordeaux.fr</p>
-                        <a href="#contact" class="partenaire-cta">Contacter →</a>
-                    </div>
-                </div>
-                
-                <div class="partenaire-card" data-sector="numerique">
-                    <div class="partenaire-image">
-                        <img src="https://picsum.photos/400/250?random=14" alt="Digital Hub">
-                        <div class="partenaire-badge">Numérique</div>
-                    </div>
-                    <div class="partenaire-content">
-                        <h3 class="partenaire-title">Digital Hub</h3>
-                        <p class="partenaire-activity"><strong>Activité :</strong> Développement web</p>
-                        <p class="partenaire-engagement"><strong>Type d'engagement :</strong> Projets pédagogiques, Accueil de stagiaires</p>
-                        <p class="partenaire-contact"><strong>Contact :</strong> contact@digitalhub.fr</p>
-                        <a href="#contact" class="partenaire-cta">Contacter →</a>
-                    </div>
-                </div>
-                
-                <div class="partenaire-card" data-sector="industrie">
-                    <div class="partenaire-image">
-                        <img src="https://picsum.photos/400/250?random=15" alt="Manufacture Tech">
-                        <div class="partenaire-badge">Industrie</div>
-                    </div>
-                    <div class="partenaire-content">
-                        <h3 class="partenaire-title">Manufacture Tech</h3>
-                        <p class="partenaire-activity"><strong>Activité :</strong> Automation et robotique</p>
-                        <p class="partenaire-engagement"><strong>Type d'engagement :</strong> Visites d'entreprise, Interventions</p>
-                        <p class="partenaire-contact"><strong>Contact :</strong> contact@manufacturetech.fr</p>
-                        <a href="#contact" class="partenaire-cta">Contacter →</a>
-                    </div>
-                </div>
+            <!-- Select pour mobile -->
+            <div class="filtre-select-container">
+                <label for="filtreMobile" class="filtre-label">Filtrer par secteur :</label>
+                <select id="filtreMobile" class="filtre-select">
+                    <option value="all">Tous les secteurs</option>
+                    <option value="aeroport">Aéroport</option>
+                    <option value="agriculture">Agriculture</option>
+                    <option value="animation-sport">Animation / Sport</option>
+                    <option value="animaux-elevage">Animaux / Elevage</option>
+                    <option value="artisanat">Artisanat</option>
+                    <option value="automobile">Automobile</option>
+                    <option value="batiment-tp">Bâtiment / Travaux publics</option>
+                    <option value="energie">Energie</option>
+                    <option value="hotellerie-restauration">Hôtellerie / Restauration</option>
+                    <option value="industrie">Industrie</option>
+                    <option value="maintenance-entretien">Maintenance / Entretien</option>
+                    <option value="mode-esthetique">Mode / Esthétique</option>
+                    <option value="nature-environnement">Nature / Environnement</option>
+                    <option value="sante-social">Santé / Social</option>
+                    <option value="securite-defense">Sécurité / Défense</option>
+                    <option value="services-administratifs">Services administratifs</option>
+                    <option value="services-funeraires">Services funéraires</option>
+                    <option value="spectacles-divertissement">Spectacles / Divertissement</option>
+                    <option value="transport-magasinage">Transport / Magasinage</option>
+                    <option value="vente-commerce">Vente / Commerce</option>
+                </select>
+            </div>
+            
+            <div class="partenaires-grid" id="partenairesGrid">
+                <!-- Les cartes seront générées par JavaScript à partir du JSON -->
+            </div>
+            
+            <!-- Bouton "Voir plus" -->
+            <div class="voir-plus-container">
+                <button class="voir-plus-btn" id="voirPlusBtn">
+                    <span class="voir-plus-text">Voir plus d'entreprises</span>
+                    <i class="fas fa-chevron-down voir-plus-icon"></i>
+                </button>
             </div>
         </div>
     </section>
@@ -308,7 +290,7 @@
     <section class="temoignages-section" id="temoignages">
         <div class="container">
             <h2 class="section-title">Témoignages</h2>
-            <p class="section-subtitle">Les entreprises du bassin Bordeaux Avenir partagent leur expérience, leurs motivations et les bénéfices concrets de leur engagement aux côtés du CLEE.</p>
+            <p class="section-subtitle">Les entreprises du CLEE Bordeaux Avenir partagent leurs expériences, leurs motivations et les bénéfices concrets de leur engagement.</p>
             
             <div class="temoignages-grid">
                 <div class="temoignage-card">
@@ -338,10 +320,6 @@
                     </div>
                 </div>
             </div>
-
-            <div class="cta-buttons">
-                <a href="contact.html" class="btn btn-primary">Contactez-nous pour en savoir plus</a>
-            </div>
         </div>
     </section>
 
@@ -353,25 +331,13 @@
             <div class="guides-grid">
                 <div class="guide-card">
                     <h3 class="guide-title">Guide d'accueil du tuteur</h3>
-                    <p class="guide-description">Guide complet pour accompagner un élève en PFMP</p>
-                    <a href="#" class="guide-download">Télécharger (PDF)</a>
-                </div>
-                
-                <div class="guide-card">
-                    <h3 class="guide-title">Modèle de convention</h3>
-                    <p class="guide-description">Convention type pour l'accueil de stagiaires</p>
+                    <p class="guide-description">Guide complet pour accompagner un élève en PFMP / Stage</p>
                     <a href="#" class="guide-download">Télécharger (PDF)</a>
                 </div>
                 
                 <div class="guide-card">
                     <h3 class="guide-title">Les différents types de stage</h3>
                     <p class="guide-description">Comprendre PFMP, stages et contrats d'apprentissage</p>
-                    <a href="#" class="guide-download">Télécharger (PDF)</a>
-                </div>
-                
-                <div class="guide-card">
-                    <h3 class="guide-title">Guide entreprise</h3>
-                    <p class="guide-description">Comprendre le lycée professionnel et ses spécificités</p>
                     <a href="#" class="guide-download">Télécharger (PDF)</a>
                 </div>
                 
@@ -387,7 +353,6 @@
     <section class="liens-section" id="liens-utiles">
         <div class="container">
             <h2 class="section-title">Liens utiles</h2>
-            <p class="section-subtitle">Déposez vos offres de PFMP, stages ou contrats d'apprentissage pour permettre aux jeunes du bassin de découvrir vos métiers et intégrer votre entreprise.</p>
             
             <div class="liens-grid">
                 <a href="https://www.1jeune1solution.gouv.fr/" target="_blank" class="lien-card">
@@ -411,6 +376,18 @@
                 <a href="https://www.nouvelle-aquitaine.fr/" target="_blank" class="lien-card">
                     <h3 class="lien-title">Région Nouvelle-Aquitaine</h3>
                     <p class="lien-description">Dispositifs et aides régionales pour les entreprises</p>
+                    <span class="lien-cta">Accéder au site →</span>
+                </a>
+                
+                <a href="https://www.missionlocalebordeaux.fr/" target="_blank" class="lien-card">
+                    <h3 class="lien-title">Mission Locale Bordeaux</h3>
+                    <p class="lien-description">Accompagnement des jeunes vers l'emploi et la formation</p>
+                    <span class="lien-cta">Accéder au site →</span>
+                </a>
+                
+                <a href="https://www.francetravail.fr/accueil/" target="_blank" class="lien-card">
+                    <h3 class="lien-title">France Travail</h3>
+                    <p class="lien-description">Accompagnement des demandeurs d'emploi et des entreprises</p>
                     <span class="lien-cta">Accéder au site →</span>
                 </a>
             </div>

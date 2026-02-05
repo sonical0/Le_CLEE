@@ -48,8 +48,12 @@
                             <li><a href="companies.html#actions">Actions pour les entreprises</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item nav-dropdown">
                         <a href="establishments.html" class="nav-link nav-link-orange active">Établissements & Formations</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="establishments.html">Établissements et formations</a></li>
+                            <li><a href="pfmp.html">Stages et/ou PFMP</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item nav-dropdown">
                         <a href="jeunes-familles.html" class="nav-link nav-link-rouge">Jeunes & Familles</a>
@@ -77,7 +81,7 @@
             <nav class="breadcrumb" aria-label="Fil d'ariane">
                 <a href="../index.html">Accueil</a>
                 <span>/</span>
-                <span>Établissements & Formations</span>
+                <span>Établissements</span>
             </nav>
         </div>
     </div>
@@ -99,6 +103,15 @@
                     <option value="CAP">CAP</option>
                     <option value="BAC PRO">BAC PRO</option>
                     <option value="BTS">BTS</option>
+                </select>
+                <select id="formation-formations-filter" aria-label="Filtrer par formations">
+                    <option value="tous">Toutes les formations</option>
+                    <option value="cap-electricien">CAP Électricien</option>
+                    <option value="bac-pro-sn">Bac Pro Systèmes Numériques</option>
+                    <option value="bac-pro-ga">Bac Pro Gestion Administrative</option>
+                    <option value="bts-cybersecurite">BTS Cybersécurité</option>
+                    <option value="bts-sio">BTS SIO - Option SLAM</option>
+                    <option value="cap-macon">CAP Maçon</option>
                 </select>
                 <button type="submit" class="btn btn-primary">Filtrer</button>
             </form>
@@ -206,7 +219,7 @@
         </div>
     </section>
 
-    <section class="formations-section" id="formations">
+    <section class="formations-section" id="formations" style="display: none;">
         <div class="container">
             <h2 class="section-title">Formations proposées</h2>
             
@@ -366,20 +379,6 @@
                         <button class="formation-toggle">Voir les détails</button>
                     </div>
                 </article>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-section" id="cta">
-        <div class="container">
-            <h2 class="cta-title">Prêt à commencer ?</h2>
-            <p class="cta-text">
-                Explorez nos formations et trouvez le parcours professionnel qui vous correspond. 
-                Nos conseillers sont là pour vous accompagner à chaque étape.
-            </p>
-            <div class="cta-buttons">
-                <a href="#" class="btn btn-primary">Candidater maintenant</a>
-                <a href="#" class="btn btn-outline">Consulter l'offre complète</a>
             </div>
         </div>
     </section>
