@@ -1,43 +1,79 @@
 // Menu déroulant navigation (fermeture au mouseleave, apparition vers le bas)
 const DropdownMenuModule = (() => {
+  function isMobile() {
+    return window.innerWidth <= 1200; // Même breakpoint que le menu burger
+  }
+  
   function closeDropdown(dropdown) {
+    if (isMobile()) return; // Ne rien faire en mode mobile
+    
     dropdown.classList.remove('dropdown-open');
     const menu = dropdown.querySelector('.dropdown-menu');
     if (menu) menu.style.display = '';
   }
+  
   function openDropdown(dropdown) {
+    if (isMobile()) return; // Ne pas ouvrir les dropdowns en mode mobile/tablette
+    
     dropdown.classList.add('dropdown-open');
     const menu = dropdown.querySelector('.dropdown-menu');
     if (menu) menu.style.display = 'block';
   }
+  
   function handleDropdownEvents() {
     document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
       let timeout;
+      
       dropdown.addEventListener('mouseenter', () => {
+        if (isMobile()) return; // Ignorer en mode mobile
         clearTimeout(timeout);
         openDropdown(dropdown);
       });
+      
       dropdown.addEventListener('mouseleave', () => {
+        if (isMobile()) return; // Ignorer en mode mobile
         timeout = setTimeout(() => closeDropdown(dropdown), 120);
       });
+      
       // Accessibilité : focus/blur
       dropdown.addEventListener('focusin', () => {
+        if (isMobile()) return; // Ignorer en mode mobile
         clearTimeout(timeout);
         openDropdown(dropdown);
       });
+      
       dropdown.addEventListener('focusout', () => {
+        if (isMobile()) return; // Ignorer en mode mobile
         timeout = setTimeout(() => closeDropdown(dropdown), 120);
       });
+      
       // Empêcher le scroll du menu déroulant
       const menu = dropdown.querySelector('.dropdown-menu');
       if (menu) {
-        menu.addEventListener('wheel', e => e.preventDefault(), { passive: false });
+        menu.addEventListener('wheel', e => {
+          if (!isMobile()) {
+            e.preventDefault();
+          }
+        }, { passive: false });
       }
     });
   }
+  
   function init() {
     handleDropdownEvents();
+    
+    // Fermer tous les dropdowns lors du redimensionnement en mode mobile
+    window.addEventListener('resize', () => {
+      if (isMobile()) {
+        document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+          dropdown.classList.remove('dropdown-open');
+          const menu = dropdown.querySelector('.dropdown-menu');
+          if (menu) menu.style.display = '';
+        });
+      }
+    });
   }
+  
   return { init };
 })();
 

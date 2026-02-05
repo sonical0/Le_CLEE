@@ -1,31 +1,24 @@
-/* ==========================================
-   THÈME ÉTUDIANT - COULEURS VIVES
-   Basé sur la charte graphique CLÉE
-   ========================================== */
-
-/* Variables de couleur étudiant (basées sur la charte graphique) */
 :root[data-theme="etudiant"] {
-    /* Couleurs primaires vives */
-    --primary-orange: #FF6B35;  /* CMJN C000 M055 J100 N000 */
-    --primary-cyan: #00A7E1;    /* CMJN C100 M045 J018 N000 */
-    --primary-green: #5CB85C;   /* CMJN C082 M010 J100 N000 */
-    --primary-red: #E74C3C;     /* CMJN C000 M090 J080 N000 */
+    --primary-orange: #FF9966;
+                                /* Charte originelle: #FF6B35 (CMJN C000 M055 J100 N000) - Plus vif */
+    --primary-cyan: #00A7E1;
+    --primary-green: #5CB85C;
+    --primary-red: #E74C3C;
     
-    /* Réaffectation des variables principales */
-    --primary-900: #FF6B35;
+    --primary-900: #FF9966;
+                                /* Charte originelle: #FF6B35 */
     --primary-500: #00A7E1;
     --primary-50: #E3F9FF;
     
-    /* Dégradés colorés */
-    --gradient-primary: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+    --gradient-primary: linear-gradient(135deg, #FF9966 0%, #FFB84D 100%);
     --gradient-secondary: linear-gradient(135deg, #00A7E1 0%, #5CB85C 100%);
-    --gradient-hero: linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #00A7E1 100%);
+    --gradient-hero: linear-gradient(135deg, #E74C3C 0%, #00A7E1 100%);
 }
 
-/* Navigation en mode étudiant */
 [data-theme="etudiant"] .header {
     background: white;
-    box-shadow: 0 2px 12px rgba(255, 107, 53, 0.15);
+    box-shadow: 0 2px 12px rgba(255, 153, 102, 0.15);
+                                                       /* Charte originelle: rgba(255, 107, 53, 0.15) */
 }
 
 [data-theme="etudiant"] .nav-link {
@@ -54,7 +47,6 @@
     color: var(--primary-orange);
 }
 
-/* Boutons en mode étudiant */
 [data-theme="etudiant"] .btn-primary {
     background: var(--gradient-primary);
     border: none;
@@ -81,7 +73,8 @@
 
 [data-theme="etudiant"] .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(255, 107, 53, 0.4);
+    box-shadow: 0 8px 24px rgba(255, 153, 102, 0.35);
+                                                       /* Charte originelle: rgba(255, 107, 53, 0.4) */
 }
 
 [data-theme="etudiant"] .btn-outline {
@@ -96,7 +89,6 @@
     border-color: transparent;
 }
 
-/* Hero section en mode étudiant */
 [data-theme="etudiant"] .hero {
     background: var(--gradient-hero);
     position: relative;
@@ -130,7 +122,6 @@
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Sections colorées */
 [data-theme="etudiant"] .section-title {
     background: var(--gradient-primary);
     -webkit-background-clip: text;
@@ -139,7 +130,6 @@
     font-weight: 800;
 }
 
-/* Cartes actualités en mode étudiant */
 [data-theme="etudiant"] .actualite-card {
     border: 3px solid transparent;
     background: white;
@@ -188,33 +178,47 @@
     color: var(--primary-cyan);
 }
 
-/* Chiffres clés en mode étudiant */
+[data-theme="etudiant"] .event-date {
+    background: var(--primary-orange);
+                                 /* Charte originelle: #FF6B35 */
+    color: #ffffff;
+}
+
 [data-theme="etudiant"] .chiffres-cles {
     background: linear-gradient(135deg, #F8F9FF 0%, #FFF5F0 100%);
 }
 
 [data-theme="etudiant"] .chiffre-card {
-    border: 3px solid transparent;
-    background: white;
+    background: white !important;
+    border: 2px solid transparent;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 [data-theme="etudiant"] .chiffre-card::before {
+    display: none !important;
+}
+
+[data-theme="etudiant"] .chiffre-card::after {
     content: '';
     position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: var(--gradient-primary);
+    inset: -2px;
+    background: linear-gradient(135deg, var(--primary-50) 0%, var(--grey-50) 100%);
+                                                                      /* Charte originelle: var(--gradient-primary) */
+    border-radius: 16px;
     z-index: -1;
-    border-radius: 12px;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
-[data-theme="etudiant"] .chiffre-card:hover::before {
+[data-theme="etudiant"] .chiffre-card:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 12px 24px rgba(31, 52, 72, 0.18) !important;
+                                                               /* Charte originelle: rgba(255, 107, 53, 0.3) */
+}
+
+[data-theme="etudiant"] .chiffre-card:hover::after {
     opacity: 1;
 }
 
@@ -234,10 +238,10 @@
     color: var(--primary-red);
 }
 
-/* Timeline agenda en mode étudiant */
 [data-theme="etudiant"] .timeline-dot {
     background: var(--gradient-primary);
-    box-shadow: 0 0 20px rgba(255, 107, 53, 0.4);
+    box-shadow: 0 0 20px rgba(255, 153, 102, 0.35);
+                                                     /* Charte originelle: rgba(255, 107, 53, 0.4) */
 }
 
 [data-theme="etudiant"] .timeline-item::before {
@@ -249,7 +253,6 @@
     font-weight: 700;
 }
 
-/* Footer en mode étudiant */
 [data-theme="etudiant"] .footer {
     background: linear-gradient(135deg, var(--grey-900) 0%, #2C3E50 100%);
     position: relative;
@@ -269,7 +272,6 @@
     color: var(--primary-orange);
 }
 
-/* Animations spécifiques mode étudiant */
 @keyframes float {
     0%, 100% {
         transform: translateY(0) rotate(0deg);
@@ -284,7 +286,6 @@
     animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* Badge de mode actif */
 [data-theme="etudiant"] .theme-badge {
     position: fixed;
     bottom: 20px;
@@ -296,7 +297,8 @@
     font-family: var(--navbar-text-font-family);
     font-size: 0.875rem;
     font-weight: 700;
-    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+    box-shadow: 0 4px 12px rgba(255, 153, 102, 0.25);
+                                                       /* Charte originelle: rgba(255, 107, 53, 0.3) */
     z-index: 1000;
     display: flex;
     align-items: center;
@@ -307,10 +309,10 @@
 
 [data-theme="etudiant"] .theme-badge:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 16px rgba(255, 107, 53, 0.4);
+    box-shadow: 0 6px 16px rgba(255, 153, 102, 0.35);
+                                                       /* Charte originelle: rgba(255, 107, 53, 0.4) */
 }
 
-/* Éléments décoratifs mode étudiant */
 [data-theme="etudiant"] .decorative-circle {
     position: absolute;
     border-radius: 50%;
@@ -319,7 +321,15 @@
     pointer-events: none;
 }
 
-/* Responsive mode étudiant */
+/* ==========================================
+   RESPONSIVE - MODE MOBILE
+   Adaptations pour petits écrans
+   ========================================== */
+
+/* Note: Dropdowns masqués automatiquement par globals.css en responsive */
+/* Héritage des styles de @media (max-width: 1023px) depuis globals.css */
+
+/* Tablette et mobile (max 768px) */
 @media (max-width: 768px) {
     [data-theme="etudiant"] .hero::before,
     [data-theme="etudiant"] .hero::after {

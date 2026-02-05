@@ -105,12 +105,14 @@
 
 ### Mode Étudiant
 - **Couleurs** : Orange (#FF6B35), Cyan (#00A7E1), Vert (#5CB85C), Rouge (#E74C3C)
-- **Boutons** : Dégradés orange/jaune avec effet brillant
+- **Boutons** : Dégradés orange/jaune avec effet brillant et ombres optimisées
 - **Titres** : Dégradé coloré (gradient clipped text)
-- **Chiffres clés** : Chaque chiffre une couleur différente
+- **Chiffres clés** : Chaque chiffre une couleur différente avec surbrillance adoucie au hover
 - **Hero** : Dégradé orange → jaune → cyan avec cercles flottants
 - **Navigation** : Liens orange au survol avec soulignement animé
 - **Badge flottant** : Badge orange "Mode Étudiant" avec icône diplôme
+- **Agenda** : Dates mises en avant avec fond orange et texte blanc pour plus de visibilité
+- **Section "Notre impact"** : Surbrillance adoucie (dégradé clair + ombre douce) pour améliorer la lisibilité
 
 ---
 
@@ -202,6 +204,29 @@ Ouvrez votre navigateur :
 - Ajouter des statistiques d'utilisation par profil
 - Créer des dashboards dédiés par type d'utilisateur
 - Intégrer des notifications personnalisées
+
+---
+
+## Historique des Mises à Jour
+
+### Version 1.2 (Février 2026)
+- **Recherche partenaires** : Ajout d'une barre de recherche en temps réel sur la page entreprises
+- **Thème étudiant amélioré** :
+  - Agenda avec dates en fond orange et texte blanc
+  - Section "Notre impact" avec surbrillance adoucie (dégradé clair, ombre douce)
+  - Boutons CTA avec couleurs de la charte graphique et ombres optimisées
+- **Simplification du contenu** : Refactorisation de jeunes-familles.html et vie-clee.html
+
+### Version 1.1 (Janvier 2026)
+- Ajout du badge de changement de profil
+- Amélioration de la persistance localStorage
+- Corrections responsive
+
+### Version 1.0 (Janvier 2026)
+- Lancement initial du système de portail
+- Création des thèmes Étudiant et Professionnel
+- Redirection automatique
+- Page de démonstration des thèmes
 
 ---
 

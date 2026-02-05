@@ -7,11 +7,11 @@ Les **6 pages principales** du site :
 ```
 0. Portail de sélection (NEW)     → pages/portail.html (choix du profil utilisateur)
 1. Accueil                        → index.html (racine du projet)
-2. Le CLÉE                        → pages/le-clee.html
+2. Le CLEE                        → pages/le-clee.html
 3. Entreprises & Partenaires      → pages/companies.html
 4. Établissements & Formations    → pages/establishments.html
 5. Jeunes & Familles              → pages/jeunes-familles.html
-6. Vie du CLÉE                    → pages/vie-clee.html
+6. Vie du CLEE                    → pages/vie-clee.html
 7. Connexion                      → pages/connexion.html (lien spécial dans la navbar)
 ```
 
@@ -57,11 +57,11 @@ pages/
 | # | Page | Fichier | Description |
 |---|------|---------|-------------|
 | 1 | **Accueil** | `index.html` (racine) | Page d'accueil du site |
-| 2 | **Le CLÉE** | `pages/le-clee.html` | Présentation du CLÉE, sa mission et ses objectifs |
+| 2 | **Le CLEE** | `pages/le-clee.html` | Présentation du CLEE, sa mission et ses objectifs |
 | 3 | **Entreprises & Partenaires** | `pages/companies.html` | Espace dédié aux entreprises partenaires |
 | 4 | **Établissements & Formations** | `pages/establishments.html` | Annuaire des établissements et formations |
 | 5 | **Jeunes & Familles** | `pages/jeunes-familles.html` | Ressources pour les jeunes et les familles |
-| 6 | **Vie du CLÉE** | `pages/vie-clee.html` | Actualités, événements et vie de la communauté |
+| 6 | **Vie du CLEE** | `pages/vie-clee.html` | Actualités, événements et vie de la communauté |
 | 7 | **Connexion** | `pages/connexion.html` | Page de connexion à l'espace personnel |
 
 ### Sous-pages (Non présentes dans la navigation principale)
@@ -83,8 +83,9 @@ pages/
 | Page | Fichier | Description |
 |------|---------|-------------|
 | Vie du CLEE - Élèves | `vie-clee-eleves.html` | Vie étudiante et animations spécifiques |
-| Agenda | `agenda.html` | Calendrier des événements (peut-être intégré dans vie-clee.html) |
-Rattachées à "Connexion"
+| Agenda | `agenda.html` | Calendrier des événements |
+
+#### Rattachées à "Connexion"
 | Page | Fichier | Description |
 |------|---------|-------------|
 | Inscription | `inscription.html` | Formulaire d'inscription pour créer un compte |
@@ -95,11 +96,36 @@ Rattachées à "Connexion"
 | Contact | `contact.html` | Formulaire de contact (accessible depuis footer et CTAs) |
 | Mentions légales | `mentions-legales.html` | Mentions légales et conditions d'utilisation |
 
+#### Pages de Démonstration
+| Page | Fichier | Description |
+|------|---------|-------------|
+| Démonstration des thèmes | `theme-demo.html` | Page permettant de comparer les thèmes Étudiant et Professionnel |
+| Référence des couleurs | `colors-reference.html` | Référence visuelle de la charte graphique |
+
 ---
 
-**Total : 17 pages HTML**
+**Total : 19 pages HTML**
+- 1 page système (portail de sélection)
 - 7 pages principales (dans la navigation)
 - 8 sous-pages (accessibles depuis les pages principales)
-- 2 pages utilitaires (contact et mentions légales - accessiblesges principales)
-- 1 page utilitaire (contact - accessible depuis footer/CTAs)
+- 2 pages utilitaires (contact et mentions légales)
+- 2 pages de démonstration (theme-demo et colors-reference)
+
+---
+
+## Fonctionnalités récentes (Février 2026)
+
+### Recherche partenaires
+La page **Entreprises & Partenaires** dispose désormais d'une barre de recherche en temps réel permettant de filtrer les entreprises par nom. Cette fonctionnalité s'ajoute au système de filtrage par catégorie existant.
+
+### Améliorations du thème étudiant
+Le thème étudiant a été optimisé avec :
+- **Agenda** : Dates en fond orange et texte blanc pour plus de visibilité
+- **Section "Notre impact"** : Surbrillance adoucie avec dégradé clair pour améliorer la lisibilité
+- **Boutons CTA** : Application des couleurs de la charte graphique avec ombres optimisées
+
+### Simplification du contenu
+- **jeunes-familles.html** : Contenu amélioré et clarifié
+- **vie-clee.html** : Modal de contact supprimée (simplification)
+- **index.html** : Section agenda déplacée vers vie-clee.html
 

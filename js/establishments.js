@@ -70,39 +70,39 @@ const EstablishmentsPageModule = (() => {
   // Data for establishments
   const etablissements = {
     'lycee-talence': {
-      nom: 'Lycée Professionnel Talence',
+      nom: 'lycée professionnel Talence',
       adresse: '123 Avenue de la République, 33400 Talence',
-      badge: 'Établissement Public',
+      badge: 'établissement public',
       image: 'https://picsum.photos/800/400?random=10',
       stats: { etudiants: '850', formations: '12', taux: '95%' },
-      description: 'Le Lycée Professionnel de Talence est un établissement d\'enseignement professionnel offrant une large gamme de formations dans les secteurs de l\'industrie, du numérique, et du tertiaire.',
+      description: 'Le lycée professionnel de Talence est un établissement d\'enseignement professionnel offrant une large gamme de formations dans les secteurs de l\'industrie, du numérique, et du tertiaire.',
       contact: { telephone: '05 56 84 56 78', email: 'contact@lp-talence.fr', horaires: 'Lundi au Vendredi : 8h00 - 18h00' }
     },
     'lycee-merignac': {
-      nom: 'Lycée Professionnel Mérignac',
+      nom: 'lycée professionnel Mérignac',
       adresse: '45 Rue du Château d\'Eau, 33700 Mérignac',
-      badge: 'Établissement Public',
+      badge: 'établissement public',
       image: 'https://picsum.photos/800/400?random=15',
       stats: { etudiants: '720', formations: '10', taux: '92%' },
-      description: 'Le Lycée Professionnel de Mérignac se distingue par son expertise dans les métiers du bâtiment, de l\'aéronautique et de la logistique.',
+      description: 'Le lycée professionnel de Mérignac se distingue par son expertise dans les métiers du bâtiment, de l\'aéronautique et de la logistique.',
       contact: { telephone: '05 56 97 45 23', email: 'contact@lp-merignac.fr', horaires: 'Lundi au Vendredi : 8h00 - 17h30' }
     },
     'lycee-pessac': {
-      nom: 'Lycée Professionnel Pessac',
-      adresse: '78 Avenue Jean Jaurès, 33600 Pessac',
-      badge: 'Établissement Public',
+      nom: 'lycée professionnel Pessac',
+      adresse: '78 avenue Jean Jaurès, 33600 Pessac',
+      badge: 'établissement public',
       image: 'https://picsum.photos/800/400?random=20',
       stats: { etudiants: '680', formations: '9', taux: '93%' },
-      description: 'Le Lycée Professionnel de Pessac propose des formations spécialisées dans les secteurs du numérique, de la gestion administrative et du commerce.',
+      description: 'Le lycée professionnel de Pessac propose des formations spécialisées dans les secteurs du numérique, de la gestion administrative et du commerce.',
       contact: { telephone: '05 56 36 78 90', email: 'contact@lp-pessac.fr', horaires: 'Lundi au Vendredi : 8h00 - 18h00' }
     },
     'lycee-bordeaux': {
-      nom: 'Lycée Professionnel Bordeaux Centre',
+      nom: 'lycée professionnel Bordeaux Centre',
       adresse: '12 Place de la Bourse, 33000 Bordeaux',
-      badge: 'Établissement Public',
+      badge: 'établissement public',
       image: 'https://picsum.photos/800/400?random=25',
       stats: { etudiants: '950', formations: '14', taux: '96%' },
-      description: 'Le Lycée Professionnel Bordeaux Centre est le plus grand établissement professionnel de l\'agglomération bordelaise.',
+      description: 'Le lycée professionnel Bordeaux Centre est le plus grand établissement professionnel de l\'agglomération bordelaise.',
       contact: { telephone: '05 56 00 12 34', email: 'contact@lp-bordeaux.fr', horaires: 'Lundi au Vendredi : 7h30 - 18h30' }
     }
   };
@@ -114,6 +114,7 @@ const EstablishmentsPageModule = (() => {
     initSchoolList();
     initFilters();
     initFormationToggles();
+    initViewFormationsButton();
   };
 
   const initMapMarkers = () => {
@@ -139,6 +140,12 @@ const EstablishmentsPageModule = (() => {
 
     currentEcole = schoolId;
     const ecole = etablissements[schoolId];
+
+    // Hide formations section when changing school
+    const formationsSection = document.getElementById('formations');
+    if (formationsSection) {
+      formationsSection.style.display = 'none';
+    }
 
     // Update markers
     document.querySelectorAll('.map-marker').forEach(marker => {
@@ -218,6 +225,19 @@ const EstablishmentsPageModule = (() => {
         this.textContent = card.classList.contains('expanded') ? 'Masquer les détails' : 'Voir les détails';
       });
     });
+  };
+
+  const initViewFormationsButton = () => {
+    const viewFormationsBtn = document.querySelector('.etablissement-actions .btn-primary');
+    const formationsSection = document.getElementById('formations');
+    
+    if (viewFormationsBtn && formationsSection) {
+      viewFormationsBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        formationsSection.style.display = 'block';
+        formationsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
   };
 
   return { init };
