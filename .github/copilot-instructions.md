@@ -63,7 +63,7 @@ js/
 ```
 
 ### Page Hierarchy (17 pages total)
-See [PAGES-STRUCTURE.md](PAGES-STRUCTURE.md) for complete structure:
+See [PAGES-STRUCTURE.md](../PAGES-STRUCTURE.md) for complete structure:
 - **1 homepage at root**: index.html (Accueil)
 - **6 main navigation pages**: le-clee, companies, establishments, jeunes-familles, vie-clee, connexion
 - **9 sub-pages**: bureau-membres, nos-actions, documents-officiels, orientation-insertion, pfmp, vie-clee-eleves, agenda, connexion, inscription
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
    - Include both globals.css and page-specific CSS in the HTML
    - Include common.js for shared functionality
    - Copy navigation structure from existing pages
-   - Update [PAGES-STRUCTURE.md](PAGES-STRUCTURE.md) with the new page
+   - Update [PAGES-STRUCTURE.md](../PAGES-STRUCTURE.md) with the new page
 
 2. **Documentation & Historique**
   - À chaque modification du projet, **mettre à jour obligatoirement** le fichier `README.md` (documentation, tâches, instructions) et le fichier `CHANGELOG.md` (historique des changements).
