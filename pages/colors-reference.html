@@ -380,7 +380,8 @@
             border-radius: 12px;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
+            padding: 0 32px;
             color: white;
             font-weight: 700;
             font-size: 1.125rem;
@@ -575,7 +576,7 @@
                 <div class="color-card">
                     <div class="color-swatch" style="background: #1F3448;">900</div>
                     <div class="color-info">
-                        <div class="color-name">Bleu Foncé</div>
+                        <div class="color-name">Couleur 1</div>
                         <div class="color-codes">
                             <span class="color-code">HEX: #1F3448</span>
                             <span class="color-code">RGB: 31, 52, 72</span>
@@ -586,7 +587,7 @@
                 <div class="color-card">
                     <div class="color-swatch" style="background: #5E7E9F;">500</div>
                     <div class="color-info">
-                        <div class="color-name">Bleu Moyen</div>
+                        <div class="color-name">Couleur 2</div>
                         <div class="color-codes">
                             <span class="color-code">HEX: #5E7E9F</span>
                             <span class="color-code">RGB: 94, 126, 159</span>
@@ -597,7 +598,7 @@
                 <div class="color-card">
                     <div class="color-swatch" style="background: #E5F0FF; color: #1F3448;">50</div>
                     <div class="color-info">
-                        <div class="color-name">Bleu Clair</div>
+                        <div class="color-name">Couleur 3</div>
                         <div class="color-codes">
                             <span class="color-code">HEX: #E5F0FF</span>
                             <span class="color-code">RGB: 229, 240, 255</span>
@@ -608,7 +609,7 @@
                 <div class="color-card">
                     <div class="color-swatch" style="background: #333;">900</div>
                     <div class="color-info">
-                        <div class="color-name">Gris Foncé</div>
+                        <div class="color-name">Couleur 4</div>
                         <div class="color-codes">
                             <span class="color-code">HEX: #333333</span>
                             <span class="color-code">RGB: 51, 51, 51</span>
@@ -638,7 +639,7 @@
                 <div class="color-card">
                     <div class="color-swatch" style="background: #FF6B35;"></div>
                     <div class="color-info">
-                        <div class="color-name">Orange Principal</div>
+                        <div class="color-name">Couleur 1</div>
                         <div class="color-codes">
                             <span class="color-code">HEX: #FF6B35</span>
                             <span class="color-code">RGB: 255, 107, 53</span>
@@ -650,7 +651,7 @@
                 <div class="color-card">
                     <div class="color-swatch" style="background: #00A7E1;"></div>
                     <div class="color-info">
-                        <div class="color-name">Cyan Principal</div>
+                        <div class="color-name">Couleur 2</div>
                         <div class="color-codes">
                             <span class="color-code">HEX: #00A7E1</span>
                             <span class="color-code">RGB: 0, 167, 225</span>
@@ -662,7 +663,7 @@
                 <div class="color-card">
                     <div class="color-swatch" style="background: #5CB85C;"></div>
                     <div class="color-info">
-                        <div class="color-name">Vert</div>
+                        <div class="color-name">Couleur 3</div>
                         <div class="color-codes">
                             <span class="color-code">HEX: #5CB85C</span>
                             <span class="color-code">RGB: 92, 184, 92</span>
@@ -674,7 +675,7 @@
                 <div class="color-card">
                     <div class="color-swatch" style="background: #E74C3C;"></div>
                     <div class="color-info">
-                        <div class="color-name">Rouge</div>
+                        <div class="color-name">Couleur 4</div>
                         <div class="color-codes">
                             <span class="color-code">HEX: #E74C3C</span>
                             <span class="color-code">RGB: 231, 76, 60</span>
@@ -686,7 +687,7 @@
                 <div class="color-card">
                     <div class="color-swatch" style="background: #FFB84D;"></div>
                     <div class="color-info">
-                        <div class="color-name">Jaune</div>
+                        <div class="color-name">Couleur 5</div>
                         <div class="color-codes">
                             <span class="color-code">HEX: #FFB84D</span>
                             <span class="color-code">RGB: 255, 184, 77</span>
@@ -698,29 +699,29 @@
             <h3 style="margin-top: 40px; font-size: 1.5rem; color: #333;">Dégradés Utilisés</h3>
             
             <div class="gradient-examples">
-                <div class="gradient-card" style="background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);">
-                    Dégradé Primaire<br>
-                    <small style="font-size: 0.875rem; opacity: 0.9;">Orange → Jaune</small>
+                <div class="gradient-card" style="background: linear-gradient(135deg, #FF6B35 0%, #FFB84D 100%);">
+                    <span>Dégradé Primaire</span>
+                    <span style="font-size: 0.875rem;">C1 → C5</span>
                 </div>
                 
                 <div class="gradient-card" style="background: linear-gradient(135deg, #00A7E1 0%, #5CB85C 100%);">
-                    Dégradé Secondaire<br>
-                    <small style="font-size: 0.875rem; opacity: 0.9;">Cyan → Vert</small>
+                    <span>Dégradé Secondaire</span>
+                    <span style="font-size: 0.875rem;">C2 → C3</span>
                 </div>
                 
-                <div class="gradient-card" style="background: linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #00A7E1 100%);">
-                    Dégradé Hero<br>
-                    <small style="font-size: 0.875rem; opacity: 0.9;">Orange → Jaune → Cyan</small>
+                <div class="gradient-card" style="background: linear-gradient(135deg, #FF6B35 0%, #FFB84D 50%, #00A7E1 100%);">
+                    <span>Dégradé Hero</span>
+                    <span style="font-size: 0.875rem;">C1 → C5 → C2</span>
                 </div>
             </div>
             
             <div class="usage student">
                 <h3>Usage du thème Étudiant</h3>
                 <ul>
-                    <li><strong>Orange (#FF6B35)</strong> : Boutons principaux, liens, CTA, accents</li>
-                    <li><strong>Cyan (#00A7E1)</strong> : Liens secondaires, badges, icônes</li>
-                    <li><strong>Vert (#5CB85C)</strong> : Validation, succès, chiffres clés</li>
-                    <li><strong>Rouge (#E74C3C)</strong> : Alertes, urgence, chiffres clés</li>
+                    <li><strong>Couleur 1 (Orange #FF6B35)</strong> : Boutons principaux, liens, CTA, accents</li>
+                    <li><strong>Couleur 2 (Cyan #00A7E1)</strong> : Liens secondaires, badges, icônes</li>
+                    <li><strong>Couleur 3 (Vert #5CB85C)</strong> : Validation, succès, chiffres clés</li>
+                    <li><strong>Couleur 4 (Rouge #E74C3C)</strong> : Alertes, urgence, chiffres clés</li>
                     <li><strong>Dégradés</strong> : Hero section, boutons, titres, effets</li>
                 </ul>
             </div>
@@ -967,10 +968,10 @@
         
         // Mise à jour des couleurs du thème professionnel
         const proColors = [
-            { selector: '.theme-section:nth-of-type(1) .color-card:nth-of-type(1)', var: '--primary-900', name: 'Bleu Foncé (900)' },
-            { selector: '.theme-section:nth-of-type(1) .color-card:nth-of-type(2)', var: '--primary-500', name: 'Bleu Moyen (500)' },
-            { selector: '.theme-section:nth-of-type(1) .color-card:nth-of-type(3)', var: '--primary-50', name: 'Bleu Clair (50)' },
-            { selector: '.theme-section:nth-of-type(1) .color-card:nth-of-type(4)', var: '--grey-900', name: 'Gris Foncé (900)' }
+            { selector: '.theme-section:nth-of-type(1) .color-card:nth-of-type(1)', var: '--primary-900', name: 'Couleur 1' },
+            { selector: '.theme-section:nth-of-type(1) .color-card:nth-of-type(2)', var: '--primary-500', name: 'Couleur 2' },
+            { selector: '.theme-section:nth-of-type(1) .color-card:nth-of-type(3)', var: '--primary-50', name: 'Couleur 3' },
+            { selector: '.theme-section:nth-of-type(1) .color-card:nth-of-type(4)', var: '--grey-900', name: 'Couleur 4' }
         ];
         
         proColors.forEach(({ selector, var: cssVar, name }) => {
@@ -988,11 +989,11 @@
         };
         
         const studentColors = [
-            { selector: '.theme-section:nth-of-type(2) .color-card:nth-of-type(1)', var: '--primary-orange', name: 'Orange Principal' },
-            { selector: '.theme-section:nth-of-type(2) .color-card:nth-of-type(2)', var: '--primary-cyan', name: 'Cyan Principal' },
-            { selector: '.theme-section:nth-of-type(2) .color-card:nth-of-type(3)', var: '--primary-green', name: 'Vert' },
-            { selector: '.theme-section:nth-of-type(2) .color-card:nth-of-type(4)', var: '--primary-red', name: 'Rouge' },
-            { selector: '.theme-section:nth-of-type(2) .color-card:nth-of-type(5)', var: '--primary-yellow', name: 'Jaune' }
+            { selector: '.theme-section:nth-of-type(2) .color-card:nth-of-type(1)', var: '--primary-orange', name: 'Couleur 1' },
+            { selector: '.theme-section:nth-of-type(2) .color-card:nth-of-type(2)', var: '--primary-cyan', name: 'Couleur 2' },
+            { selector: '.theme-section:nth-of-type(2) .color-card:nth-of-type(3)', var: '--primary-green', name: 'Couleur 3' },
+            { selector: '.theme-section:nth-of-type(2) .color-card:nth-of-type(4)', var: '--primary-red', name: 'Couleur 4' },
+            { selector: '.theme-section:nth-of-type(2) .color-card:nth-of-type(5)', var: '--primary-yellow', name: 'Couleur 5' }
         ];
         
         studentColors.forEach(({ selector, var: cssVar, name }) => {
