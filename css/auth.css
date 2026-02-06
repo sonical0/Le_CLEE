@@ -3,7 +3,7 @@
 /* Main Layout */
 .auth-page {
     min-height: calc(100vh - 80px - 200px);
-    padding: 80px 0;
+    padding: 120px;
     background: linear-gradient(135deg, var(--primary-50) 0%, var(--grey-50) 100%);
 }
 
@@ -19,7 +19,7 @@
 .auth-card {
     background: white;
     border-radius: 16px;
-    padding: 48px;
+    padding: 10px 48px 48px 48px;
     box-shadow: 0 8px 32px rgba(31, 52, 72, 0.08);
 }
 
