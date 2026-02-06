@@ -116,16 +116,50 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         
+        .gradient-toggle {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            font-size: 0.85rem;
+        }
+        
+        .gradient-toggle input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        
+        .gradient-toggle label {
+            cursor: pointer;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        /* Styles pour les boutons sans dégradé */
+        .preview-panel.no-gradient .btn-primary {
+            background: var(--primary-800) !important;
+            border: none;
+        }
+        
+        .preview-panel.no-gradient[data-theme="etudiant"] .btn-primary {
+            background: var(--primary-orange) !important;
+        }
+        
         /* Styles pour la preview avec thème étudiant */
         .preview-panel[data-theme="etudiant"] {
             --primary-orange: #FF9966;
             --primary-cyan: #00A7E1;
             --primary-green: #5CB85C;
             --primary-red: #E74C3C;
+            --primary-yellow: #FFB84D;
         }
         
         .preview-panel[data-theme="etudiant"] .btn-primary {
-            background: linear-gradient(135deg, var(--primary-orange) 0%, #FFB84D 100%);
+            background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-yellow) 100%);
             border: none;
         }
         
@@ -140,13 +174,13 @@
         }
         
         .preview-panel[data-theme="etudiant"] .btn-outline:hover {
-            background: linear-gradient(135deg, var(--primary-orange) 0%, #FFB84D 100%);
+            background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-yellow) 100%);
             color: white;
             border-color: transparent;
         }
         
         .preview-panel[data-theme="etudiant"] .section-title {
-            background: linear-gradient(135deg, var(--primary-orange) 0%, #FFB84D 100%);
+            background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-yellow) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -173,11 +207,11 @@
             left: 0;
             right: 0;
             height: 3px;
-            background: linear-gradient(135deg, var(--primary-orange) 0%, #FFB84D 100%);
+            background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-yellow) 100%);
         }
         
         .preview-panel[data-theme="etudiant"] .tag {
-            background: linear-gradient(135deg, var(--primary-orange) 0%, #FFB84D 100%);
+            background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-yellow) 100%);
             color: white;
         }
         
@@ -650,12 +684,12 @@
                 </div>
                 
                 <div class="color-card">
-                    <div class="color-swatch" style="background: #F7931E;"></div>
+                    <div class="color-swatch" style="background: #FFB84D;"></div>
                     <div class="color-info">
-                        <div class="color-name">Jaune/Orange</div>
+                        <div class="color-name">Jaune</div>
                         <div class="color-codes">
-                            <span class="color-code">HEX: #F7931E</span>
-                            <span class="color-code">RGB: 247, 147, 30</span>
+                            <span class="color-code">HEX: #FFB84D</span>
+                            <span class="color-code">RGB: 255, 184, 77</span>
                         </div>
                     </div>
                 </div>
@@ -740,6 +774,11 @@
         <div class="theme-toggle">
             <button class="active" onclick="switchPreviewTheme('pro')">Professionnel</button>
             <button onclick="switchPreviewTheme('etudiant')">Étudiant</button>
+        </div>
+        
+        <div class="gradient-toggle">
+            <input type="checkbox" id="gradientToggle" checked onchange="toggleGradient()">
+            <label for="gradientToggle">Activer les dégradés sur les boutons</label>
         </div>
         
         <div class="preview-section">
@@ -905,6 +944,12 @@
                     // Appliquer temporairement la couleur à la racine
                     root.style.setProperty(cssVar, newColor);
                     
+                    // Appliquer aussi au panneau de prévisualisation si il existe
+                    const previewPanel = document.querySelector('.preview-panel');
+                    if (previewPanel) {
+                        previewPanel.style.setProperty(cssVar, newColor);
+                    }
+                    
                     // Marquer comme modifié
                     modifiedColors.add(cssVar);
                     updateModifiedBadge();
@@ -947,7 +992,7 @@
             { selector: '.theme-section:nth-of-type(2) .color-card:nth-of-type(2)', var: '--primary-cyan', name: 'Cyan Principal' },
             { selector: '.theme-section:nth-of-type(2) .color-card:nth-of-type(3)', var: '--primary-green', name: 'Vert' },
             { selector: '.theme-section:nth-of-type(2) .color-card:nth-of-type(4)', var: '--primary-red', name: 'Rouge' },
-            { selector: '.theme-section:nth-of-type(2) .color-card:nth-of-type(5)', var: '--primary-orange', name: 'Jaune/Orange' }
+            { selector: '.theme-section:nth-of-type(2) .color-card:nth-of-type(5)', var: '--primary-yellow', name: 'Jaune' }
         ];
         
         studentColors.forEach(({ selector, var: cssVar, name }) => {
@@ -984,12 +1029,22 @@
     function resetAllColors() {
         if (!root) return;
         
+        const previewPanel = document.querySelector('.preview-panel');
+        
         // Réinitialiser les propriétés CSS
         modifiedColors.forEach(cssVar => {
             if (originalColors[cssVar]) {
                 root.style.setProperty(cssVar, originalColors[cssVar]);
+                // Réinitialiser aussi sur le preview panel
+                if (previewPanel) {
+                    previewPanel.style.setProperty(cssVar, originalColors[cssVar]);
+                }
             } else {
                 root.style.removeProperty(cssVar);
+                // Supprimer aussi du preview panel
+                if (previewPanel) {
+                    previewPanel.style.removeProperty(cssVar);
+                }
             }
         });
         
@@ -1045,7 +1100,7 @@
         
         // Ajouter aussi le thème étudiant si applicable
         const studentVars = Array.from(modifiedColors).filter(v => 
-            ['--primary-orange', '--primary-cyan', '--primary-green', '--primary-red'].includes(v)
+            ['--primary-orange', '--primary-cyan', '--primary-green', '--primary-red', '--primary-yellow'].includes(v)
         );
         
         if (studentVars.length > 0) {
@@ -1107,6 +1162,26 @@
             previewPanel.setAttribute('data-theme', 'etudiant');
         } else {
             previewPanel.removeAttribute('data-theme');
+        }
+        
+        // Réappliquer toutes les couleurs modifiées au preview panel
+        modifiedColors.forEach(cssVar => {
+            const picker = document.querySelector(`[data-css-var="${cssVar}"]`);
+            if (picker && previewPanel) {
+                previewPanel.style.setProperty(cssVar, picker.value);
+            }
+        });
+    }
+    
+    // Fonction pour activer/désactiver les dégradés
+    function toggleGradient() {
+        const previewPanel = document.querySelector('.preview-panel');
+        const checkbox = document.getElementById('gradientToggle');
+        
+        if (checkbox.checked) {
+            previewPanel.classList.remove('no-gradient');
+        } else {
+            previewPanel.classList.add('no-gradient');
         }
     }
     </script>
