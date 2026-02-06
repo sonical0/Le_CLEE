@@ -4,15 +4,16 @@
     --primary-cyan: #00A7E1;
     --primary-green: #5CB85C;
     --primary-red: #E74C3C;
+    --primary-yellow: #FFB84D;
     
     --primary-900: #FF9966;
                                 /* Charte originelle: #FF6B35 */
     --primary-500: #00A7E1;
     --primary-50: #E3F9FF;
     
-    --gradient-primary: linear-gradient(135deg, #FF9966 0%, #FFB84D 100%);
-    --gradient-secondary: linear-gradient(135deg, #00A7E1 0%, #5CB85C 100%);
-    --gradient-hero: linear-gradient(135deg, #E74C3C 0%, #00A7E1 100%);
+    --gradient-primary: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-yellow) 100%);
+    --gradient-secondary: linear-gradient(135deg, var(--primary-cyan) 0%, var(--primary-green) 100%);
+    --gradient-hero: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-cyan) 100%);
 }
 
 [data-theme="etudiant"] .header {
