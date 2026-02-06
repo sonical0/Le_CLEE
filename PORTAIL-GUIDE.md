@@ -30,6 +30,10 @@ Le site CLEE Bordeaux Avenir dispose désormais d'un **système de portail** per
 - Design énergique et engageant
 - Badge orange "Mode Étudiant" avec icône diplôme
 - Possibilité de changer de profil via le badge
+- **Améliorations visuelles spécifiques** :
+  - **Agenda** : Dates mises en avant avec fond orange et texte blanc pour plus de visibilité
+  - **Section "Notre impact"** : Surbrillance adoucie avec dégradé clair et ombre douce pour améliorer la lisibilité des chiffres
+  - **Boutons CTA** : Application des couleurs de la charte graphique avec ombres optimisées au survol
 
 ## Architecture Technique
 
@@ -190,6 +194,24 @@ Le portail et les thèmes sont entièrement responsive :
 - Dashboard dédié par type d'utilisateur
 - Historique des interactions
 - Notifications personnalisées
+
+---
+
+## Changelog du Portail
+
+### Version 1.2 (Février 2026)
+- Amélioration visuelle de l'agenda en mode étudiant (fond orange, texte blanc)
+- Optimisation du hover de la section "Notre impact" (dégradé clair, ombre adoucie)
+- Amélioration des boutons CTA avec couleurs de la charte graphique
+
+### Version 1.1 (Janvier 2026)
+- Ajout du badge de changement de profil
+- Amélioration de la persistance localStorage
+
+### Version 1.0 (Janvier 2026)
+- Lancement initial du système de portail
+- Thèmes Étudiant et Professionnel
+- Redirection automatique
 
 ## Support
 

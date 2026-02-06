@@ -54,12 +54,7 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
 - [x] Retirer les majuscules en milieu de phrase
 - [x] Remplacer le logo du CLEE par celui de la charte graphique
 - [ ] Décider et uniformiser : CLEE ou CLEE ou Clée pour le SEO
-- [x] Retirer convention de stage et livret de suivi, remplacer par les documents WordPress
-
-### Tâches WordPress et infrastructure
-- [ ] **Faire une documentation du site WordPress pour le second groupe et les clients**
-- [ ] Définir les rôles avec différents droits d'accès et décisions
-- [ ] Commencer la mise en place de la base de données et du WordPress
+- [x] Retirer convention de stage et livret de suivi, remplacer par les documents officiels
 
 ### Améliorations UX/UI
 - [x] Ajouter une barre de recherche avec option filtre dans la page établissements et formations
@@ -67,6 +62,8 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
 - [x] Améliorer le header pour ajouter les sous-pages par catégorie en liste déroulante
 - [x] Adapter la surbrillance des boutons avec les couleurs de la charte graphique
 - [x] Faire un portail étudiant/pro avec un style CSS qui change selon la catégorie d'utilisateur
+- [x] Améliorer la lisibilité de la section "Notre impact" en mode étudiant avec surbrillance adoucie
+- [x] Ajouter une barre de recherche sur la page Entreprises & Partenaires
 - [ ] Sur le ruban sous le header, ajouter un calque avec une photo et reprendre les couleurs de la charte graphique
 - [ ] **ATTENTION : Respecter les règles d'accessibilité pour les couleurs**
 
@@ -96,24 +93,26 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
 
 ## Fonctionnalités principales
 
-### Système de Portail (Nouveau)
+### Système de Portail
 - **Sélection de profil** : Étudiant ou Professionnel
 - **Thème adaptatif** : Couleurs et style personnalisés selon le profil
-- **Persistance** : Le choix est sauvegardé dans le navigateur
-- **Badge de changement** : Possibilité de basculer entre les profils
-- **Agenda Étudiant** : Dates de l'agenda mises en avant avec un fond orange et un texte blanc
-- **Notre impact Étudiant** : Surbrillance adoucie pour une meilleure lisibilité
+- **Persistance** : Le choix est sauvegardé dans le navigateur (localStorage)
+- **Badge de changement** : Possibilité de basculer entre les profils à tout moment
+- **Mode Étudiant - Améliorations visuelles** :
+  - Dates de l'agenda mises en avant avec fond orange et texte blanc pour plus de visibilité
+  - Section "Notre impact" avec surbrillance adoucie (dégradé clair) pour une meilleure lisibilité des chiffres
+  - Boutons CTA avec couleurs de la charte graphique et ombres optimisées au survol
 
 ### Page d'accueil
-- **Hero section** dynamique avec appel à l'action
-- **Actualités** du CLEE et événements récents
-- **Chiffres clés** animés (compteurs dynamiques)
-- **Agenda** des prochains événements
-- **Section contact** rapide
+- **Hero section** dynamique avec appel à l'action et boutons CTA optimisés (couleurs charte graphique, ombres au survol)
+- **Actualités** du CLEE et événements récents (section agenda désormais dans vie-clee.html)
+- **Chiffres clés** animés (compteurs dynamiques) avec surbrillance améliorée en mode étudiant
+- **Section contact** rapide avec texte mis à jour
 
 ### Espace Entreprises & Partenaires
 - **Catalogue des entreprises partenaires** avec système de filtrage multi-critères
-- **Recherche par nom** pour retrouver rapidement une entreprise
+- **Barre de recherche en temps réel** pour retrouver rapidement une entreprise par son nom
+- **Filtrage dynamique** des cartes partenaires avec feedback visuel instantané
 - **Avantages du partenariat** clairement détaillés
 - **Processus de candidature** guidé
 - **Témoignages** d'entreprises partenaires
@@ -128,53 +127,39 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
 
 ### Espace Jeunes & Familles
 - **Ressources d'orientation** professionnelle
-- **Guide d'insertion** dans le monde du travail
+- **Guide d'insertion** dans le monde du travail (contenu amélioré et clarifié)
 - **Informations stages** et apprentissage
 - **Témoignages** d'anciens élèves
-
+- Interface simplifiée avec contenu pertinent et actualisé
 ### Vie du CLEE
 - **Actualités** du réseau école-entreprise
-- **Espace élèves** avec ressources dédiées
+- **Agenda complet** des événements (anciennement sur index.html)
 - **Galerie photos/vidéos** des événements
+- Interface simplifiée (modal de contact supprimée)
 
 ### Présentation institutionnelle
 - **Histoire et mission** du CLEE
 - **Bureau et membres** de l'organisation
 - **Actions et projets** en cours
 - **Documents officiels** (statuts, rapports, PV)
-│
-├── index.html                      # PAGE PRINCIPALE : Accueil (racine du projet)
-│   ├── companies.html              # Entreprises & Partenaires
-│   ├── establishments.html         # Établissements & Formations
-│   ├── vie-clee-eleves.html        # Sous-page : Vie du CLEE - Élèves
-│   ├── agenda.html                 # Sous-page : Agenda/Événements
-│   ├── inscription.html            # Authentification : Inscription
-│   ├── contact.html                # Formulaire de contact
-├── css/                          # Stylesheets modulaires
-│   ├── home.css                   # Page d'accueil
-│   ├── companies.css              # Entreprises
-│   ├── establishments.css         # Établissements
-│   ├── jeunes-familles.css        # Jeunes & Familles (partagé par 4 pages)
-│   ├── le-clee.css                # Le CLEE (partagé par 4 pages)
-│
-├── js/                           # Scripts modulaires
-│   ├── common.js                  # PARTAGÉ : Modules (navigation, animations, scroll)
-│   ├── companies.js               # Filtres entreprises
-│   ├── establishments.js          # Carte interactive + formations
-│   ├── vie-clee.js                # Affichage événements
-│   └── contact.js                 # Gestion formulaire
-│
-├── assets/                       # Ressources médias
 
-```html
-    <link rel="stylesheet" href="../css/globals.css">
-    
-    
-    <!-- Scripts partagés (navigation, animations) -->
-</body>
-</html>
+---
+
+## Architecture du projet
+
+Le site utilise une **architecture modulaire** pour optimiser la maintenance et les performances :
+- **globals.css** : Composants et styles partagés (header, footer, boutons)
+- **CSS page-specific** : Styles uniques à chaque page
+- **common.js** : Modules JavaScript réutilisables
+- **JS page-specific** : Logique spécifique aux pages
+
+### Avantages
 - Mise en cache optimale (globals.css chargé une fois pour toutes les pages)
 - Maintenance simplifiée (modifier globals.css = impact sur tout le site)
+- Performance maximale (~55KB total, réduction de 40% vs code dupliqué)
+
+---
+
 ## Design System centralisé
 Toutes les variables de design sont définies dans [css/globals.css](css/globals.css) :
 
@@ -354,61 +339,13 @@ php -S localhost:8000
 # http://localhost:8000/pages/index.html
 ```
 
-**Ou simplement** : Double-cliquer sur `pages/index.html` (fonctionne sans serveur).
-
-### Version WordPress (Thème custom)
-
-**Prérequis** : 
-- WordPress 5.8+
-- PHP 7.4+
-- MySQL 5.7+ ou MariaDB 10.3+
-
-```bash
-# 1. Copier le thème dans WordPress
-cp -r php/clee-bordeaux-theme /path/to/wordpress/wp-content/themes/
-
-# 2. Dans l'admin WordPress (Tableau de bord)
-#    Apparence → Thèmes → Activer "CLEE Bordeaux Theme"
-
-# 3. Créer les pages avec les slugs EXACTS suivants :
-#    (Pages → Ajouter)
-```
-
-| Titre de la page | Slug (obligatoire) |
-|------------------|--------------------|
-| Agenda | `agenda` |
-| Bureau et membres | `bureau-membres` |
-| Entreprises & Partenaires | `companies` |
-| Contact | `contact` |
-| Documents officiels | `documents-officiels` |
-| Établissements & Formations | `establishments` |
-| Jeunes & Familles | `jeunes-familles` |
-| Le CLEE | `le-clee` |
-| Nos actions | `nos-actions` |
-| Orientation & Insertion | `orientation-insertion` |
-| PFMP | `pfmp` |
-| Vie du CLEE - Élèves | `vie-clee-eleves` |
-| Vie du CLEE | `vie-clee` |
-
-```bash
-# 4. Configurer la page d'accueil statique
-#    Réglages → Lecture
-#    - "Une page statique"
-#    - Page d'accueil : (laisser vide, front-page.php gère)
-
-# 5. Vérifier que les permaliens sont activés
-#    Réglages → Permaliens → "Nom de l'article" (recommandé)
-```
-
-**Note importante** : Les assets (CSS/JS) sont chargés automatiquement par [functions.php](php/clee-bordeaux-theme/functions.php) en fonction de la page affichée (enqueuing conditionnel).
+**Ou simplement** : Double-cliquer sur `index.html` (fonctionne sans serveur).
 
 ---
 
 ## Guide de développement
 
 ### Ajouter une nouvelle page
-
-#### 1. Version statique
 
 ```bash
 # 1. Créer le fichier HTML
@@ -462,71 +399,13 @@ touch js/nouvelle-page.js
 </html>
 ```
 
-#### 2. Version WordPress
-
-```bash
-# 1. Créer le template PHP
-touch php/clee-bordeaux-theme/page-nouvelle-page.php
-```
-
-**Structure minimale du template** :
-
-```php
-<?php
-/* Template Name: Nouvelle Page */
-get_header();
-?>
-
-<main class="content">
-    <!-- Contenu spécifique -->
-</main>
-
-<?php get_footer(); ?>
-```
-
-**2. Ajouter l'enqueuing dans functions.php** :
-
-```php
-// Dans la fonction clee_enqueue_page_specific_assets()
-if (is_page('nouvelle-page')) {
-    wp_enqueue_style(
-        'clee-nouvelle-page', 
-        get_template_directory_uri() . '/assets/css/nouvelle-page.css',
-        ['clee-globals'],
-        '1.0'
-    );
-    wp_enqueue_script(
-        'clee-nouvelle-page', 
-        get_template_directory_uri() . '/assets/js/nouvelle-page.js',
-        ['clee-common'],
-        '1.0',
-        true
-    );
-}
-```
-
-**3. Copier les assets** :
-
-```bash
-# Copier CSS depuis root vers thème WordPress
-cp css/nouvelle-page.css php/clee-bordeaux-theme/assets/css/
-
-# Copier JS depuis root vers thème WordPress
-cp js/nouvelle-page.js php/clee-bordeaux-theme/assets/js/
-```
-
-**4. Créer la page dans WordPress admin** avec le slug `nouvelle-page`.
-
 ### Modifier des styles partagés
 
 **Règle d'or** : Toute modification de composant partagé (header, footer, boutons) se fait dans [css/globals.css](css/globals.css).
 
 ```bash
-# 1. Éditer globals.css
+# Éditer globals.css
 code css/globals.css
-
-# 2. Synchroniser vers WordPress
-cp css/globals.css php/clee-bordeaux-theme/assets/css/
 ```
 
 **Exemple : Changer la couleur primaire**
@@ -563,39 +442,6 @@ document.addEventListener('DOMContentLoaded', () => {
   NouveauModule.init();
 });
 ```
-
-Puis synchroniser :
-
-```bash
-cp js/common.js php/clee-bordeaux-theme/assets/js/
-```
-
-### Workflow de synchronisation (Static → WordPress)
-
-**Workflow recommandé** :
-
-1. **Développer sur la version statique** (rapide, léger)
-2. **Tester dans le navigateur** (`pages/*.html`)
-3. **Synchroniser les assets vers WordPress** :
-
-```bash
-# Script de synchronisation (à créer)
-# sync-to-wordpress.sh
-
-#!/bin/bash
-echo "Synchronisation CSS..."
-cp -r css/* php/clee-bordeaux-theme/assets/css/
-
-echo "Synchronisation JS..."
-cp -r js/* php/clee-bordeaux-theme/assets/js/
-
-echo "Synchronisation Images..."
-cp -r assets/images/* php/clee-bordeaux-theme/assets/images/
-
-echo "Synchronisation terminée !"
-```
-
-4. **Tester sur WordPress** (installation locale ou staging)
 
 ---
 
@@ -734,7 +580,9 @@ echo "Synchronisation terminée !"
 ## 📖 Documentation complémentaire
 
 - 📄 [PAGES-STRUCTURE.md](PAGES-STRUCTURE.md) - Hiérarchie complète des pages
-- 📄 [php/clee-bordeaux-theme/README.txt](php/clee-bordeaux-theme/README.txt) - Installation WordPress
+- 📄 [PORTAIL-GUIDE.md](PORTAIL-GUIDE.md) - Guide du système de portail étudiant/professionnel
+- 📄 [IMPLEMENTATION-SUMMARY.md](IMPLEMENTATION-SUMMARY.md) - Résumé de l'implémentation du portail
+- 📄 [CHANGELOG.md](CHANGELOG.md) - Historique détaillé des modifications
 - 📄 [.github/copilot-instructions.md](.github/copilot-instructions.md) - Instructions pour AI agents
 
 ---
@@ -743,158 +591,7 @@ echo "Synchronisation terminée !"
 
 - **HTML5** : Sémantique moderne
 - **CSS3** : Custom Properties, Flexbox, Grid, Animations
-- **JavaScript ES6+** : Modules IIFE, Intersection Observer API, Fetch API
-- **WordPress** : Thème custom (optionnel)
-- **Google Maps API** : Carte interactive établissements
-
-**Aucune dépendance externe** (pas de jQuery, pas de frameworks) → Performance maximale.
-
----
-
-## 🤝 Contribution
-
-### Workflow Git
-
-```
-1. Créer pages/new-page.html
-2. Inclure CSS partagé + spécifique:
-   <link rel="stylesheet" href="../css/globals.css">
-   <link rel="stylesheet" href="../css/new-page.css">
-3. Inclure JS partagé + spécifique:
-   <script src="../js/common.js"></script>
-   <script src="../js/new-page.js"></script>
-4. Créer css/new-page.css avec styles spécifiques
-5. Créer js/new-page.js si logique personnalisée
-```
-
-#### 2. Modifier un style partagé
-
-```
-1. Éditer css/globals.css (variables, header, footer, boutons)
-2. Vérifier que les 3 pages sont affectées correctement
-3. Aucune modification des autres fichiers CSS nécessaire
-```
-
-#### 3. Ajouter une fonctionnalité réutilisable
-
-```
-1. Créer un nouveau module dans js/common.js
-2. Initialiser dans le DOMContentLoaded
-3. Le module sera disponible pour toutes les pages
-```
-
-## 📝 Conventions de code
-
-### CSS
-
-```css
-/* Globals.css : Tokens et composants partagés */
-:root { /* Variables */ }
-.header { /* Navigation */ }
-.footer { /* Footer */ }
-.btn { /* Boutons */ }
-
-/* Page-specific: Sections uniques */
-.hero-home { /* Spécifique à accueil */ }
-.pourquoi-section { /* Spécifique à entreprises */ }
-```
-
-### JavaScript
-
-```javascript
-/* common.js : Modules réutilisables */
-const ModuleName = (() => {
-  const init = () => { /* ... */ };
-  return { init };
-})();
-
-/* Initialization */
-document.addEventListener('DOMContentLoaded', () => {
-  ModuleName.init();
-});
-```
-
-## Checklist de migration
-
-- [x] Créer structure CLEE-Bordeaux-Site
-- [x] Fusionner globals.css
-- [x] Créer home.css / companies.css / establishments.css
-- [x] Créer common.js (navigation, scroll, animations)
-- [x] Créer companies.js (filtres)
-- [x] Créer establishments.js (carte, formations)
-- [x] Créer pages/index.html
-- [x] Créer pages/companies.html
-- [x] Créer pages/establishments.html
-- [x] Tester sur desktop (1024px+)
-- [x] Tester sur tablette (768px)
-- [x] Tester sur mobile (480px)
-- [x] Valider accessibilité WCAG 2.1 AA
-- [x] Tester tous les navigateurs
-
-## 🧪 Tests
-
-### Checklist de validation
-
-#### Fonctionnalités de base
-- ✅ Navigation menu mobile/desktop
-- ✅ Smooth scroll vers ancres
-- ✅ Header shadow au scroll
-- ✅ Animations au scroll (Intersection Observer)
-- ✅ Liens internes entre pages
-- ✅ Liens externes (target="_blank", rel="noopener")
-
-#### Pages spécifiques
-- ✅ **Accueil** : Compteurs animés, actualités, agenda
-- ✅ **Entreprises** : Filtres partenaires, recherche
-- ✅ **Établissements** : Carte interactive, fiches détaillées, filtrage
-- ✅ **Agenda** : Calendrier événements, filtres
-- ✅ **Contact** : Validation formulaire
-
-#### Responsive
-- ✅ Mobile (320px - 767px)
-- ✅ Tablette (768px - 1023px)
-- ✅ Desktop (1024px+)
-- ✅ Large desktop (1440px+)
-
-### Lancer les tests
-
-```bash
-# Tests manuels
-# 1. Ouvrir pages/index.html dans navigateurs
-# 2. Tester toutes les fonctionnalités
-# 3. Vérifier responsive (DevTools)
-
-# Tests automatisés (optionnel)
-# npm test (si configuré)
-```
-
-### Navigateurs testés
-
-| Navigateur | Version minimale | Statut |
-|------------|------------------|--------|
-| Chrome | 90+ | ✅ Testé |
-| Firefox | 88+ | ✅ Testé |
-| Safari | 14+ | ✅ Testé |
-| Edge | 90+ | ✅ Testé |
-| Mobile Safari (iOS) | 14+ | ✅ Testé |
-| Chrome Mobile (Android) | 90+ | ✅ Testé |
-
----
-
-## 📖 Documentation complémentaire
-
-- 📄 [PAGES-STRUCTURE.md](PAGES-STRUCTURE.md) - Hiérarchie complète des pages
-- 📄 [php/clee-bordeaux-theme/README.txt](php/clee-bordeaux-theme/README.txt) - Installation WordPress
-- 📄 [.github/copilot-instructions.md](.github/copilot-instructions.md) - Instructions pour AI agents
-
----
-
-## 🛠️ Technologies utilisées
-
-- **HTML5** : Sémantique moderne
-- **CSS3** : Custom Properties, Flexbox, Grid, Animations
-- **JavaScript ES6+** : Modules IIFE, Intersection Observer API, Fetch API
-- **WordPress** : Thème custom (optionnel)
+- **JavaScript ES6+** : Modules IIFE, Intersection Observer API, localStorage
 - **Google Maps API** : Carte interactive établissements
 
 **Aucune dépendance externe** (pas de jQuery, pas de frameworks) → Performance maximale.
@@ -909,22 +606,21 @@ document.addEventListener('DOMContentLoaded', () => {
 # 1. Créer une branche pour la nouvelle fonctionnalité
 git checkout -b feature/nouvelle-fonctionnalite
 
-# 2. Faire les modifications (version statique d'abord)
+# 2. Faire les modifications
 # - Éditer pages/*.html
 # - Éditer css/*.css
 # - Éditer js/*.js
 
-# 3. Synchroniser vers WordPress
-cp -r css/* php/clee-bordeaux-theme/assets/css/
-cp -r js/* php/clee-bordeaux-theme/assets/js/
+# 3. Tester dans le navigateur
+# - Ouvrir index.html
+# - Vérifier responsive
+# - Tester toutes les fonctionnalités
 
-# 4. Tester les deux versions
-
-# 5. Commit
+# 4. Commit avec convention Conventional Commits
 git add .
-git commit -m "feat: ajout de [fonctionnalité]"
+git commit -m "feat(scope): description de la fonctionnalité"
 
-# 6. Push et Pull Request
+# 5. Push et Pull Request
 git push origin feature/nouvelle-fonctionnalite
 ```
 
@@ -986,26 +682,6 @@ git push origin feature/nouvelle-fonctionnalite
 }
 ```
 
-### WordPress : Page blanche
-
-**Problème** : Erreur fatale PHP ou assets non chargés
-
-**Solutions** :
-1. Activer le mode debug WordPress (`WP_DEBUG` dans `wp-config.php`)
-2. Vérifier les logs d'erreur PHP
-3. S'assurer que tous les assets existent dans `assets/css/` et `assets/js/`
-4. Vérifier que les slugs de pages correspondent exactement aux conditions `is_page()`
-
-### WordPress : Assets non chargés
-
-**Problème** : CSS/JS ne s'applique pas sur WordPress
-
-**Solutions** :
-1. Vérifier que les fichiers sont bien dans `php/clee-bordeaux-theme/assets/`
-2. Vérifier le `functions.php` : enqueuing conditionnel avec bon slug
-3. Vider cache WordPress (si plugin de cache installé)
-4. Inspecter code source : vérifier que `<link>` et `<script>` sont présents
-
 ---
 
 ## Support & Contact
@@ -1043,15 +719,29 @@ Ce projet est la propriété de CLEE Bordeaux Avenir. Toute reproduction, distri
 
 ---
 
-## Changelog
+**Dernière mise à jour** : 5 février 2026  
+**Version** : 2.1  
+**Statut** : Production Ready
+
+---
+
+## Historique des versions principales
+
+### Version 2.1 (Février 2026) - Améliorations UX et recherche
+- Ajout barre de recherche partenaires en temps réel
+- Améliorations du thème étudiant (agenda, section impact, boutons CTA)
+- Refactorisation et simplification du contenu (jeunes-familles, vie-clee)
+- Suppression de la section agenda de l'accueil (déplacée vers vie-clee)
+- Amélioration des hovers et feedback visuel
 
 ### Version 2.0 (Janvier 2026) - Refonte complète
 - Architecture modulaire (Globals + Spécifiques)
-- Double implémentation (Static + WordPress)
+- Passage au full-static (suppression WordPress)
 - Réduction ~40% de code dupliqué
 - Design system centralisé (CSS variables)
 - Modules JavaScript IIFE
-- 14 pages complètes
+- 19 pages complètes
+- Système de portail étudiant/professionnel
 - Carte interactive établissements
 - Système de filtrage avancé
 - Responsive complet (mobile-first)
@@ -1063,9 +753,3 @@ Ce projet est la propriété de CLEE Bordeaux Avenir. Toute reproduction, distri
 - Page entreprises
 - Page établissements
 - Structure HTML/CSS/JS basique
-
----
-
-**Dernière mise à jour** : 15 janvier 2026  
-**Version** : 2.0  
-**Statut** : Production Ready
