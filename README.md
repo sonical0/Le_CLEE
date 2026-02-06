@@ -117,6 +117,15 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
 - **Processus de candidature** guidé
 - **Témoignages** d'entreprises partenaires
 - **Formulaire de contact** dédié
+- **Tableau des formations** avec système de pagination complet :
+  - Affichage par défaut de 5 formations par page
+  - Sélecteur personnalisé (5, 10, 15, 20, 50 résultats par page)
+  - Navigation par pages avec boutons précédent/suivant
+  - Numéros de page cliquables avec ellipses pour grandes listes
+  - Compteur de résultats affichant "Affichage de X à Y sur Z formation(s)"
+  - Tri par colonnes (établissement, formation, secteur, niveau, modalités, périodes)
+  - Filtres multicritères (établissement, secteur, niveau, modalité, recherche textuelle)
+  - Réinitialisation à la page 1 lors du changement de filtres ou tri
 
 ### Établissements & Formations
 - **Carte interactive** des établissements scolaires (Google Maps intégré)

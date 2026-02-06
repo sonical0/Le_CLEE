@@ -2,6 +2,24 @@
 
 Tous les messages de commit suivent la convention **Conventional Commits** (voir `.github/copilot-instructions.md`).
 
+## [05/02/2026] - Système de pagination pour le tableau des formations
+
+### Pagination complète
+- Ajout d'un système de pagination avec navigation par pages
+- Sélecteur de résultats par page : 5, 10, 15, 20, 50 formations
+- Affichage par défaut de 5 formations par page
+- Boutons précédent/suivant avec états désactivés intelligents
+- Numéros de page cliquables avec ellipses pour les grandes listes
+- Compteur de résultats affichant "Affichage de X à Y sur Z formation(s)"
+- Réinitialisation à la page 1 lors du changement de filtres ou de tri
+- Design responsive et cohérent avec la charte graphique
+
+### Améliorations UX
+- Limite de 7 numéros de page visibles simultanément
+- Ellipses (...) pour indiquer les pages cachées
+- État actif visuellement distinct (fond primary-500, texte blanc)
+- Transitions fluides sur les interactions
+
 ## [05/02/2026] - Refactorisation et améliorations UX multiples
 
 ### Recherche partenaires

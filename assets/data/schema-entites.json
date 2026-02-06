@@ -1,0 +1,700 @@
+{
+    "meta": {
+        "version": "1.0.0",
+        "dateCreation": "2026-02-06",
+        "description": "Schéma de données consolidé pour les entreprises et établissements du CLEE Bordeaux Avenir"
+    },
+    "referentiels": {
+        "secteursActivite": [
+            "Agriculture / Agroalimentaire",
+            "Artisanat / Métiers d'art",
+            "Automobile / Mécanique",
+            "BTP / Construction",
+            "Commerce / Distribution",
+            "Communication / Marketing",
+            "Culture / Arts / Spectacle",
+            "Éducation / Formation",
+            "Énergie / Environnement",
+            "Finance / Banque / Assurance",
+            "Hôtellerie / Restauration",
+            "Immobilier",
+            "Industrie / Production",
+            "Informatique / Numérique",
+            "Juridique / Conseil",
+            "Logistique / Transport",
+            "Santé / Social",
+            "Sécurité / Défense",
+            "Sport / Loisirs",
+            "Tourisme"
+        ],
+        "tranchesEffectifs": [
+            "1-9 salariés",
+            "10-49 salariés",
+            "50-249 salariés",
+            "250-499 salariés",
+            "500-999 salariés",
+            "1000+ salariés"
+        ],
+        "typesStages": [
+            "Stage de 3ᵉ",
+            "Stage de 2de générale",
+            "Stage Bac Pro (PFMP)",
+            "Stage BTS",
+            "Stage licence",
+            "Stage master"
+        ],
+        "niveauxFormation": [
+            "CAP",
+            "Bac Pro",
+            "BTS",
+            "Licence Pro",
+            "Master",
+            "Autre"
+        ],
+        "modalitesFormation": [
+            "Initial",
+            "Alternance",
+            "Mixité"
+        ],
+        "formatsMediasAutorises": {
+            "logos": {
+                "formats": [
+                    "jpg",
+                    "jpeg",
+                    "png",
+                    "svg"
+                ],
+                "poidsMax": 2048,
+                "poidsMaxUnite": "Ko"
+            },
+            "photos": {
+                "formats": [
+                    "jpg",
+                    "jpeg",
+                    "png"
+                ],
+                "poidsMax": 5120,
+                "poidsMaxUnite": "Ko",
+                "nombreMax": 10
+            }
+        }
+    },
+    "schemas": {
+        "informationsCommunes": {
+            "description": "Champs partagés par toutes les entités (entreprises et établissements)",
+            "champs": {
+                "nomOfficiel": {
+                    "type": "string",
+                    "obligatoire": true,
+                    "longueurMax": 200,
+                    "exemple": "CLEE Bordeaux Avenir"
+                },
+                "adresse": {
+                    "type": "object",
+                    "obligatoire": true,
+                    "proprietes": {
+                        "rue": {
+                            "type": "string",
+                            "obligatoire": true,
+                            "exemple": "12 rue de la République"
+                        },
+                        "codePostal": {
+                            "type": "string",
+                            "obligatoire": true,
+                            "pattern": "^[0-9]{5}$",
+                            "exemple": "33000"
+                        },
+                        "ville": {
+                            "type": "string",
+                            "obligatoire": true,
+                            "exemple": "Bordeaux"
+                        },
+                        "pays": {
+                            "type": "string",
+                            "obligatoire": true,
+                            "defaut": "France",
+                            "exemple": "France"
+                        }
+                    }
+                },
+                "coordonneesGenerales": {
+                    "type": "object",
+                    "obligatoire": true,
+                    "proprietes": {
+                        "emailPrincipal": {
+                            "type": "string",
+                            "format": "email",
+                            "obligatoire": true,
+                            "exemple": "contact@clee-bordeaux.fr"
+                        },
+                        "telephonePrincipal": {
+                            "type": "string",
+                            "pattern": "^0[1-9][0-9]{8}$",
+                            "obligatoire": true,
+                            "exemple": "0556123456"
+                        }
+                    }
+                },
+                "logo": {
+                    "type": "object",
+                    "obligatoire": false,
+                    "proprietes": {
+                        "url": {
+                            "type": "string",
+                            "format": "url",
+                            "exemple": "/assets/images/logos/clee-logo.png"
+                        },
+                        "format": {
+                            "type": "string",
+                            "enum": [
+                                "jpg",
+                                "jpeg",
+                                "png",
+                                "svg"
+                            ],
+                            "exemple": "png"
+                        },
+                        "poids": {
+                            "type": "number",
+                            "max": 2048,
+                            "unite": "Ko",
+                            "exemple": 150
+                        }
+                    }
+                },
+                "secteursActivite": {
+                    "type": "array",
+                    "obligatoire": true,
+                    "items": {
+                        "type": "string",
+                        "enum": "referentiels.secteursActivite"
+                    },
+                    "minItems": 1,
+                    "exemple": [
+                        "Éducation / Formation",
+                        "Commerce / Distribution"
+                    ]
+                },
+                "description": {
+                    "type": "string",
+                    "obligatoire": true,
+                    "longueurMin": 100,
+                    "longueurMax": 1000,
+                    "exemple": "Le CLEE Bordeaux Avenir est une association qui facilite les liens entre les établissements scolaires et les entreprises..."
+                },
+                "presenceInternational": {
+                    "type": "boolean",
+                    "obligatoire": true,
+                    "defaut": false,
+                    "exemple": false
+                }
+            }
+        },
+        "entreprise": {
+            "description": "Champs spécifiques aux entreprises partenaires",
+            "heriteDe": "informationsCommunes",
+            "champsSpecifiques": {
+                "identificationLegale": {
+                    "type": "object",
+                    "obligatoire": true,
+                    "proprietes": {
+                        "siret": {
+                            "type": "string",
+                            "pattern": "^[0-9]{14}$",
+                            "obligatoire": true,
+                            "exemple": "12345678901234"
+                        }
+                    }
+                },
+                "effectif": {
+                    "type": "object",
+                    "obligatoire": true,
+                    "proprietes": {
+                        "tranche": {
+                            "type": "string",
+                            "enum": "referentiels.tranchesEffectifs",
+                            "obligatoire": true,
+                            "exemple": "50-249 salariés"
+                        }
+                    }
+                },
+                "presenceEnLigne": {
+                    "type": "object",
+                    "obligatoire": false,
+                    "proprietes": {
+                        "siteInternet": {
+                            "type": "string",
+                            "format": "url",
+                            "exemple": "https://www.entreprise-exemple.fr"
+                        },
+                        "linkedIn": {
+                            "type": "string",
+                            "format": "url",
+                            "exemple": "https://www.linkedin.com/company/entreprise-exemple"
+                        }
+                    }
+                },
+                "medias": {
+                    "type": "object",
+                    "obligatoire": false,
+                    "proprietes": {
+                        "photos": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "proprietes": {
+                                    "url": {
+                                        "type": "string",
+                                        "format": "url"
+                                    },
+                                    "format": {
+                                        "type": "string",
+                                        "enum": [
+                                            "jpg",
+                                            "jpeg",
+                                            "png"
+                                        ]
+                                    },
+                                    "poids": {
+                                        "type": "number",
+                                        "max": 5120,
+                                        "unite": "Ko"
+                                    },
+                                    "legende": {
+                                        "type": "string",
+                                        "longueurMax": 200
+                                    }
+                                }
+                            },
+                            "maxItems": 10
+                        }
+                    }
+                },
+                "accueilApprenants": {
+                    "type": "object",
+                    "obligatoire": true,
+                    "proprietes": {
+                        "stagiaires": {
+                            "type": "object",
+                            "proprietes": {
+                                "accepte": {
+                                    "type": "boolean",
+                                    "obligatoire": true,
+                                    "defaut": false
+                                },
+                                "typesAcceptes": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string",
+                                        "enum": "referentiels.typesStages"
+                                    },
+                                    "dependDe": "stagiaires.accepte",
+                                    "exemple": [
+                                        "Stage de 3ᵉ",
+                                        "Stage Bac Pro (PFMP)"
+                                    ]
+                                }
+                            }
+                        },
+                        "alternants": {
+                            "type": "object",
+                            "proprietes": {
+                                "accepte": {
+                                    "type": "boolean",
+                                    "obligatoire": true,
+                                    "defaut": false
+                                },
+                                "niveauxAcceptes": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string",
+                                        "enum": "referentiels.niveauxFormation"
+                                    },
+                                    "dependDe": "alternants.accepte",
+                                    "exemple": [
+                                        "BTS",
+                                        "Licence Pro"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "etablissement": {
+            "description": "Champs spécifiques aux établissements scolaires",
+            "heriteDe": "informationsCommunes",
+            "champsSpecifiques": {
+                "coordonneesEtablissement": {
+                    "type": "object",
+                    "note": "Hérite des informationsCommunes, peut surcharger si nécessaire",
+                    "obligatoire": true
+                },
+                "contactReferent": {
+                    "type": "object",
+                    "obligatoire": true,
+                    "proprietes": {
+                        "nom": {
+                            "type": "string",
+                            "obligatoire": true,
+                            "exemple": "Jean Dupont"
+                        },
+                        "fonction": {
+                            "type": "string",
+                            "obligatoire": true,
+                            "exemple": "Directeur des relations entreprises"
+                        },
+                        "emailDirect": {
+                            "type": "string",
+                            "format": "email",
+                            "obligatoire": true,
+                            "exemple": "j.dupont@etablissement.fr"
+                        },
+                        "telephoneDirect": {
+                            "type": "string",
+                            "pattern": "^0[1-9][0-9]{8}$",
+                            "obligatoire": false,
+                            "exemple": "0556123457"
+                        }
+                    }
+                },
+                "formationsProposees": {
+                    "type": "array",
+                    "obligatoire": true,
+                    "items": {
+                        "type": "object",
+                        "proprietes": {
+                            "intitule": {
+                                "type": "string",
+                                "obligatoire": true,
+                                "exemple": "Bac Pro Commerce"
+                            },
+                            "secteur": {
+                                "type": "string",
+                                "enum": "referentiels.secteursActivite",
+                                "obligatoire": true,
+                                "exemple": "Commerce / Distribution"
+                            },
+                            "niveau": {
+                                "type": "string",
+                                "enum": "referentiels.niveauxFormation",
+                                "obligatoire": true,
+                                "exemple": "Bac Pro"
+                            },
+                            "modalites": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "enum": "referentiels.modalitesFormation"
+                                },
+                                "obligatoire": true,
+                                "exemple": [
+                                    "Initial",
+                                    "Alternance"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "formationsNonProposees": {
+                    "type": "object",
+                    "obligatoire": false,
+                    "proprietes": {
+                        "afficherMessageOnisep": {
+                            "type": "boolean",
+                            "defaut": true
+                        },
+                        "messageStandardise": {
+                            "type": "string",
+                            "defaut": "Cette formation n'est pas proposée par notre établissement. Pour plus d'informations sur les établissements proposant cette formation, consultez le site de l'ONISEP."
+                        },
+                        "logoOnisep": {
+                            "type": "string",
+                            "format": "url",
+                            "defaut": "/assets/images/logos/onisep-logo.png"
+                        },
+                        "lienOnisep": {
+                            "type": "string",
+                            "format": "url",
+                            "defaut": "https://www.onisep.fr"
+                        }
+                    }
+                },
+                "calendrierStagesPFMP": {
+                    "type": "array",
+                    "obligatoire": true,
+                    "description": "Formulaire annuel par établissement",
+                    "items": {
+                        "type": "object",
+                        "proprietes": {
+                            "anneeScolaire": {
+                                "type": "string",
+                                "pattern": "^[0-9]{4}-[0-9]{4}$",
+                                "obligatoire": true,
+                                "exemple": "2025-2026"
+                            },
+                            "formation": {
+                                "type": "string",
+                                "obligatoire": true,
+                                "exemple": "Bac Pro Commerce"
+                            },
+                            "niveau": {
+                                "type": "string",
+                                "enum": "referentiels.niveauxFormation",
+                                "obligatoire": true,
+                                "exemple": "Bac Pro"
+                            },
+                            "modalite": {
+                                "type": "string",
+                                "enum": "referentiels.modalitesFormation",
+                                "obligatoire": true,
+                                "exemple": "Initial"
+                            },
+                            "periodes": {
+                                "type": "array",
+                                "obligatoire": true,
+                                "items": {
+                                    "type": "object",
+                                    "proprietes": {
+                                        "dateDebut": {
+                                            "type": "string",
+                                            "format": "date",
+                                            "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+                                            "obligatoire": true,
+                                            "exemple": "2025-11-15"
+                                        },
+                                        "dateFin": {
+                                            "type": "string",
+                                            "format": "date",
+                                            "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+                                            "obligatoire": true,
+                                            "exemple": "2025-12-20"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "contraintesValidation": {
+        "champsObligatoires": {
+            "description": "Tous les champs marqués 'obligatoire: true' doivent être remplis",
+            "verification": "Avant enregistrement, vérifier la présence de tous les champs obligatoires"
+        },
+        "listesReferentiels": {
+            "description": "Les listes déroulantes doivent utiliser exclusivement les valeurs des référentiels",
+            "verification": "Valider que toutes les valeurs sélectionnées existent dans le référentiel correspondant"
+        },
+        "gestionDoublons": {
+            "description": "Éviter les doublons d'adresse et coordonnées via entités liées",
+            "regles": [
+                "Vérifier l'existence d'une entité avec le même SIRET (entreprises)",
+                "Vérifier l'existence d'une entité avec la même adresse exacte",
+                "Proposer de lier à l'entité existante ou de créer une nouvelle entrée"
+            ]
+        },
+        "miseAJourAnnuelle": {
+            "description": "Les calendriers de stages doivent être mis à jour chaque année",
+            "frequence": "Annuelle",
+            "alerte": "Déclencher une notification 2 mois avant la rentrée scolaire"
+        },
+        "controleMedias": {
+            "description": "Contrôle du poids et du format des fichiers médias",
+            "regles": [
+                "Vérifier le format du fichier contre les formats autorisés",
+                "Vérifier le poids du fichier contre le poids maximum",
+                "Pour les photos, vérifier le nombre total contre le maximum autorisé",
+                "Redimensionner automatiquement si possible, sinon rejeter le fichier"
+            ]
+        },
+        "formatsEmail": {
+            "pattern": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+            "description": "Validation du format email"
+        },
+        "formatsTelephone": {
+            "pattern": "^0[1-9][0-9]{8}$",
+            "description": "Format téléphone français à 10 chiffres"
+        },
+        "formatsSIRET": {
+            "pattern": "^[0-9]{14}$",
+            "description": "SIRET français à 14 chiffres",
+            "verification": "Vérifier la validité de la clé SIRET via algorithme de Luhn"
+        }
+    },
+    "exemples": {
+        "entrepriseComplete": {
+            "typeEntite": "entreprise",
+            "nomOfficiel": "Tech Innovations Bordeaux",
+            "adresse": {
+                "rue": "25 avenue Thiers",
+                "codePostal": "33100",
+                "ville": "Bordeaux",
+                "pays": "France"
+            },
+            "coordonneesGenerales": {
+                "emailPrincipal": "contact@tech-innovations.fr",
+                "telephonePrincipal": "0556789012"
+            },
+            "logo": {
+                "url": "/assets/images/logos/tech-innovations.png",
+                "format": "png",
+                "poids": 180
+            },
+            "secteursActivite": [
+                "Informatique / Numérique",
+                "Communication / Marketing"
+            ],
+            "description": "Tech Innovations Bordeaux est une entreprise spécialisée dans le développement de solutions numériques innovantes pour les PME. Nous accompagnons nos clients dans leur transformation digitale avec une approche personnalisée et des outils de pointe.",
+            "presenceInternational": true,
+            "identificationLegale": {
+                "siret": "85234567890123"
+            },
+            "effectif": {
+                "tranche": "50-249 salariés"
+            },
+            "presenceEnLigne": {
+                "siteInternet": "https://www.tech-innovations.fr",
+                "linkedIn": "https://www.linkedin.com/company/tech-innovations-bordeaux"
+            },
+            "medias": {
+                "photos": [
+                    {
+                        "url": "/assets/images/entreprises/tech-innovations-bureaux.jpg",
+                        "format": "jpg",
+                        "poids": 3200,
+                        "legende": "Nos bureaux en open space"
+                    },
+                    {
+                        "url": "/assets/images/entreprises/tech-innovations-equipe.jpg",
+                        "format": "jpg",
+                        "poids": 2800,
+                        "legende": "L'équipe de développement"
+                    }
+                ]
+            },
+            "accueilApprenants": {
+                "stagiaires": {
+                    "accepte": true,
+                    "typesAcceptes": [
+                        "Stage de 3ᵉ",
+                        "Stage Bac Pro (PFMP)",
+                        "Stage BTS"
+                    ]
+                },
+                "alternants": {
+                    "accepte": true,
+                    "niveauxAcceptes": [
+                        "BTS",
+                        "Licence Pro"
+                    ]
+                }
+            }
+        },
+        "etablissementComplet": {
+            "typeEntite": "etablissement",
+            "nomOfficiel": "Lycée Professionnel Jean Moulin",
+            "adresse": {
+                "rue": "8 rue des Écoles",
+                "codePostal": "33300",
+                "ville": "Bordeaux",
+                "pays": "France"
+            },
+            "coordonneesGenerales": {
+                "emailPrincipal": "contact@lp-jeanmoulin.fr",
+                "telephonePrincipal": "0556234567"
+            },
+            "logo": {
+                "url": "/assets/images/logos/lp-jeanmoulin.png",
+                "format": "png",
+                "poids": 125
+            },
+            "secteursActivite": [
+                "Éducation / Formation"
+            ],
+            "description": "Le Lycée Professionnel Jean Moulin forme depuis plus de 50 ans des jeunes aux métiers du commerce, de la vente et de la relation client. Notre établissement propose des formations en initial et en alternance, avec un fort ancrage dans le tissu économique local.",
+            "presenceInternational": false,
+            "contactReferent": {
+                "nom": "Marie Durand",
+                "fonction": "Coordinatrice des stages et PFMP",
+                "emailDirect": "m.durand@lp-jeanmoulin.fr",
+                "telephoneDirect": "0556234568"
+            },
+            "formationsProposees": [
+                {
+                    "intitule": "CAP Employé de Commerce Multi-spécialités",
+                    "secteur": "Commerce / Distribution",
+                    "niveau": "CAP",
+                    "modalites": [
+                        "Initial"
+                    ]
+                },
+                {
+                    "intitule": "Bac Pro Métiers du Commerce et de la Vente",
+                    "secteur": "Commerce / Distribution",
+                    "niveau": "Bac Pro",
+                    "modalites": [
+                        "Initial",
+                        "Alternance"
+                    ]
+                },
+                {
+                    "intitule": "BTS Management Commercial Opérationnel",
+                    "secteur": "Commerce / Distribution",
+                    "niveau": "BTS",
+                    "modalites": [
+                        "Initial",
+                        "Alternance"
+                    ]
+                }
+            ],
+            "formationsNonProposees": {
+                "afficherMessageOnisep": true,
+                "messageStandardise": "Cette formation n'est pas proposée par notre établissement. Pour plus d'informations sur les établissements proposant cette formation, consultez le site de l'ONISEP.",
+                "logoOnisep": "/assets/images/logos/onisep-logo.png",
+                "lienOnisep": "https://www.onisep.fr"
+            },
+            "calendrierStagesPFMP": [
+                {
+                    "anneeScolaire": "2025-2026",
+                    "formation": "Bac Pro Métiers du Commerce et de la Vente",
+                    "niveau": "Bac Pro",
+                    "modalite": "Initial",
+                    "periodes": [
+                        {
+                            "dateDebut": "2025-11-10",
+                            "dateFin": "2025-12-20"
+                        },
+                        {
+                            "dateDebut": "2026-02-09",
+                            "dateFin": "2026-03-27"
+                        },
+                        {
+                            "dateDebut": "2026-05-25",
+                            "dateFin": "2026-06-26"
+                        }
+                    ]
+                },
+                {
+                    "anneeScolaire": "2025-2026",
+                    "formation": "BTS Management Commercial Opérationnel",
+                    "niveau": "BTS",
+                    "modalite": "Initial",
+                    "periodes": [
+                        {
+                            "dateDebut": "2026-01-12",
+                            "dateFin": "2026-02-06"
+                        },
+                        {
+                            "dateDebut": "2026-04-20",
+                            "dateFin": "2026-05-29"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
