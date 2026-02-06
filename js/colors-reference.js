@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     root.removeAttribute('data-theme');
     
-    console.log('✅ Couleurs chargées dynamiquement depuis les fichiers CSS du projet');
+    console.log('Couleurs chargées dynamiquement depuis les fichiers CSS du projet');
 });
 
 function resetAllColors() {
