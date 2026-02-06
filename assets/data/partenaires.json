@@ -1,0 +1,184 @@
+{
+  "partenaires": [
+    {
+      "id": 1,
+      "sector": "aeroport",
+      "name": "Aéroport de Bordeaux",
+      "activity": "Services aéroportuaires",
+      "engagement": "Accueil de stagiaires, Visites",
+      "contact": "contact@bordeaux.aeroport.fr",
+      "image": "https://picsum.photos/400/250?random=10"
+    },
+    {
+      "id": 2,
+      "sector": "agriculture",
+      "name": "Vignobles Bordelais",
+      "activity": "Viticulture et œnologie",
+      "engagement": "Stages, Interventions",
+      "contact": "contact@vignobles-bordeaux.fr",
+      "image": "https://picsum.photos/400/250?random=11"
+    },
+    {
+      "id": 3,
+      "sector": "animation-sport",
+      "name": "Girondins Centre de Formation",
+      "activity": "Formation sportive",
+      "engagement": "Projets pédagogiques, Visites",
+      "contact": "contact@girondins.fr",
+      "image": "https://picsum.photos/400/250?random=12"
+    },
+    {
+      "id": 4,
+      "sector": "animaux-elevage",
+      "name": "Ferme Pédagogique Aquitaine",
+      "activity": "Élevage et soins animaliers",
+      "engagement": "Accueil de stagiaires",
+      "contact": "contact@ferme-aquitaine.fr",
+      "image": "https://picsum.photos/400/250?random=13"
+    },
+    {
+      "id": 5,
+      "sector": "artisanat",
+      "name": "Atelier d'Art Bordelais",
+      "activity": "Artisanat d'art traditionnel",
+      "engagement": "Interventions, Stages",
+      "contact": "contact@atelier-art.fr",
+      "image": "https://picsum.photos/400/250?random=14"
+    },
+    {
+      "id": 6,
+      "sector": "automobile",
+      "name": "Garage Auto Expert",
+      "activity": "Réparation et entretien automobile",
+      "engagement": "Accueil de stagiaires, Interventions",
+      "contact": "contact@auto-expert.fr",
+      "image": "https://picsum.photos/400/250?random=15"
+    },
+    {
+      "id": 7,
+      "sector": "batiment-tp",
+      "name": "BTP Gironde",
+      "activity": "Construction et travaux publics",
+      "engagement": "Accueil de stagiaires, Visites",
+      "contact": "contact@btp-gironde.fr",
+      "image": "https://picsum.photos/400/250?random=16"
+    },
+    {
+      "id": 8,
+      "sector": "energie",
+      "name": "Engie Bordeaux",
+      "activity": "Production et distribution d'énergie",
+      "engagement": "Projets pédagogiques, Interventions",
+      "contact": "contact@engie-bordeaux.fr",
+      "image": "https://picsum.photos/400/250?random=17"
+    },
+    {
+      "id": 9,
+      "sector": "hotellerie-restauration",
+      "name": "Hôtel Restaurant Le Grand",
+      "activity": "Hôtellerie et restauration gastronomique",
+      "engagement": "Accueil de stagiaires",
+      "contact": "contact@legrand.fr",
+      "image": "https://picsum.photos/400/250?random=18"
+    },
+    {
+      "id": 10,
+      "sector": "industrie",
+      "name": "Industrie Mécanique",
+      "activity": "Fabrication mécanique de précision",
+      "engagement": "Accueil de stagiaires, Visites",
+      "contact": "contact@industrie-meca.fr",
+      "image": "https://picsum.photos/400/250?random=19"
+    },
+    {
+      "id": 11,
+      "sector": "maintenance-entretien",
+      "name": "Services Maintenance Plus",
+      "activity": "Maintenance industrielle et entretien",
+      "engagement": "Interventions, Stages",
+      "contact": "contact@maintenance-plus.fr",
+      "image": "https://picsum.photos/400/250?random=20"
+    },
+    {
+      "id": 12,
+      "sector": "mode-esthetique",
+      "name": "Institut Beauté & Style",
+      "activity": "Esthétique et coiffure",
+      "engagement": "Accueil de stagiaires",
+      "contact": "contact@beaute-style.fr",
+      "image": "https://picsum.photos/400/250?random=21"
+    },
+    {
+      "id": 13,
+      "sector": "nature-environnement",
+      "name": "Éco Services Gironde",
+      "activity": "Protection de l'environnement",
+      "engagement": "Projets pédagogiques, Visites",
+      "contact": "contact@eco-services.fr",
+      "image": "https://picsum.photos/400/250?random=22"
+    },
+    {
+      "id": 14,
+      "sector": "sante-social",
+      "name": "Centre Médico-Social Bordeaux",
+      "activity": "Services de santé et aide sociale",
+      "engagement": "Accueil de stagiaires, Interventions",
+      "contact": "contact@cms-bordeaux.fr",
+      "image": "https://picsum.photos/400/250?random=23"
+    },
+    {
+      "id": 15,
+      "sector": "securite-defense",
+      "name": "Sécurité Privée Aquitaine",
+      "activity": "Services de sécurité et surveillance",
+      "engagement": "Interventions, Visites",
+      "contact": "contact@securite-aquitaine.fr",
+      "image": "https://picsum.photos/400/250?random=24"
+    },
+    {
+      "id": 16,
+      "sector": "services-administratifs",
+      "name": "Cabinet Administratif Expert",
+      "activity": "Gestion administrative et comptable",
+      "engagement": "Accueil de stagiaires",
+      "contact": "contact@cabinet-admin.fr",
+      "image": "https://picsum.photos/400/250?random=25"
+    },
+    {
+      "id": 17,
+      "sector": "services-funeraires",
+      "name": "Pompes Funèbres Dignité",
+      "activity": "Services funéraires",
+      "engagement": "Interventions",
+      "contact": "contact@pf-dignite.fr",
+      "image": "https://picsum.photos/400/250?random=26"
+    },
+    {
+      "id": 18,
+      "sector": "spectacles-divertissement",
+      "name": "Spectacles & Événements Bordeaux",
+      "activity": "Organisation d'événements et spectacles",
+      "engagement": "Projets pédagogiques, Stages",
+      "contact": "contact@spectacles-bdx.fr",
+      "image": "https://picsum.photos/400/250?random=27"
+    },
+    {
+      "id": 19,
+      "sector": "transport-magasinage",
+      "name": "Transports Logistique Aquitaine",
+      "activity": "Transport et logistique",
+      "engagement": "Accueil de stagiaires, Visites",
+      "contact": "contact@transports-aquitaine.fr",
+      "image": "https://picsum.photos/400/250?random=28"
+    },
+    {
+      "id": 20,
+      "sector": "vente-commerce",
+      "name": "Commerce & Distribution Gironde",
+      "activity": "Commerce de détail",
+      "engagement": "Accueil de stagiaires, Interventions",
+      "contact": "contact@commerce-gironde.fr",
+      "image": "https://picsum.photos/400/250?random=29"
+    }
+  ]
+}

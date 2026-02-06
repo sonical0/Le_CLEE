@@ -1,5 +1,74 @@
 # Changelog - CLEE Bordeaux Avenir
 
+Tous les messages de commit suivent la convention **Conventional Commits** (voir `.github/copilot-instructions.md`).
+
+## [05/02/2026] - Refactorisation et améliorations UX multiples
+
+### Recherche partenaires
+- Ajout d'une barre de recherche sur la page entreprises (entre introduction et filtres)
+- Recherche en temps réel par nom d'entreprise
+- Filtre dynamique des cartes partenaires
+- Amélioration de l'UX avec feedback visuel instantané
+
+### Améliorations du thème étudiant
+- **Agenda accueil** : Dates mises en avant avec fond orange et texte blanc pour plus de visibilité
+- **Section "Notre impact"** : Amélioration du hover avec dégradé clair et ombre adoucie pour une meilleure lisibilité des chiffres
+- Remplacement du fond orange vif par un dégradé subtil sur les cartes statistiques
+
+### Améliorations des boutons CTA
+- Application des couleurs de la charte graphique sur les boutons du hero de l'accueil
+- Ajustement des ombres pour renforcer la hiérarchie visuelle au survol
+- Transitions fluides et feedback visuel amélioré
+
+### Refactorisation du contenu
+- **jeunes-familles.html** : Amélioration de la clarté et du formatage des descriptions de sections
+- **index.html** : Suppression de la section agenda (déplacée dans vie-clee.html) et mise à jour du texte contact
+- **vie-clee.html** : Suppression de la modal de contact et des fonctionnalités associées (simplification)
+- **jeunes-familles.html** : Retrait des cartes info obsolètes et mise à jour du contenu
+
+### Corrections diverses
+- **companies.html** : Correction et amélioration de la page Entreprises et Partenaires
+- **establishments.html** : Améliorations de la page Établissements et Formations
+
+### Commits détaillés
+```
+ef27ac5 - Merge pull request #27 from sonical0/dev_xav
+b1b8026 - Add partners search, student theme & CTA hovers
+0487d84 - Merge pull request #26 from sonical0/dev_alex
+6c1557f - refactor(jeunes-familles): improve content clarity and formatting
+e693361 - refactor(index.html): remove agenda section and update contact text
+8ecf690 - Merge pull request #25 from sonical0/dev
+10a88e9 - Merge pull request #24 from sonical0/dev_xav
+e2e99d5 - établissements et formation
+0e8610b - Merge pull request #23 from sonical0/dev_alex
+e06a742 - refactor(vie-clee): remove contact modal and related functionality
+0b2c580 - refactor(jeunes-familles): remove outdated info cards and update content
+bbb0470 - Corriger la page : Entreprises et partenaire
+```
+
+## [05/02/2026] - Lisibilité hover Notre impact (thème étudiant)
+
+### Ajustement de la surbrillance
+- Remplacement du fond orange par un dégradé clair sur les cartes "Notre impact"
+- Ombre adoucie pour améliorer la lisibilité des chiffres
+
+## [05/02/2026] - Agenda accueil thème étudiant
+
+### Ajustement des dates de l'agenda
+- Mise en avant des dates avec un fond orange et un texte blanc dans le thème Étudiant
+
+## [05/02/2026] - Surbrillance des boutons d'accueil
+
+### Amélioration du hover des CTA
+- Application des couleurs de la charte graphique sur les boutons du hero de l'accueil
+- Ajustement des ombres pour renforcer la hiérarchie visuelle au survol
+
+## [05/02/2026] - Barre de recherche partenaires
+
+### Ajout d'une recherche sur la page partenaires
+- Ajout d'une barre de recherche entre l'introduction et les filtres des entreprises
+- Filtrage des cartes par nom via le champ de recherche
+
 ## [05/02/2026] - Simplification de la page Nos Actions et documentation des commits
 
 ### Refactorisation du contenu

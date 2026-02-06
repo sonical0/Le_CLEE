@@ -114,6 +114,7 @@ const EstablishmentsPageModule = (() => {
     initSchoolList();
     initFilters();
     initFormationToggles();
+    initViewFormationsButton();
   };
 
   const initMapMarkers = () => {
@@ -139,6 +140,12 @@ const EstablishmentsPageModule = (() => {
 
     currentEcole = schoolId;
     const ecole = etablissements[schoolId];
+
+    // Hide formations section when changing school
+    const formationsSection = document.getElementById('formations');
+    if (formationsSection) {
+      formationsSection.style.display = 'none';
+    }
 
     // Update markers
     document.querySelectorAll('.map-marker').forEach(marker => {
@@ -218,6 +225,19 @@ const EstablishmentsPageModule = (() => {
         this.textContent = card.classList.contains('expanded') ? 'Masquer les détails' : 'Voir les détails';
       });
     });
+  };
+
+  const initViewFormationsButton = () => {
+    const viewFormationsBtn = document.querySelector('.etablissement-actions .btn-primary');
+    const formationsSection = document.getElementById('formations');
+    
+    if (viewFormationsBtn && formationsSection) {
+      viewFormationsBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        formationsSection.style.display = 'block';
+        formationsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
   };
 
   return { init };

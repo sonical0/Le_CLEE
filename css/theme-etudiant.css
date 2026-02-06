@@ -178,6 +178,12 @@
     color: var(--primary-cyan);
 }
 
+[data-theme="etudiant"] .event-date {
+    background: var(--primary-orange);
+                                 /* Charte originelle: #FF6B35 */
+    color: #ffffff;
+}
+
 [data-theme="etudiant"] .chiffres-cles {
     background: linear-gradient(135deg, #F8F9FF 0%, #FFF5F0 100%);
 }
@@ -198,7 +204,8 @@
     content: '';
     position: absolute;
     inset: -2px;
-    background: var(--gradient-primary);
+    background: linear-gradient(135deg, var(--primary-50) 0%, var(--grey-50) 100%);
+                                                                      /* Charte originelle: var(--gradient-primary) */
     border-radius: 16px;
     z-index: -1;
     opacity: 0;
@@ -207,8 +214,8 @@
 
 [data-theme="etudiant"] .chiffre-card:hover {
     transform: translateY(-8px) !important;
-    box-shadow: 0 12px 24px rgba(255, 153, 102, 0.25) !important;
-                                                                   /* Charte originelle: rgba(255, 107, 53, 0.3) */
+    box-shadow: 0 12px 24px rgba(31, 52, 72, 0.18) !important;
+                                                               /* Charte originelle: rgba(255, 107, 53, 0.3) */
 }
 
 [data-theme="etudiant"] .chiffre-card:hover::after {

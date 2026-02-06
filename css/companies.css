@@ -3,10 +3,36 @@
 ======================================== */
 
 :root {
-  --color-industrie: #176ea1;
-  --color-tertiaire: #c63634;
-  --color-numerique: #589842;
-  --color-batiment: #d8861b;
+  /* Secteurs basés sur la charte graphique CLEE avec tons adoucis */
+  /* Groupe BLEU (Entreprises) - Variations du bleu CLEE #176ea1 */
+  --color-aeroport: #4a8fc2;              /* Bleu ciel doux */
+  --color-industrie: #176ea1;             /* Bleu CLEE original */
+  --color-transport-magasinage: #2d7aa8;  /* Bleu profond doux */
+  --color-services-administratifs: #5b9bc9; /* Bleu clair */
+  --color-securite-defense: #1f5f8a;      /* Bleu marine doux */
+  
+  /* Groupe ORANGE (Formation/Artisanat) - Variations de l'orange CLEE #d8861b */
+  --color-batiment-tp: #d8861b;           /* Orange CLEE original */
+  --color-artisanat: #e09a3f;             /* Orange doux */
+  --color-automobile: #c27a16;            /* Orange foncé doux */
+  --color-maintenance-entretien: #d8a050; /* Orange pâle */
+  
+  /* Groupe VERT (Stages/Nature) - Variations du vert CLEE #589842 */
+  --color-agriculture: #6fa854;           /* Vert naturel doux */
+  --color-nature-environnement: #589842;  /* Vert CLEE original */
+  --color-animaux-elevage: #74a85f;       /* Vert prairie doux */
+  --color-animation-sport: #4d8739;       /* Vert foncé doux */
+  
+  /* Groupe ROUGE (Jeunes/Services) - Variations du rouge CLEE #c63634 */
+  --color-sante-social: #d65d5b;          /* Rouge doux */
+  --color-hotellerie-restauration: #c63634; /* Rouge CLEE original */
+  --color-spectacles-divertissement: #d1524f; /* Rouge rosé doux */
+  
+  /* Tons complémentaires doux coordonnés avec la palette */
+  --color-mode-esthetique: #d47fb3;       /* Rose harmonieux */
+  --color-vente-commerce: #de8357;        /* Terracotta doux */
+  --color-energie: #e5a827;               /* Jaune ambre doux */
+  --color-services-funeraires: #7a8a9a;   /* Gris bleuté sobre */
 }
 
 /* ========================================
@@ -245,12 +271,67 @@
   margin-right: auto;
 }
 
+.partenaires-search {
+  max-width: 760px;
+  margin: 0 auto 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.partenaires-search .filtre-label {
+  margin-bottom: 0;
+}
+
+.partenaires-search-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 10px 12px;
+  background-color: var(--grey-50);
+  border: 2px solid var(--grey-200);
+  border-radius: 12px;
+}
+
+.partenaires-search-bar:focus-within {
+  border-color: var(--primary-400);
+  background-color: var(--primary-50);
+}
+
+#partenairesSearch {
+  flex: 1;
+  min-width: 240px;
+  border: none;
+  background: transparent;
+  padding: 10px 12px;
+  font-size: 15px;
+  color: var(--primary-900);
+  outline: none;
+}
+
+#partenairesSearch::placeholder {
+  color: var(--grey-500);
+}
+
 .filtre-container {
   display: flex;
   gap: 12px;
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 48px;
+  position: relative;
+}
+
+/* Cacher les filtres secondaires par défaut */
+.filtre-secondaire {
+  display: none;
+}
+
+.filtre-container.expanded .filtre-secondaire {
+  display: inline-flex;
 }
 
 .filtre-btn {
@@ -265,7 +346,87 @@
   transition: all 0.3s ease;
 }
 
-.filtre-btn:hover,
+/* Bouton toggle "Plus de filtres" */
+.filtre-toggle-btn {
+  padding: 10px 24px;
+  background-color: var(--primary-100);
+  border: 2px solid var(--primary-300);
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary-800);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 8px;
+}
+
+.filtre-toggle-btn:hover {
+  background-color: var(--primary-200);
+  border-color: var(--primary-400);
+  transform: translateY(-2px);
+}
+
+.toggle-icon {
+  transition: transform 0.3s ease;
+  font-size: 12px;
+}
+
+.filtre-container.expanded .toggle-icon {
+  transform: rotate(180deg);
+}
+
+/* Select mobile - caché par défaut sur desktop */
+.filtre-select-container {
+  display: none;
+  margin-bottom: 32px;
+}
+
+.filtre-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary-800);
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.filtre-select {
+  width: 100%;
+  max-width: 100%;
+  padding: 12px 16px;
+  background-color: #ffffff;
+  border: 2px solid var(--grey-300);
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--primary-800);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23176ea1' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 12px;
+  padding-right: 40px;
+}
+
+.filtre-select:hover,
+.filtre-select:focus {
+  border-color: var(--primary-600);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(23, 110, 161, 0.1);
+}
+
+.filtre-btn:hover {
+  background-color: var(--grey-200);
+  color: var(--primary-700);
+  border-color: var(--grey-300);
+  transform: translateY(-2px);
+}
+
 .filtre-btn.active {
   background-color: var(--primary-800);
   color: #ffffff;
@@ -273,35 +434,123 @@
   transform: translateY(-2px);
 }
 
-.filtre-btn[data-filter="industrie"],
-.filtre-btn[data-filter="industrie"]:hover,
+.filtre-btn[data-filter="aeroport"].active {
+  background-color: var(--color-aeroport);
+  border-color: var(--color-aeroport);
+  color: #ffffff;
+}
+
+.filtre-btn[data-filter="agriculture"].active {
+  background-color: var(--color-agriculture);
+  border-color: var(--color-agriculture);
+  color: #ffffff;
+}
+
+.filtre-btn[data-filter="animation-sport"].active {
+  background-color: var(--color-animation-sport);
+  border-color: var(--color-animation-sport);
+  color: #ffffff;
+}
+
+.filtre-btn[data-filter="animaux-elevage"].active {
+  background-color: var(--color-animaux-elevage);
+  border-color: var(--color-animaux-elevage);
+  color: #ffffff;
+}
+
+.filtre-btn[data-filter="artisanat"].active {
+  background-color: var(--color-artisanat);
+  border-color: var(--color-artisanat);
+  color: #ffffff;
+}
+
+.filtre-btn[data-filter="automobile"].active {
+  background-color: var(--color-automobile);
+  border-color: var(--color-automobile);
+  color: #ffffff;
+}
+
+.filtre-btn[data-filter="batiment-tp"].active {
+  background-color: var(--color-batiment-tp);
+  border-color: var(--color-batiment-tp);
+  color: #ffffff;
+}
+
+.filtre-btn[data-filter="energie"].active {
+  background-color: var(--color-energie);
+  border-color: var(--color-energie);
+  color: #ffffff;
+}
+
+.filtre-btn[data-filter="hotellerie-restauration"].active {
+  background-color: var(--color-hotellerie-restauration);
+  border-color: var(--color-hotellerie-restauration);
+  color: #ffffff;
+}
+
 .filtre-btn[data-filter="industrie"].active {
   background-color: var(--color-industrie);
   border-color: var(--color-industrie);
   color: #ffffff;
 }
 
-.filtre-btn[data-filter="numerique"],
-.filtre-btn[data-filter="numerique"]:hover,
-.filtre-btn[data-filter="numerique"].active {
-  background-color: var(--color-numerique);
-  border-color: var(--color-numerique);
+.filtre-btn[data-filter="maintenance-entretien"].active {
+  background-color: var(--color-maintenance-entretien);
+  border-color: var(--color-maintenance-entretien);
   color: #ffffff;
 }
 
-.filtre-btn[data-filter="tertiaire"],
-.filtre-btn[data-filter="tertiaire"]:hover,
-.filtre-btn[data-filter="tertiaire"].active {
-  background-color: var(--color-tertiaire);
-  border-color: var(--color-tertiaire);
+.filtre-btn[data-filter="mode-esthetique"].active {
+  background-color: var(--color-mode-esthetique);
+  border-color: var(--color-mode-esthetique);
   color: #ffffff;
 }
 
-.filtre-btn[data-filter="batiment"],
-.filtre-btn[data-filter="batiment"]:hover,
-.filtre-btn[data-filter="batiment"].active {
-  background-color: var(--color-batiment);
-  border-color: var(--color-batiment);
+.filtre-btn[data-filter="nature-environnement"].active {
+  background-color: var(--color-nature-environnement);
+  border-color: var(--color-nature-environnement);
+  color: #ffffff;
+}
+
+.filtre-btn[data-filter="sante-social"].active {
+  background-color: var(--color-sante-social);
+  border-color: var(--color-sante-social);
+  color: #ffffff;
+}
+
+.filtre-btn[data-filter="securite-defense"].active {
+  background-color: var(--color-securite-defense);
+  border-color: var(--color-securite-defense);
+  color: #ffffff;
+}
+
+.filtre-btn[data-filter="services-administratifs"].active {
+  background-color: var(--color-services-administratifs);
+  border-color: var(--color-services-administratifs);
+  color: #ffffff;
+}
+
+.filtre-btn[data-filter="services-funeraires"].active {
+  background-color: var(--color-services-funeraires);
+  border-color: var(--color-services-funeraires);
+  color: #ffffff;
+}
+
+.filtre-btn[data-filter="spectacles-divertissement"].active {
+  background-color: var(--color-spectacles-divertissement);
+  border-color: var(--color-spectacles-divertissement);
+  color: #ffffff;
+}
+
+.filtre-btn[data-filter="transport-magasinage"].active {
+  background-color: var(--color-transport-magasinage);
+  border-color: var(--color-transport-magasinage);
+  color: #ffffff;
+}
+
+.filtre-btn[data-filter="vente-commerce"].active {
+  background-color: var(--color-vente-commerce);
+  border-color: var(--color-vente-commerce);
   color: #ffffff;
 }
 
@@ -326,7 +575,93 @@
   transform: translateY(-8px);
 }
 
+/* Cartes cachées - "Voir plus" */
+.partenaire-card-hidden {
+  display: none;
+  opacity: 0;
+  animation: slideDown 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.partenaires-grid.expanded .partenaire-card-hidden {
+  display: flex;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Séparateur et bouton "Voir plus" */
+.voir-plus-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 64px;
+  position: relative;
+}
+
+.voir-plus-container::before {
+  content: '';
+  position: absolute;
+  top: -32px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--grey-300) 20%, var(--grey-300) 80%, transparent);
+}
+
+.voir-plus-btn {
+  padding: 14px 32px;
+  background-color: #ffffff;
+  border: 2px solid var(--primary-300);
+  border-radius: 24px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--primary-800);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.voir-plus-btn:hover {
+  background-color: var(--primary-50);
+  border-color: var(--primary-500);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(23, 110, 161, 0.15);
+}
+
+.voir-plus-text {
+  transition: all 0.3s ease;
+}
+
+.voir-plus-icon {
+  font-size: 12px;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.voir-plus-btn.collapsed .voir-plus-icon {
+  transform: rotate(-180deg);
+}
+
+.voir-plus-btn.collapsed .voir-plus-text {
+  color: var(--primary-800);
+}
+
+.voir-plus-btn.expanded .voir-plus-text::after {
+  content: ' moins';
+}
+
 .partenaire-image {
+  position: relative;
   width: 100%;
   height: 220px;
   background-color: var(--grey-100);
@@ -356,23 +691,103 @@
   color: var(--primary-800);
 }
 
+.partenaire-card[data-sector="aeroport"] .partenaire-badge {
+  background: var(--color-aeroport);
+  color: #ffffff;
+}
+
+.partenaire-card[data-sector="agriculture"] .partenaire-badge {
+  background: var(--color-agriculture);
+  color: #ffffff;
+}
+
+.partenaire-card[data-sector="animation-sport"] .partenaire-badge {
+  background: var(--color-animation-sport);
+  color: #ffffff;
+}
+
+.partenaire-card[data-sector="animaux-elevage"] .partenaire-badge {
+  background: var(--color-animaux-elevage);
+  color: #ffffff;
+}
+
+.partenaire-card[data-sector="artisanat"] .partenaire-badge {
+  background: var(--color-artisanat);
+  color: #ffffff;
+}
+
+.partenaire-card[data-sector="automobile"] .partenaire-badge {
+  background: var(--color-automobile);
+  color: #ffffff;
+}
+
+.partenaire-card[data-sector="batiment-tp"] .partenaire-badge {
+  background: var(--color-batiment-tp);
+  color: #ffffff;
+}
+
+.partenaire-card[data-sector="energie"] .partenaire-badge {
+  background: var(--color-energie);
+  color: #ffffff;
+}
+
+.partenaire-card[data-sector="hotellerie-restauration"] .partenaire-badge {
+  background: var(--color-hotellerie-restauration);
+  color: #ffffff;
+}
+
 .partenaire-card[data-sector="industrie"] .partenaire-badge {
   background: var(--color-industrie);
   color: #ffffff;
 }
 
-.partenaire-card[data-sector="numerique"] .partenaire-badge {
-  background: var(--color-numerique);
+.partenaire-card[data-sector="maintenance-entretien"] .partenaire-badge {
+  background: var(--color-maintenance-entretien);
   color: #ffffff;
 }
 
-.partenaire-card[data-sector="tertiaire"] .partenaire-badge {
-  background: var(--color-tertiaire);
+.partenaire-card[data-sector="mode-esthetique"] .partenaire-badge {
+  background: var(--color-mode-esthetique);
   color: #ffffff;
 }
 
-.partenaire-card[data-sector="batiment"] .partenaire-badge {
-  background: var(--color-batiment);
+.partenaire-card[data-sector="nature-environnement"] .partenaire-badge {
+  background: var(--color-nature-environnement);
+  color: #ffffff;
+}
+
+.partenaire-card[data-sector="sante-social"] .partenaire-badge {
+  background: var(--color-sante-social);
+  color: #ffffff;
+}
+
+.partenaire-card[data-sector="securite-defense"] .partenaire-badge {
+  background: var(--color-securite-defense);
+  color: #ffffff;
+}
+
+.partenaire-card[data-sector="services-administratifs"] .partenaire-badge {
+  background: var(--color-services-administratifs);
+  color: #ffffff;
+}
+
+.partenaire-card[data-sector="services-funeraires"] .partenaire-badge {
+  background: var(--color-services-funeraires);
+  color: #ffffff;
+}
+
+.partenaire-card[data-sector="spectacles-divertissement"] .partenaire-badge {
+  background: var(--color-spectacles-divertissement);
+  color: #ffffff;
+}
+
+.partenaire-card[data-sector="transport-magasinage"] .partenaire-badge {
+  background: var(--color-transport-magasinage);
+  color: #ffffff;
+}
+
+.partenaire-card[data-sector="vente-commerce"] .partenaire-badge {
+  background: var(--color-vente-commerce);
   color: #ffffff;
 }
 
@@ -735,6 +1150,30 @@
   
   .hero-title {
     font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Cacher les filtres desktop et afficher le select mobile */
+  .filtre-container {
+    display: none !important;
+  }
+  
+  .filtre-select-container {
+    display: block;
+  }
+
+  .partenaires-search {
+    margin-bottom: 24px;
+  }
+
+  .partenaires-search-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #partenairesSearch {
+    width: 100%;
   }
 }
 
