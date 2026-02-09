@@ -1,0 +1,529 @@
+{
+    "meta": {
+        "version": "1.0.0",
+        "lastUpdate": "2026-02-06",
+        "description": "Données des inscriptions entreprises et établissements"
+    },
+    "entreprises": [
+        {
+            "id": "ent-001",
+            "nom": "Tech Innovations Bordeaux",
+            "secteurs": [
+                "Informatique / Numérique",
+                "Communication / Marketing"
+            ],
+            "adresse": {
+                "rue": "25 avenue Thiers",
+                "codePostal": "33100",
+                "ville": "Bordeaux"
+            },
+            "contact": {
+                "email": "contact@tech-innovations.fr",
+                "telephone": "0556789012"
+            },
+            "accueilApprenants": {
+                "stagiaires": {
+                    "accepte": true,
+                    "types": [
+                        "Stage de 3ᵉ",
+                        "Stage Bac Pro (PFMP)",
+                        "Stage BTS"
+                    ]
+                },
+                "alternants": {
+                    "accepte": true,
+                    "niveaux": [
+                        "BTS",
+                        "Licence Pro"
+                    ]
+                }
+            },
+            "dateInscription": "2026-02-01"
+        }
+    ],
+    "etablissements": [
+        {
+            "id": "etab-001",
+            "nom": "Lycée Professionnel Jean Moulin",
+            "adresse": {
+                "rue": "8 rue des Écoles",
+                "codePostal": "33300",
+                "ville": "Bordeaux"
+            },
+            "contact": {
+                "email": "contact@lp-jeanmoulin.fr",
+                "telephone": "0556234567"
+            },
+            "formations": [
+                {
+                    "intitule": "CAP Employé de Commerce Multi-spécialités",
+                    "secteur": "Commerce / Distribution",
+                    "niveau": "CAP",
+                    "modalites": [
+                        "Initial"
+                    ]
+                },
+                {
+                    "intitule": "Bac Pro Métiers du Commerce et de la Vente",
+                    "secteur": "Commerce / Distribution",
+                    "niveau": "Bac Pro",
+                    "modalites": [
+                        "Initial",
+                        "Alternance"
+                    ]
+                },
+                {
+                    "intitule": "BTS Management Commercial Opérationnel",
+                    "secteur": "Commerce / Distribution",
+                    "niveau": "BTS",
+                    "modalites": [
+                        "Initial",
+                        "Alternance"
+                    ]
+                }
+            ],
+            "calendrierStages": [
+                {
+                    "formation": "Bac Pro Métiers du Commerce et de la Vente",
+                    "niveau": "Bac Pro",
+                    "modalite": "Initial",
+                    "periodes": [
+                        {
+                            "dateDebut": "2025-11-10",
+                            "dateFin": "2025-12-20"
+                        },
+                        {
+                            "dateDebut": "2026-02-09",
+                            "dateFin": "2026-03-27"
+                        },
+                        {
+                            "dateDebut": "2026-05-25",
+                            "dateFin": "2026-06-26"
+                        }
+                    ]
+                },
+                {
+                    "formation": "BTS Management Commercial Opérationnel",
+                    "niveau": "BTS",
+                    "modalite": "Initial",
+                    "periodes": [
+                        {
+                            "dateDebut": "2026-01-12",
+                            "dateFin": "2026-02-06"
+                        },
+                        {
+                            "dateDebut": "2026-04-20",
+                            "dateFin": "2026-05-29"
+                        }
+                    ]
+                }
+            ],
+            "dateInscription": "2026-01-15"
+        },
+        {
+            "id": "etab-002",
+            "nom": "Lycée Gustave Eiffel",
+            "adresse": {
+                "rue": "143 cours de la Marne",
+                "codePostal": "33800",
+                "ville": "Bordeaux"
+            },
+            "contact": {
+                "email": "contact@lycee-eiffel.fr",
+                "telephone": "0556987654"
+            },
+            "formations": [
+                {
+                    "intitule": "Bac Pro Maintenance des Équipements Industriels",
+                    "secteur": "Industrie / Production",
+                    "niveau": "Bac Pro",
+                    "modalites": [
+                        "Initial",
+                        "Alternance"
+                    ]
+                },
+                {
+                    "intitule": "BTS Électrotechnique",
+                    "secteur": "Industrie / Production",
+                    "niveau": "BTS",
+                    "modalites": [
+                        "Initial",
+                        "Alternance"
+                    ]
+                },
+                {
+                    "intitule": "BTS Conception et Réalisation de Systèmes Automatiques",
+                    "secteur": "Industrie / Production",
+                    "niveau": "BTS",
+                    "modalites": [
+                        "Alternance",
+                        "Mixité"
+                    ]
+                }
+            ],
+            "calendrierStages": [
+                {
+                    "formation": "Bac Pro Maintenance des Équipements Industriels",
+                    "niveau": "Bac Pro",
+                    "modalite": "Initial",
+                    "periodes": [
+                        {
+                            "dateDebut": "2025-11-04",
+                            "dateFin": "2025-12-13"
+                        },
+                        {
+                            "dateDebut": "2026-03-02",
+                            "dateFin": "2026-04-17"
+                        }
+                    ]
+                }
+            ],
+            "dateInscription": "2026-01-20"
+        },
+        {
+            "id": "etab-003",
+            "nom": "Lycée Hôtelier de Talence",
+            "adresse": {
+                "rue": "115 avenue de Thouars",
+                "codePostal": "33400",
+                "ville": "Talence"
+            },
+            "contact": {
+                "email": "contact@lycee-hotelier-talence.fr",
+                "telephone": "0556847123"
+            },
+            "formations": [
+                {
+                    "intitule": "CAP Cuisine",
+                    "secteur": "Hôtellerie / Restauration",
+                    "niveau": "CAP",
+                    "modalites": [
+                        "Initial",
+                        "Alternance"
+                    ]
+                },
+                {
+                    "intitule": "CAP Commercialisation et Services en Hôtel-Café-Restaurant",
+                    "secteur": "Hôtellerie / Restauration",
+                    "niveau": "CAP",
+                    "modalites": [
+                        "Initial"
+                    ]
+                },
+                {
+                    "intitule": "Bac Pro Cuisine",
+                    "secteur": "Hôtellerie / Restauration",
+                    "niveau": "Bac Pro",
+                    "modalites": [
+                        "Initial",
+                        "Alternance"
+                    ]
+                },
+                {
+                    "intitule": "BTS Management en Hôtellerie Restauration",
+                    "secteur": "Hôtellerie / Restauration",
+                    "niveau": "BTS",
+                    "modalites": [
+                        "Initial",
+                        "Alternance"
+                    ]
+                }
+            ],
+            "calendrierStages": [
+                {
+                    "formation": "CAP Cuisine",
+                    "niveau": "CAP",
+                    "modalite": "Initial",
+                    "periodes": [
+                        {
+                            "dateDebut": "2025-11-03",
+                            "dateFin": "2025-12-06"
+                        },
+                        {
+                            "dateDebut": "2026-01-19",
+                            "dateFin": "2026-03-06"
+                        }
+                    ]
+                },
+                {
+                    "formation": "Bac Pro Cuisine",
+                    "niveau": "Bac Pro",
+                    "modalite": "Initial",
+                    "periodes": [
+                        {
+                            "dateDebut": "2025-10-14",
+                            "dateFin": "2025-11-29"
+                        },
+                        {
+                            "dateDebut": "2026-02-16",
+                            "dateFin": "2026-04-10"
+                        }
+                    ]
+                }
+            ],
+            "dateInscription": "2026-01-18"
+        },
+        {
+            "id": "etab-004",
+            "nom": "Lycée Professionnel Les Chartrons",
+            "adresse": {
+                "rue": "2 rue de Conde",
+                "codePostal": "33000",
+                "ville": "Bordeaux"
+            },
+            "contact": {
+                "email": "secretariat@lp-chartrons.fr",
+                "telephone": "0556526789"
+            },
+            "formations": [
+                {
+                    "intitule": "CAP Coiffure",
+                    "secteur": "Artisanat / Métiers d'art",
+                    "niveau": "CAP",
+                    "modalites": [
+                        "Initial",
+                        "Alternance"
+                    ]
+                },
+                {
+                    "intitule": "CAP Esthétique Cosmétique Parfumerie",
+                    "secteur": "Artisanat / Métiers d'art",
+                    "niveau": "CAP",
+                    "modalites": [
+                        "Initial"
+                    ]
+                }
+            ],
+            "calendrierStages": [
+                {
+                    "formation": "CAP Coiffure",
+                    "niveau": "CAP",
+                    "modalite": "Initial",
+                    "periodes": [
+                        {
+                            "dateDebut": "2025-11-24",
+                            "dateFin": "2026-01-16"
+                        },
+                        {
+                            "dateDebut": "2026-04-06",
+                            "dateFin": "2026-05-22"
+                        }
+                    ]
+                }
+            ],
+            "dateInscription": "2026-01-25"
+        },
+        {
+            "id": "etab-005",
+            "nom": "Lycée des Métiers du Bâtiment",
+            "adresse": {
+                "rue": "75 rue de Pessac",
+                "codePostal": "33000",
+                "ville": "Bordeaux"
+            },
+            "contact": {
+                "email": "contact@lycee-batiment-bordeaux.fr",
+                "telephone": "0556789543"
+            },
+            "formations": [
+                {
+                    "intitule": "CAP Maçon",
+                    "secteur": "BTP / Construction",
+                    "niveau": "CAP",
+                    "modalites": [
+                        "Initial",
+                        "Alternance"
+                    ]
+                },
+                {
+                    "intitule": "Bac Pro Technicien du Bâtiment",
+                    "secteur": "BTP / Construction",
+                    "niveau": "Bac Pro",
+                    "modalites": [
+                        "Initial",
+                        "Alternance",
+                        "Mixité"
+                    ]
+                },
+                {
+                    "intitule": "BTS Bâtiment",
+                    "secteur": "BTP / Construction",
+                    "niveau": "BTS",
+                    "modalites": [
+                        "Alternance"
+                    ]
+                }
+            ],
+            "calendrierStages": [
+                {
+                    "formation": "Bac Pro Technicien du Bâtiment",
+                    "niveau": "Bac Pro",
+                    "modalite": "Initial",
+                    "periodes": [
+                        {
+                            "dateDebut": "2025-11-17",
+                            "dateFin": "2025-12-19"
+                        },
+                        {
+                            "dateDebut": "2026-03-09",
+                            "dateFin": "2026-04-24"
+                        }
+                    ]
+                }
+            ],
+            "dateInscription": "2026-01-28"
+        },
+        {
+            "id": "etab-006",
+            "nom": "Lycée Camille Jullian",
+            "adresse": {
+                "rue": "33 rue de la Croix Blanche",
+                "codePostal": "33000",
+                "ville": "Bordeaux"
+            },
+            "contact": {
+                "email": "administration@lycee-cjullian.fr",
+                "telephone": "0556814567"
+            },
+            "formations": [
+                {
+                    "intitule": "BTS Comptabilité et Gestion",
+                    "secteur": "Finance / Banque / Assurance",
+                    "niveau": "BTS",
+                    "modalites": [
+                        "Initial",
+                        "Alternance"
+                    ]
+                },
+                {
+                    "intitule": "BTS Support à l'Action Managériale",
+                    "secteur": "Communication / Marketing",
+                    "niveau": "BTS",
+                    "modalites": [
+                        "Initial"
+                    ]
+                }
+            ],
+            "calendrierStages": [
+                {
+                    "formation": "BTS Comptabilité et Gestion",
+                    "niveau": "BTS",
+                    "modalite": "Initial",
+                    "periodes": [
+                        {
+                            "dateDebut": "2026-01-05",
+                            "dateFin": "2026-02-13"
+                        },
+                        {
+                            "dateDebut": "2026-05-11",
+                            "dateFin": "2026-06-19"
+                        }
+                    ]
+                }
+            ],
+            "dateInscription": "2026-02-01"
+        },
+        {
+            "id": "etab-007",
+            "nom": "Lycée Professionnel de la Nature et du Vivant",
+            "adresse": {
+                "rue": "Route de Latresne",
+                "codePostal": "33270",
+                "ville": "Floirac"
+            },
+            "contact": {
+                "email": "contact@lpnv-floirac.fr",
+                "telephone": "0556925678"
+            },
+            "formations": [
+                {
+                    "intitule": "CAP Jardinier Paysagiste",
+                    "secteur": "Agriculture / Agroalimentaire",
+                    "niveau": "CAP",
+                    "modalites": [
+                        "Initial",
+                        "Alternance"
+                    ]
+                },
+                {
+                    "intitule": "Bac Pro Aménagements Paysagers",
+                    "secteur": "Agriculture / Agroalimentaire",
+                    "niveau": "Bac Pro",
+                    "modalites": [
+                        "Initial",
+                        "Alternance"
+                    ]
+                }
+            ],
+            "calendrierStages": [
+                {
+                    "formation": "Bac Pro Aménagements Paysagers",
+                    "niveau": "Bac Pro",
+                    "modalite": "Initial",
+                    "periodes": [
+                        {
+                            "dateDebut": "2025-10-20",
+                            "dateFin": "2025-11-28"
+                        },
+                        {
+                            "dateDebut": "2026-03-16",
+                            "dateFin": "2026-05-08"
+                        }
+                    ]
+                }
+            ],
+            "dateInscription": "2026-02-02"
+        },
+        {
+            "id": "etab-008",
+            "nom": "Lycée Professionnel Automobile Jean Monnet",
+            "adresse": {
+                "rue": "Avenue Jean Monnet",
+                "codePostal": "33140",
+                "ville": "Villenave-d'Ornon"
+            },
+            "contact": {
+                "email": "secretariat@lp-jmonnet.fr",
+                "telephone": "0556754321"
+            },
+            "formations": [
+                {
+                    "intitule": "CAP Maintenance des Véhicules",
+                    "secteur": "Automobile / Mécanique",
+                    "niveau": "CAP",
+                    "modalites": [
+                        "Initial",
+                        "Alternance"
+                    ]
+                },
+                {
+                    "intitule": "Bac Pro Maintenance des Véhicules Option A",
+                    "secteur": "Automobile / Mécanique",
+                    "niveau": "Bac Pro",
+                    "modalites": [
+                        "Initial",
+                        "Alternance"
+                    ]
+                }
+            ],
+            "calendrierStages": [
+                {
+                    "formation": "Bac Pro Maintenance des Véhicules Option A",
+                    "niveau": "Bac Pro",
+                    "modalite": "Initial",
+                    "periodes": [
+                        {
+                            "dateDebut": "2025-11-03",
+                            "dateFin": "2025-12-13"
+                        },
+                        {
+                            "dateDebut": "2026-02-02",
+                            "dateFin": "2026-03-20"
+                        }
+                    ]
+                }
+            ],
+            "dateInscription": "2026-02-03"
+        }
+    ]
+}
