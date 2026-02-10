@@ -61,7 +61,7 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
 - [x] Remplacer le terme PFMP par "stage" pour vulgariser
 - [x] Améliorer le header pour ajouter les sous-pages par catégorie en liste déroulante
 - [x] Adapter la surbrillance des boutons avec les couleurs de la charte graphique
-- [x] Faire un portail étudiant/pro avec un style CSS qui change selon la catégorie d'utilisateur
+- [x] Faire un portail étudiant/pro avec un style CSS qui change selon la catégorie d'utilisateur (transformé en page d'accessibilité)
 - [x] Améliorer la lisibilité de la section "Notre impact" en mode étudiant avec surbrillance adoucie
 - [x] Ajouter une barre de recherche sur la page Entreprises & Partenaires
 - [ ] Sur le ruban sous le header, ajouter un calque avec une photo et reprendre les couleurs de la charte graphique
@@ -93,15 +93,15 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
 
 ## Fonctionnalités principales
 
-### Système de Portail
-- **Sélection de profil** : Étudiant ou Professionnel
-- **Thème adaptatif** : Couleurs et style personnalisés selon le profil
-- **Persistance** : Le choix est sauvegardé dans le navigateur (localStorage)
-- **Badge de changement** : Possibilité de basculer entre les profils à tout moment
-- **Mode Étudiant - Améliorations visuelles** :
-  - Dates de l'agenda mises en avant avec fond orange et texte blanc pour plus de visibilité
-  - Section "Notre impact" avec surbrillance adoucie (dégradé clair) pour une meilleure lisibilité des chiffres
-  - Boutons CTA avec couleurs de la charte graphique et ombres optimisées au survol
+### Accessibilité
+- **Options d'accessibilité** : Taille de texte, contraste élevé, réduction d'animations
+- **Persistance** : Les préférences sont sauvegardées dans le navigateur (localStorage)
+- **Page dédiée** : [pages/portail.html](pages/portail.html) accessible à tout moment
+- **Thème par défaut** : Le site utilise le thème étudiant pour tous les utilisateurs
+- **Réglages personnalisables** :
+  - 4 niveaux de taille de police (Petit, Normal, Grand, Très grand)
+  - Mode contraste élevé pour faciliter la lecture
+  - Option de réduction des animations pour les personnes sensibles aux mouvements
 
 ### Page d'accueil
 - **Hero section** dynamique avec appel à l'action et boutons CTA optimisés (couleurs charte graphique, ombres au survol)
@@ -589,8 +589,9 @@ document.addEventListener('DOMContentLoaded', () => {
 ## 📖 Documentation complémentaire
 
 - 📄 [PAGES-STRUCTURE.md](PAGES-STRUCTURE.md) - Hiérarchie complète des pages
-- 📄 [PORTAIL-GUIDE.md](PORTAIL-GUIDE.md) - Guide du système de portail étudiant/professionnel
-- 📄 [IMPLEMENTATION-SUMMARY.md](IMPLEMENTATION-SUMMARY.md) - Résumé de l'implémentation du portail
+- 📄 [ACCESSIBILITE-GUIDE.md](ACCESSIBILITE-GUIDE.md) - Guide des options d'accessibilité
+- 📄 [PORTAIL-GUIDE.md](PORTAIL-GUIDE.md) - Ancien système de portail (obsolète, voir ACCESSIBILITE-GUIDE.md)
+- 📄 [IMPLEMENTATION-SUMMARY.md](IMPLEMENTATION-SUMMARY.md) - Résumé des implémentations principales
 - 📄 [CHANGELOG.md](CHANGELOG.md) - Historique détaillé des modifications
 - 📄 [.github/copilot-instructions.md](.github/copilot-instructions.md) - Instructions pour AI agents
 
@@ -728,13 +729,21 @@ Ce projet est la propriété de CLEE Bordeaux Avenir. Toute reproduction, distri
 
 ---
 
-**Dernière mise à jour** : 5 février 2026  
-**Version** : 2.1  
+**Dernière mise à jour** : 10 février 2026  
+**Version** : 2.2  
 **Statut** : Production Ready
 
 ---
 
 ## Historique des versions principales
+
+### Version 2.2 (Février 2026) - Transformation du portail en page d'accessibilité
+- **Changement majeur** : Transformation de portail.html en page d'options d'accessibilité
+- Thème étudiant défini comme thème par défaut pour tous les utilisateurs
+- Suppression de la redirection automatique vers le portail
+- Nouvelles options d'accessibilité : taille de texte (4 niveaux), contraste élevé, réduction d'animations
+- Persistance des préférences d'accessibilité via localStorage
+- Création du guide ACCESSIBILITE-GUIDE.md
 
 ### Version 2.1 (Février 2026) - Améliorations UX et recherche
 - Ajout barre de recherche partenaires en temps réel

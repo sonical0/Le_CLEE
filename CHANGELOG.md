@@ -2,6 +2,39 @@
 
 Tous les messages de commit suivent la convention **Conventional Commits** (voir `.github/copilot-instructions.md`).
 
+## [10/02/2026] - Transformation du portail en page d'accessibilité
+
+### Changement majeur du système de portail
+- **Transformation de portail.html** : La page de sélection de profil devient une page d'options d'accessibilité
+- **Thème par défaut** : Le thème étudiant est maintenant appliqué par défaut pour tous les utilisateurs
+- **Suppression de la redirection** : Les utilisateurs ne sont plus redirigés automatiquement vers le portail
+
+### Nouvelles fonctionnalités d'accessibilité
+- **Taille de texte** : 4 niveaux ajustables (Petit, Normal, Grand, Très grand)
+- **Contraste élevé** : Mode à fort contraste pour faciliter la lecture
+- **Réduction d'animations** : Option pour désactiver ou réduire les animations
+- **Persistance** : Toutes les préférences sont sauvegardées dans localStorage
+- **Bouton de réinitialisation** : Restaure tous les paramètres par défaut
+
+### Modifications techniques
+- **js/portail.js** : Remplacement de PortailModule par AccessibilityModule
+- **css/portail.css** : Refonte complète des styles pour la page d'accessibilité
+- **js/common.js** : Suppression de la logique de redirection et du badge de profil
+- Thème étudiant défini comme valeur par défaut dans getCurrentTheme()
+
+### Documentation
+- **Création de ACCESSIBILITE-GUIDE.md** : Guide complet des options d'accessibilité
+- **Mise à jour de PORTAIL-GUIDE.md** : Marqué comme obsolète avec redirection vers le nouveau guide
+- **Mise à jour de PAGES-STRUCTURE.md** : Portail.html déplacé vers les pages utilitaires
+- **Mise à jour de README.md** : Section portail remplacée par section accessibilité
+
+### Interface utilisateur
+- Ajout de la navigation complète sur portail.html
+- Nouveau design de cartes d'accessibilité avec icônes SVG
+- Toggles interactifs pour les options on/off
+- Boutons +/- pour l'ajustement de la taille de texte
+- Design responsive avec breakpoints mobile/tablette/desktop
+
 ## [05/02/2026] - Système de pagination pour le tableau des formations
 
 ### Pagination complète
