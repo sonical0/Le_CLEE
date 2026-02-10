@@ -112,6 +112,7 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
 ### Espace Entreprises & Partenaires
 - **Catalogue des entreprises partenaires** avec système de filtrage multi-critères
 - **Barre de recherche en temps réel** pour retrouver rapidement une entreprise par son nom
+- Barre de recherche ajustée pour une hauteur fixe de 56px
 - **Filtrage dynamique** des cartes partenaires avec feedback visuel instantané
 - **Avantages du partenariat** clairement détaillés
 - **Processus de candidature** guidé
@@ -135,6 +136,7 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
   - Tri par colonnes (établissement, formation, secteur, niveau, modalités, périodes)
   - Filtres multicritères (établissement, secteur, niveau, modalité, recherche textuelle)
   - Réinitialisation à la page 1 lors du changement de filtres ou tri
+- Calendriers de stages : suppression du PDF "Calendrier des stages"
 
 ### Espace Jeunes & Familles
 - **Ressources d'orientation** professionnelle

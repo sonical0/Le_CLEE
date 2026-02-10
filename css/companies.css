@@ -306,11 +306,12 @@
 
 .partenaires-search-bar {
   width: 100%;
+  height: 56px;
   display: flex;
   align-items: center;
   gap: 12px;
   flex-wrap: wrap;
-  padding: 10px 12px;
+  padding: 0 12px;
   background-color: var(--grey-50);
   border: 2px solid var(--grey-200);
   border-radius: 12px;
@@ -326,10 +327,19 @@
   min-width: 240px;
   border: none;
   background: transparent;
-  padding: 10px 12px;
+  height: 100%;
+  padding: 0 12px;
   font-size: 15px;
   color: var(--primary-900);
   outline: none;
+}
+
+.partenaires-search-bar .btn {
+  height: 40px;
+  padding: 0 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #partenairesSearch::placeholder {
@@ -1192,6 +1202,8 @@
   .partenaires-search-bar {
     flex-direction: column;
     align-items: stretch;
+    height: auto;
+    padding: 10px 12px;
   }
 
   #partenairesSearch {

@@ -7,6 +7,10 @@ Tous les messages de commit suivent la convention **Conventional Commits** (voir
 ### PFMP
 - Déplacement du bloc "Formations disponibles" de la page Entreprises vers la page stages (PFMP)
 - Positionnement du tableau juste après la section "Qu'est-ce qu'un stage ?"
+- Suppression du téléchargement PDF "Calendrier des stages"
+
+### Entreprises & Partenaires
+- Ajustement du style de la barre de recherche "Rechercher une formation" pour une hauteur fixe de 56px
 
 ## [05/02/2026] - Système de pagination pour le tableau des formations
 
