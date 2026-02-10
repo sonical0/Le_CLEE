@@ -2,10 +2,9 @@
 
 ## Navigation Principale
 
-Les **6 pages principales** du site :
+Les **7 pages principales** du site :
 
 ```
-0. Portail de sélection (NEW)     → pages/portail.html (choix du profil utilisateur)
 1. Accueil                        → index.html (racine du projet)
 2. Le CLEE                        → pages/le-clee.html
 3. Entreprises & Partenaires      → pages/companies.html
@@ -17,7 +16,7 @@ Les **6 pages principales** du site :
 
 **Note importante** : Le fichier `index.html` est situé à la racine du projet pour faciliter le déploiement sur les plateformes comme Vercel, Netlify, GitHub Pages, etc. Toutes les autres pages HTML sont dans le répertoire `pages/`.
 
-**Nouveau système de portail** : Les utilisateurs sont d'abord redirigés vers [portail.html](pages/portail.html) pour choisir leur profil (Étudiant ou Professionnel). Ce choix détermine le thème visuel appliqué à toutes les pages. Voir [PORTAIL-GUIDE.md](PORTAIL-GUIDE.md) pour plus de détails.
+**Thème par défaut** : Le site utilise désormais le **thème étudiant** par défaut pour tous les utilisateurs. Les visiteurs peuvent accéder aux options d'accessibilité via [portail.html](pages/portail.html) pour personnaliser leur expérience de navigation (taille de police, contraste, animations).
 
 ## Arborescence Complète des Pages
 
@@ -27,7 +26,7 @@ Les **6 pages principales** du site :
 
 pages/
 │
-├── portail.html                    # PAGE SYSTÈME : Sélection du profil utilisateur (NEW)
+├── portail.html                    # PAGE UTILITAIRE : Options d'accessibilité
 ├── le-clee.html                    # PAGE PRINCIPALE : Le CLEE
 │   ├── bureau-membres.html            # Sous-page : Bureau et membres
 │   ├── nos-actions.html               # Sous-page : Nos actions
@@ -93,6 +92,7 @@ pages/
 #### Pages Utilitaires
 | Page | Fichier | Description |
 |------|---------|-------------|
+| Accessibilité | `portail.html` | Options d'accessibilité (taille de police, contraste, animations) |
 | Contact | `contact.html` | Formulaire de contact (accessible depuis footer et CTAs) |
 | Mentions légales | `mentions-legales.html` | Mentions légales et conditions d'utilisation |
 
@@ -105,10 +105,9 @@ pages/
 ---
 
 **Total : 19 pages HTML**
-- 1 page système (portail de sélection)
 - 7 pages principales (dans la navigation)
 - 8 sous-pages (accessibles depuis les pages principales)
-- 2 pages utilitaires (contact et mentions légales)
+- 3 pages utilitaires (accessibilité, contact et mentions légales)
 - 2 pages de démonstration (theme-demo et colors-reference)
 
 ---

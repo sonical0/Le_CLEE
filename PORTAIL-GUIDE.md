@@ -1,53 +1,27 @@
-# Système de Portail Étudiant/Professionnel
+# Système de Portail - OBSOLÈTE
 
-## Vue d'ensemble
+## Avertissement
 
-Le site CLEE Bordeaux Avenir dispose désormais d'un **système de portail** permettant aux utilisateurs de choisir leur profil (Étudiant ou Professionnel) avec une expérience visuelle adaptée à chaque catégorie.
+Ce document est **obsolète** depuis la transformation du portail en page d'accessibilité (Février 2026).
 
-## Fonctionnalités
+**Nouveau comportement** :
+- Le site utilise maintenant le **thème étudiant par défaut** pour tous les utilisateurs
+- La page `portail.html` sert désormais de **page d'options d'accessibilité**
+- Il n'y a plus de sélection de profil au démarrage
 
-### Page de Portail (`pages/portail.html`)
-- Interface de sélection de profil avec deux cartes interactives
-- Design responsive avec animations fluides
-- Redirection automatique vers l'accueil après sélection
-- Persistance du choix via localStorage
+## Documentation à jour
 
-### Thèmes Visuels
+Pour les informations actuelles sur le système d'accessibilité, consultez :
+- [ACCESSIBILITE-GUIDE.md](ACCESSIBILITE-GUIDE.md) - Guide des options d'accessibilité
+- [PAGES-STRUCTURE.md](PAGES-STRUCTURE.md) - Structure des pages mise à jour
 
-#### **Mode Professionnel (par défaut)**
-- Palette sobre : bleus et gris (#1F3448, #5E7E9F)
-- Design élégant et corporate
-- Badge bleu "Mode Professionnel" avec icône mallette
-- Idéal pour les entreprises et partenaires
+---
 
-#### **Mode Étudiant**
-- Couleurs vives basées sur la charte graphique :
-  - Orange : #FF6B35
-  - Cyan : #00A7E1
-  - Vert : #5CB85C
-  - Rouge : #E74C3C
-- Dégradés colorés et animations dynamiques
-- Design énergique et engageant
-- Badge orange "Mode Étudiant" avec icône diplôme
-- Possibilité de changer de profil via le badge
-- **Améliorations visuelles spécifiques** :
-  - **Agenda** : Dates mises en avant avec fond orange et texte blanc pour plus de visibilité
-  - **Section "Notre impact"** : Surbrillance adoucie avec dégradé clair et ombre douce pour améliorer la lisibilité des chiffres
-  - **Boutons CTA** : Application des couleurs de la charte graphique avec ombres optimisées au survol
+## Historique (Archive)
 
-## Architecture Technique
+### Ancien système (jusqu'en Février 2026)
 
-### Fichiers créés
-
-```
-pages/
-  └── portail.html           # Page de sélection de profil
-
-css/
-  ├── portail.css           # Styles de la page de portail
-  └── theme-etudiant.css    # Thème coloré pour les étudiants
-
-js/
+Le site disposait d'un système de portail permettant aux utilisateurs de choisir leur profil (Étudiant ou Professionnel) avec des thèmes visuels adaptés.
   ├── portail.js            # Gestion de la sélection et persistance
   └── common.js (modifié)   # Ajout du ThemeModule
 ```
