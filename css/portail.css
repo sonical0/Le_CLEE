@@ -1,107 +1,83 @@
 /* ==========================================
-   PORTAIL - PAGE DE SÉLECTION DE PROFIL
+   PORTAIL - PAGE D'ACCESSIBILITÉ
    ========================================== */
 
 .portail-body {
     min-height: 100vh;
-    background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-500) 100%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
+    background: var(--grey-50);
+    padding: 0;
+    margin: 0;
 }
 
 /* Header du portail */
 .portail-header {
     text-align: center;
-    margin-bottom: 60px;
+    padding: 80px 20px 40px;
+    background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-500) 100%);
+    color: white;
     animation: fadeInDown 0.8s ease-out;
-}
-
-.portail-logo {
-    max-width: 180px;
-    height: auto;
-    margin-bottom: 24px;
-    filter: brightness(0) invert(1);
 }
 
 .portail-main-title {
     font-family: var(--titre-font-family);
     font-size: 2.5rem;
-    color: white;
     font-weight: 700;
-    margin: 0;
+    margin: 0 0 16px 0;
     letter-spacing: -0.5px;
-}
-
-/* Section de sélection */
-.portail-selection {
-    width: 100%;
-    max-width: 1200px;
-}
-
-.portail-title {
-    font-family: var(--titre-font-family);
-    font-size: 2rem;
-    color: white;
-    text-align: center;
-    margin-bottom: 16px;
-    font-weight: 600;
 }
 
 .portail-subtitle {
     font-family: var(--navbar-text-font-family);
     font-size: 1.125rem;
     color: rgba(255, 255, 255, 0.9);
-    text-align: center;
-    margin-bottom: 48px;
+    margin: 0;
 }
 
-/* Grille des cartes de profil */
-.profile-cards {
+/* Section de sélection */
+.portail-selection {
+    width: 100%;
+    padding: 60px 20px;
+}
+
+/* Grille des options d'accessibilité */
+.accessibility-options {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 40px;
-    margin-bottom: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto 60px;
 }
 
-/* Carte de profil */
-.profile-card {
+/* Carte d'accessibilité */
+.accessibility-card {
     background: white;
     border-radius: 16px;
     padding: 40px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
     animation: fadeInUp 0.8s ease-out;
+    border: 2px solid transparent;
 }
 
-.profile-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 6px;
-    background: linear-gradient(90deg, var(--primary-500), var(--primary-900));
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.4s ease;
+.accessibility-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    border-color: var(--primary-500);
 }
 
-.profile-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+.accessibility-card-disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 
-.profile-card:hover::before {
-    transform: scaleX(1);
+.accessibility-card-disabled:hover {
+    transform: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-color: transparent;
 }
 
-/* Icône du profil */
-.profile-icon {
+/* Icône de l'option */
+.accessibility-icon {
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -109,144 +85,193 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 24px;
+    background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-500) 100%);
+    color: white;
     transition: all 0.3s ease;
 }
 
-.profile-etudiant .profile-icon {
-    background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
-    color: white;
-}
-
-.profile-pro .profile-icon {
-    background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-500) 100%);
-    color: white;
-}
-
-.profile-card:hover .profile-icon {
-    transform: scale(1.1) rotate(5deg);
+.accessibility-card:hover .accessibility-icon {
+    transform: scale(1.05);
 }
 
 /* Contenu de la carte */
-.profile-title {
+.accessibility-title {
     font-family: var(--titre-font-family);
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
     color: var(--grey-900);
 }
 
-.profile-description {
+.accessibility-description {
     font-family: var(--navbar-text-font-family);
-    font-size: 1rem;
+    font-size: 0.95rem;
     line-height: 1.6;
     color: var(--grey-700);
-    margin-bottom: 24px;
+    margin-bottom: 28px;
 }
 
-.profile-features {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 32px 0;
+/* Contrôles */
+.accessibility-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
 }
 
-.profile-features li {
-    font-family: var(--navbar-text-font-family);
-    font-size: 0.9375rem;
-    color: var(--grey-700);
-    padding: 10px 0;
-    padding-left: 28px;
-    position: relative;
-    border-bottom: 1px solid var(--grey-200);
-}
-
-.profile-features li:last-child {
-    border-bottom: none;
-}
-
-.profile-features li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    font-weight: 700;
-    font-size: 1.125rem;
-}
-
-.profile-etudiant .profile-features li::before {
-    color: #FF6B35;
-}
-
-.profile-pro .profile-features li::before {
-    color: var(--primary-500);
-}
-
-/* Boutons de profil */
-.btn-profile {
-    width: 100%;
-    padding: 16px 24px;
+.btn-accessibility {
+    background: var(--primary-900);
+    color: white;
     border: none;
     border-radius: 8px;
+    padding: 12px 20px;
+    font-family: var(--navbar-text-font-family);
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 60px;
+}
+
+.btn-accessibility:hover {
+    background: var(--primary-500);
+    transform: scale(1.05);
+}
+
+.btn-accessibility:active {
+    transform: scale(0.98);
+}
+
+.accessibility-value {
+    font-family: var(--navbar-text-font-family);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--grey-900);
+    min-width: 100px;
+    text-align: center;
+}
+
+.accessibility-status {
+    font-family: var(--navbar-text-font-family);
+    font-size: 0.95rem;
+    color: var(--grey-700);
+    font-weight: 500;
+}
+
+/* Toggle switch */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 56px;
+    height: 30px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--grey-300);
+    transition: 0.3s;
+    border-radius: 30px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+    background-color: var(--primary-900);
+}
+
+input:checked + .toggle-slider:before {
+    transform: translateX(26px);
+}
+
+/* Footer de la section */
+.accessibility-footer {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.btn-reset {
+    background: var(--grey-200);
+    color: var(--grey-900);
+    border: 2px solid var(--grey-300);
+    border-radius: 12px;
+    padding: 16px 32px;
     font-family: var(--navbar-text-font-family);
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
     transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
 }
 
-.btn-profile svg {
-    transition: transform 0.3s ease;
-}
-
-.btn-profile:hover svg {
-    transform: translateX(4px);
-}
-
-.btn-etudiant {
-    background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
-    color: white;
-}
-
-.btn-etudiant:hover {
-    background: linear-gradient(135deg, #E85A25 0%, #E0820A 100%);
+.btn-reset:hover {
+    background: var(--grey-300);
+    border-color: var(--grey-400);
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.btn-pro {
-    background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-500) 100%);
-    color: white;
+.btn-reset svg {
+    flex-shrink: 0;
 }
 
-.btn-pro:hover {
-    background: linear-gradient(135deg, #1A3348 0%, #7A9EBF 100%);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(94, 126, 159, 0.3);
-}
-
-/* Note de bas de page */
-.portail-footer-note {
-    text-align: center;
-    margin-top: 32px;
-    animation: fadeIn 1s ease-out 0.4s both;
-}
-
-.portail-footer-note p {
+.accessibility-note {
     font-family: var(--navbar-text-font-family);
     font-size: 0.875rem;
-    color: rgba(255, 255, 255, 0.8);
-    font-style: italic;
+    color: var(--grey-600);
+    margin: 0;
+}
+
+/* Classes d'accessibilité appliquées au document */
+.high-contrast {
+    filter: contrast(1.2);
+}
+
+.high-contrast .accessibility-card {
+    border: 2px solid var(--grey-900);
+}
+
+/* Texte noir pour les boutons en mode contraste élevé */
+.high-contrast .btn-accessibility,
+.high-contrast .btn-reset {
+    color: #000000 !important;
+}
+
+.reduce-motion * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
 }
 
 /* Animations */
 @keyframes fadeInDown {
     from {
         opacity: 0;
-        transform: translateY(-30px);
+        transform: translateY(-20px);
     }
     to {
         opacity: 1;
@@ -257,7 +282,7 @@
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
@@ -265,71 +290,77 @@
     }
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* Responsive */
+/* Responsive design */
 @media (max-width: 768px) {
-    .portail-main-title {
-        font-size: 1.75rem;
+    .portail-header {
+        padding: 60px 20px 30px;
     }
     
-    .portail-title {
-        font-size: 1.5rem;
+    .portail-main-title {
+        font-size: 2rem;
     }
     
     .portail-subtitle {
         font-size: 1rem;
     }
     
-    .profile-cards {
+    .portail-selection {
+        padding: 40px 20px;
+    }
+    
+    .accessibility-options {
         grid-template-columns: 1fr;
         gap: 24px;
     }
     
-    .profile-card {
+    .accessibility-card {
         padding: 32px 24px;
     }
     
-    .profile-title {
-        font-size: 1.5rem;
+    .accessibility-title {
+        font-size: 1.25rem;
+    }
+    
+    .accessibility-controls {
+        flex-wrap: wrap;
+    }
+    
+    .btn-reset {
+        width: 100%;
+        padding: 14px 24px;
     }
 }
 
 @media (max-width: 480px) {
-    .portail-body {
-        padding: 24px 16px;
-    }
-    
     .portail-header {
-        margin-bottom: 40px;
-    }
-    
-    .portail-logo {
-        max-width: 140px;
+        padding: 40px 16px 24px;
     }
     
     .portail-main-title {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
     }
     
-    .profile-card {
+    .portail-selection {
+        padding: 32px 16px;
+    }
+    
+    .accessibility-card {
         padding: 24px 20px;
     }
     
-    .profile-icon {
+    .accessibility-icon {
         width: 60px;
         height: 60px;
     }
     
-    .profile-icon svg {
+    .accessibility-icon svg {
         width: 40px;
         height: 40px;
+    }
+    
+    .btn-accessibility {
+        padding: 10px 16px;
+        font-size: 1rem;
+        min-width: 50px;
     }
 }
