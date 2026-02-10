@@ -5,9 +5,41 @@
 /* Hero Section - Variante Jeunes & Familles */
 .hero {
     background: linear-gradient(135deg, var(--primary-600) 0%, var(--primary-700) 100%);
-    padding: 20px 0 20px;
+    padding: 60px 0 40px;
     color: white;
     position: relative;
+    overflow: hidden;
+    min-height: 360px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.hero-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--primary-900);
+    opacity: 0.55;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
 }
 
 /* Section Communes */
@@ -39,6 +71,16 @@
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 32px;
     margin-bottom: 48px;
+}
+
+.cards-grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 768px) {
+    .cards-grid-2 {
+        grid-template-columns: 1fr;
+    }
 }
 
 .info-card {
@@ -411,8 +453,20 @@
 
 .links-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
+}
+
+@media (max-width: 1023px) {
+    .links-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .links-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .link-card {

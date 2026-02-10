@@ -198,13 +198,15 @@
 
 .day-number {
   font-weight: 600;
-  color: var(--grey-800);
+  color: var(--orange-clee);
+  /* Charte originelle: var(--grey-800) */
   margin-bottom: 8px;
   font-size: 16px;
 }
 
 .calendar-day.today .day-number {
-  color: var(--primary-600);
+  color: var(--orange-clee);
+  /* Charte originelle: var(--primary-600) */
 }
 
 .day-events {
@@ -271,7 +273,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #ffffff;
+  /* Charte originelle: white */
 }
 
 .event-day {

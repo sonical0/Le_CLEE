@@ -45,7 +45,7 @@
 }
 
 [data-theme="etudiant"] .nav-link:hover {
-    color: var(--primary-orange);
+    color: var(--grey-900);
 }
 
 [data-theme="etudiant"] .btn-primary {
@@ -158,7 +158,7 @@
 
 [data-theme="etudiant"] .actualite-badge {
     background: var(--gradient-primary);
-    color: white;
+    color: var(--grey-900);
     font-weight: 700;
     padding: 8px 16px;
     border-radius: 20px;
@@ -166,23 +166,23 @@
 
 [data-theme="etudiant"] .actualite-category {
     background: var(--primary-cyan);
-    color: white;
+    color: var(--grey-900);
     font-weight: 600;
 }
 
 [data-theme="etudiant"] .actualite-link {
-    color: var(--primary-orange);
+    color: var(--primary-800);
     font-weight: 700;
 }
 
 [data-theme="etudiant"] .actualite-link:hover {
-    color: var(--primary-cyan);
+    color: var(--grey-900);
 }
 
 [data-theme="etudiant"] .event-date {
     background: var(--primary-orange);
                                  /* Charte originelle: #FF6B35 */
-    color: #ffffff;
+    color: var(--grey-900);
 }
 
 [data-theme="etudiant"] .chiffres-cles {
@@ -250,23 +250,12 @@
 }
 
 [data-theme="etudiant"] .event-link {
-    color: var(--primary-orange);
+    color: var(--primary-800);
     font-weight: 700;
 }
 
 [data-theme="etudiant"] .footer {
-    background: linear-gradient(135deg, var(--grey-900) 0%, #2C3E50 100%);
-    position: relative;
-}
-
-[data-theme="etudiant"] .footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: var(--gradient-primary);
+    background-color: var(--primary-900);
 }
 
 [data-theme="etudiant"] .footer a:hover {

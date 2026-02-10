@@ -76,6 +76,10 @@ Tous les messages de commit suivent la convention **Conventional Commits** (voir
 - Déplacement du bloc "Formations disponibles" de la page Entreprises vers la page stages (PFMP)
 - Positionnement du tableau juste après la section "Qu'est-ce qu'un stage ?"
 - Suppression du téléchargement PDF "Calendrier des stages"
+- Suppression du bloc "Calendriers des PFMP par Formation"
+- Correction du padding dans "Modèles pour vos Candidatures"
+- Liens utiles : grille 3x2
+- PFMP ou Stage : remplacement par 2 cartes dédiées
 
 ### Entreprises & Partenaires
 - Ajustement du style de la barre de recherche "Rechercher une formation" pour une hauteur fixe de 56px
@@ -86,10 +90,12 @@ Tous les messages de commit suivent la convention **Conventional Commits** (voir
 ### Accueil
 - Ajout d'un calque photo sur le bandeau hero avec image de remplacement
 
+### Pages principales
+- Portail : hauteur du hero alignée sur les autres pages
+- Portail : calque hero affiché sur l'en-tête
+
 ### Établissements & Formations
 - Intégration d'une carte Google Maps interactive dans le bloc carte
-- Activation des interactions (zoom/déplacement) sur la carte
-- Suppression des points et de la liste d'établissements codés en dur
 - Génération de la liste et des points de carte à partir du JSON
 - Remplacement de l'API Google Maps par un iframe Google Maps personnalisé
 - Masquage du panneau/banderole dans l'iframe de la carte
@@ -99,6 +105,7 @@ Tous les messages de commit suivent la convention **Conventional Commits** (voir
 - Points des collèges en rouge sur la carte
 - Génération dynamique des cartes établissement depuis le JSON
 - Mise en forme des informations (lignes distinctes, libellés en gras)
+- Footer synchronisé avec l'image du hero sur la page établissements
 
 ## [05/02/2026] - Système de pagination pour le tableau des formations
 

@@ -106,6 +106,10 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
   - 4 niveaux de taille de police (Petit, Normal, Grand, Très grand)
   - Mode contraste élevé pour faciliter la lecture
   - Option de réduction des animations pour les personnes sensibles aux mouvements
+- Thème étudiant : couleurs de texte renforcées pour un contraste minimum de 4,5:1
+- Portail accessibilité : footer synchronisé via hero masqué
+- Portail accessibilité : hauteur du hero alignée sur les autres pages
+- Portail accessibilité : calque hero affiché sur l'en-tête
 
 ### Page d'accueil
 - **Hero section** dynamique avec appel à l'action et boutons CTA optimisés (couleurs charte graphique, ombres au survol)
@@ -113,11 +117,21 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
 - **Actualités** du CLEE et événements récents (section agenda désormais dans vie-clee.html)
 - **Chiffres clés** animés (compteurs dynamiques) avec surbrillance améliorée en mode étudiant
 - **Section contact** rapide avec texte mis à jour
+- Fil d'Ariane sans fond, texte en noir avec contraste du hero
+- Fil d'Ariane superposé au hero pour conserver le fond visuel
+- Menu déroulant harmonisé avec les couleurs des sections
+- Menu déroulant aéré et sans fond bleu marine
+- Couleurs de texte des hovers de navigation renforcées pour le contraste
+- Connexion : footer synchronisé via hero masqué
+- Footer synchronisé avec le hero sur toutes les pages (y compris Vie du CLEE)
+- Footer synchronisé avec l'image du hero (calque partagé, bas de l'image visible)
 
 ### Espace Entreprises & Partenaires
 - **Catalogue des entreprises partenaires** avec système de filtrage multi-critères
 - **Barre de recherche en temps réel** pour retrouver rapidement une entreprise par son nom
 - Barre de recherche ajustée pour une hauteur fixe de 56px
+- Hero harmonisé avec l'accueil (calque photo)
+- Hauteur de hero alignée sur l'accueil
 - **Filtrage dynamique** des cartes partenaires avec feedback visuel instantané
 - **Avantages du partenariat** clairement détaillés
 - **Processus de candidature** guidé
@@ -132,11 +146,16 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
 - Points des collèges en rouge
 - Cartes établissement générées depuis le JSON
 - Informations affichées sur plusieurs lignes avec libellés en gras
+- Footer synchronisé avec l'image du hero (calque invisible sur la page)
 - **Filtrage par secteur** (Commerce, Industrie, Services, Hôtellerie-Restauration)
 - **Catalogue de formations** avec descriptions complètes
 - **Informations PFMP** (Périodes de Formation en Milieu Professionnel)
 
 ### Page Stages (PFMP)
+- Hero harmonisé avec l'accueil (calque photo)
+- Lisibilité du texte du hero sécurisée (empilement du calque)
+- Suppression des calendriers PFMP par formation
+- Bloc "Modèles pour vos Candidatures" : structure et padding corrigés
 - **Tableau des formations** avec système de pagination complet :
   - Affichage par défaut de 5 formations par page
   - Sélecteur personnalisé (5, 10, 15, 20, 50 résultats par page)
@@ -147,24 +166,38 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
   - Filtres multicritères (établissement, secteur, niveau, modalité, recherche textuelle)
   - Réinitialisation à la page 1 lors du changement de filtres ou tri
 - Calendriers de stages : suppression du PDF "Calendrier des stages"
+- Liens utiles : grille 3x2 sur PFMP
+- PFMP ou Stage : cartes en 2 colonnes (PFMP/Stage)
 
 ### Espace Jeunes & Familles
 - **Ressources d'orientation** professionnelle
+- Hero harmonisé avec l'accueil (calque photo)
+- Hauteur de hero alignée sur l'accueil
+- Lisibilité du texte du hero sécurisée (empilement du calque)
 - **Guide d'insertion** dans le monde du travail (contenu amélioré et clarifié)
 - **Informations stages** et apprentissage
 - **Témoignages** d'anciens élèves
 - Interface simplifiée avec contenu pertinent et actualisé
+- Orientation & insertion : hero et footer synchronisés avec le calque
+- Vie du CLEE élèves : hero et footer synchronisés avec le calque
 ### Vie du CLEE
 - **Actualités** du réseau école-entreprise
+- Hero harmonisé avec l'accueil (calque photo)
+- Hauteur de hero alignée sur l'accueil
 - **Agenda complet** des événements (anciennement sur index.html)
 - **Galerie photos/vidéos** des événements
 - Interface simplifiée (modal de contact supprimée)
+- Agenda : dates en texte orange primaire
+- Agenda (vue liste) : dates en blanc
 
 ### Présentation institutionnelle
 - **Histoire et mission** du CLEE
+- Hero harmonisé avec l'accueil (calque photo)
+- Hauteur de hero alignée sur l'accueil
 - **Bureau et membres** de l'organisation
 - **Actions et projets** en cours
 - **Documents officiels** (statuts, rapports, PV)
+- Hero harmonisé avec l'accueil sur les sous-pages Le CLEE (bureau, actions, documents)
 
 ---
 
@@ -616,7 +649,7 @@ document.addEventListener('DOMContentLoaded', () => {
 - **HTML5** : Sémantique moderne
 - **CSS3** : Custom Properties, Flexbox, Grid, Animations
 - **JavaScript ES6+** : Modules IIFE, Intersection Observer API, localStorage
-- **Google Maps API** : Carte interactive établissements
+- **Leaflet** : Carte interactive établissements (OpenStreetMap)
 
 **Aucune dépendance externe** (pas de jQuery, pas de frameworks) → Performance maximale.
 
@@ -738,7 +771,7 @@ Ce projet est la propriété de CLEE Bordeaux Avenir. Toute reproduction, distri
 
 **Technologies open-source utilisées** :
 - Google Fonts (Roboto, Barlow Condensed)
-- Google Maps API
+- Leaflet (OpenStreetMap)
 - Intersection Observer API (Web standard)
 
 ---
