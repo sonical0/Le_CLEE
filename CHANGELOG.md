@@ -34,6 +34,35 @@ Tous les messages de commit suivent la convention **Conventional Commits** (voir
 - Toggles interactifs pour les options on/off
 - Boutons +/- pour l'ajustement de la taille de texte
 - Design responsive avec breakpoints mobile/tablette/desktop
+## [10/02/2026] - Déplacement du tableau des formations
+
+### PFMP
+- Déplacement du bloc "Formations disponibles" de la page Entreprises vers la page stages (PFMP)
+- Positionnement du tableau juste après la section "Qu'est-ce qu'un stage ?"
+- Suppression du téléchargement PDF "Calendrier des stages"
+
+### Entreprises & Partenaires
+- Ajustement du style de la barre de recherche "Rechercher une formation" pour une hauteur fixe de 56px
+
+### Formulaire établissements
+- Remplacement de "Modalité" par des tags de type de stage (3e, 2de, PFMP, BTS)
+
+### Accueil
+- Ajout d'un calque photo sur le bandeau hero avec image de remplacement
+
+### Établissements & Formations
+- Intégration d'une carte Google Maps interactive dans le bloc carte
+- Activation des interactions (zoom/déplacement) sur la carte
+- Suppression des points et de la liste d'établissements codés en dur
+- Génération de la liste et des points de carte à partir du JSON
+- Remplacement de l'API Google Maps par un iframe Google Maps personnalisé
+- Masquage du panneau/banderole dans l'iframe de la carte
+- Remplacement par une carte Google Maps centrée sur Bordeaux (sans points personnalisés)
+- Retour à la carte Google Maps JS avec points JSON
+- Passage à une carte Leaflet/OpenStreetMap sans clé API
+- Points des collèges en rouge sur la carte
+- Génération dynamique des cartes établissement depuis le JSON
+- Mise en forme des informations (lignes distinctes, libellés en gras)
 
 ## [05/02/2026] - Système de pagination pour le tableau des formations
 

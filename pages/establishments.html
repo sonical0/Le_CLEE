@@ -7,6 +7,7 @@
     <title>Lycée Professionnel Talence - CLEE Bordeaux Avenir</title>
     <link rel="stylesheet" href="../css/globals.css">
     <link rel="stylesheet" href="../css/establishments.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
     <style>
         :root {
             --color-industrie: #176ea1;
@@ -126,93 +127,15 @@
                     <p class="carte-subtitle">Sélectionnez un établissement sur la carte</p>
                     
                     <div class="carte-interactive">
-                        <img src="../assets/images/carte-bordeaux.jpg" alt="Carte de la région bordelaise" class="carte-image">
-                        <div class="carte-overlay">
-                            <button class="map-marker active" data-school="lycee-talence" style="top: 80%; left: 43%;" aria-label="Lycée Professionnel Talence">
-                                <span class="marker-dot"></span>
-                                <span class="marker-label">LP Talence</span>
-                            </button>
-                            <button class="map-marker" data-school="lycee-merignac" style="top: 60%; left: 35%;" aria-label="Lycée Professionnel Mérignac">
-                                <span class="marker-dot"></span>
-                                <span class="marker-label">LP Mérignac</span>
-                            </button>
-                            <button class="map-marker" data-school="lycee-pessac" style="top: 75%; left: 37%;" aria-label="Lycée Professionnel Pessac">
-                                <span class="marker-dot"></span>
-                                <span class="marker-label">LP Pessac</span>
-                            </button>
-                            <button class="map-marker" data-school="lycee-bordeaux" style="top: 60%; left: 53%;" aria-label="Lycée Professionnel Bordeaux Centre">
-                                <span class="marker-dot"></span>
-                                <span class="marker-label">LP Bordeaux</span>
-                            </button>
-                        </div>
+                        <div class="carte-map" id="establishmentsMap" role="application" aria-label="Carte interactive des établissements"></div>
                     </div>
-                    
-                    <div class="ecoles-list">
-                        <button class="ecole-item active" data-school="lycee-talence">
-                            <span>LP Talence</span>
-                            <span class="ecole-arrow">→</span>
-                        </button>
-                        <button class="ecole-item" data-school="lycee-merignac">
-                            <span>LP Mérignac</span>
-                            <span class="ecole-arrow">→</span>
-                        </button>
-                        <button class="ecole-item" data-school="lycee-pessac">
-                            <span>LP Pessac</span>
-                            <span class="ecole-arrow">→</span>
-                        </button>
-                        <button class="ecole-item" data-school="lycee-bordeaux">
-                            <span>LP Bordeaux Centre</span>
-                            <span class="ecole-arrow">→</span>
-                        </button>
-                    </div>
+
+                    <div class="ecoles-list" id="ecolesList"></div>
                 </div>
                 
                 <div class="etablissement-card" id="etablissement-content">
-                    <div class="etablissement-image">
-                        <img src="https://picsum.photos/800/500?random=51" alt="Lycée Professionnel Talence">
-                        <div class="etablissement-badge">Établissement Public</div>
-                    </div>
-                    
                     <div class="etablissement-content">
-                        <h1 class="etablissement-name">Lycée Professionnel Talence</h1>
-                        <p class="etablissement-address">📍 123 Avenue de la République, 33400 Talence</p>
-                        
-                        <div class="etablissement-stats">
-                            <div class="stat-item">
-                                <span class="stat-number">850</span>
-                                <span class="stat-label">Élèves</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">12</span>
-                                <span class="stat-label">Formations</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">95%</span>
-                                <span class="stat-label">Réussite</span>
-                            </div>
-                        </div>
-                        
-                        <p class="etablissement-description">
-                            Le Lycée Professionnel de Talence est un établissement d'excellence proposant des formations 
-                            dans les secteurs de l'industrie, du numérique et du tertiaire. Équipé de plateaux techniques 
-                            modernes, il accompagne ses élèves vers la réussite professionnelle.
-                        </p>
-                        
-                        <div class="etablissement-info">
-                            <div class="info-item">
-                                <strong>Contact stages :</strong>
-                                <p>Marie Dupont - m.dupont@lycee-talence.fr</p>
-                            </div>
-                            <div class="info-item">
-                                <strong>Téléphone :</strong>
-                                <p>05 56 84 56 78</p>
-                            </div>
-                        </div>
-                        
-                        <div class="etablissement-actions">
-                            <a href="#formations" class="btn btn-primary">Voir les formations</a>
-                            <a href="#" class="btn btn-outline">Site de l'établissement</a>
-                        </div>
+                        <p>Chargement des établissements...</p>
                     </div>
                 </div>
             </div>
@@ -456,6 +379,7 @@
 
     <script src="../js/common.js"></script>
     <script src="../js/establishments.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </body>
 </html>
 

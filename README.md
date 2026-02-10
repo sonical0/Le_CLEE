@@ -105,6 +105,7 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
 
 ### Page d'accueil
 - **Hero section** dynamique avec appel à l'action et boutons CTA optimisés (couleurs charte graphique, ombres au survol)
+- Calque visuel sur le hero avec image de remplacement à mettre à jour
 - **Actualités** du CLEE et événements récents (section agenda désormais dans vie-clee.html)
 - **Chiffres clés** animés (compteurs dynamiques) avec surbrillance améliorée en mode étudiant
 - **Section contact** rapide avec texte mis à jour
@@ -112,11 +113,26 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
 ### Espace Entreprises & Partenaires
 - **Catalogue des entreprises partenaires** avec système de filtrage multi-critères
 - **Barre de recherche en temps réel** pour retrouver rapidement une entreprise par son nom
+- Barre de recherche ajustée pour une hauteur fixe de 56px
 - **Filtrage dynamique** des cartes partenaires avec feedback visuel instantané
 - **Avantages du partenariat** clairement détaillés
 - **Processus de candidature** guidé
 - **Témoignages** d'entreprises partenaires
 - **Formulaire de contact** dédié
+- Formulaire établissements : tags de type de stage à la place de "modalité"
+
+### Établissements & Formations
+- Carte interactive basée sur Leaflet/OpenStreetMap (sans clé API)
+- Liste d'établissements générée depuis le JSON
+- Points de carte générés à partir des coordonnées JSON
+- Points des collèges en rouge
+- Cartes établissement générées depuis le JSON
+- Informations affichées sur plusieurs lignes avec libellés en gras
+- **Filtrage par secteur** (Commerce, Industrie, Services, Hôtellerie-Restauration)
+- **Catalogue de formations** avec descriptions complètes
+- **Informations PFMP** (Périodes de Formation en Milieu Professionnel)
+
+### Page Stages (PFMP)
 - **Tableau des formations** avec système de pagination complet :
   - Affichage par défaut de 5 formations par page
   - Sélecteur personnalisé (5, 10, 15, 20, 50 résultats par page)
@@ -126,13 +142,7 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
   - Tri par colonnes (établissement, formation, secteur, niveau, modalités, périodes)
   - Filtres multicritères (établissement, secteur, niveau, modalité, recherche textuelle)
   - Réinitialisation à la page 1 lors du changement de filtres ou tri
-
-### Établissements & Formations
-- **Carte interactive** des établissements scolaires (Google Maps intégré)
-- **Fiches établissement** détaillées (coordonnées, secteurs, formations)
-- **Filtrage par secteur** (Commerce, Industrie, Services, Hôtellerie-Restauration)
-- **Catalogue de formations** avec descriptions complètes
-- **Informations PFMP** (Périodes de Formation en Milieu Professionnel)
+- Calendriers de stages : suppression du PDF "Calendrier des stages"
 
 ### Espace Jeunes & Familles
 - **Ressources d'orientation** professionnelle
