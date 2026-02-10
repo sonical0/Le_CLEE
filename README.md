@@ -105,6 +105,7 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
 
 ### Page d'accueil
 - **Hero section** dynamique avec appel à l'action et boutons CTA optimisés (couleurs charte graphique, ombres au survol)
+- Calque visuel sur le hero avec image de remplacement à mettre à jour
 - **Actualités** du CLEE et événements récents (section agenda désormais dans vie-clee.html)
 - **Chiffres clés** animés (compteurs dynamiques) avec surbrillance améliorée en mode étudiant
 - **Section contact** rapide avec texte mis à jour
@@ -120,8 +121,12 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
 - **Formulaire de contact** dédié
 
 ### Établissements & Formations
-- **Carte interactive** des établissements scolaires (Google Maps intégré)
-- **Fiches établissement** détaillées (coordonnées, secteurs, formations)
+- Carte interactive basée sur Leaflet/OpenStreetMap (sans clé API)
+- Liste d'établissements générée depuis le JSON
+- Points de carte générés à partir des coordonnées JSON
+- Points des collèges en rouge
+- Cartes établissement générées depuis le JSON
+- Informations affichées sur plusieurs lignes avec libellés en gras
 - **Filtrage par secteur** (Commerce, Industrie, Services, Hôtellerie-Restauration)
 - **Catalogue de formations** avec descriptions complètes
 - **Informations PFMP** (Périodes de Formation en Milieu Professionnel)

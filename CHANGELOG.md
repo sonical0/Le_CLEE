@@ -12,6 +12,23 @@ Tous les messages de commit suivent la convention **Conventional Commits** (voir
 ### Entreprises & Partenaires
 - Ajustement du style de la barre de recherche "Rechercher une formation" pour une hauteur fixe de 56px
 
+### Accueil
+- Ajout d'un calque photo sur le bandeau hero avec image de remplacement
+
+### Établissements & Formations
+- Intégration d'une carte Google Maps interactive dans le bloc carte
+- Activation des interactions (zoom/déplacement) sur la carte
+- Suppression des points et de la liste d'établissements codés en dur
+- Génération de la liste et des points de carte à partir du JSON
+- Remplacement de l'API Google Maps par un iframe Google Maps personnalisé
+- Masquage du panneau/banderole dans l'iframe de la carte
+- Remplacement par une carte Google Maps centrée sur Bordeaux (sans points personnalisés)
+- Retour à la carte Google Maps JS avec points JSON
+- Passage à une carte Leaflet/OpenStreetMap sans clé API
+- Points des collèges en rouge sur la carte
+- Génération dynamique des cartes établissement depuis le JSON
+- Mise en forme des informations (lignes distinctes, libellés en gras)
+
 ## [05/02/2026] - Système de pagination pour le tableau des formations
 
 ### Pagination complète
