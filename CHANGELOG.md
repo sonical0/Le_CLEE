@@ -12,6 +12,9 @@ Tous les messages de commit suivent la convention **Conventional Commits** (voir
 ### Entreprises & Partenaires
 - Ajustement du style de la barre de recherche "Rechercher une formation" pour une hauteur fixe de 56px
 
+### Formulaire établissements
+- Remplacement de "Modalité" par des tags de type de stage (3e, 2de, PFMP, BTS)
+
 ### Accueil
 - Ajout d'un calque photo sur le bandeau hero avec image de remplacement
 

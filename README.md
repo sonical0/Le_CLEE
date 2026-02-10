@@ -119,6 +119,7 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
 - **Processus de candidature** guidé
 - **Témoignages** d'entreprises partenaires
 - **Formulaire de contact** dédié
+- Formulaire établissements : tags de type de stage à la place de "modalité"
 
 ### Établissements & Formations
 - Carte interactive basée sur Leaflet/OpenStreetMap (sans clé API)

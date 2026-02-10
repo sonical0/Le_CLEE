@@ -814,15 +814,27 @@
 
                                 <div class="form-row">
                                     <div class="form-group">
-                                        <label for="periodeModalite0" class="form-label">Modalité <span
+                                        <label class="form-label">Tags (type de stage) <span
                                                 class="required">*</span></label>
-                                        <select id="periodeModalite0" name="periodes[0][modalite]" class="form-select"
-                                            required>
-                                            <option value="">Sélectionnez...</option>
-                                            <option value="initial">Initial</option>
-                                            <option value="alternance">Alternance</option>
-                                            <option value="mixite">Mixité</option>
-                                        </select>
+                                        <div class="form-checkbox-group">
+                                            <label class="form-checkbox">
+                                                <input type="checkbox" name="periodes[0][tags][]" value="stage-3eme"
+                                                    required>
+                                                <span>Stage de 3ème</span>
+                                            </label>
+                                            <label class="form-checkbox">
+                                                <input type="checkbox" name="periodes[0][tags][]" value="stage-2de">
+                                                <span>Stage de 2de générale</span>
+                                            </label>
+                                            <label class="form-checkbox">
+                                                <input type="checkbox" name="periodes[0][tags][]" value="pfmp-bac-pro">
+                                                <span>PFMP (Bac Pro)</span>
+                                            </label>
+                                            <label class="form-checkbox">
+                                                <input type="checkbox" name="periodes[0][tags][]" value="stage-bts">
+                                                <span>Stage BTS</span>
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
 
