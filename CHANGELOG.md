@@ -89,6 +89,8 @@ Tous les messages de commit suivent la convention **Conventional Commits** (voir
 ### Pages principales
 - Orientation & insertion : hero et footer harmonisés avec le calque
 - Vie du CLEE élèves : hero et footer harmonisés avec le calque
+- Connexion : footer synchronisé via hero masqué
+- Thème étudiant : contraste texte ajusté pour viser 4,5:1
 
 ### Établissements & Formations
 - Intégration d'une carte Google Maps interactive dans le bloc carte
@@ -101,6 +103,7 @@ Tous les messages de commit suivent la convention **Conventional Commits** (voir
 - Points des collèges en rouge sur la carte
 - Génération dynamique des cartes établissement depuis le JSON
 - Mise en forme des informations (lignes distinctes, libellés en gras)
+- Footer synchronisé avec l'image du hero sur la page établissements
 
 ## [05/02/2026] - Système de pagination pour le tableau des formations
 

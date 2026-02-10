@@ -106,6 +106,7 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
   - 4 niveaux de taille de police (Petit, Normal, Grand, Très grand)
   - Mode contraste élevé pour faciliter la lecture
   - Option de réduction des animations pour les personnes sensibles aux mouvements
+- Thème étudiant : couleurs de texte renforcées pour un contraste minimum de 4,5:1
 
 ### Page d'accueil
 - **Hero section** dynamique avec appel à l'action et boutons CTA optimisés (couleurs charte graphique, ombres au survol)
@@ -118,6 +119,7 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
 - Menu déroulant harmonisé avec les couleurs des sections
 - Menu déroulant aéré et sans fond bleu marine
 - Couleurs de texte des hovers de navigation renforcées pour le contraste
+- Connexion : footer synchronisé via hero masqué
 - Footer synchronisé avec le hero sur toutes les pages (y compris Vie du CLEE)
 - Footer synchronisé avec l'image du hero (calque partagé, bas de l'image visible)
 
@@ -141,6 +143,7 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
 - Points des collèges en rouge
 - Cartes établissement générées depuis le JSON
 - Informations affichées sur plusieurs lignes avec libellés en gras
+- Footer synchronisé avec l'image du hero (calque invisible sur la page)
 - **Filtrage par secteur** (Commerce, Industrie, Services, Hôtellerie-Restauration)
 - **Catalogue de formations** avec descriptions complètes
 - **Informations PFMP** (Périodes de Formation en Milieu Professionnel)
