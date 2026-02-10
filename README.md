@@ -115,6 +115,7 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
 - **Section contact** rapide avec texte mis à jour
 - Fil d'Ariane sans fond, texte en noir avec contraste du hero
 - Fil d'Ariane superposé au hero pour conserver le fond visuel
+- Footer synchronisé avec l'image du hero (calque partagé, bas de l'image visible)
 
 ### Espace Entreprises & Partenaires
 - **Catalogue des entreprises partenaires** avec système de filtrage multi-critères

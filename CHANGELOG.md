@@ -87,19 +87,8 @@ Tous les messages de commit suivent la convention **Conventional Commits** (voir
 - Ajout d'un calque photo sur le bandeau hero avec image de remplacement
 
 ### Pages principales
-- Harmonisation des heroes avec l'accueil (calque photo) pour Le CLEE, Entreprises, Jeunes & Familles, Vie du CLEE
-- Alignement de la hauteur des heroes sur l'accueil
-- Ajout d'une hauteur minimale commune pour stabiliser la taille verticale
-- Ajout du calque hero sur les pages bureau, actions, documents officiels et PFMP
-- Correction de l'empilement du calque hero pour préserver la visibilité du texte
-- Fil d'Ariane transparent et texte en contraste avec le hero
-- Superposition du fil d'Ariane sur le hero pour éviter le fond blanc
-- Typographie du fil d'Ariane en noir
-
-### Établissements & Formations
+- Footer synchronisé avec l'image du hero en mode étudiant
 - Intégration d'une carte Google Maps interactive dans le bloc carte
-- Activation des interactions (zoom/déplacement) sur la carte
-- Suppression des points et de la liste d'établissements codés en dur
 - Génération de la liste et des points de carte à partir du JSON
 - Remplacement de l'API Google Maps par un iframe Google Maps personnalisé
 - Masquage du panneau/banderole dans l'iframe de la carte

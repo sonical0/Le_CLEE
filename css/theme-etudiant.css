@@ -255,18 +255,7 @@
 }
 
 [data-theme="etudiant"] .footer {
-    background: linear-gradient(135deg, var(--grey-900) 0%, #2C3E50 100%);
-    position: relative;
-}
-
-[data-theme="etudiant"] .footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: var(--gradient-primary);
+    background-color: var(--primary-900);
 }
 
 [data-theme="etudiant"] .footer a:hover {
