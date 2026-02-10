@@ -76,6 +76,10 @@ Tous les messages de commit suivent la convention **Conventional Commits** (voir
 - Déplacement du bloc "Formations disponibles" de la page Entreprises vers la page stages (PFMP)
 - Positionnement du tableau juste après la section "Qu'est-ce qu'un stage ?"
 - Suppression du téléchargement PDF "Calendrier des stages"
+- Suppression du bloc "Calendriers des PFMP par Formation"
+- Correction du padding dans "Modèles pour vos Candidatures"
+- Liens utiles : grille 3x2
+- PFMP ou Stage : remplacement par 2 cartes dédiées
 
 ### Entreprises & Partenaires
 - Ajustement du style de la barre de recherche "Rechercher une formation" pour une hauteur fixe de 56px
@@ -89,6 +93,8 @@ Tous les messages de commit suivent la convention **Conventional Commits** (voir
 ### Pages principales
 - Orientation & insertion : hero et footer harmonisés avec le calque
 - Vie du CLEE élèves : hero et footer harmonisés avec le calque
+- Agenda : dates en texte orange primaire
+- Agenda : dates en blanc en vue liste
 - Connexion : footer synchronisé via hero masqué
 - Thème étudiant : contraste texte ajusté pour viser 4,5:1
 

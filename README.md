@@ -151,6 +151,8 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
 ### Page Stages (PFMP)
 - Hero harmonisé avec l'accueil (calque photo)
 - Lisibilité du texte du hero sécurisée (empilement du calque)
+- Suppression des calendriers PFMP par formation
+- Bloc "Modèles pour vos Candidatures" : structure et padding corrigés
 - **Tableau des formations** avec système de pagination complet :
   - Affichage par défaut de 5 formations par page
   - Sélecteur personnalisé (5, 10, 15, 20, 50 résultats par page)
@@ -161,6 +163,8 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
   - Filtres multicritères (établissement, secteur, niveau, modalité, recherche textuelle)
   - Réinitialisation à la page 1 lors du changement de filtres ou tri
 - Calendriers de stages : suppression du PDF "Calendrier des stages"
+- Liens utiles : grille 3x2 sur PFMP
+- PFMP ou Stage : cartes en 2 colonnes (PFMP/Stage)
 
 ### Espace Jeunes & Familles
 - **Ressources d'orientation** professionnelle
@@ -180,6 +184,8 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
 - **Agenda complet** des événements (anciennement sur index.html)
 - **Galerie photos/vidéos** des événements
 - Interface simplifiée (modal de contact supprimée)
+- Agenda : dates en texte orange primaire
+- Agenda (vue liste) : dates en blanc
 
 ### Présentation institutionnelle
 - **Histoire et mission** du CLEE
