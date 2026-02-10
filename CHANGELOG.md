@@ -2,6 +2,12 @@
 
 Tous les messages de commit suivent la convention **Conventional Commits** (voir `.github/copilot-instructions.md`).
 
+## [10/02/2026] - Déplacement du tableau des formations
+
+### PFMP
+- Déplacement du bloc "Formations disponibles" de la page Entreprises vers la page stages (PFMP)
+- Positionnement du tableau juste après la section "Qu'est-ce qu'un stage ?"
+
 ## [05/02/2026] - Système de pagination pour le tableau des formations
 
 ### Pagination complète

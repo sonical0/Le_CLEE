@@ -117,6 +117,15 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
 - **Processus de candidature** guidé
 - **Témoignages** d'entreprises partenaires
 - **Formulaire de contact** dédié
+
+### Établissements & Formations
+- **Carte interactive** des établissements scolaires (Google Maps intégré)
+- **Fiches établissement** détaillées (coordonnées, secteurs, formations)
+- **Filtrage par secteur** (Commerce, Industrie, Services, Hôtellerie-Restauration)
+- **Catalogue de formations** avec descriptions complètes
+- **Informations PFMP** (Périodes de Formation en Milieu Professionnel)
+
+### Page Stages (PFMP)
 - **Tableau des formations** avec système de pagination complet :
   - Affichage par défaut de 5 formations par page
   - Sélecteur personnalisé (5, 10, 15, 20, 50 résultats par page)
@@ -126,13 +135,6 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
   - Tri par colonnes (établissement, formation, secteur, niveau, modalités, périodes)
   - Filtres multicritères (établissement, secteur, niveau, modalité, recherche textuelle)
   - Réinitialisation à la page 1 lors du changement de filtres ou tri
-
-### Établissements & Formations
-- **Carte interactive** des établissements scolaires (Google Maps intégré)
-- **Fiches établissement** détaillées (coordonnées, secteurs, formations)
-- **Filtrage par secteur** (Commerce, Industrie, Services, Hôtellerie-Restauration)
-- **Catalogue de formations** avec descriptions complètes
-- **Informations PFMP** (Périodes de Formation en Milieu Professionnel)
 
 ### Espace Jeunes & Familles
 - **Ressources d'orientation** professionnelle

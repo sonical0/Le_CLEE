@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Tout savoir sur les stages (PFMP) - CLEE Bordeaux Avenir">
     <title>CLEE Bordeaux Avenir - Tout savoir sur les stages</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../css/globals.css">
+    <link rel="stylesheet" href="../css/companies.css">
     <link rel="stylesheet" href="../css/jeunes-familles.css">
 </head>
 <body>
@@ -124,6 +126,116 @@
                         Vos périodes en entreprise sont évaluées et comptent pour l'obtention de votre diplôme. 
                         Un livret de suivi permet de valider vos acquis.
                     </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tableau-formations-section" id="tableau-formations">
+        <div class="container">
+            <h2 class="section-title">Formations disponibles</h2>
+            <p class="section-subtitle">Explorez toutes les formations proposées par les établissements partenaires du
+                CLEE</p>
+
+            <!-- Filtres du tableau -->
+            <div class="tableau-filtres">
+                <div class="filtre-group">
+                    <label for="filtreEtablissement" class="filtre-label">Établissement :</label>
+                    <select id="filtreEtablissement" class="filtre-select">
+                        <option value="">Tous les établissements</option>
+                    </select>
+                </div>
+
+                <div class="filtre-group">
+                    <label for="filtreSecteur" class="filtre-label">Secteur :</label>
+                    <select id="filtreSecteur" class="filtre-select">
+                        <option value="">Tous les secteurs</option>
+                    </select>
+                </div>
+
+                <div class="filtre-group">
+                    <label for="filtreNiveau" class="filtre-label">Niveau :</label>
+                    <select id="filtreNiveau" class="filtre-select">
+                        <option value="">Tous les niveaux</option>
+                        <option value="CAP">CAP</option>
+                        <option value="Bac Pro">Bac Pro</option>
+                        <option value="BTS">BTS</option>
+                        <option value="Licence Pro">Licence Pro</option>
+                        <option value="Master">Master</option>
+                    </select>
+                </div>
+
+                <div class="filtre-group">
+                    <label for="filtreModalite" class="filtre-label">Modalité :</label>
+                    <select id="filtreModalite" class="filtre-select">
+                        <option value="">Toutes les modalités</option>
+                        <option value="Initial">Initial</option>
+                        <option value="Alternance">Alternance</option>
+                        <option value="Mixité">Mixité</option>
+                    </select>
+                </div>
+
+                <div class="filtre-group">
+                    <label for="filtreRecherche" class="filtre-label">Recherche :</label>
+                    <div class="filtre-recherche-wrapper">
+                        <input type="text" id="filtreRecherche" class="filtre-input" placeholder="Nom de formation...">
+                        <button class="btn-reset-filters" id="reinitialiserFiltres" title="Réinitialiser les filtres">
+                            <i class="fas fa-redo"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tableau responsive -->
+            <div class="tableau-container">
+                <table class="formations-table" id="formationsTable">
+                    <thead>
+                        <tr>
+                            <th data-sort="etablissement">Établissement <i class="fas fa-sort"></i></th>
+                            <th data-sort="formation">Formation <i class="fas fa-sort"></i></th>
+                            <th data-sort="secteur">Secteur <i class="fas fa-sort"></i></th>
+                            <th data-sort="niveau">Niveau <i class="fas fa-sort"></i></th>
+                            <th data-sort="modalites">Modalités <i class="fas fa-sort"></i></th>
+                            <th data-sort="periodes">Périodes de stages <i class="fas fa-sort"></i></th>
+                            <th>Contact</th>
+                        </tr>
+                    </thead>
+                    <tbody id="formationsTableBody">
+                        <!-- Lignes générées dynamiquement -->
+                    </tbody>
+                </table>
+
+                <div class="tableau-empty" id="tableauEmpty" style="display: none;">
+                    <i class="fas fa-inbox"></i>
+                    <p>Aucune formation ne correspond à vos critères de recherche.</p>
+                </div>
+            </div>
+
+            <div class="tableau-footer">
+                <div class="tableau-info">
+                    <div class="results-per-page">
+                        <label for="resultsPerPage">Afficher :</label>
+                        <select id="resultsPerPage" class="results-select">
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                        </select>
+                        <span>résultats par page</span>
+                    </div>
+                </div>
+
+                <div class="pagination" id="pagination">
+                    <button class="pagination-btn" id="paginationPrev" disabled>
+                        <i class="fas fa-chevron-left"></i> Précédent
+                    </button>
+                    <div class="pagination-pages" id="paginationPages">
+                        <!-- Numéros de page générés dynamiquement -->
+                    </div>
+                    <button class="pagination-btn" id="paginationNext">
+                        Suivant <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -450,6 +562,7 @@
     </footer>
 
     <script src="../js/common.js"></script>
+    <script src="../js/companies.js"></script>
 </body>
 </html>
 
