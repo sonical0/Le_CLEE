@@ -438,9 +438,12 @@ button {
 ======================================== */
 
 .breadcrumb-container {
-  background-color: var(--primary-900);
+  background-color: transparent;
   padding: 12px 0;
   margin-top: 80px; /* Décalage pour le header fixe */
+  margin-bottom: -40px;
+  position: relative;
+  z-index: 2;
 }
 
 .breadcrumb {
@@ -448,26 +451,31 @@ button {
   align-items: center;
   gap: 8px;
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--grey-900);
+  /* Charte originelle: rgba(255, 255, 255, 0.9) */
 }
 
 .breadcrumb a {
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--grey-900);
+  /* Charte originelle: rgba(255, 255, 255, 0.9) */
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .breadcrumb a:hover {
-  color: #ffffff;
+  color: var(--grey-900);
+  /* Charte originelle: #ffffff */
   text-decoration: underline;
 }
 
 .breadcrumb span {
-  color: rgba(255, 255, 255, 0.6);
+  color: color-mix(in srgb, var(--grey-900) 70%, transparent);
+  /* Charte originelle: rgba(255, 255, 255, 0.6) */
 }
 
 .breadcrumb span:last-child {
-  color: #ffffff;
+  color: var(--grey-900);
+  /* Charte originelle: #ffffff */
   font-weight: 500;
 }
 
