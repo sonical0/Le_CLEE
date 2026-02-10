@@ -255,6 +255,12 @@ input:checked + .toggle-slider:before {
     border: 2px solid var(--grey-900);
 }
 
+/* Texte noir pour les boutons en mode contraste élevé */
+.high-contrast .btn-accessibility,
+.high-contrast .btn-reset {
+    color: #000000 !important;
+}
+
 .reduce-motion * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;

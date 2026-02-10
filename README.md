@@ -94,6 +94,10 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
 ## Fonctionnalités principales
 
 ### Accessibilité
+- **Bannière de notification** : Au premier lancement, propose d'activer le mode contraste élevé
+  - Ne s'affiche qu'une seule fois (persistance localStorage)
+  - Trois actions : Activer, Non merci, Fermer
+  - Lien vers les options d'accessibilité complètes
 - **Options d'accessibilité** : Taille de texte, contraste élevé, réduction d'animations
 - **Persistance** : Les préférences sont sauvegardées dans le navigateur (localStorage)
 - **Page dédiée** : [pages/portail.html](pages/portail.html) accessible à tout moment
