@@ -107,6 +107,9 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
   - Mode contraste élevé pour faciliter la lecture
   - Option de réduction des animations pour les personnes sensibles aux mouvements
 - Thème étudiant : couleurs de texte renforcées pour un contraste minimum de 4,5:1
+- Portail accessibilité : footer synchronisé via hero masqué
+- Portail accessibilité : hauteur du hero alignée sur les autres pages
+- Portail accessibilité : calque hero affiché sur l'en-tête
 
 ### Page d'accueil
 - **Hero section** dynamique avec appel à l'action et boutons CTA optimisés (couleurs charte graphique, ombres au survol)

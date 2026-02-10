@@ -91,12 +91,8 @@ Tous les messages de commit suivent la convention **Conventional Commits** (voir
 - Ajout d'un calque photo sur le bandeau hero avec image de remplacement
 
 ### Pages principales
-- Orientation & insertion : hero et footer harmonisés avec le calque
-- Vie du CLEE élèves : hero et footer harmonisés avec le calque
-- Agenda : dates en texte orange primaire
-- Agenda : dates en blanc en vue liste
-- Connexion : footer synchronisé via hero masqué
-- Thème étudiant : contraste texte ajusté pour viser 4,5:1
+- Portail : hauteur du hero alignée sur les autres pages
+- Portail : calque hero affiché sur l'en-tête
 
 ### Établissements & Formations
 - Intégration d'une carte Google Maps interactive dans le bloc carte

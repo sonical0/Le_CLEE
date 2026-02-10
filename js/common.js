@@ -231,7 +231,7 @@ const ScrollAnimationModule = (() => {
 const FooterHeroImageModule = (() => {
   const init = () => {
     const footer = document.querySelector('.footer');
-    const heroImage = document.querySelector('section[class*="hero"] .hero-overlay img');
+    const heroImage = document.querySelector('.hero-overlay img');
 
     if (!footer || !heroImage || !heroImage.src) return;
 
