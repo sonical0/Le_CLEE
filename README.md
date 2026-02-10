@@ -115,6 +115,10 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
 - **Section contact** rapide avec texte mis à jour
 - Fil d'Ariane sans fond, texte en noir avec contraste du hero
 - Fil d'Ariane superposé au hero pour conserver le fond visuel
+- Menu déroulant harmonisé avec les couleurs des sections
+- Menu déroulant aéré et sans fond bleu marine
+- Couleurs de texte des hovers de navigation renforcées pour le contraste
+- Footer synchronisé avec le hero sur toutes les pages (y compris Vie du CLEE)
 - Footer synchronisé avec l'image du hero (calque partagé, bas de l'image visible)
 
 ### Espace Entreprises & Partenaires
@@ -164,6 +168,8 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
 - **Informations stages** et apprentissage
 - **Témoignages** d'anciens élèves
 - Interface simplifiée avec contenu pertinent et actualisé
+- Orientation & insertion : hero et footer synchronisés avec le calque
+- Vie du CLEE élèves : hero et footer synchronisés avec le calque
 ### Vie du CLEE
 - **Actualités** du réseau école-entreprise
 - Hero harmonisé avec l'accueil (calque photo)

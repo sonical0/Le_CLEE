@@ -13,18 +13,22 @@
 .nav-link-bleu:hover,
 .nav-link-bleu:focus {
   background: rgba(23, 110, 161, 0.3) !important;
+  color: var(--grey-900) !important;
 }
 .nav-link-orange:hover,
 .nav-link-orange:focus {
   background: rgba(216, 134, 27, 0.3) !important;
+  color: var(--grey-900) !important;
 }
 .nav-link-rouge:hover,
 .nav-link-rouge:focus {
   background: rgba(198, 54, 52, 0.3) !important;
+  color: var(--grey-900) !important;
 }
 .nav-link-vert:hover,
 .nav-link-vert:focus {
   background: rgba(88, 152, 66, 0.3) !important;
+  color: var(--grey-900) !important;
 }
 
 /* ========================================
@@ -45,18 +49,21 @@
   left: 0;
   top: 100%;
   min-width: 220px;
-  background: rgba(31, 52, 72, 0.90);
-  color: #fff;
+  background: rgba(255, 255, 255, 0.98);
+  /* Charte originelle: rgba(31, 52, 72, 0.90) */
+  color: var(--primary-800);
+  /* Charte originelle: #fff */
   font-family: var(--navbar-text-font-family);
   font-size: 1rem;
   border-radius: 0 12px 8px 8px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   z-index: 100;
   opacity: 0;
   pointer-events: none;
   transform: translateY(-10px);
   transition: opacity 0.22s cubic-bezier(.4,0,.2,1), transform 0.22s cubic-bezier(.4,0,.2,1);
   padding: 1.1rem 0 0.5rem 0;
+  margin-top: 10px;
 }
 
 .nav-dropdown:hover > .dropdown-menu,
@@ -74,7 +81,8 @@
 .dropdown-menu a {
   display: block;
   padding: 0.75rem 1.5rem;
-  color: #fff;
+  color: var(--primary-800);
+  /* Charte originelle: #fff */
   text-decoration: none;
   font-family: var(--navbar-text-font-family);
   font-size: 1rem;
@@ -84,8 +92,39 @@
 
 .dropdown-menu a:hover,
 .dropdown-menu a:focus {
-  background: rgba(49, 73, 96, 0.95);
-  color: #fff;
+  background: var(--primary-100);
+  /* Charte originelle: rgba(49, 73, 96, 0.95) */
+  color: var(--grey-900);
+  /* Charte originelle: #fff */
+}
+
+/* Dropdown hover par thématique */
+.nav-dropdown .nav-link-bleu + .dropdown-menu a:hover,
+.nav-dropdown .nav-link-bleu + .dropdown-menu a:focus {
+  background: color-mix(in srgb, var(--bleu-clee) 30%, transparent);
+                                                                      /* Charte originelle: rgba(49, 73, 96, 0.95) */
+  color: var(--grey-900);
+}
+
+.nav-dropdown .nav-link-orange + .dropdown-menu a:hover,
+.nav-dropdown .nav-link-orange + .dropdown-menu a:focus {
+  background: color-mix(in srgb, var(--orange-clee) 30%, transparent);
+                                                                        /* Charte originelle: rgba(49, 73, 96, 0.95) */
+  color: var(--grey-900);
+}
+
+.nav-dropdown .nav-link-rouge + .dropdown-menu a:hover,
+.nav-dropdown .nav-link-rouge + .dropdown-menu a:focus {
+  background: color-mix(in srgb, var(--rouge-clee) 30%, transparent);
+                                                                       /* Charte originelle: rgba(49, 73, 96, 0.95) */
+  color: var(--grey-900);
+}
+
+.nav-dropdown .nav-link-vert + .dropdown-menu a:hover,
+.nav-dropdown .nav-link-vert + .dropdown-menu a:focus {
+  background: color-mix(in srgb, var(--vert-clee) 30%, transparent);
+                                                                      /* Charte originelle: rgba(49, 73, 96, 0.95) */
+  color: var(--grey-900);
 }
 
 /* Masquer dropdowns dès que le menu burger apparaît */

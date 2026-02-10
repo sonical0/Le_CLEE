@@ -87,7 +87,10 @@ Tous les messages de commit suivent la convention **Conventional Commits** (voir
 - Ajout d'un calque photo sur le bandeau hero avec image de remplacement
 
 ### Pages principales
-- Footer synchronisé avec l'image du hero en mode étudiant
+- Orientation & insertion : hero et footer harmonisés avec le calque
+- Vie du CLEE élèves : hero et footer harmonisés avec le calque
+
+### Établissements & Formations
 - Intégration d'une carte Google Maps interactive dans le bloc carte
 - Génération de la liste et des points de carte à partir du JSON
 - Remplacement de l'API Google Maps par un iframe Google Maps personnalisé
