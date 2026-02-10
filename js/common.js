@@ -295,6 +295,129 @@ const ActiveLinkModule = (() => {
 })();
 
 // ========================================
+// ACCESSIBILITY BANNER MODULE
+// ========================================
+
+const AccessibilityBannerModule = (() => {
+  const BANNER_DISMISSED_KEY = 'clee_accessibility_banner_dismissed';
+  const HIGH_CONTRAST_KEY = 'clee_high_contrast';
+  
+  // Vérifier si la bannière a déjà été affichée/fermée
+  const isBannerDismissed = () => {
+    return localStorage.getItem(BANNER_DISMISSED_KEY) === 'true';
+  };
+  
+  // Vérifier si le contraste élevé est déjà activé
+  const isHighContrastEnabled = () => {
+    return localStorage.getItem(HIGH_CONTRAST_KEY) === 'true';
+  };
+  
+  // Appliquer le contraste élevé
+  const applyHighContrast = (enabled) => {
+    if (enabled) {
+      document.documentElement.classList.add('high-contrast');
+    } else {
+      document.documentElement.classList.remove('high-contrast');
+    }
+    localStorage.setItem(HIGH_CONTRAST_KEY, enabled);
+  };
+  
+  // Fermer la bannière
+  const dismissBanner = () => {
+    const banner = document.getElementById('accessibility-banner');
+    if (banner) {
+      banner.classList.add('hidden');
+      setTimeout(() => banner.remove(), 300);
+    }
+    localStorage.setItem(BANNER_DISMISSED_KEY, 'true');
+  };
+  
+  // Activer le contraste et fermer la bannière
+  const acceptHighContrast = () => {
+    applyHighContrast(true);
+    dismissBanner();
+  };
+  
+  // Refuser et fermer la bannière
+  const declineHighContrast = () => {
+    dismissBanner();
+  };
+  
+  // Créer et afficher la bannière
+  const showBanner = () => {
+    // Ne pas afficher si déjà fermée ou si contraste déjà activé
+    if (isBannerDismissed() || isHighContrastEnabled()) {
+      return;
+    }
+    
+    // Créer l'élément de bannière
+    const banner = document.createElement('div');
+    banner.id = 'accessibility-banner';
+    banner.className = 'accessibility-banner';
+    banner.setAttribute('role', 'dialog');
+    banner.setAttribute('aria-labelledby', 'banner-title');
+    banner.setAttribute('aria-describedby', 'banner-description');
+    
+    banner.innerHTML = `
+      <div class="accessibility-banner-content">
+        <div class="accessibility-banner-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+            <path d="M12 2V22" stroke="currentColor" stroke-width="2"/>
+            <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22V2Z" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="accessibility-banner-text">
+          <h3 id="banner-title" class="accessibility-banner-title">Mode Contraste Élevé</h3>
+          <p id="banner-description" class="accessibility-banner-description">
+            Améliorez la lisibilité du site avec un mode à fort contraste. 
+            Vous pouvez modifier ce paramètre à tout moment dans les 
+            <a href="${window.location.pathname.includes('/pages/') ? '' : 'pages/'}portail.html">options d'accessibilité</a>.
+          </p>
+        </div>
+        <div class="accessibility-banner-actions">
+          <button class="btn-banner btn-banner-accept" id="accept-contrast" aria-label="Activer le mode contraste élevé">
+            Activer
+          </button>
+          <button class="btn-banner btn-banner-decline" id="decline-contrast" aria-label="Non merci">
+            Non merci
+          </button>
+          <button class="btn-banner-close" id="close-banner" aria-label="Fermer la bannière">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    `;
+    
+    document.body.appendChild(banner);
+    
+    // Ajouter les événements
+    document.getElementById('accept-contrast').addEventListener('click', acceptHighContrast);
+    document.getElementById('decline-contrast').addEventListener('click', declineHighContrast);
+    document.getElementById('close-banner').addEventListener('click', dismissBanner);
+    
+    // Afficher la bannière avec animation après un court délai
+    setTimeout(() => {
+      banner.classList.add('visible');
+    }, 500);
+  };
+  
+  const init = () => {
+    // Appliquer le contraste s'il est déjà activé
+    if (isHighContrastEnabled()) {
+      applyHighContrast(true);
+    }
+    
+    // Afficher la bannière après un délai
+    setTimeout(showBanner, 1000);
+  };
+  
+  return { init };
+})();
+
+// ========================================
 // THEME MANAGER MODULE
 // ========================================
 
@@ -373,6 +496,9 @@ const ThemeModule = (() => {
 document.addEventListener('DOMContentLoaded', () => {
   // Initialiser le gestionnaire de thème en premier
   ThemeModule.init();
+  
+  // Initialiser la bannière d'accessibilité
+  AccessibilityBannerModule.init();
   
   NavigationModule.init();
   SmoothScrollModule.init();

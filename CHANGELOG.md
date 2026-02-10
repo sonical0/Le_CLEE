@@ -2,6 +2,42 @@
 
 Tous les messages de commit suivent la convention **Conventional Commits** (voir `.github/copilot-instructions.md`).
 
+## [10/02/2026] - Ajout de la bannière d'accessibilité
+
+### Nouvelle fonctionnalité : Bannière de notification
+- **Bannière d'accessibilité** : Affichage automatique au lancement du site (similaire aux bannières de cookies)
+- **Proposition de contraste élevé** : L'utilisateur peut activer le mode contraste élevé directement depuis la bannière
+- **Persistance intelligente** : La bannière ne s'affiche qu'une seule fois et ne réapparaît pas si :
+  - L'utilisateur l'a déjà fermée
+  - Le mode contraste élevé est déjà activé
+- **Lien vers portail** : Redirection vers les options d'accessibilité complètes
+
+### Modifications techniques
+- **js/common.js** : Ajout du module `AccessibilityBannerModule`
+  - Gestion de l'affichage automatique (délai de 1 seconde)
+  - Gestion des actions (Activer, Non merci, Fermer)
+  - Application du contraste élevé
+  - Persistance avec localStorage (`clee_accessibility_banner_dismissed`, `clee_high_contrast`)
+- **css/globals.css** : Ajout des styles de la bannière
+  - Design moderne avec fond dégradé sombre
+  - Animation de slide-up depuis le bas
+  - Boutons stylisés (Activer en orange, Non merci en transparent)
+  - Responsive avec adaptations mobile/tablette
+  - Déplacement des styles `.high-contrast` et `.reduce-motion` depuis portail.css
+
+### Interface utilisateur
+- Position fixe en bas de l'écran (z-index: 10000)
+- Icône de contraste (cercle moitié noir/moitié blanc)
+- Texte explicatif avec lien vers portail.html
+- Trois actions possibles : Activer, Non merci, Fermer (X)
+- Animation fluide d'apparition/disparition
+- Responsive : boutons empilés sur mobile
+
+### Documentation
+- **TEST-ACCESSIBILITY-BANNER.md** : Guide complet de test avec 8 scénarios
+- Instructions de test pour vérifier toutes les fonctionnalités
+- Liste des fichiers modifiés et variables localStorage utilisées
+
 ## [10/02/2026] - Transformation du portail en page d'accessibilité
 
 ### Changement majeur du système de portail

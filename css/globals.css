@@ -1169,6 +1169,232 @@ button {
 }
 
 /* ========================================
+   ACCESSIBILITY BANNER (Cookie-like notification)
+======================================== */
+
+.accessibility-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, rgba(31, 52, 72, 0.98) 0%, rgba(49, 73, 96, 0.98) 100%);
+  color: white;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  z-index: 10000;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+}
+
+.accessibility-banner.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.accessibility-banner.hidden {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.accessibility-banner-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.accessibility-banner-icon {
+  flex-shrink: 0;
+  color: var(--orange-clee);
+}
+
+.accessibility-banner-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.accessibility-banner-title {
+  font-family: var(--titre-font-family);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: white;
+}
+
+.accessibility-banner-description {
+  font-family: var(--navbar-text-font-family);
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.accessibility-banner-description a {
+  color: var(--orange-clee);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.accessibility-banner-description a:hover {
+  color: #ff9966;
+}
+
+.accessibility-banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.btn-banner {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-family: var(--navbar-text-font-family);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-banner-accept {
+  background: var(--orange-clee);
+  color: white;
+}
+
+.btn-banner-accept:hover {
+  background: #ff9966;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(216, 134, 27, 0.3);
+}
+
+.btn-banner-decline {
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-banner-decline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-banner-close {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+  margin-left: 0.5rem;
+}
+
+.btn-banner-close:hover {
+  color: white;
+}
+
+.btn-banner-close svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .accessibility-banner {
+    padding: 1rem;
+  }
+  
+  .accessibility-banner-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .accessibility-banner-icon {
+    display: none;
+  }
+  
+  .accessibility-banner-text {
+    min-width: 0;
+  }
+  
+  .accessibility-banner-title {
+    font-size: 1.1rem;
+  }
+  
+  .accessibility-banner-description {
+    font-size: 0.9rem;
+  }
+  
+  .accessibility-banner-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .btn-banner {
+    flex: 1;
+    padding: 0.65rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .btn-banner-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .accessibility-banner-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .btn-banner {
+    width: 100%;
+  }
+}
+
+/* High Contrast Mode Styles */
+.high-contrast {
+  filter: contrast(1.2);
+}
+
+.high-contrast .accessibility-card {
+  border: 2px solid var(--grey-900);
+}
+
+/* Texte noir pour les boutons en mode contraste élevé */
+.high-contrast .btn,
+.high-contrast .btn-primary,
+.high-contrast .btn-outline,
+.high-contrast .btn-banner,
+.high-contrast .btn-banner-accept,
+.high-contrast .btn-banner-decline,
+.high-contrast .btn-accessibility {
+  color: #000000 !important;
+}
+
+.high-contrast .btn-primary:hover,
+.high-contrast .btn-banner-accept:hover {
+  color: #000000 !important;
+}
+
+/* Reduce Motion Styles */
+.reduce-motion * {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
+
+/* ========================================
    PRINT STYLES
 ======================================== */
 
