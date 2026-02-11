@@ -41,41 +41,6 @@ docs(readme): update installation instructions
 
 Voir `.github/copilot-instructions.md` pour plus de détails.
 
-## Liste de tâches - Retour entretien CLEE
-
-### Modifications prioritaires
-- [x] Retirer MEDEF du footer
-- [x] Diminuer le scroll de l'accueil
-- [x] Rendre chaque icône/logo du carrousel cliquable vers le site correspondant
-- [ ] Ajouter une page ressources rassemblant les entreprises d'information qui ne sont pas autour de la table
-- [x] Supprimer les options téléphone et adresse ainsi que l'engagement de délai de la page Contact
-- [ ] Objet du formulaire de contact à customiser côté administrateur
-- [x] Déplacer l'agenda directement dans la page Vie du CLEE pour éviter le publipostage sur plusieurs pages
-- [x] Retirer les majuscules en milieu de phrase
-- [x] Remplacer le logo du CLEE par celui de la charte graphique
-- [ ] Décider et uniformiser : CLEE ou CLEE ou Clée pour le SEO
-- [x] Retirer convention de stage et livret de suivi, remplacer par les documents officiels
-
-### Améliorations UX/UI
-- [x] Ajouter une barre de recherche avec option filtre dans la page établissements et formations
-- [x] Remplacer le terme PFMP par "stage" pour vulgariser
-- [x] Améliorer le header pour ajouter les sous-pages par catégorie en liste déroulante
-- [x] Adapter la surbrillance des boutons avec les couleurs de la charte graphique
-- [x] Faire un portail étudiant/pro avec un style CSS qui change selon la catégorie d'utilisateur (transformé en page d'accessibilité)
-- [x] Améliorer la lisibilité de la section "Notre impact" en mode étudiant avec surbrillance adoucie
-- [x] Ajouter une barre de recherche sur la page Entreprises & Partenaires
-- [ ] Sur le ruban sous le header, ajouter un calque avec une photo et reprendre les couleurs de la charte graphique
-- [ ] **ATTENTION : Respecter les règles d'accessibilité pour les couleurs**
-
-### Mentions légales et contenu
-- [ ] Déplacer le bloc crédit photos dans les mentions légales
-
-### Validation et présentation
-- [ ] Mettre en place la maquette sur Cercle pour que les clients puissent la consulter avec leurs associés
-- [ ] **13 mars : Nouvelle présentation de la maquette**
-
----
-
 ## À propos du projet
 
 **CLEE Bordeaux Avenir** est une organisation qui renforce les ponts entre le monde éducatif et le tissu économique local. Ce projet est le site web institutionnel de l'organisation, conçu pour faciliter les interactions entre :
