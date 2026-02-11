@@ -209,7 +209,7 @@ Le site utilise une **architecture modulaire** pour optimiser la maintenance et 
 - **CSS page-specific** : Styles uniques à chaque page
 - **common.js** : Modules JavaScript réutilisables
 - **JS page-specific** : Logique spécifique aux pages
-- **Composants JS** : Web Components centralisés dans `js/components/` (ex: bouton principal utilisé sur les pages et formulaires)
+- **Composants JS** : Web Components centralisés dans `js/components/` (ex: bouton principal et navbar, navbar utilisée sur l'ensemble des pages)
 
 ### Avantages
 - Mise en cache optimale (globals.css chargé une fois pour toutes les pages)

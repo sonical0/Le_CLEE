@@ -9,65 +9,7 @@
     <link rel="stylesheet" href="../css/auth.css">
 </head>
 <body>
-    <header class="header">
-        <nav class="navigation" role="navigation" aria-label="Navigation principale">
-            <div class="container">
-                <a href="../index.html" class="logo" aria-label="Retour à l'accueil">
-                    <img src="../assets/images/logo-clee.png" alt="CLEE Bordeaux Avenir">
-                </a>
-                
-                <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                
-                <ul class="nav-links">
-                    <li class="nav-item nav-dropdown">
-                        <a href="le-clee.html" class="nav-link nav-link-bleu">Le CLEE</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="le-clee.html">Qui sommes-nous ?</a></li>
-                            <li><a href="bureau-membres.html">Bureau et membres</a></li>
-                            <li><a href="nos-actions.html">Nos actions</a></li>
-                            <li><a href="documents-officiels.html">Documents officiels</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item nav-dropdown">
-                        <a href="companies.html" class="nav-link nav-link-bleu">Entreprises & Partenaires</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="companies.html">Devenir partenaire</a></li>
-                            <li><a href="companies.html#sponsors">Nos sponsors</a></li>
-                            <li><a href="companies.html#actions">Actions pour les entreprises</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item nav-dropdown">
-                        <a href="establishments.html" class="nav-link nav-link-orange">Établissements & Formations</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="establishments.html">Établissements et formations</a></li>
-                            <li><a href="pfmp.html">Stages et/ou PFMP</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item nav-dropdown">
-                        <a href="jeunes-familles.html" class="nav-link nav-link-rouge">Jeunes & Familles</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="pfmp.html">Tout savoir sur les stages</a></li>
-                            <li><a href="orientation-insertion.html">Conseils orientation</a></li>
-                            <li><a href="vie-clee-eleves.html">Vie du CLEE pour les élèves</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item nav-dropdown">
-                        <a href="vie-clee.html" class="nav-link nav-link-vert">Vie du CLEE</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="agenda.html">Agenda</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="connexion.html" class="nav-link nav-link-auth">Connexion</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <clee-nav-bar base-path=".." pages-path=""></clee-nav-bar>
 
     <main class="auth-page">
         <div class="container">
@@ -268,6 +210,7 @@
         </div>
     </footer>
 
+    <script src="../js/components/nav-bar.js"></script>
     <script src="../js/components/primary-button.js"></script>
     <script src="../js/common.js"></script>
     <script src="../js/auth.js"></script>

@@ -2,6 +2,14 @@
 
 Tous les messages de commit suivent la convention **Conventional Commits** (voir `.github/copilot-instructions.md`).
 
+## [11/02/2026] - Généralisation du composant navbar
+
+### Navigation
+- **pages/** : Remplacement de la navbar statique par le composant `clee-nav-bar` sur l'ensemble des pages
+- **pages/dashboard.html** : Réparation de la structure HTML/CSS endommagée et insertion du composant navbar
+- **pages/connexion.html** : Restauration de l'entête HTML après remplacement de la navbar
+- **pages/portail.html** : Restauration de l'entête HTML après remplacement de la navbar
+
 ## [11/02/2026] - Composant bouton principal centralisé
 
 ### Composants
@@ -25,6 +33,13 @@ Tous les messages de commit suivent la convention **Conventional Commits** (voir
 - **pages/theme-demo.html** : Remplacement des boutons primaires de démonstration
 - **pages/colors-reference.html** : Remplacement du bouton primaire de prévisualisation
 - **pages/dashboard.html** : Remplacement du bouton de déconnexion par le composant
+
+## [11/02/2026] - Composant navbar
+
+### Composants
+- **js/components/nav-bar.js** : Création d'un composant de navigation (HTML/CSS/JS) basé sur la navbar de l'accueil
+- **index.html** : Remplacement intégral de la navbar par le composant
+- **pages/agenda.html** : Remplacement de la navbar par le composant
 
 ## [11/02/2026] - Conformité hero et footer de l'agenda
 
