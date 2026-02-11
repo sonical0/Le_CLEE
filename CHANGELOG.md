@@ -2,6 +2,26 @@
 
 Tous les messages de commit suivent la convention **Conventional Commits** (voir `.github/copilot-instructions.md`).
 
+## [11/02/2026] - Composant bouton principal centralisé
+
+### Composants
+- **js/components/primary-button.js** : Création d'un composant bouton principal avec styles intégrés et propriétés configurables
+- **js/components/primary-button.js** : Ajout du thème étudiant optionnel pour le visuel du bouton
+- **js/components/primary-button.js** : Ajustement du rendu étudiant pour conserver le gradient et le hover dédié
+- **js/components/primary-button.js** : Valeurs par défaut dépendantes du thème avec overrides via attributs
+- **js/components/primary-button.js** : Correction du background gradient en thème étudiant pour les hovers
+- **js/components/primary-button.js** : Détection du thème étudiant sur html/body pour appliquer le gradient par défaut
+- **js/components/primary-button.js** : Re-render automatique lors du changement de thème + fallback localStorage
+- **js/components/primary-button.js** : Support du rendu en bouton (submit/button) pour les formulaires
+- **pages/companies.html** : Remplacement des boutons btn-primary par le composant centralisé
+- **pages/establishments.html** : Remplacement des boutons btn-primary par le composant centralisé
+
+## [11/02/2026] - Conformité hero et footer de l'agenda
+
+### Ajustements de mise en page
+- **pages/agenda.html** : Ajout du calque hero pour aligner la structure sur l'accueil
+- **css/agenda.css** : Harmonisation de la hauteur du hero et du calque pour synchroniser le footer avec l'image
+
 ## [10/02/2026] - Ajout de la bannière d'accessibilité
 
 ### Nouvelle fonctionnalité : Bannière de notification

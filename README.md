@@ -189,6 +189,7 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
 - Interface simplifiée (modal de contact supprimée)
 - Agenda : dates en texte orange primaire
 - Agenda (vue liste) : dates en blanc
+- Agenda : hero et footer synchronisés avec le calque
 
 ### Présentation institutionnelle
 - **Histoire et mission** du CLEE
@@ -208,6 +209,7 @@ Le site utilise une **architecture modulaire** pour optimiser la maintenance et 
 - **CSS page-specific** : Styles uniques à chaque page
 - **common.js** : Modules JavaScript réutilisables
 - **JS page-specific** : Logique spécifique aux pages
+- **Composants JS** : Web Components centralisés dans `js/components/` (ex: bouton principal utilisé sur companies et establishments)
 
 ### Avantages
 - Mise en cache optimale (globals.css chargé une fois pour toutes les pages)
