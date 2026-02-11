@@ -434,29 +434,31 @@ touch js/nouvelle-page.js
     <link rel="stylesheet" href="../css/nouvelle-page.css">
 </head>
 <body>
-    <!-- OBLIGATOIRE : Copier le header depuis une autre page -->
-    <header class="header">
-        <!-- ... navigation ... -->
-    </header>
+    <!-- OBLIGATOIRE : Composant navbar -->
+    <clee-nav-bar current-page="nouvelle-page"></clee-nav-bar>
     
     <!-- Contenu spécifique de la page -->
     <main>
         <!-- ... -->
     </main>
     
-    <!-- OBLIGATOIRE : Copier le footer depuis une autre page -->
-    <footer class="footer">
-        <!-- ... -->
-    </footer>
+    <!-- OBLIGATOIRE : Composant footer -->
+    <clee-footer></clee-footer>
     
     <!-- OBLIGATOIRE : common.js -->
     <script src="../js/common.js"></script>
     
-    <!-- Page-specific JS -->
+    <!-- OBLIGATOIRE : Composants (navbar et footer) -->
+    <script src="../js/components/nav-bar.js"></script>
+    <script src="../js/components/footer.js"></script>
+    
+    <!-- Page-specific JS (optionnel) -->
     <script src="../js/nouvelle-page.js"></script>
 </body>
 </html>
 ```
+
+**Note importante** : Les composants `<clee-nav-bar>` et `<clee-footer>` sont des Web Components centralisés. Il n'est plus nécessaire de copier/coller le HTML de la navigation et du footer. L'attribut `current-page` sur la navbar permet d'activer la surbrillance de la page courante.
 
 ### Modifier des styles partagés
 
@@ -779,21 +781,32 @@ Ce projet est la propriété de CLEE Bordeaux Avenir. Toute reproduction, distri
 
 ---
 
-**Dernière mise à jour** : 10 février 2026  
-**Version** : 2.2  
+**Dernière mise à jour** : 11 février 2026  
+**Version** : 2.3  
 **Statut** : Production Ready
 
 ---
 
 ## Historique des versions principales
 
-### Version 2.2 (Février 2026) - Transformation du portail en page d'accessibilité
-- **Changement majeur** : Transformation de portail.html en page d'options d'accessibilité
+### Version 2.3 (11 Février 2026) - Web Components et documentation
+- **Composants centralisés** : Migration vers Web Components pour navbar et footer
+- Création de `<clee-nav-bar>` et `<clee-footer>` dans `js/components/`
+- Création du composant `<clee-primary-button>` avec support thème étudiant
+- Élimination du copier/coller HTML sur les 20 pages
+- Mise à jour complète de la documentation (README, PAGES-STRUCTURE, CHANGELOG)
+- Correction du nombre total de pages (20 pages au lieu de 17)
+- Enrichissement de la charte graphique avec design system CSS complet
+- Suppression des fichiers de documentation obsolètes
+
+### Version 2.2 (10 Février 2026) - Accessibilité et bannière de notification
+- **Bannière d'accessibilité** : Notification au premier lancement pour activer le contraste élevé
+- **Transformation du portail** : portail.html devient une page d'options d'accessibilité
 - Thème étudiant défini comme thème par défaut pour tous les utilisateurs
 - Suppression de la redirection automatique vers le portail
 - Nouvelles options d'accessibilité : taille de texte (4 niveaux), contraste élevé, réduction d'animations
 - Persistance des préférences d'accessibilité via localStorage
-- Création du guide ACCESSIBILITE-GUIDE.md
+- Création du guide ACCESSIBILITE-GUIDE.md et TEST-ACCESSIBILITY-BANNER.md
 
 ### Version 2.1 (Février 2026) - Améliorations UX et recherche
 - Ajout barre de recherche partenaires en temps réel
@@ -808,7 +821,7 @@ Ce projet est la propriété de CLEE Bordeaux Avenir. Toute reproduction, distri
 - Réduction ~40% de code dupliqué
 - Design system centralisé (CSS variables)
 - Modules JavaScript IIFE
-- 19 pages complètes
+- 20 pages complètes
 - Système de portail étudiant/professionnel
 - Carte interactive établissements
 - Système de filtrage avancé
