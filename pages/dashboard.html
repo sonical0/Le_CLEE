@@ -264,9 +264,7 @@
             <div class="logout-section">
                 <h2>Session active</h2>
                 <p id="sessionInfo">Connecté depuis le <span id="loginTime">...</span></p>
-                <button id="logoutBtn" class="btn btn-primary btn-large" style="margin-top: 16px;">
-                    <span class="btn-text">Se déconnecter</span>
-                </button>
+                <clee-primary-button id="logoutBtn" as="button" type="button" text="Se déconnecter" style="margin-top: 16px;"></clee-primary-button>
             </div>
         </div>
     </main>
@@ -342,6 +340,7 @@
         </div>
     </footer>
 
+    <script src="../js/components/primary-button.js"></script>
     <script src="../js/common.js"></script>
     <script>
         // Dashboard protection and initialization

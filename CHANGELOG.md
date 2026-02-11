@@ -15,6 +15,16 @@ Tous les messages de commit suivent la convention **Conventional Commits** (voir
 - **js/components/primary-button.js** : Support du rendu en bouton (submit/button) pour les formulaires
 - **pages/companies.html** : Remplacement des boutons btn-primary par le composant centralisé
 - **pages/establishments.html** : Remplacement des boutons btn-primary par le composant centralisé
+- **pages/contact.html** : Remplacement du bouton principal du formulaire par le composant
+- **pages/vie-clee.html** : Remplacement du CTA principal par le composant
+- **pages/orientation-insertion.html** : Remplacement du CTA principal par le composant
+- **pages/nos-actions.html** : Remplacement du CTA principal par le composant
+- **pages/documents-officiels.html** : Remplacement du CTA principal par le composant
+- **pages/inscription.html** : Remplacement du bouton de soumission par le composant
+- **pages/connexion.html** : Remplacement du bouton de soumission par le composant
+- **pages/theme-demo.html** : Remplacement des boutons primaires de démonstration
+- **pages/colors-reference.html** : Remplacement du bouton primaire de prévisualisation
+- **pages/dashboard.html** : Remplacement du bouton de déconnexion par le composant
 
 ## [11/02/2026] - Conformité hero et footer de l'agenda
 
