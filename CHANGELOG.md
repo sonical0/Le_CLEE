@@ -2,6 +2,12 @@
 
 Tous les messages de commit suivent la convention **Conventional Commits** (voir `.github/copilot-instructions.md`).
 
+## [11/02/2026] - Conformité hero et footer de l'agenda
+
+### Ajustements de mise en page
+- **pages/agenda.html** : Ajout du calque hero pour aligner la structure sur l'accueil
+- **css/agenda.css** : Harmonisation de la hauteur du hero et du calque pour synchroniser le footer avec l'image
+
 ## [10/02/2026] - Ajout de la bannière d'accessibilité
 
 ### Nouvelle fonctionnalité : Bannière de notification

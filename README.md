@@ -189,6 +189,7 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
 - Interface simplifiée (modal de contact supprimée)
 - Agenda : dates en texte orange primaire
 - Agenda (vue liste) : dates en blanc
+- Agenda : hero et footer synchronisés avec le calque
 
 ### Présentation institutionnelle
 - **Histoire et mission** du CLEE
