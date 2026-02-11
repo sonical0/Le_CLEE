@@ -2,6 +2,23 @@
 
 Tous les messages de commit suivent la convention **Conventional Commits** (voir `.github/copilot-instructions.md`).
 
+## [11/02/2026] - Mise à jour de la documentation
+
+### Documentation
+- **README.md** : Suppression des références à des fichiers obsolètes (PORTAIL-GUIDE.md, IMPLEMENTATION-SUMMARY.md)
+- **README.md** : Correction du nombre total de pages (20 pages au lieu de 17)
+- **PAGES-STRUCTURE.md** : Ajout de dashboard.html dans les pages utilitaires
+- **PAGES-STRUCTURE.md** : Correction du total de pages (20 au lieu de 19)
+- **copilot-instructions.md** : Mise à jour du nombre de pages (19 dans pages/ au lieu de 16)
+- **copilot-instructions.md** : Mise à jour de la hiérarchie des pages pour inclure dashboard
+- **Charte graphique.md** : Enrichissement avec le design system complet (CSS variables, tokens, typographie)
+- **ACCESSIBILITY-BANNER-SUMMARY.md** : Suppression du fichier (redondant avec README et CHANGELOG)
+
+### Améliorations
+- Élimination des répétitions entre fichiers de documentation
+- Cohérence des informations sur le nombre de pages
+- Documentation complète de la charte graphique avec exemples CSS
+
 ## [11/02/2026] - Composant footer
 
 ### Composants

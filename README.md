@@ -209,12 +209,13 @@ Le site utilise une **architecture modulaire** pour optimiser la maintenance et 
 - **CSS page-specific** : Styles uniques à chaque page
 - **common.js** : Modules JavaScript réutilisables
 - **JS page-specific** : Logique spécifique aux pages
-- **Composants JS** : Web Components centralisés dans `js/components/` (ex: bouton principal, navbar et footer, navbar/footer utilisés sur l'ensemble des pages)
+- **Composants JS** : Web Components centralisés dans `js/components/` (ex: bouton principal, navbar et footer utilisés sur l'ensemble des pages)
 
 ### Avantages
 - Mise en cache optimale (globals.css chargé une fois pour toutes les pages)
 - Maintenance simplifiée (modifier globals.css = impact sur tout le site)
-- Performance maximale (~55KB total, réduction de 40% vs code dupliqué)
+- Performance maximale (réduction de ~40% du code dupliqué)
+- 20 pages HTML au total (1 index.html à la racine + 19 pages dans pages/)
 
 ---
 
@@ -635,14 +636,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 ---
 
-## 📖 Documentation complémentaire
+## Documentation complémentaire
 
-- 📄 [PAGES-STRUCTURE.md](PAGES-STRUCTURE.md) - Hiérarchie complète des pages
-- 📄 [ACCESSIBILITE-GUIDE.md](ACCESSIBILITE-GUIDE.md) - Guide des options d'accessibilité
-- 📄 [PORTAIL-GUIDE.md](PORTAIL-GUIDE.md) - Ancien système de portail (obsolète, voir ACCESSIBILITE-GUIDE.md)
-- 📄 [IMPLEMENTATION-SUMMARY.md](IMPLEMENTATION-SUMMARY.md) - Résumé des implémentations principales
-- 📄 [CHANGELOG.md](CHANGELOG.md) - Historique détaillé des modifications
-- 📄 [.github/copilot-instructions.md](.github/copilot-instructions.md) - Instructions pour AI agents
+- [PAGES-STRUCTURE.md](PAGES-STRUCTURE.md) - Hiérarchie complète des pages
+- [ACCESSIBILITE-GUIDE.md](ACCESSIBILITE-GUIDE.md) - Guide des options d'accessibilité
+- [TEST-ACCESSIBILITY-BANNER.md](TEST-ACCESSIBILITY-BANNER.md) - Guide de test de la bannière d'accessibilité
+- [Charte graphique.md](Charte%20graphique.md) - Charte graphique et palette de couleurs
+- [CHANGELOG.md](CHANGELOG.md) - Historique détaillé des modifications
+- [.github/copilot-instructions.md](.github/copilot-instructions.md) - Instructions pour AI agents
 
 ---
 
