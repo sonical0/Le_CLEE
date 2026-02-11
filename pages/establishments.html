@@ -7,6 +7,7 @@
     <title>Lycée Professionnel Talence - CLEE Bordeaux Avenir</title>
     <link rel="stylesheet" href="../css/globals.css">
     <link rel="stylesheet" href="../css/establishments.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
     <style>
         :root {
             --color-industrie: #176ea1;
@@ -17,64 +18,7 @@
     </style>
 </head>
 <body>
-    <header class="header">
-        <nav class="navigation" role="navigation" aria-label="Navigation principale">
-            <div class="container">
-                <a href="../index.html" class="logo" aria-label="Retour à l'accueil">
-                    <img src="../assets/images/logo-clee.png" alt="CLEE Bordeaux Avenir">
-                </a>
-                
-                <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                
-                <ul class="nav-links">
-                    <li class="nav-item nav-dropdown">
-                        <a href="le-clee.html" class="nav-link nav-link-bleu">Le CLEE</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="le-clee.html">Qui sommes-nous ?</a></li>
-                            <li><a href="bureau-membres.html">Bureau et membres</a></li>
-                            <li><a href="nos-actions.html">Nos actions</a></li>
-                            <li><a href="documents-officiels.html">Documents officiels</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item nav-dropdown">
-                        <a href="companies.html" class="nav-link nav-link-bleu">Entreprises & Partenaires</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="companies.html">Devenir partenaire</a></li>
-                            <li><a href="companies.html#sponsors">Nos sponsors</a></li>
-                            <li><a href="companies.html#actions">Actions pour les entreprises</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item nav-dropdown">
-                        <a href="establishments.html" class="nav-link nav-link-orange active">Établissements & Formations</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="establishments.html">Établissements et formations</a></li>
-                            <li><a href="pfmp.html">Stages et/ou PFMP</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item nav-dropdown">
-                        <a href="jeunes-familles.html" class="nav-link nav-link-rouge">Jeunes & Familles</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="pfmp.html">Tout savoir sur les stages</a></li>
-                            <li><a href="orientation-insertion.html">Conseils orientation</a></li>
-                            <li><a href="vie-clee-eleves.html">Vie du CLEE pour les élèves</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item nav-dropdown">
-                        <a href="vie-clee.html" class="nav-link nav-link-vert">Vie du CLEE</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="agenda.html">Agenda</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="connexion.html" class="nav-link nav-link-auth">Connexion</a>
-                    </li>
-            </div>
-        </nav>
-    </header>
+    <clee-nav-bar base-path=".." pages-path=""></clee-nav-bar>
 
     <div class="breadcrumb-container">
         <div class="container">
@@ -113,12 +57,16 @@
                     <option value="bts-sio">BTS SIO - Option SLAM</option>
                     <option value="cap-macon">CAP Maçon</option>
                 </select>
-                <button type="submit" class="btn btn-primary">Filtrer</button>
+                <clee-primary-button as="button" type="submit" text="Filtrer"></clee-primary-button>
             </form>
         </div>
     </section>
 
     <section class="hero-etablissement">
+        <div class="hero-overlay hero-overlay-hidden" aria-hidden="true">
+            <!-- TODO: Remplacer l'image du calque du hero par la photo définitive -->
+            <img src="https://picsum.photos/1920/1080" alt="" loading="lazy">
+        </div>
         <div class="container">
             <div class="hero-grid">
                 <div class="carte-ecoles-wrapper">
@@ -126,93 +74,15 @@
                     <p class="carte-subtitle">Sélectionnez un établissement sur la carte</p>
                     
                     <div class="carte-interactive">
-                        <img src="../assets/images/carte-bordeaux.jpg" alt="Carte de la région bordelaise" class="carte-image">
-                        <div class="carte-overlay">
-                            <button class="map-marker active" data-school="lycee-talence" style="top: 80%; left: 43%;" aria-label="Lycée Professionnel Talence">
-                                <span class="marker-dot"></span>
-                                <span class="marker-label">LP Talence</span>
-                            </button>
-                            <button class="map-marker" data-school="lycee-merignac" style="top: 60%; left: 35%;" aria-label="Lycée Professionnel Mérignac">
-                                <span class="marker-dot"></span>
-                                <span class="marker-label">LP Mérignac</span>
-                            </button>
-                            <button class="map-marker" data-school="lycee-pessac" style="top: 75%; left: 37%;" aria-label="Lycée Professionnel Pessac">
-                                <span class="marker-dot"></span>
-                                <span class="marker-label">LP Pessac</span>
-                            </button>
-                            <button class="map-marker" data-school="lycee-bordeaux" style="top: 60%; left: 53%;" aria-label="Lycée Professionnel Bordeaux Centre">
-                                <span class="marker-dot"></span>
-                                <span class="marker-label">LP Bordeaux</span>
-                            </button>
-                        </div>
+                        <div class="carte-map" id="establishmentsMap" role="application" aria-label="Carte interactive des établissements"></div>
                     </div>
-                    
-                    <div class="ecoles-list">
-                        <button class="ecole-item active" data-school="lycee-talence">
-                            <span>LP Talence</span>
-                            <span class="ecole-arrow">→</span>
-                        </button>
-                        <button class="ecole-item" data-school="lycee-merignac">
-                            <span>LP Mérignac</span>
-                            <span class="ecole-arrow">→</span>
-                        </button>
-                        <button class="ecole-item" data-school="lycee-pessac">
-                            <span>LP Pessac</span>
-                            <span class="ecole-arrow">→</span>
-                        </button>
-                        <button class="ecole-item" data-school="lycee-bordeaux">
-                            <span>LP Bordeaux Centre</span>
-                            <span class="ecole-arrow">→</span>
-                        </button>
-                    </div>
+
+                    <div class="ecoles-list" id="ecolesList"></div>
                 </div>
                 
                 <div class="etablissement-card" id="etablissement-content">
-                    <div class="etablissement-image">
-                        <img src="https://picsum.photos/800/500?random=51" alt="Lycée Professionnel Talence">
-                        <div class="etablissement-badge">Établissement Public</div>
-                    </div>
-                    
                     <div class="etablissement-content">
-                        <h1 class="etablissement-name">Lycée Professionnel Talence</h1>
-                        <p class="etablissement-address">📍 123 Avenue de la République, 33400 Talence</p>
-                        
-                        <div class="etablissement-stats">
-                            <div class="stat-item">
-                                <span class="stat-number">850</span>
-                                <span class="stat-label">Élèves</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">12</span>
-                                <span class="stat-label">Formations</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">95%</span>
-                                <span class="stat-label">Réussite</span>
-                            </div>
-                        </div>
-                        
-                        <p class="etablissement-description">
-                            Le Lycée Professionnel de Talence est un établissement d'excellence proposant des formations 
-                            dans les secteurs de l'industrie, du numérique et du tertiaire. Équipé de plateaux techniques 
-                            modernes, il accompagne ses élèves vers la réussite professionnelle.
-                        </p>
-                        
-                        <div class="etablissement-info">
-                            <div class="info-item">
-                                <strong>Contact stages :</strong>
-                                <p>Marie Dupont - m.dupont@lycee-talence.fr</p>
-                            </div>
-                            <div class="info-item">
-                                <strong>Téléphone :</strong>
-                                <p>05 56 84 56 78</p>
-                            </div>
-                        </div>
-                        
-                        <div class="etablissement-actions">
-                            <a href="#formations" class="btn btn-primary">Voir les formations</a>
-                            <a href="#" class="btn btn-outline">Site de l'établissement</a>
-                        </div>
+                        <p>Chargement des établissements...</p>
                     </div>
                 </div>
             </div>
@@ -383,78 +253,14 @@
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-main">
-                    <div class="footer-logo">
-                        <img src="../assets/images/logo-clee.png" alt="CLEE Bordeaux Avenir">
-                        <p>Comité Local École-Entreprise</p>
-                    </div>
-                    
-                    <p class="footer-description">
-                        Le CLEE Bordeaux Avenir œuvre pour renforcer les liens entre le monde éducatif et professionnel, 
-                        accompagner les jeunes dans leur orientation et faciliter leur insertion dans le monde du travail.
-                    </p>
-                </div>
-                
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4 class="footer-subtitle">Le CLEE</h4>
-                        <ul>
-                            <li><a href="le-clee.html">Qui sommes-nous ?</a></li>
-                            <li><a href="bureau-membres.html">Bureau et membres</a></li>
-                            <li><a href="nos-actions.html">Nos actions</a></li>
-                            <li><a href="documents-officiels.html">Documents officiels</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h4 class="footer-subtitle">Pour les entreprises</h4>
-                        <ul>
-                            <li><a href="companies.html">Devenir partenaire</a></li>
-                            <li><a href="companies.html#sponsors">Nos sponsors</a></li>
-                            <li><a href="companies.html#actions">Actions pour les entreprises</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h4 class="footer-subtitle">Pour les jeunes</h4>
-                        <ul>
-                            <li><a href="pfmp.html">Tout savoir sur les stages</a></li>
-                            <li><a href="orientation-insertion.html">Conseils orientation</a></li>
-                            <li><a href="vie-clee-eleves.html">Vie du CLEE pour les élèves</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h4 class="footer-subtitle">Navigation</h4>
-                        <ul>
-                            <li><a href="establishments.html">Établissements & Formations</a></li>
-                            <li><a href="vie-clee.html">Vie du CLEE</a></li>
-                            <li><a href="agenda.html">Agenda</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h4 class="footer-subtitle">Contact</h4>
-                        <ul>
-                            <li><a href="contact.html">Nous contacter</a></li>
-                            <li><a href="#">LinkedIn</a></li>
-                            <li><a href="mentions-legales.html">Mentions légales</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2026 CLEE Bordeaux Avenir. Tous droits réservés.</p>
-            </div>
-        </div>
-    </footer>
+    <clee-footer base-path=".." pages-path=""></clee-footer>
 
+    <script src="../js/components/nav-bar.js"></script>
+    <script src="../js/components/primary-button.js"></script>
+    <script src="../js/components/footer.js"></script>
     <script src="../js/common.js"></script>
     <script src="../js/establishments.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </body>
 </html>
 

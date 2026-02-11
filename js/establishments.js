@@ -62,139 +62,189 @@ const FormationsFilterModule = (() => {
 document.addEventListener('DOMContentLoaded', () => {
   FormationsFilterModule.init();
 });
+
+// ========================================
+// PAGE-SPECIFIC MODULE - ESTABLISHMENTS MAP
+// ========================================
+
+const EstablishmentsMapModule = (() => {
+  const dataUrl = encodeURI('../assets/data/liste des tâches CLEE - Etablissement scolaire.json');
+  const mapContainerId = 'establishmentsMap';
+  const listContainerId = 'ecolesList';
+  const defaultCenter = [44.837789, -0.57918];
+  const defaultImage = 'https://picsum.photos/800/500?random=51';
+
+  let map;
+  let markers = [];
+  let establishments = [];
+
+  const buildAddress = (item) => {
+    const number = item['Num adresse'] ? `${item['Num adresse']} ` : '';
+    const street = item['nom adresse'] || '';
+    const postal = item['cp'] ? `${item['cp']} ` : '';
+    const city = item['ville'] || '';
+    return `${number}${street}, ${postal}${city}`.trim();
+  };
+
+  const parseLatLng = (item) => [
+    Number.parseFloat(item.Latitude),
+    Number.parseFloat(item.Longitude)
+  ];
+
+  const createInfoContent = (item) => {
+    const address = buildAddress(item);
+    const site = item.Site
+      ? `<div><strong>Site :</strong> <a href="${item.Site}" target="_blank" rel="noopener noreferrer">Accéder au site</a></div>`
+      : '';
+    const type = item.Type ? `<div><strong>Type :</strong> ${item.Type}</div>` : '';
+    const formations = item['Type de formations'] ? `<div><strong>Formations :</strong> ${item['Type de formations']}</div>` : '';
+
+    return `
+      <div style="font-family: Roboto, sans-serif; font-size: 13px; line-height: 1.4;">
+        <strong>${item.Nom}</strong>
+        <div><strong>Adresse :</strong> ${address}</div>
+        ${type}
+        ${formations}
+        ${site}
+      </div>
+    `;
+  };
+
+  const setActiveListItem = (index) => {
+    const items = document.querySelectorAll('.ecole-item');
+    items.forEach((item, idx) => {
+      item.classList.toggle('active', idx === index);
+    });
+  };
+
+  const buildDescription = (item) => {
+    const type = item.Type ? item.Type.toLowerCase() : 'établissement';
+    const city = item.ville ? item.ville : 'Bordeaux';
+    const formations = item['Type de formations'] ? ` Formations : ${item['Type de formations']}.` : '';
+    return `${item.Nom} est un ${type} situé à ${city}.${formations}`;
+  };
+
+  const updateCard = (item) => {
+    const card = document.getElementById('etablissement-content');
+    if (!card) return;
+
+    const address = buildAddress(item);
+    const badge = item.Type ? item.Type : 'Établissement';
+    const description = buildDescription(item);
+    const typeInfo = item.Type ? `<div><strong>Type :</strong> ${item.Type}</div>` : '';
+    const formationsInfo = item['Type de formations'] ? `<div><strong>Formations :</strong> ${item['Type de formations']}</div>` : '';
+    const siteButton = item.Site
+      ? `<a href="${item.Site}" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Site de l'établissement</a>`
+      : '';
+
+    card.innerHTML = `
+      <div class="etablissement-image">
+        <img src="${defaultImage}" alt="${item.Nom}">
+        <div class="etablissement-badge">${badge}</div>
+      </div>
+      <div class="etablissement-content">
+        <h1 class="etablissement-name">${item.Nom}</h1>
+        <p class="etablissement-address"><span style="font-size: 20px;">📍</span> ${address}</p>
+        <p class="etablissement-description">${description}</p>
+        <div class="etablissement-info">
+          <div class="info-item">${typeInfo}</div>
+          <div class="info-item">${formationsInfo}</div>
+        </div>
+        <div class="etablissement-actions">
+          <a href="#formations" class="btn btn-primary">Voir les formations</a>
+          ${siteButton}
+        </div>
+      </div>
+    `;
+  };
+
+  const focusMarker = (index) => {
+    const marker = markers[index];
+    const item = establishments[index];
+    if (!marker || !item || !map) return;
+
+    map.setView(marker.getLatLng(), 14, { animate: true });
+    marker.openPopup();
+    setActiveListItem(index);
+    updateCard(item);
+  };
+
+  const renderList = () => {
+    const list = document.getElementById(listContainerId);
+    if (!list) return;
+    list.innerHTML = '';
+
+    establishments.forEach((item, index) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'ecole-item';
+      button.innerHTML = `<span>${item.Nom}</span><span class="ecole-arrow">→</span>`;
+      button.addEventListener('click', () => focusMarker(index));
+      list.appendChild(button);
+    });
+  };
+
+  const initMap = () => {
+    const container = document.getElementById(mapContainerId);
+    if (!container || !window.L) return;
+
+    map = window.L.map(container).setView(defaultCenter, 12);
+
+    window.L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    const markerGroup = [];
+    markers = establishments.map((item, index) => {
+      const position = parseLatLng(item);
+      const isCollege = (item.Type || '').toLowerCase() === 'collège';
+      const marker = window.L.circleMarker(position, {
+        radius: 7,
+        color: isCollege ? '#c63634' : '#176ea1',
+        fillColor: isCollege ? '#c63634' : '#176ea1',
+        fillOpacity: 0.9,
+        weight: 2
+      }).addTo(map);
+      marker.bindPopup(createInfoContent(item));
+      marker.on('click', () => setActiveListItem(index));
+      markerGroup.push(marker);
+      return marker;
+    });
+
+    if (markerGroup.length > 0) {
+      const group = window.L.featureGroup(markerGroup);
+      map.fitBounds(group.getBounds().pad(0.2));
+    }
+  };
+
+  const loadData = async () => {
+    const response = await fetch(dataUrl);
+    const data = await response.json();
+    establishments = Array.isArray(data) ? data : [];
+  };
+
+  const init = async () => {
+    await loadData();
+    renderList();
+    initMap();
+    if (establishments.length > 0) {
+      setActiveListItem(0);
+      updateCard(establishments[0]);
+    }
+  };
+
+  return { init };
+})();
+
 // ========================================
 // PAGE-SPECIFIC MODULE - ESTABLISHMENTS PAGE
 // ========================================
 
 const EstablishmentsPageModule = (() => {
-  // Data for establishments
-  const etablissements = {
-    'lycee-talence': {
-      nom: 'lycée professionnel Talence',
-      adresse: '123 Avenue de la République, 33400 Talence',
-      badge: 'établissement public',
-      image: 'https://picsum.photos/800/400?random=10',
-      stats: { etudiants: '850', formations: '12', taux: '95%' },
-      description: 'Le lycée professionnel de Talence est un établissement d\'enseignement professionnel offrant une large gamme de formations dans les secteurs de l\'industrie, du numérique, et du tertiaire.',
-      contact: { telephone: '05 56 84 56 78', email: 'contact@lp-talence.fr', horaires: 'Lundi au Vendredi : 8h00 - 18h00' }
-    },
-    'lycee-merignac': {
-      nom: 'lycée professionnel Mérignac',
-      adresse: '45 Rue du Château d\'Eau, 33700 Mérignac',
-      badge: 'établissement public',
-      image: 'https://picsum.photos/800/400?random=15',
-      stats: { etudiants: '720', formations: '10', taux: '92%' },
-      description: 'Le lycée professionnel de Mérignac se distingue par son expertise dans les métiers du bâtiment, de l\'aéronautique et de la logistique.',
-      contact: { telephone: '05 56 97 45 23', email: 'contact@lp-merignac.fr', horaires: 'Lundi au Vendredi : 8h00 - 17h30' }
-    },
-    'lycee-pessac': {
-      nom: 'lycée professionnel Pessac',
-      adresse: '78 avenue Jean Jaurès, 33600 Pessac',
-      badge: 'établissement public',
-      image: 'https://picsum.photos/800/400?random=20',
-      stats: { etudiants: '680', formations: '9', taux: '93%' },
-      description: 'Le lycée professionnel de Pessac propose des formations spécialisées dans les secteurs du numérique, de la gestion administrative et du commerce.',
-      contact: { telephone: '05 56 36 78 90', email: 'contact@lp-pessac.fr', horaires: 'Lundi au Vendredi : 8h00 - 18h00' }
-    },
-    'lycee-bordeaux': {
-      nom: 'lycée professionnel Bordeaux Centre',
-      adresse: '12 Place de la Bourse, 33000 Bordeaux',
-      badge: 'établissement public',
-      image: 'https://picsum.photos/800/400?random=25',
-      stats: { etudiants: '950', formations: '14', taux: '96%' },
-      description: 'Le lycée professionnel Bordeaux Centre est le plus grand établissement professionnel de l\'agglomération bordelaise.',
-      contact: { telephone: '05 56 00 12 34', email: 'contact@lp-bordeaux.fr', horaires: 'Lundi au Vendredi : 7h30 - 18h30' }
-    }
-  };
-
-  let currentEcole = 'lycee-talence';
-
   const init = () => {
-    initMapMarkers();
-    initSchoolList();
     initFilters();
     initFormationToggles();
     initViewFormationsButton();
-  };
-
-  const initMapMarkers = () => {
-    const markers = document.querySelectorAll('.map-marker');
-    markers.forEach(marker => {
-      marker.addEventListener('click', function() {
-        selectSchool(this.getAttribute('data-school'));
-      });
-    });
-  };
-
-  const initSchoolList = () => {
-    const items = document.querySelectorAll('.ecole-item');
-    items.forEach(item => {
-      item.addEventListener('click', function() {
-        selectSchool(this.getAttribute('data-school'));
-      });
-    });
-  };
-
-  const selectSchool = (schoolId) => {
-    if (!etablissements[schoolId]) return;
-
-    currentEcole = schoolId;
-    const ecole = etablissements[schoolId];
-
-    // Hide formations section when changing school
-    const formationsSection = document.getElementById('formations');
-    if (formationsSection) {
-      formationsSection.style.display = 'none';
-    }
-
-    // Update markers
-    document.querySelectorAll('.map-marker').forEach(marker => {
-      marker.classList.remove('active');
-      if (marker.getAttribute('data-school') === schoolId) {
-        marker.classList.add('active');
-      }
-    });
-
-    // Update school list
-    document.querySelectorAll('.ecole-item').forEach(item => {
-      item.classList.remove('active');
-      if (item.getAttribute('data-school') === schoolId) {
-        item.classList.add('active');
-      }
-    });
-
-    // Update card
-    updateCard(ecole);
-  };
-
-  const updateCard = (ecole) => {
-    const card = document.querySelector('.etablissement-card');
-    card.style.opacity = '0';
-
-    setTimeout(() => {
-      card.querySelector('.etablissement-image img').src = ecole.image;
-      card.querySelector('.etablissement-badge').textContent = ecole.badge;
-      card.querySelector('.etablissement-name').textContent = ecole.nom;
-      card.querySelector('.etablissement-address').innerHTML = `<span style="font-size: 20px;">📍</span> ${ecole.adresse}`;
-
-      const statNumbers = card.querySelectorAll('.stat-number');
-      if (statNumbers.length >= 3) {
-        statNumbers[0].textContent = ecole.stats.etudiants;
-        statNumbers[1].textContent = ecole.stats.formations;
-        statNumbers[2].textContent = ecole.stats.taux;
-      }
-
-      card.querySelector('.etablissement-description').textContent = ecole.description;
-
-      const contactInfo = card.querySelectorAll('.info-item p');
-      if (contactInfo.length >= 3) {
-        contactInfo[0].textContent = ecole.contact.telephone;
-        contactInfo[1].textContent = ecole.contact.email;
-        contactInfo[2].textContent = ecole.contact.horaires;
-      }
-
-      card.style.opacity = '1';
-    }, 300);
   };
 
   const initFilters = () => {
@@ -228,16 +278,16 @@ const EstablishmentsPageModule = (() => {
   };
 
   const initViewFormationsButton = () => {
-    const viewFormationsBtn = document.querySelector('.etablissement-actions .btn-primary');
     const formationsSection = document.getElementById('formations');
-    
-    if (viewFormationsBtn && formationsSection) {
-      viewFormationsBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        formationsSection.style.display = 'block';
-        formationsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
-    }
+    if (!formationsSection) return;
+
+    document.addEventListener('click', (event) => {
+      const target = event.target.closest('.etablissement-actions .btn-primary');
+      if (!target) return;
+      event.preventDefault();
+      formationsSection.style.display = 'block';
+      formationsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
   };
 
   return { init };
@@ -246,6 +296,7 @@ const EstablishmentsPageModule = (() => {
 // Initialize if on establishments page
 document.addEventListener('DOMContentLoaded', () => {
   if (document.querySelector('.hero-etablissement')) {
+    EstablishmentsMapModule.init();
     EstablishmentsPageModule.init();
   }
 });

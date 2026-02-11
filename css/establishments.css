@@ -56,6 +56,32 @@
   padding-top: 20px;
   padding-bottom: 20px;
   background: linear-gradient(135deg, var(--primary-50) 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-etablissement .hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero-etablissement .hero-overlay img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-etablissement .hero-overlay-hidden {
+  opacity: 0;
+}
+
+.hero-etablissement .container {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-grid {
@@ -97,66 +123,10 @@
   box-shadow: var(--200);
 }
 
-.carte-image {
+.carte-map {
   width: 100%;
-  height: auto;
+  height: 360px;
   display: block;
-}
-
-.carte-overlay {
-  position: absolute;
-  inset: 0;
-}
-
-.map-marker {
-  position: absolute;
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  transform: translate(-50%, -50%);
-  transition: all 0.3s ease;
-  z-index: 10;
-}
-
-.marker-dot {
-  width: 20px;
-  height: 20px;
-  background-color: var(--primary-600);
-  border: 3px solid #ffffff;
-  border-radius: 50%;
-  box-shadow: var(--300);
-  transition: all 0.3s ease;
-}
-
-.map-marker.active .marker-dot {
-  width: 28px;
-  height: 28px;
-  background-color: var(--primary-800);
-  animation: pulse 2s infinite;
-}
-
-.marker-label {
-  background-color: rgba(255, 255, 255, 0.95);
-  color: var(--primary-900);
-  padding: 4px 12px;
-  border-radius: 12px;
-  font-size: 12px;
-  font-weight: 600;
-  white-space: nowrap;
-  box-shadow: var(--200);
-  opacity: 0;
-  transform: translateY(-5px);
-  transition: all 0.3s ease;
-}
-
-.map-marker:hover .marker-label,
-.map-marker.active .marker-label {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* Liste des écoles */
@@ -203,6 +173,7 @@
 .ecole-item.active .ecole-arrow {
   opacity: 1;
 }
+
 
 /* Fiche établissement */
 .etablissement-card {

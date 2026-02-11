@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tout savoir sur les stages (PFMP) - CLEE Bordeaux Avenir">
+    <title>CLEE Bordeaux Avenir - Tout savoir sur les stages</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/globals.css">
+    <link rel="stylesheet" href="../css/companies.css">
+    <link rel="stylesheet" href="../css/jeunes-familles.css">
+</head>
+<body>
+    <clee-nav-bar base-path=".." pages-path=""></clee-nav-bar>
+
+    <div class="breadcrumb-container">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Fil d'ariane">
+                <a href="../index.html">Accueil</a>
+                <span>/</span>
+                <a href="establishments.html">├ëtablissements & Formations</a>
+                <span>/</span>
+                <span>Tout savoir sur les stages</span>
+            </nav>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="hero-overlay" aria-hidden="true">
+            <!-- TODO: Remplacer l'image du calque du hero par la photo d├®finitive -->
+            <img src="https://picsum.photos/1920/1080" alt="" loading="lazy">
+        </div>
+        <div class="container">
+            <h1 class="hero-title">PFMP et Stages : Tout savoir</h1>
+            <p class="hero-description">
+                PFMP (lyc├®e professionnel) ou stage (lyc├®e g├®n├®ral) : des p├®riodes de formation en entreprise essentielles pour votre avenir professionnel
+            </p>
+        </div>
+    </section>
+
+    <section class="section-content">
+        <div class="container">
+            <h2 class="section-title">PFMP ou Stage : Quelle diff├®rence&nbsp;?</h2>
+            <div class="cards-grid cards-grid-2">
+                <div class="info-card">
+                    <h3 class="info-card-title">PFMP</h3>
+                    <p class="info-card-text">
+                        <strong>P├®riode de Formation en Milieu Professionnel</strong> : destin├®e aux ├®l├¿ves de 
+                        <strong>lyc├®e professionnel</strong> (CAP, Bac Pro). Ces p├®riodes obligatoires font partie int├®grante 
+                        de votre formation et sont ├®valu├®es pour l'obtention du dipl├┤me.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <h3 class="info-card-title">Stage</h3>
+                    <p class="info-card-text">
+                        Pour les ├®l├¿ves de <strong>lyc├®e g├®n├®ral et technologique</strong> (Seconde, Premi├¿re, Terminale). 
+                        Il s'agit de p├®riodes d'observation ou de formation compl├®mentaires pour d├®couvrir le monde professionnel.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tableau-formations-section" id="tableau-formations">
+        <div class="container">
+            <h2 class="section-title">Formations disponibles</h2>
+            <p class="section-subtitle">Explorez toutes les formations propos├®es par les ├®tablissements partenaires du
+                CLEE</p>
+
+            <!-- Filtres du tableau -->
+            <div class="tableau-filtres">
+                <div class="filtre-group">
+                    <label for="filtreEtablissement" class="filtre-label">├ëtablissement :</label>
+                    <select id="filtreEtablissement" class="filtre-select">
+                        <option value="">Tous les ├®tablissements</option>
+                    </select>
+                </div>
+
+                <div class="filtre-group">
+                    <label for="filtreSecteur" class="filtre-label">Secteur :</label>
+                    <select id="filtreSecteur" class="filtre-select">
+                        <option value="">Tous les secteurs</option>
+                    </select>
+                </div>
+
+                <div class="filtre-group">
+                    <label for="filtreNiveau" class="filtre-label">Niveau :</label>
+                    <select id="filtreNiveau" class="filtre-select">
+                        <option value="">Tous les niveaux</option>
+                        <option value="CAP">CAP</option>
+                        <option value="Bac Pro">Bac Pro</option>
+                        <option value="BTS">BTS</option>
+                        <option value="Licence Pro">Licence Pro</option>
+                        <option value="Master">Master</option>
+                    </select>
+                </div>
+
+                <div class="filtre-group">
+                    <label for="filtreModalite" class="filtre-label">Modalit├® :</label>
+                    <select id="filtreModalite" class="filtre-select">
+                        <option value="">Toutes les modalit├®s</option>
+                        <option value="Initial">Initial</option>
+                        <option value="Alternance">Alternance</option>
+                        <option value="Mixit├®">Mixit├®</option>
+                    </select>
+                </div>
+
+                <div class="filtre-group">
+                    <label for="filtreRecherche" class="filtre-label">Recherche :</label>
+                    <div class="filtre-recherche-wrapper">
+                        <input type="text" id="filtreRecherche" class="filtre-input" placeholder="Nom de formation...">
+                        <button class="btn-reset-filters" id="reinitialiserFiltres" title="R├®initialiser les filtres">
+                            <i class="fas fa-redo"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tableau responsive -->
+            <div class="tableau-container">
+                <table class="formations-table" id="formationsTable">
+                    <thead>
+                        <tr>
+                            <th data-sort="etablissement">├ëtablissement <i class="fas fa-sort"></i></th>
+                            <th data-sort="formation">Formation <i class="fas fa-sort"></i></th>
+                            <th data-sort="secteur">Secteur <i class="fas fa-sort"></i></th>
+                            <th data-sort="niveau">Niveau <i class="fas fa-sort"></i></th>
+                            <th data-sort="modalites">Modalit├®s <i class="fas fa-sort"></i></th>
+                            <th data-sort="periodes">P├®riodes de stages <i class="fas fa-sort"></i></th>
+                            <th>Contact</th>
+                        </tr>
+                    </thead>
+                    <tbody id="formationsTableBody">
+                        <!-- Lignes g├®n├®r├®es dynamiquement -->
+                    </tbody>
+                </table>
+
+                <div class="tableau-empty" id="tableauEmpty" style="display: none;">
+                    <i class="fas fa-inbox"></i>
+                    <p>Aucune formation ne correspond ├á vos crit├¿res de recherche.</p>
+                </div>
+            </div>
+
+            <div class="tableau-footer">
+                <div class="tableau-info">
+                    <div class="results-per-page">
+                        <label for="resultsPerPage">Afficher :</label>
+                        <select id="resultsPerPage" class="results-select">
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                        </select>
+                        <span>r├®sultats par page</span>
+                    </div>
+                </div>
+
+                <div class="pagination" id="pagination">
+                    <button class="pagination-btn" id="paginationPrev" disabled>
+                        <i class="fas fa-chevron-left"></i> Pr├®c├®dent
+                    </button>
+                    <div class="pagination-pages" id="paginationPages">
+                        <!-- Num├®ros de page g├®n├®r├®s dynamiquement -->
+                    </div>
+                    <button class="pagination-btn" id="paginationNext">
+                        Suivant <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="documents-section">
+        <div class="container">
+            <div class="document-category">
+                <h2 class="category-title">Documents Officiels</h2>
+                <p class="category-description">
+                    Tous les documents n├®cessaires pour vos d├®marches de stage
+                </p>
+                <div class="documents-grid">
+                    <div class="document-card">
+                        <div class="document-info">
+                            <h3 class="document-title">Attestation de P├®riode en Entreprise</h3>
+                            <p class="document-meta">
+                                <span class="document-size">Format : PDF</span>
+                            </p>
+                            <p class="document-description">
+                                Attestation ├á faire remplir par l'entreprise en fin de p├®riode.
+                            </p>
+                        </div>
+                        <a href="#" class="document-download" aria-label="T├®l├®charger l'attestation">
+                            <span>Ô¼ç´©Å T├®l├®charger</span>
+                        </a>
+                    </div>
+
+                    <div class="document-card">
+                        <div class="document-info">
+                            <h3 class="document-title">Grille d'├ëvaluation des Comp├®tences</h3>
+                            <p class="document-meta">
+                                <span class="document-size">Format : PDF</span>
+                            </p>
+                            <p class="document-description">
+                                Grille utilis├®e par votre tuteur pour ├®valuer vos comp├®tences professionnelles.
+                            </p>
+                        </div>
+                        <a href="#" class="document-download" aria-label="T├®l├®charger la grille">
+                            <span>Ô¼ç´©Å T├®l├®charger</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="document-category">
+                <h2 class="category-title">Mod├¿les pour vos Candidatures</h2>
+                <p class="category-description">
+                    Mod├¿les de CV, lettres de motivation et emails pour vous aider dans vos d├®marches
+                </p>
+                
+                <div class="documents-grid">
+                    <div class="document-card">
+                        <div class="document-info">
+                            <h3 class="document-title">Mod├¿le de CV Lyc├®en</h3>
+                            <p class="document-meta">
+                                <span class="document-size">Format : Word & PDF</span>
+                            </p>
+                            <p class="document-description">
+                                Plusieurs mod├¿les de CV adapt├®s aux lyc├®ens, faciles ├á personnaliser.
+                            </p>
+                        </div>
+                        <a href="#" class="document-download" aria-label="T├®l├®charger les mod├¿les CV">
+                            <span>Ô¼ç´©Å T├®l├®charger</span>
+                        </a>
+                    </div>
+
+                    <div class="document-card">
+                        <div class="document-info">
+                            <h3 class="document-title">Mod├¿les de Lettre de Motivation</h3>
+                            <p class="document-meta">
+                                <span class="document-size">Format : Word & PDF</span>
+                            </p>
+                            <p class="document-description">
+                                Exemples de lettres de motivation pour une demande de stage selon votre fili├¿re.
+                            </p>
+                        </div>
+                        <a href="#" class="document-download" aria-label="T├®l├®charger les mod├¿les lettres">
+                            <span>Ô¼ç´©Å T├®l├®charger</span>
+                        </a>
+                    </div>
+
+                    <div class="document-card">
+                        <div class="document-info">
+                            <h3 class="document-title">Mod├¿les d'Email de Candidature</h3>
+                            <p class="document-meta">
+                                <span class="document-size">Format : PDF</span>
+                            </p>
+                            <p class="document-description">
+                                Exemples d'emails professionnels pour postuler ├á une offre de stage.
+                            </p>
+                        </div>
+                        <a href="#" class="document-download" aria-label="T├®l├®charger les mod├¿les emails">
+                            <span>Ô¼ç´©Å T├®l├®charger</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="video-section">
+        <div class="container">
+            <h2 class="section-title">Bien r├®ussir sa p├®riode en entreprise</h2>
+            <p class="section-description">
+                D├®couvrez nos conseils pratiques en vid├®o pour optimiser votre exp├®rience en entreprise (PFMP ou stage)
+            </p>
+            
+            <div class="video-container">
+                <div class="video-embed">
+                    <iframe 
+                        src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                        title="Bien r├®ussir son stage - Conseils pratiques"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="links-section">
+        <div class="container">
+            <h2 class="section-title">Liens Utiles</h2>
+            <p class="section-description">
+                Ressources et sites partenaires pour vous accompagner dans vos d├®marches
+            </p>
+            
+            <div class="links-grid">
+                <a href="https://www.onisep.fr" target="_blank" class="link-card">
+                    <span class="link-icon">­ƒÄô</span>
+                    <div class="link-content">
+                        <h3 class="link-title">ONISEP</h3>
+                        <p class="link-description">Information sur les m├®tiers et les formations</p>
+                    </div>
+                </a>
+
+                <a href="#" target="_blank" class="link-card">
+                    <span class="link-icon">­ƒÅó</span>
+                    <div class="link-content">
+                        <h3 class="link-title">Mission Locale</h3>
+                        <p class="link-description">Accompagnement des jeunes de 16 ├á 25 ans</p>
+                    </div>
+                </a>
+
+                <a href="#" target="_blank" class="link-card">
+                    <span class="link-icon">­ƒÆ╝</span>
+                    <div class="link-content">
+                        <h3 class="link-title">P├┤le Emploi</h3>
+                        <p class="link-description">Offres de stage et d'alternance</p>
+                    </div>
+                </a>
+
+                <a href="#" target="_blank" class="link-card">
+                    <span class="link-icon">­ƒîÉ</span>
+                    <div class="link-content">
+                        <h3 class="link-title">La Bonne Alternance</h3>
+                        <p class="link-description">Plateforme de recherche d'alternance</p>
+                    </div>
+                </a>
+
+                <a href="#" target="_blank" class="link-card">
+                    <span class="link-icon">­ƒô▒</span>
+                    <div class="link-content">
+                        <h3 class="link-title">CIDJ</h3>
+                        <p class="link-description">Centre d'information et de documentation jeunesse</p>
+                    </div>
+                </a>
+
+                <a href="#" target="_blank" class="link-card">
+                    <span class="link-icon">ÔÜû´©Å</span>
+                    <div class="link-content">
+                        <h3 class="link-title">Service Public</h3>
+                        <p class="link-description">Droits et devoirs du stagiaire</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Pr├¬t ├á trouver votre PFMP ou stage ?</h2>
+            <p class="cta-description">
+                Consultez les offres de PFMP, stages et alternances propos├®es par nos entreprises partenaires
+            </p>
+            <div class="cta-buttons">
+                <a href="companies.html" class="btn btn-secondary btn-large">
+                    <span class="btn-text">Voir les ressources de stage</span>
+                </a>
+                <a href="orientation-insertion.html" class="btn btn-secondary btn-large">
+                    <span class="btn-text">Conseils orientation</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-logo">
+                        <img src="../assets/images/logo-clee.png" alt="CLEE Bordeaux Avenir">
+                        <p>Comit├® Local ├ëcole-Entreprise</p>
+                    </div>
+                    
+                    <p class="footer-description">
+                        Le CLEE Bordeaux Avenir ┼ôuvre pour renforcer les liens entre le monde ├®ducatif et professionnel, 
+                        accompagner les jeunes dans leur orientation et faciliter leur insertion dans le monde du travail.
+                    </p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-subtitle">Le CLEE</h4>
+                        <ul>
+                            <li><a href="le-clee.html">Qui sommes-nous ?</a></li>
+                            <li><a href="bureau-membres.html">Bureau et membres</a></li>
+                            <li><a href="nos-actions.html">Nos actions</a></li>
+                            <li><a href="documents-officiels.html">Documents officiels</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-subtitle">Pour les entreprises</h4>
+                        <ul>
+                            <li><a href="companies.html">Devenir partenaire</a></li>
+                            <li><a href="companies.html#sponsors">Nos sponsors</a></li>
+                            <li><a href="companies.html#actions">Actions pour les entreprises</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-subtitle">Pour les jeunes</h4>
+                        <ul>
+                            <li><a href="pfmp.html">Tout savoir sur les stages</a></li>
+                            <li><a href="orientation-insertion.html">Conseils orientation</a></li>
+                            <li><a href="vie-clee-eleves.html">Vie du CLEE pour les ├®l├¿ves</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-subtitle">Navigation</h4>
+                        <ul>
+                            <li><a href="establishments.html">├ëtablissements & Formations</a></li>
+                            <li><a href="vie-clee.html">Vie du CLEE</a></li>
+                            <li><a href="agenda.html">Agenda</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-subtitle">Contact</h4>
+                        <ul>
+                            <li><a href="contact.html">Nous contacter</a></li>
+                            <li><a href="portail.html">Options d'accessibilit├®</a></li>
+                            <li><a href="#">LinkedIn</a></li>
+                            <li><a href="mentions-legales.html">Mentions l├®gales</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 CLEE Bordeaux Avenir. Tous droits r├®serv├®s.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/components/nav-bar.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/companies.js"></script>
+</body>
+</html>
+
+

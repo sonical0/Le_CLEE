@@ -61,7 +61,7 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
 - [x] Remplacer le terme PFMP par "stage" pour vulgariser
 - [x] Améliorer le header pour ajouter les sous-pages par catégorie en liste déroulante
 - [x] Adapter la surbrillance des boutons avec les couleurs de la charte graphique
-- [x] Faire un portail étudiant/pro avec un style CSS qui change selon la catégorie d'utilisateur
+- [x] Faire un portail étudiant/pro avec un style CSS qui change selon la catégorie d'utilisateur (transformé en page d'accessibilité)
 - [x] Améliorer la lisibilité de la section "Notre impact" en mode étudiant avec surbrillance adoucie
 - [x] Ajouter une barre de recherche sur la page Entreprises & Partenaires
 - [ ] Sur le ruban sous le header, ajouter un calque avec une photo et reprendre les couleurs de la charte graphique
@@ -93,30 +93,69 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
 
 ## Fonctionnalités principales
 
-### Système de Portail
-- **Sélection de profil** : Étudiant ou Professionnel
-- **Thème adaptatif** : Couleurs et style personnalisés selon le profil
-- **Persistance** : Le choix est sauvegardé dans le navigateur (localStorage)
-- **Badge de changement** : Possibilité de basculer entre les profils à tout moment
-- **Mode Étudiant - Améliorations visuelles** :
-  - Dates de l'agenda mises en avant avec fond orange et texte blanc pour plus de visibilité
-  - Section "Notre impact" avec surbrillance adoucie (dégradé clair) pour une meilleure lisibilité des chiffres
-  - Boutons CTA avec couleurs de la charte graphique et ombres optimisées au survol
+### Accessibilité
+- **Bannière de notification** : Au premier lancement, propose d'activer le mode contraste élevé
+  - Ne s'affiche qu'une seule fois (persistance localStorage)
+  - Trois actions : Activer, Non merci, Fermer
+  - Lien vers les options d'accessibilité complètes
+- **Options d'accessibilité** : Taille de texte, contraste élevé, réduction d'animations
+- **Persistance** : Les préférences sont sauvegardées dans le navigateur (localStorage)
+- **Page dédiée** : [pages/portail.html](pages/portail.html) accessible à tout moment
+- **Thème par défaut** : Le site utilise le thème étudiant pour tous les utilisateurs
+- **Réglages personnalisables** :
+  - 4 niveaux de taille de police (Petit, Normal, Grand, Très grand)
+  - Mode contraste élevé pour faciliter la lecture
+  - Option de réduction des animations pour les personnes sensibles aux mouvements
+- Thème étudiant : couleurs de texte renforcées pour un contraste minimum de 4,5:1
+- Portail accessibilité : footer synchronisé via hero masqué
+- Portail accessibilité : hauteur du hero alignée sur les autres pages
+- Portail accessibilité : calque hero affiché sur l'en-tête
 
 ### Page d'accueil
 - **Hero section** dynamique avec appel à l'action et boutons CTA optimisés (couleurs charte graphique, ombres au survol)
+- Calque visuel sur le hero avec image de remplacement à mettre à jour
 - **Actualités** du CLEE et événements récents (section agenda désormais dans vie-clee.html)
 - **Chiffres clés** animés (compteurs dynamiques) avec surbrillance améliorée en mode étudiant
 - **Section contact** rapide avec texte mis à jour
+- Fil d'Ariane sans fond, texte en noir avec contraste du hero
+- Fil d'Ariane superposé au hero pour conserver le fond visuel
+- Menu déroulant harmonisé avec les couleurs des sections
+- Menu déroulant aéré et sans fond bleu marine
+- Couleurs de texte des hovers de navigation renforcées pour le contraste
+- Connexion : footer synchronisé via hero masqué
+- Footer synchronisé avec le hero sur toutes les pages (y compris Vie du CLEE)
+- Footer synchronisé avec l'image du hero (calque partagé, bas de l'image visible)
 
 ### Espace Entreprises & Partenaires
 - **Catalogue des entreprises partenaires** avec système de filtrage multi-critères
 - **Barre de recherche en temps réel** pour retrouver rapidement une entreprise par son nom
+- Barre de recherche ajustée pour une hauteur fixe de 56px
+- Hero harmonisé avec l'accueil (calque photo)
+- Hauteur de hero alignée sur l'accueil
 - **Filtrage dynamique** des cartes partenaires avec feedback visuel instantané
 - **Avantages du partenariat** clairement détaillés
 - **Processus de candidature** guidé
 - **Témoignages** d'entreprises partenaires
 - **Formulaire de contact** dédié
+- Formulaire établissements : tags de type de stage à la place de "modalité"
+
+### Établissements & Formations
+- Carte interactive basée sur Leaflet/OpenStreetMap (sans clé API)
+- Liste d'établissements générée depuis le JSON
+- Points de carte générés à partir des coordonnées JSON
+- Points des collèges en rouge
+- Cartes établissement générées depuis le JSON
+- Informations affichées sur plusieurs lignes avec libellés en gras
+- Footer synchronisé avec l'image du hero (calque invisible sur la page)
+- **Filtrage par secteur** (Commerce, Industrie, Services, Hôtellerie-Restauration)
+- **Catalogue de formations** avec descriptions complètes
+- **Informations PFMP** (Périodes de Formation en Milieu Professionnel)
+
+### Page Stages (PFMP)
+- Hero harmonisé avec l'accueil (calque photo)
+- Lisibilité du texte du hero sécurisée (empilement du calque)
+- Suppression des calendriers PFMP par formation
+- Bloc "Modèles pour vos Candidatures" : structure et padding corrigés
 - **Tableau des formations** avec système de pagination complet :
   - Affichage par défaut de 5 formations par page
   - Sélecteur personnalisé (5, 10, 15, 20, 50 résultats par page)
@@ -126,31 +165,40 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
   - Tri par colonnes (établissement, formation, secteur, niveau, modalités, périodes)
   - Filtres multicritères (établissement, secteur, niveau, modalité, recherche textuelle)
   - Réinitialisation à la page 1 lors du changement de filtres ou tri
-
-### Établissements & Formations
-- **Carte interactive** des établissements scolaires (Google Maps intégré)
-- **Fiches établissement** détaillées (coordonnées, secteurs, formations)
-- **Filtrage par secteur** (Commerce, Industrie, Services, Hôtellerie-Restauration)
-- **Catalogue de formations** avec descriptions complètes
-- **Informations PFMP** (Périodes de Formation en Milieu Professionnel)
+- Calendriers de stages : suppression du PDF "Calendrier des stages"
+- Liens utiles : grille 3x2 sur PFMP
+- PFMP ou Stage : cartes en 2 colonnes (PFMP/Stage)
 
 ### Espace Jeunes & Familles
 - **Ressources d'orientation** professionnelle
+- Hero harmonisé avec l'accueil (calque photo)
+- Hauteur de hero alignée sur l'accueil
+- Lisibilité du texte du hero sécurisée (empilement du calque)
 - **Guide d'insertion** dans le monde du travail (contenu amélioré et clarifié)
 - **Informations stages** et apprentissage
 - **Témoignages** d'anciens élèves
 - Interface simplifiée avec contenu pertinent et actualisé
+- Orientation & insertion : hero et footer synchronisés avec le calque
+- Vie du CLEE élèves : hero et footer synchronisés avec le calque
 ### Vie du CLEE
 - **Actualités** du réseau école-entreprise
+- Hero harmonisé avec l'accueil (calque photo)
+- Hauteur de hero alignée sur l'accueil
 - **Agenda complet** des événements (anciennement sur index.html)
 - **Galerie photos/vidéos** des événements
 - Interface simplifiée (modal de contact supprimée)
+- Agenda : dates en texte orange primaire
+- Agenda (vue liste) : dates en blanc
+- Agenda : hero et footer synchronisés avec le calque
 
 ### Présentation institutionnelle
 - **Histoire et mission** du CLEE
+- Hero harmonisé avec l'accueil (calque photo)
+- Hauteur de hero alignée sur l'accueil
 - **Bureau et membres** de l'organisation
 - **Actions et projets** en cours
 - **Documents officiels** (statuts, rapports, PV)
+- Hero harmonisé avec l'accueil sur les sous-pages Le CLEE (bureau, actions, documents)
 
 ---
 
@@ -161,6 +209,7 @@ Le site utilise une **architecture modulaire** pour optimiser la maintenance et 
 - **CSS page-specific** : Styles uniques à chaque page
 - **common.js** : Modules JavaScript réutilisables
 - **JS page-specific** : Logique spécifique aux pages
+- **Composants JS** : Web Components centralisés dans `js/components/` (ex: bouton principal, navbar et footer, navbar/footer utilisés sur l'ensemble des pages)
 
 ### Avantages
 - Mise en cache optimale (globals.css chargé une fois pour toutes les pages)
@@ -589,8 +638,9 @@ document.addEventListener('DOMContentLoaded', () => {
 ## 📖 Documentation complémentaire
 
 - 📄 [PAGES-STRUCTURE.md](PAGES-STRUCTURE.md) - Hiérarchie complète des pages
-- 📄 [PORTAIL-GUIDE.md](PORTAIL-GUIDE.md) - Guide du système de portail étudiant/professionnel
-- 📄 [IMPLEMENTATION-SUMMARY.md](IMPLEMENTATION-SUMMARY.md) - Résumé de l'implémentation du portail
+- 📄 [ACCESSIBILITE-GUIDE.md](ACCESSIBILITE-GUIDE.md) - Guide des options d'accessibilité
+- 📄 [PORTAIL-GUIDE.md](PORTAIL-GUIDE.md) - Ancien système de portail (obsolète, voir ACCESSIBILITE-GUIDE.md)
+- 📄 [IMPLEMENTATION-SUMMARY.md](IMPLEMENTATION-SUMMARY.md) - Résumé des implémentations principales
 - 📄 [CHANGELOG.md](CHANGELOG.md) - Historique détaillé des modifications
 - 📄 [.github/copilot-instructions.md](.github/copilot-instructions.md) - Instructions pour AI agents
 
@@ -601,7 +651,7 @@ document.addEventListener('DOMContentLoaded', () => {
 - **HTML5** : Sémantique moderne
 - **CSS3** : Custom Properties, Flexbox, Grid, Animations
 - **JavaScript ES6+** : Modules IIFE, Intersection Observer API, localStorage
-- **Google Maps API** : Carte interactive établissements
+- **Leaflet** : Carte interactive établissements (OpenStreetMap)
 
 **Aucune dépendance externe** (pas de jQuery, pas de frameworks) → Performance maximale.
 
@@ -723,18 +773,26 @@ Ce projet est la propriété de CLEE Bordeaux Avenir. Toute reproduction, distri
 
 **Technologies open-source utilisées** :
 - Google Fonts (Roboto, Barlow Condensed)
-- Google Maps API
+- Leaflet (OpenStreetMap)
 - Intersection Observer API (Web standard)
 
 ---
 
-**Dernière mise à jour** : 5 février 2026  
-**Version** : 2.1  
+**Dernière mise à jour** : 10 février 2026  
+**Version** : 2.2  
 **Statut** : Production Ready
 
 ---
 
 ## Historique des versions principales
+
+### Version 2.2 (Février 2026) - Transformation du portail en page d'accessibilité
+- **Changement majeur** : Transformation de portail.html en page d'options d'accessibilité
+- Thème étudiant défini comme thème par défaut pour tous les utilisateurs
+- Suppression de la redirection automatique vers le portail
+- Nouvelles options d'accessibilité : taille de texte (4 niveaux), contraste élevé, réduction d'animations
+- Persistance des préférences d'accessibilité via localStorage
+- Création du guide ACCESSIBILITE-GUIDE.md
 
 ### Version 2.1 (Février 2026) - Améliorations UX et recherche
 - Ajout barre de recherche partenaires en temps réel

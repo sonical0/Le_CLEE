@@ -60,13 +60,16 @@
 ======================================== */
 
 .hero-entreprises {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 60px;
+  padding-bottom: 40px;
   background: linear-gradient(135deg, var(--primary-800) 0%, var(--primary-600) 100%);
   color: #ffffff;
   text-align: center;
   position: relative;
   overflow: hidden;
+  min-height: 360px;
+  display: flex;
+  align-items: center;
 }
 
 .hero-entreprises::before {
@@ -78,6 +81,29 @@
   height: 600px;
   background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
   border-radius: 50%;
+}
+
+.hero-entreprises .hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero-entreprises .hero-overlay img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-entreprises .hero-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--primary-900);
+  opacity: 0.55;
 }
 
 .hero-content {
@@ -306,11 +332,12 @@
 
 .partenaires-search-bar {
   width: 100%;
+  height: 56px;
   display: flex;
   align-items: center;
   gap: 12px;
   flex-wrap: wrap;
-  padding: 10px 12px;
+  padding: 0 12px;
   background-color: var(--grey-50);
   border: 2px solid var(--grey-200);
   border-radius: 12px;
@@ -326,10 +353,19 @@
   min-width: 240px;
   border: none;
   background: transparent;
-  padding: 10px 12px;
+  height: 100%;
+  padding: 0 12px;
   font-size: 15px;
   color: var(--primary-900);
   outline: none;
+}
+
+.partenaires-search-bar .btn {
+  height: 40px;
+  padding: 0 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #partenairesSearch::placeholder {
@@ -1192,6 +1228,8 @@
   .partenaires-search-bar {
     flex-direction: column;
     align-items: stretch;
+    height: auto;
+    padding: 10px 12px;
   }
 
   #partenairesSearch {

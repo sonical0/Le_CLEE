@@ -13,64 +13,7 @@
 </head>
 
 <body>
-    <header class="header">
-        <nav class="navigation" role="navigation" aria-label="Navigation principale">
-            <div class="container">
-                <a href="../index.html" class="logo" aria-label="Retour à l'accueil">
-                    <img src="../assets/images/logo-clee.png" alt="CLEE Bordeaux Avenir">
-                </a>
-
-                <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-
-                <ul class="nav-links">
-                    <li class="nav-item nav-dropdown">
-                        <a href="le-clee.html" class="nav-link nav-link-bleu">Le CLEE</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="le-clee.html">Qui sommes-nous ?</a></li>
-                            <li><a href="bureau-membres.html">Bureau et membres</a></li>
-                            <li><a href="nos-actions.html">Nos actions</a></li>
-                            <li><a href="documents-officiels.html">Documents officiels</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item nav-dropdown">
-                        <a href="companies.html" class="nav-link nav-link-bleu active">Entreprises & Partenaires</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="companies.html">Devenir partenaire</a></li>
-                            <li><a href="companies.html#sponsors">Nos sponsors</a></li>
-                            <li><a href="companies.html#actions">Actions pour les entreprises</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item nav-dropdown">
-                        <a href="establishments.html" class="nav-link nav-link-orange">Établissements & Formations</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="establishments.html">Établissements et formations</a></li>
-                            <li><a href="pfmp.html">Stages et/ou PFMP</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item nav-dropdown">
-                        <a href="jeunes-familles.html" class="nav-link nav-link-rouge">Jeunes & Familles</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="pfmp.html">Tout savoir sur les stages</a></li>
-                            <li><a href="orientation-insertion.html">Conseils orientation</a></li>
-                            <li><a href="vie-clee-eleves.html">Vie du CLEE pour les élèves</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item nav-dropdown">
-                        <a href="vie-clee.html" class="nav-link nav-link-vert">Vie du CLEE</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="agenda.html">Agenda</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="connexion.html" class="nav-link nav-link-auth">Connexion</a>
-                    </li>
-            </div>
-        </nav>
-    </header>
+    <clee-nav-bar base-path=".." pages-path=""></clee-nav-bar>
 
     <div class="breadcrumb-container">
         <div class="container">
@@ -83,6 +26,10 @@
     </div>
 
     <section class="hero-entreprises">
+        <div class="hero-overlay" aria-hidden="true">
+            <!-- TODO: Remplacer l'image du calque du hero par la photo définitive -->
+            <img src="https://picsum.photos/1920/1080" alt="" loading="lazy">
+        </div>
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">Entreprises & Partenaires</h1>
@@ -212,118 +159,11 @@
             </div>
 
             <div class="cta-buttons">
-                <a href="contact.html" class="btn btn-primary">Contactez-nous pour en savoir plus</a>
+                <clee-primary-button
+                    href="contact.html"
+                    text="Contactez-nous pour en savoir plus">
+                </clee-primary-button>
                 <button class="btn btn-secondary" id="openInscriptionModal">S'inscrire comme partenaire</button>
-            </div>
-        </div>
-    </section>
-
-    <section class="tableau-formations-section" id="tableau-formations">
-        <div class="container">
-            <h2 class="section-title">Formations disponibles</h2>
-            <p class="section-subtitle">Explorez toutes les formations proposées par les établissements partenaires du
-                CLEE</p>
-
-            <!-- Filtres du tableau -->
-            <div class="tableau-filtres">
-                <div class="filtre-group">
-                    <label for="filtreEtablissement" class="filtre-label">Établissement :</label>
-                    <select id="filtreEtablissement" class="filtre-select">
-                        <option value="">Tous les établissements</option>
-                    </select>
-                </div>
-
-                <div class="filtre-group">
-                    <label for="filtreSecteur" class="filtre-label">Secteur :</label>
-                    <select id="filtreSecteur" class="filtre-select">
-                        <option value="">Tous les secteurs</option>
-                    </select>
-                </div>
-
-                <div class="filtre-group">
-                    <label for="filtreNiveau" class="filtre-label">Niveau :</label>
-                    <select id="filtreNiveau" class="filtre-select">
-                        <option value="">Tous les niveaux</option>
-                        <option value="CAP">CAP</option>
-                        <option value="Bac Pro">Bac Pro</option>
-                        <option value="BTS">BTS</option>
-                        <option value="Licence Pro">Licence Pro</option>
-                        <option value="Master">Master</option>
-                    </select>
-                </div>
-
-                <div class="filtre-group">
-                    <label for="filtreModalite" class="filtre-label">Modalité :</label>
-                    <select id="filtreModalite" class="filtre-select">
-                        <option value="">Toutes les modalités</option>
-                        <option value="Initial">Initial</option>
-                        <option value="Alternance">Alternance</option>
-                        <option value="Mixité">Mixité</option>
-                    </select>
-                </div>
-
-                <div class="filtre-group">
-                    <label for="filtreRecherche" class="filtre-label">Recherche :</label>
-                    <div class="filtre-recherche-wrapper">
-                        <input type="text" id="filtreRecherche" class="filtre-input" placeholder="Nom de formation...">
-                        <button class="btn-reset-filters" id="reinitialiserFiltres" title="Réinitialiser les filtres">
-                            <i class="fas fa-redo"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tableau responsive -->
-            <div class="tableau-container">
-                <table class="formations-table" id="formationsTable">
-                    <thead>
-                        <tr>
-                            <th data-sort="etablissement">Établissement <i class="fas fa-sort"></i></th>
-                            <th data-sort="formation">Formation <i class="fas fa-sort"></i></th>
-                            <th data-sort="secteur">Secteur <i class="fas fa-sort"></i></th>
-                            <th data-sort="niveau">Niveau <i class="fas fa-sort"></i></th>
-                            <th data-sort="modalites">Modalités <i class="fas fa-sort"></i></th>
-                            <th data-sort="periodes">Périodes de stages <i class="fas fa-sort"></i></th>
-                            <th>Contact</th>
-                        </tr>
-                    </thead>
-                    <tbody id="formationsTableBody">
-                        <!-- Lignes générées dynamiquement -->
-                    </tbody>
-                </table>
-
-                <div class="tableau-empty" id="tableauEmpty" style="display: none;">
-                    <i class="fas fa-inbox"></i>
-                    <p>Aucune formation ne correspond à vos critères de recherche.</p>
-                </div>
-            </div>
-
-            <div class="tableau-footer">
-                <div class="tableau-info">
-                    <div class="results-per-page">
-                        <label for="resultsPerPage">Afficher :</label>
-                        <select id="resultsPerPage" class="results-select">
-                            <option value="5">5</option>
-                            <option value="10">10</option>
-                            <option value="15">15</option>
-                            <option value="20">20</option>
-                            <option value="50">50</option>
-                        </select>
-                        <span>résultats par page</span>
-                    </div>
-                </div>
-
-                <div class="pagination" id="pagination">
-                    <button class="pagination-btn" id="paginationPrev" disabled>
-                        <i class="fas fa-chevron-left"></i> Précédent
-                    </button>
-                    <div class="pagination-pages" id="paginationPages">
-                        <!-- Numéros de page générés dynamiquement -->
-                    </div>
-                    <button class="pagination-btn" id="paginationNext">
-                        Suivant <i class="fas fa-chevron-right"></i>
-                    </button>
-                </div>
             </div>
         </div>
     </section>
@@ -673,7 +513,7 @@
                     </div>
 
                     <div class="form-actions">
-                        <button type="submit" class="btn btn-primary">Envoyer ma demande d'inscription</button>
+                        <clee-primary-button as="button" type="submit" text="Envoyer ma demande d'inscription"></clee-primary-button>
                     </div>
                 </form>
             </div>
@@ -924,15 +764,27 @@
 
                                 <div class="form-row">
                                     <div class="form-group">
-                                        <label for="periodeModalite0" class="form-label">Modalité <span
+                                        <label class="form-label">Tags (type de stage) <span
                                                 class="required">*</span></label>
-                                        <select id="periodeModalite0" name="periodes[0][modalite]" class="form-select"
-                                            required>
-                                            <option value="">Sélectionnez...</option>
-                                            <option value="initial">Initial</option>
-                                            <option value="alternance">Alternance</option>
-                                            <option value="mixite">Mixité</option>
-                                        </select>
+                                        <div class="form-checkbox-group">
+                                            <label class="form-checkbox">
+                                                <input type="checkbox" name="periodes[0][tags][]" value="stage-3eme"
+                                                    required>
+                                                <span>Stage de 3ème</span>
+                                            </label>
+                                            <label class="form-checkbox">
+                                                <input type="checkbox" name="periodes[0][tags][]" value="stage-2de">
+                                                <span>Stage de 2de générale</span>
+                                            </label>
+                                            <label class="form-checkbox">
+                                                <input type="checkbox" name="periodes[0][tags][]" value="pfmp-bac-pro">
+                                                <span>PFMP (Bac Pro)</span>
+                                            </label>
+                                            <label class="form-checkbox">
+                                                <input type="checkbox" name="periodes[0][tags][]" value="stage-bts">
+                                                <span>Stage BTS</span>
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -960,7 +812,7 @@
                     </div>
 
                     <div class="form-actions">
-                        <button type="submit" class="btn btn-primary">Envoyer ma demande d'inscription</button>
+                        <clee-primary-button as="button" type="submit" text="Envoyer ma demande d'inscription"></clee-primary-button>
                     </div>
                 </form>
             </div>
@@ -973,7 +825,7 @@
                 <h2 class="modal-title">Demande envoyée avec succès !</h2>
                 <p class="confirmation-text">Votre demande d'inscription a bien été enregistrée. Notre équipe va
                     l'examiner et vous contactera dans les plus brefs délais.</p>
-                <button class="btn btn-primary" id="closeConfirmation">Fermer</button>
+                <clee-primary-button id="closeConfirmation" as="button" type="button" text="Fermer"></clee-primary-button>
             </div>
         </div>
     </div>
@@ -1123,13 +975,13 @@
                 <div class="guide-card">
                     <h3 class="guide-title">Guide d'accueil du tuteur</h3>
                     <p class="guide-description">Guide complet pour accompagner un élève en PFMP / Stage</p>
-                    <a href="#" class="guide-download">Télécharger (PDF)</a>
+                    <a href="../assets/doc/padlet clee/Guide du tuteur CLEE Bordeaux Avenir.pdf" class="guide-download">Télécharger (PDF)</a>
                 </div>
 
                 <div class="guide-card">
                     <h3 class="guide-title">Les différents types de stage</h3>
                     <p class="guide-description">Comprendre PFMP, stages et contrats d'apprentissage</p>
-                    <a href="#" class="guide-download">Télécharger (PDF)</a>
+                    <a href="../assets/doc/padlet clee/CLEE_Bordeaux Avenir_doc stages.pdf" class="guide-download">Télécharger (PDF)</a>
                 </div>
 
                 <div class="guide-card">
@@ -1194,82 +1046,16 @@
                 Contactez-nous dès maintenant pour en savoir plus sur les modalités de partenariat.
             </p>
             <div class="cta-buttons">
-                <a href="contact.html" class="btn btn-primary">Contactez-nous</a>
+                <clee-primary-button href="contact.html" text="Contactez-nous"></clee-primary-button>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-main">
-                    <div class="footer-logo">
-                        <img src="../assets/images/logo-clee.png" alt="CLEE Bordeaux Avenir">
-                        <p>Comité Local École-Entreprise</p>
-                    </div>
+    <clee-footer base-path=".." pages-path=""></clee-footer>
 
-                    <p class="footer-description">
-                        Le CLEE Bordeaux Avenir œuvre pour renforcer les liens entre le monde éducatif et professionnel,
-                        accompagner les jeunes dans leur orientation et faciliter leur insertion dans le monde du
-                        travail.
-                    </p>
-                </div>
-
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4 class="footer-subtitle">Le CLEE</h4>
-                        <ul>
-                            <li><a href="le-clee.html">Qui sommes-nous ?</a></li>
-                            <li><a href="bureau-membres.html">Bureau et membres</a></li>
-                            <li><a href="nos-actions.html">Nos actions</a></li>
-                            <li><a href="documents-officiels.html">Documents officiels</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-column">
-                        <h4 class="footer-subtitle">Pour les entreprises</h4>
-                        <ul>
-                            <li><a href="companies.html">Devenir partenaire</a></li>
-                            <li><a href="companies.html#sponsors">Nos sponsors</a></li>
-                            <li><a href="companies.html#actions">Actions pour les entreprises</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-column">
-                        <h4 class="footer-subtitle">Pour les jeunes</h4>
-                        <ul>
-                            <li><a href="pfmp.html">Tout savoir sur les stages</a></li>
-                            <li><a href="orientation-insertion.html">Conseils orientation</a></li>
-                            <li><a href="vie-clee-eleves.html">Vie du CLEE pour les élèves</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-column">
-                        <h4 class="footer-subtitle">Navigation</h4>
-                        <ul>
-                            <li><a href="establishments.html">Établissements & Formations</a></li>
-                            <li><a href="vie-clee.html">Vie du CLEE</a></li>
-                            <li><a href="agenda.html">Agenda</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-column">
-                        <h4 class="footer-subtitle">Contact</h4>
-                        <ul>
-                            <li><a href="contact.html">Nous contacter</a></li>
-                            <li><a href="#">LinkedIn</a></li>
-                            <li><a href="mentions-legales.html">Mentions légales</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2026 CLEE Bordeaux Avenir. Tous droits réservés.</p>
-            </div>
-        </div>
-    </footer>
-
+    <script src="../js/components/nav-bar.js"></script>
+    <script src="../js/components/footer.js"></script>
+    <script src="../js/components/primary-button.js"></script>
     <script src="../js/common.js"></script>
     <script src="../js/companies.js"></script>
 </body>

@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Palette de Couleurs - CLEE Bordeaux</title>
     
-    <link rel="stylesheet" href="../css/globals.css">
+    <clee-nav-bar base-path=".." pages-path=""></clee-nav-bar>
+
+
+    <link rel="stylesheet" href="../css/globals.css">    
     <link rel="stylesheet" href="../css/theme-etudiant.css">
     
     <style>
@@ -573,7 +576,7 @@
             </p>
             
             <div class="color-grid">
-                <div class="color-card">
+                <div class="color-card" data-color="primary-900">
                     <div class="color-swatch" style="background: #1F3448;">900</div>
                     <div class="color-info">
                         <div class="color-name">Couleur 1</div>
@@ -581,10 +584,14 @@
                             <span class="color-code">HEX: #1F3448</span>
                             <span class="color-code">RGB: 31, 52, 72</span>
                         </div>
+                        <div class="color-picker-container">
+                            <input type="color" class="color-picker" data-color-key="primary-900" value="#1F3448">
+                            <span class="color-picker-label">Personnaliser</span>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="color-card">
+                <div class="color-card" data-color="primary-500">
                     <div class="color-swatch" style="background: #5E7E9F;">500</div>
                     <div class="color-info">
                         <div class="color-name">Couleur 2</div>
@@ -592,10 +599,14 @@
                             <span class="color-code">HEX: #5E7E9F</span>
                             <span class="color-code">RGB: 94, 126, 159</span>
                         </div>
+                        <div class="color-picker-container">
+                            <input type="color" class="color-picker" data-color-key="primary-500" value="#5E7E9F">
+                            <span class="color-picker-label">Personnaliser</span>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="color-card">
+                <div class="color-card" data-color="primary-50">
                     <div class="color-swatch" style="background: #E5F0FF; color: #1F3448;">50</div>
                     <div class="color-info">
                         <div class="color-name">Couleur 3</div>
@@ -603,16 +614,24 @@
                             <span class="color-code">HEX: #E5F0FF</span>
                             <span class="color-code">RGB: 229, 240, 255</span>
                         </div>
+                        <div class="color-picker-container">
+                            <input type="color" class="color-picker" data-color-key="primary-50" value="#E5F0FF">
+                            <span class="color-picker-label">Personnaliser</span>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="color-card">
+                <div class="color-card" data-color="grey-900">
                     <div class="color-swatch" style="background: #333;">900</div>
                     <div class="color-info">
                         <div class="color-name">Couleur 4</div>
                         <div class="color-codes">
                             <span class="color-code">HEX: #333333</span>
                             <span class="color-code">RGB: 51, 51, 51</span>
+                        </div>
+                        <div class="color-picker-container">
+                            <input type="color" class="color-picker" data-color-key="grey-900" value="#333333">
+                            <span class="color-picker-label">Personnaliser</span>
                         </div>
                     </div>
                 </div>
@@ -636,7 +655,7 @@
             </p>
             
             <div class="color-grid">
-                <div class="color-card">
+                <div class="color-card" data-color="orange">
                     <div class="color-swatch" style="background: #FF6B35;"></div>
                     <div class="color-info">
                         <div class="color-name">Couleur 1</div>
@@ -645,10 +664,14 @@
                             <span class="color-code">RGB: 255, 107, 53</span>
                             <span class="color-code">CMJN: C0 M55 J100 N0</span>
                         </div>
+                        <div class="color-picker-container">
+                            <input type="color" class="color-picker" data-color-key="orange" value="#FF6B35">
+                            <span class="color-picker-label">Personnaliser</span>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="color-card">
+                <div class="color-card" data-color="cyan">
                     <div class="color-swatch" style="background: #00A7E1;"></div>
                     <div class="color-info">
                         <div class="color-name">Couleur 2</div>
@@ -657,10 +680,14 @@
                             <span class="color-code">RGB: 0, 167, 225</span>
                             <span class="color-code">CMJN: C100 M45 J18 N0</span>
                         </div>
+                        <div class="color-picker-container">
+                            <input type="color" class="color-picker" data-color-key="cyan" value="#00A7E1">
+                            <span class="color-picker-label">Personnaliser</span>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="color-card">
+                <div class="color-card" data-color="green">
                     <div class="color-swatch" style="background: #5CB85C;"></div>
                     <div class="color-info">
                         <div class="color-name">Couleur 3</div>
@@ -669,10 +696,14 @@
                             <span class="color-code">RGB: 92, 184, 92</span>
                             <span class="color-code">CMJN: C82 M10 J100 N0</span>
                         </div>
+                        <div class="color-picker-container">
+                            <input type="color" class="color-picker" data-color-key="green" value="#5CB85C">
+                            <span class="color-picker-label">Personnaliser</span>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="color-card">
+                <div class="color-card" data-color="red">
                     <div class="color-swatch" style="background: #E74C3C;"></div>
                     <div class="color-info">
                         <div class="color-name">Couleur 4</div>
@@ -681,16 +712,24 @@
                             <span class="color-code">RGB: 231, 76, 60</span>
                             <span class="color-code">CMJN: C0 M90 J80 N0</span>
                         </div>
+                        <div class="color-picker-container">
+                            <input type="color" class="color-picker" data-color-key="red" value="#E74C3C">
+                            <span class="color-picker-label">Personnaliser</span>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="color-card">
+                <div class="color-card" data-color="yellow">
                     <div class="color-swatch" style="background: #FFB84D;"></div>
                     <div class="color-info">
                         <div class="color-name">Couleur 5</div>
                         <div class="color-codes">
                             <span class="color-code">HEX: #FFB84D</span>
                             <span class="color-code">RGB: 255, 184, 77</span>
+                        </div>
+                        <div class="color-picker-container">
+                            <input type="color" class="color-picker" data-color-key="yellow" value="#FFB84D">
+                            <span class="color-picker-label">Personnaliser</span>
                         </div>
                     </div>
                 </div>
@@ -785,7 +824,7 @@
         <div class="preview-section">
             <h4>Boutons</h4>
             <div class="preview-buttons">
-                <button class="btn btn-primary">Bouton Principal</button>
+                <clee-primary-button as="button" type="button" text="Bouton Principal"></clee-primary-button>
                 <button class="btn btn-outline">Bouton Secondaire</button>
             </div>
         </div>
@@ -834,6 +873,11 @@
     
     </div>
     
+    <clee-footer base-path=".." pages-path=""></clee-footer>
+
+    <script src="../js/components/nav-bar.js"></script>
+    <script src="../js/components/footer.js"></script>
+    <script src="../js/components/primary-button.js"></script>
     <script src="../js/colors-reference.js"></script>
 </body>
 </html>

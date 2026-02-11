@@ -5,69 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Tout savoir sur les stages (PFMP) - CLEE Bordeaux Avenir">
     <title>CLEE Bordeaux Avenir - Tout savoir sur les stages</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../css/globals.css">
+    <link rel="stylesheet" href="../css/companies.css">
     <link rel="stylesheet" href="../css/jeunes-familles.css">
 </head>
 <body>
-    <header class="header">
-        <nav class="navigation" role="navigation" aria-label="Navigation principale">
-            <div class="container">
-                <a href="../index.html" class="logo" aria-label="Retour à l'accueil">
-                    <img src="../assets/images/logo-clee.png" alt="CLEE Bordeaux Avenir">
-                </a>
-                
-                <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                
-                <ul class="nav-links">
-                    <li class="nav-item nav-dropdown">
-                        <a href="le-clee.html" class="nav-link nav-link-bleu">Le CLEE</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="le-clee.html">Qui sommes-nous ?</a></li>
-                            <li><a href="bureau-membres.html">Bureau et membres</a></li>
-                            <li><a href="nos-actions.html">Nos actions</a></li>
-                            <li><a href="documents-officiels.html">Documents officiels</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item nav-dropdown">
-                        <a href="companies.html" class="nav-link nav-link-bleu">Entreprises & Partenaires</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="companies.html">Devenir partenaire</a></li>
-                            <li><a href="companies.html#sponsors">Nos sponsors</a></li>
-                            <li><a href="companies.html#actions">Actions pour les entreprises</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item nav-dropdown">
-                        <a href="establishments.html" class="nav-link nav-link-orange">Établissements & Formations</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="establishments.html">Établissements et formations</a></li>
-                            <li><a href="pfmp.html">Stages et/ou PFMP</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item nav-dropdown">
-                        <a href="jeunes-familles.html" class="nav-link nav-link-rouge">Jeunes & Familles</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="pfmp.html">Tout savoir sur les stages</a></li>
-                            <li><a href="orientation-insertion.html">Conseils orientation</a></li>
-                            <li><a href="vie-clee-eleves.html">Vie du CLEE pour les élèves</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item nav-dropdown">
-                        <a href="vie-clee.html" class="nav-link nav-link-vert">Vie du CLEE</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="agenda.html">Agenda</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="connexion.html" class="nav-link nav-link-auth">Connexion</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <clee-nav-bar base-path=".." pages-path=""></clee-nav-bar>
 
     <div class="breadcrumb-container">
         <div class="container">
@@ -82,48 +26,147 @@
     </div>
 
     <section class="hero">
+        <div class="hero-overlay" aria-hidden="true">
+            <!-- TODO: Remplacer l'image du calque du hero par la photo définitive -->
+            <img src="https://picsum.photos/1920/1080" alt="" loading="lazy">
+        </div>
         <div class="container">
-            <h1 class="hero-title">Tout savoir sur les stages</h1>
+            <h1 class="hero-title">PFMP et Stages : Tout savoir</h1>
             <p class="hero-description">
-                Périodes de Formation en Milieu Professionnel : un tremplin essentiel pour votre avenir professionnel
+                PFMP (lycée professionnel) ou stage (lycée général) : des périodes de formation en entreprise essentielles pour votre avenir professionnel
             </p>
         </div>
     </section>
 
     <section class="section-content">
         <div class="container">
-            <h2 class="section-title">Qu'est-ce qu'un stage&nbsp;?</h2>
-            <p class="section-description">
-                Le stage (anciennement appelé PFMP, Période de Formation en Milieu Professionnel) est une partie intégrante de votre formation.
-                Elle vous permet de développer vos compétences en situation réelle de travail et de découvrir le monde de l'entreprise.
-            </p>
-            
-            <div class="cards-grid">
+            <h2 class="section-title">PFMP ou Stage : Quelle différence&nbsp;?</h2>
+            <div class="cards-grid cards-grid-2">
                 <div class="info-card">
-                    <span class="info-card-icon">🎯</span>
-                    <h3 class="info-card-title">Objectifs du stage</h3>
+                    <h3 class="info-card-title">PFMP</h3>
                     <p class="info-card-text">
-                        Acquérir des compétences professionnelles, découvrir le monde du travail, valider votre diplôme 
-                        et construire votre réseau professionnel.
+                        <strong>Période de Formation en Milieu Professionnel</strong> : destinée aux élèves de 
+                        <strong>lycée professionnel</strong> (CAP, Bac Pro). Ces périodes obligatoires font partie intégrante 
+                        de votre formation et sont évaluées pour l'obtention du diplôme.
                     </p>
                 </div>
 
                 <div class="info-card">
-                    <span class="info-card-icon">📋</span>
-                    <h3 class="info-card-title">Déroulement</h3>
+                    <h3 class="info-card-title">Stage</h3>
                     <p class="info-card-text">
-                        Plusieurs périodes réparties sur votre formation, avec des objectifs progressifs et un suivi 
-                        personnalisé par votre tuteur en entreprise et votre enseignant.
+                        Pour les élèves de <strong>lycée général et technologique</strong> (Seconde, Première, Terminale). 
+                        Il s'agit de périodes d'observation ou de formation complémentaires pour découvrir le monde professionnel.
                     </p>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="info-card">
-                    <span class="info-card-icon">✅</span>
-                    <h3 class="info-card-title">Évaluation</h3>
-                    <p class="info-card-text">
-                        Vos périodes en entreprise sont évaluées et comptent pour l'obtention de votre diplôme. 
-                        Un livret de suivi permet de valider vos acquis.
-                    </p>
+    <section class="tableau-formations-section" id="tableau-formations">
+        <div class="container">
+            <h2 class="section-title">Formations disponibles</h2>
+            <p class="section-subtitle">Explorez toutes les formations proposées par les établissements partenaires du
+                CLEE</p>
+
+            <!-- Filtres du tableau -->
+            <div class="tableau-filtres">
+                <div class="filtre-group">
+                    <label for="filtreEtablissement" class="filtre-label">Établissement :</label>
+                    <select id="filtreEtablissement" class="filtre-select">
+                        <option value="">Tous les établissements</option>
+                    </select>
+                </div>
+
+                <div class="filtre-group">
+                    <label for="filtreSecteur" class="filtre-label">Secteur :</label>
+                    <select id="filtreSecteur" class="filtre-select">
+                        <option value="">Tous les secteurs</option>
+                    </select>
+                </div>
+
+                <div class="filtre-group">
+                    <label for="filtreNiveau" class="filtre-label">Niveau :</label>
+                    <select id="filtreNiveau" class="filtre-select">
+                        <option value="">Tous les niveaux</option>
+                        <option value="CAP">CAP</option>
+                        <option value="Bac Pro">Bac Pro</option>
+                        <option value="BTS">BTS</option>
+                        <option value="Licence Pro">Licence Pro</option>
+                        <option value="Master">Master</option>
+                    </select>
+                </div>
+
+                <div class="filtre-group">
+                    <label for="filtreModalite" class="filtre-label">Modalité :</label>
+                    <select id="filtreModalite" class="filtre-select">
+                        <option value="">Toutes les modalités</option>
+                        <option value="Initial">Initial</option>
+                        <option value="Alternance">Alternance</option>
+                        <option value="Mixité">Mixité</option>
+                    </select>
+                </div>
+
+                <div class="filtre-group">
+                    <label for="filtreRecherche" class="filtre-label">Recherche :</label>
+                    <div class="filtre-recherche-wrapper">
+                        <input type="text" id="filtreRecherche" class="filtre-input" placeholder="Nom de formation...">
+                        <button class="btn-reset-filters" id="reinitialiserFiltres" title="Réinitialiser les filtres">
+                            <i class="fas fa-redo"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tableau responsive -->
+            <div class="tableau-container">
+                <table class="formations-table" id="formationsTable">
+                    <thead>
+                        <tr>
+                            <th data-sort="etablissement">Établissement <i class="fas fa-sort"></i></th>
+                            <th data-sort="formation">Formation <i class="fas fa-sort"></i></th>
+                            <th data-sort="secteur">Secteur <i class="fas fa-sort"></i></th>
+                            <th data-sort="niveau">Niveau <i class="fas fa-sort"></i></th>
+                            <th data-sort="modalites">Modalités <i class="fas fa-sort"></i></th>
+                            <th data-sort="periodes">Périodes de stages <i class="fas fa-sort"></i></th>
+                            <th>Contact</th>
+                        </tr>
+                    </thead>
+                    <tbody id="formationsTableBody">
+                        <!-- Lignes générées dynamiquement -->
+                    </tbody>
+                </table>
+
+                <div class="tableau-empty" id="tableauEmpty" style="display: none;">
+                    <i class="fas fa-inbox"></i>
+                    <p>Aucune formation ne correspond à vos critères de recherche.</p>
+                </div>
+            </div>
+
+            <div class="tableau-footer">
+                <div class="tableau-info">
+                    <div class="results-per-page">
+                        <label for="resultsPerPage">Afficher :</label>
+                        <select id="resultsPerPage" class="results-select">
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                        </select>
+                        <span>résultats par page</span>
+                    </div>
+                </div>
+
+                <div class="pagination" id="pagination">
+                    <button class="pagination-btn" id="paginationPrev" disabled>
+                        <i class="fas fa-chevron-left"></i> Précédent
+                    </button>
+                    <div class="pagination-pages" id="paginationPages">
+                        <!-- Numéros de page générés dynamiquement -->
+                    </div>
+                    <button class="pagination-btn" id="paginationNext">
+                        Suivant <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -132,68 +175,11 @@
     <section class="documents-section">
         <div class="container">
             <div class="document-category">
-                <h2 class="category-title">Calendriers de stages par Formation</h2>
-                <p class="category-description">
-                    Consultez les calendriers des périodes de formation en milieu professionnel selon votre filière
-                </p>
-                
-                <div class="documents-grid">
-                    <div class="document-card">
-                        <div class="document-info">
-                            <h3 class="document-title">CAP - Calendrier de stages 2026</h3>
-                            <p class="document-meta">
-                                <span class="document-date">Année scolaire : 2025-2026</span>
-                                <span class="document-size">Format : PDF</span>
-                            </p>
-                            <p class="document-description">
-                                Calendrier complet des périodes de formation pour les formations CAP toutes spécialités confondues.
-                            </p>
-                        </div>
-                        <a href="#" class="document-download" aria-label="Télécharger le calendrier CAP">
-                            <span>⬇️ Télécharger</span>
-                        </a>
-                    </div>
-
-                    <div class="document-card">
-                        <div class="document-info">
-                            <h3 class="document-title">BAC PRO - Calendrier de stages 2026</h3>
-                            <p class="document-meta">
-                                <span class="document-date">Année scolaire : 2025-2026</span>
-                                <span class="document-size">Format : PDF</span>
-                            </p>
-                            <p class="document-description">
-                                Calendrier des périodes pour les BAC PRO : commerce, vente, gestion-administration, ASSP, etc.
-                            </p>
-                        </div>
-                        <a href="#" class="document-download" aria-label="Télécharger le calendrier BAC PRO">
-                            <span>⬇️ Télécharger</span>
-                        </a>
-                    </div>
-
-                    <div class="document-card">
-                        <div class="document-info">
-                            <h3 class="document-title">BTS - Calendrier Stages 2026</h3>
-                            <p class="document-meta">
-                                <span class="document-date">Année scolaire : 2025-2026</span>
-                                <span class="document-size">Format : PDF</span>
-                            </p>
-                            <p class="document-description">
-                                Calendrier des périodes de stage pour les formations BTS toutes spécialités.
-                            </p>
-                        </div>
-                        <a href="#" class="document-download" aria-label="Télécharger le calendrier BTS">
-                            <span>⬇️ Télécharger</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="document-category">
                 <h2 class="category-title">Documents Officiels</h2>
                 <p class="category-description">
                     Tous les documents nécessaires pour vos démarches de stage
                 </p>
-
+                <div class="documents-grid">
                     <div class="document-card">
                         <div class="document-info">
                             <h3 class="document-title">Attestation de Période en Entreprise</h3>
@@ -284,9 +270,9 @@
 
     <section class="video-section">
         <div class="container">
-            <h2 class="section-title">Bien réussir son stage</h2>
+            <h2 class="section-title">Bien réussir sa période en entreprise</h2>
             <p class="section-description">
-                Découvrez nos conseils pratiques en vidéo pour optimiser votre expérience en entreprise
+                Découvrez nos conseils pratiques en vidéo pour optimiser votre expérience en entreprise (PFMP ou stage)
             </p>
             
             <div class="video-container">
@@ -364,13 +350,13 @@
 
     <section class="cta-section">
         <div class="container">
-            <h2 class="cta-title">Prêt à trouver votre stage ?</h2>
+            <h2 class="cta-title">Prêt à trouver votre PFMP ou stage ?</h2>
             <p class="cta-description">
-                Consultez les offres de stages et d'alternance proposées par nos entreprises partenaires
+                Consultez les offres de PFMP, stages et alternances proposées par nos entreprises partenaires
             </p>
             <div class="cta-buttons">
                 <a href="companies.html" class="btn btn-secondary btn-large">
-                    <span class="btn-text">Voir les offres de stage</span>
+                    <span class="btn-text">Voir les ressources de stage</span>
                 </a>
                 <a href="orientation-insertion.html" class="btn btn-secondary btn-large">
                     <span class="btn-text">Conseils orientation</span>
@@ -379,77 +365,11 @@
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-main">
-                    <div class="footer-logo">
-                        <img src="../assets/images/logo-clee.png" alt="CLEE Bordeaux Avenir">
-                        <p>Comité Local École-Entreprise</p>
-                    </div>
-                    
-                    <p class="footer-description">
-                        Le CLEE Bordeaux Avenir œuvre pour renforcer les liens entre le monde éducatif et professionnel, 
-                        accompagner les jeunes dans leur orientation et faciliter leur insertion dans le monde du travail.
-                    </p>
-                </div>
-                
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4 class="footer-subtitle">Le CLEE</h4>
-                        <ul>
-                            <li><a href="le-clee.html">Qui sommes-nous ?</a></li>
-                            <li><a href="bureau-membres.html">Bureau et membres</a></li>
-                            <li><a href="nos-actions.html">Nos actions</a></li>
-                            <li><a href="documents-officiels.html">Documents officiels</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h4 class="footer-subtitle">Pour les entreprises</h4>
-                        <ul>
-                            <li><a href="companies.html">Devenir partenaire</a></li>
-                            <li><a href="companies.html#sponsors">Nos sponsors</a></li>
-                            <li><a href="companies.html#actions">Actions pour les entreprises</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h4 class="footer-subtitle">Pour les jeunes</h4>
-                        <ul>
-                            <li><a href="pfmp.html">Tout savoir sur les stages</a></li>
-                            <li><a href="orientation-insertion.html">Conseils orientation</a></li>
-                            <li><a href="vie-clee-eleves.html">Vie du CLEE pour les élèves</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h4 class="footer-subtitle">Navigation</h4>
-                        <ul>
-                            <li><a href="establishments.html">Établissements & Formations</a></li>
-                            <li><a href="vie-clee.html">Vie du CLEE</a></li>
-                            <li><a href="agenda.html">Agenda</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h4 class="footer-subtitle">Contact</h4>
-                        <ul>
-                            <li><a href="contact.html">Nous contacter</a></li>
-                            <li><a href="#">LinkedIn</a></li>
-                            <li><a href="mentions-legales.html">Mentions légales</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2026 CLEE Bordeaux Avenir. Tous droits réservés.</p>
-            </div>
-        </div>
-    </footer>
+    <clee-footer base-path=".." pages-path=""></clee-footer>
 
+    <script src="../js/components/nav-bar.js"></script>
     <script src="../js/common.js"></script>
+    <script src="../js/companies.js"></script>
 </body>
 </html>
 

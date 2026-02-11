@@ -2,6 +2,163 @@
 
 Tous les messages de commit suivent la convention **Conventional Commits** (voir `.github/copilot-instructions.md`).
 
+## [11/02/2026] - Composant footer
+
+### Composants
+- **js/components/footer.js** : Création du composant footer avec CSS/HTML intégrés
+- **index.html** : Remplacement du footer statique par le composant
+- **pages/** : Remplacement du footer statique par le composant sur l'ensemble des pages
+
+## [11/02/2026] - Généralisation du composant navbar
+
+### Navigation
+- **pages/** : Remplacement de la navbar statique par le composant `clee-nav-bar` sur l'ensemble des pages
+- **pages/dashboard.html** : Réparation de la structure HTML/CSS endommagée et insertion du composant navbar
+- **pages/connexion.html** : Restauration de l'entête HTML après remplacement de la navbar
+- **pages/portail.html** : Restauration de l'entête HTML après remplacement de la navbar
+
+## [11/02/2026] - Composant bouton principal centralisé
+
+### Composants
+- **js/components/primary-button.js** : Création d'un composant bouton principal avec styles intégrés et propriétés configurables
+- **js/components/primary-button.js** : Ajout du thème étudiant optionnel pour le visuel du bouton
+- **js/components/primary-button.js** : Ajustement du rendu étudiant pour conserver le gradient et le hover dédié
+- **js/components/primary-button.js** : Valeurs par défaut dépendantes du thème avec overrides via attributs
+- **js/components/primary-button.js** : Correction du background gradient en thème étudiant pour les hovers
+- **js/components/primary-button.js** : Détection du thème étudiant sur html/body pour appliquer le gradient par défaut
+- **js/components/primary-button.js** : Re-render automatique lors du changement de thème + fallback localStorage
+- **js/components/primary-button.js** : Support du rendu en bouton (submit/button) pour les formulaires
+- **pages/companies.html** : Remplacement des boutons btn-primary par le composant centralisé
+- **pages/establishments.html** : Remplacement des boutons btn-primary par le composant centralisé
+- **pages/contact.html** : Remplacement du bouton principal du formulaire par le composant
+- **pages/vie-clee.html** : Remplacement du CTA principal par le composant
+- **pages/orientation-insertion.html** : Remplacement du CTA principal par le composant
+- **pages/nos-actions.html** : Remplacement du CTA principal par le composant
+- **pages/documents-officiels.html** : Remplacement du CTA principal par le composant
+- **pages/inscription.html** : Remplacement du bouton de soumission par le composant
+- **pages/connexion.html** : Remplacement du bouton de soumission par le composant
+- **pages/theme-demo.html** : Remplacement des boutons primaires de démonstration
+- **pages/colors-reference.html** : Remplacement du bouton primaire de prévisualisation
+- **pages/dashboard.html** : Remplacement du bouton de déconnexion par le composant
+
+## [11/02/2026] - Composant navbar
+
+### Composants
+- **js/components/nav-bar.js** : Création d'un composant de navigation (HTML/CSS/JS) basé sur la navbar de l'accueil
+- **index.html** : Remplacement intégral de la navbar par le composant
+- **pages/agenda.html** : Remplacement de la navbar par le composant
+
+## [11/02/2026] - Conformité hero et footer de l'agenda
+
+### Ajustements de mise en page
+- **pages/agenda.html** : Ajout du calque hero pour aligner la structure sur l'accueil
+- **css/agenda.css** : Harmonisation de la hauteur du hero et du calque pour synchroniser le footer avec l'image
+
+## [10/02/2026] - Ajout de la bannière d'accessibilité
+
+### Nouvelle fonctionnalité : Bannière de notification
+- **Bannière d'accessibilité** : Affichage automatique au lancement du site (similaire aux bannières de cookies)
+- **Proposition de contraste élevé** : L'utilisateur peut activer le mode contraste élevé directement depuis la bannière
+- **Persistance intelligente** : La bannière ne s'affiche qu'une seule fois et ne réapparaît pas si :
+  - L'utilisateur l'a déjà fermée
+  - Le mode contraste élevé est déjà activé
+- **Lien vers portail** : Redirection vers les options d'accessibilité complètes
+
+### Modifications techniques
+- **js/common.js** : Ajout du module `AccessibilityBannerModule`
+  - Gestion de l'affichage automatique (délai de 1 seconde)
+  - Gestion des actions (Activer, Non merci, Fermer)
+  - Application du contraste élevé
+  - Persistance avec localStorage (`clee_accessibility_banner_dismissed`, `clee_high_contrast`)
+- **css/globals.css** : Ajout des styles de la bannière
+  - Design moderne avec fond dégradé sombre
+  - Animation de slide-up depuis le bas
+  - Boutons stylisés (Activer en orange, Non merci en transparent)
+  - Responsive avec adaptations mobile/tablette
+  - Déplacement des styles `.high-contrast` et `.reduce-motion` depuis portail.css
+
+### Interface utilisateur
+- Position fixe en bas de l'écran (z-index: 10000)
+- Icône de contraste (cercle moitié noir/moitié blanc)
+- Texte explicatif avec lien vers portail.html
+- Trois actions possibles : Activer, Non merci, Fermer (X)
+- Animation fluide d'apparition/disparition
+- Responsive : boutons empilés sur mobile
+
+### Documentation
+- **TEST-ACCESSIBILITY-BANNER.md** : Guide complet de test avec 8 scénarios
+- Instructions de test pour vérifier toutes les fonctionnalités
+- Liste des fichiers modifiés et variables localStorage utilisées
+
+## [10/02/2026] - Transformation du portail en page d'accessibilité
+
+### Changement majeur du système de portail
+- **Transformation de portail.html** : La page de sélection de profil devient une page d'options d'accessibilité
+- **Thème par défaut** : Le thème étudiant est maintenant appliqué par défaut pour tous les utilisateurs
+- **Suppression de la redirection** : Les utilisateurs ne sont plus redirigés automatiquement vers le portail
+
+### Nouvelles fonctionnalités d'accessibilité
+- **Taille de texte** : 4 niveaux ajustables (Petit, Normal, Grand, Très grand)
+- **Contraste élevé** : Mode à fort contraste pour faciliter la lecture
+- **Réduction d'animations** : Option pour désactiver ou réduire les animations
+- **Persistance** : Toutes les préférences sont sauvegardées dans localStorage
+- **Bouton de réinitialisation** : Restaure tous les paramètres par défaut
+
+### Modifications techniques
+- **js/portail.js** : Remplacement de PortailModule par AccessibilityModule
+- **css/portail.css** : Refonte complète des styles pour la page d'accessibilité
+- **js/common.js** : Suppression de la logique de redirection et du badge de profil
+- Thème étudiant défini comme valeur par défaut dans getCurrentTheme()
+
+### Documentation
+- **Création de ACCESSIBILITE-GUIDE.md** : Guide complet des options d'accessibilité
+- **Mise à jour de PORTAIL-GUIDE.md** : Marqué comme obsolète avec redirection vers le nouveau guide
+- **Mise à jour de PAGES-STRUCTURE.md** : Portail.html déplacé vers les pages utilitaires
+- **Mise à jour de README.md** : Section portail remplacée par section accessibilité
+
+### Interface utilisateur
+- Ajout de la navigation complète sur portail.html
+- Nouveau design de cartes d'accessibilité avec icônes SVG
+- Toggles interactifs pour les options on/off
+- Boutons +/- pour l'ajustement de la taille de texte
+- Design responsive avec breakpoints mobile/tablette/desktop
+## [10/02/2026] - Déplacement du tableau des formations
+
+### PFMP
+- Déplacement du bloc "Formations disponibles" de la page Entreprises vers la page stages (PFMP)
+- Positionnement du tableau juste après la section "Qu'est-ce qu'un stage ?"
+- Suppression du téléchargement PDF "Calendrier des stages"
+- Suppression du bloc "Calendriers des PFMP par Formation"
+- Correction du padding dans "Modèles pour vos Candidatures"
+- Liens utiles : grille 3x2
+- PFMP ou Stage : remplacement par 2 cartes dédiées
+
+### Entreprises & Partenaires
+- Ajustement du style de la barre de recherche "Rechercher une formation" pour une hauteur fixe de 56px
+
+### Formulaire établissements
+- Remplacement de "Modalité" par des tags de type de stage (3e, 2de, PFMP, BTS)
+
+### Accueil
+- Ajout d'un calque photo sur le bandeau hero avec image de remplacement
+
+### Pages principales
+- Portail : hauteur du hero alignée sur les autres pages
+- Portail : calque hero affiché sur l'en-tête
+
+### Établissements & Formations
+- Intégration d'une carte Google Maps interactive dans le bloc carte
+- Génération de la liste et des points de carte à partir du JSON
+- Remplacement de l'API Google Maps par un iframe Google Maps personnalisé
+- Masquage du panneau/banderole dans l'iframe de la carte
+- Remplacement par une carte Google Maps centrée sur Bordeaux (sans points personnalisés)
+- Retour à la carte Google Maps JS avec points JSON
+- Passage à une carte Leaflet/OpenStreetMap sans clé API
+- Points des collèges en rouge sur la carte
+- Génération dynamique des cartes établissement depuis le JSON
+- Mise en forme des informations (lignes distinctes, libellés en gras)
+- Footer synchronisé avec l'image du hero sur la page établissements
+
 ## [05/02/2026] - Système de pagination pour le tableau des formations
 
 ### Pagination complète

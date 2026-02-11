@@ -5,9 +5,41 @@
 /* Hero Section - Variante Jeunes & Familles */
 .hero {
     background: linear-gradient(135deg, var(--primary-600) 0%, var(--primary-700) 100%);
-    padding: 20px 0 20px;
+    padding: 60px 0 40px;
     color: white;
     position: relative;
+    overflow: hidden;
+    min-height: 360px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.hero-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--primary-900);
+    opacity: 0.55;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
 }
 
 /* Section Communes */
@@ -39,6 +71,16 @@
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 32px;
     margin-bottom: 48px;
+}
+
+.cards-grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 768px) {
+    .cards-grid-2 {
+        grid-template-columns: 1fr;
+    }
 }
 
 .info-card {
@@ -175,6 +217,204 @@
     background: var(--primary-700);
 }
 
+/* Table responsive pour calendriers */
+.dual-tables-container {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin: 32px auto;
+    flex-wrap: wrap;
+}
+
+.dual-tables-container .table-block {
+    flex: 1;
+    min-width: 500px;
+    max-width: 600px;
+}
+
+.table-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.table-header-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--grey-200);
+}
+
+.table-subtitle {
+    font-size: 14px;
+    color: var(--grey-600);
+    font-weight: 500;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    min-width: 800px;
+}
+
+.calendar-table thead {
+    background: var(--primary-600);
+    color: white;
+}
+
+.calendar-table th {
+    padding: 16px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.calendar-table tbody tr {
+    border-bottom: 1px solid var(--grey-200);
+    transition: background 0.2s ease;
+}
+
+.calendar-table tbody tr:hover {
+    background: var(--grey-50);
+}
+
+.calendar-table td {
+    padding: 16px;
+    font-size: 15px;
+    color: var(--grey-700);
+    text-align: center;
+}
+
+.calendar-table td:first-child {
+    text-align: left;
+}
+
+.calendar-table td strong {
+    color: var(--grey-900);
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.badge-pfmp {
+    background: var(--primary-100);
+    color: var(--primary-700);
+}
+
+.badge-stage {
+    background: var(--success-100, #d1f4e0);
+    color: var(--success-700, #0d7a3f);
+}
+
+.calendar-legend {
+    margin-top: 32px;
+    padding: 24px;
+    background: var(--grey-50);
+    border-radius: 12px;
+    border-left: 4px solid var(--primary-600);
+}
+
+.calendar-legend p {
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: var(--grey-700);
+}
+
+.calendar-legend ul {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0;
+}
+
+.calendar-legend li {
+    padding: 8px 0;
+    font-size: 14px;
+    color: var(--grey-600);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.calendar-note {
+    margin-top: 16px;
+    font-style: italic;
+    color: var(--grey-500);
+    font-size: 14px;
+}
+
+/* Responsive table sur mobile */
+@media (max-width: 1024px) {
+    .dual-tables-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .dual-tables-container .table-block {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .calendar-table {
+        min-width: unset;
+    }
+    
+    .calendar-table thead {
+        display: none;
+    }
+    
+    .calendar-table tbody tr {
+        display: block;
+        margin-bottom: 16px;
+        border: 1px solid var(--grey-200);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    .calendar-table td {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--grey-100);
+    }
+    
+    .calendar-table td:last-child {
+        border-bottom: none;
+    }
+    
+    .calendar-table td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: var(--grey-900);
+        flex-shrink: 0;
+        margin-right: 16px;
+    }
+    
+    .calendar-table td[colspan] {
+        display: none;
+    }
+}
+
 /* Video Section */
 .video-section {
     padding: 80px 0;
@@ -213,8 +453,20 @@
 
 .links-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
+}
+
+@media (max-width: 1023px) {
+    .links-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .links-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .link-card {

@@ -226,6 +226,25 @@ const ScrollAnimationModule = (() => {
 })();
 
 /**
+ * Footer background from hero image
+ */
+const FooterHeroImageModule = (() => {
+  const init = () => {
+    const footer = document.querySelector('.footer');
+    const heroImage = document.querySelector('.hero-overlay img');
+
+    if (!footer || !heroImage || !heroImage.src) return;
+
+    footer.style.setProperty(
+      '--footer-hero-image',
+      `url("${heroImage.src}")`
+    );
+  };
+
+  return { init };
+})();
+
+/**
  * Counter Animation for Numbers
  */
 const CounterModule = (() => {
@@ -295,12 +314,134 @@ const ActiveLinkModule = (() => {
 })();
 
 // ========================================
+// ACCESSIBILITY BANNER MODULE
+// ========================================
+
+const AccessibilityBannerModule = (() => {
+  const BANNER_DISMISSED_KEY = 'clee_accessibility_banner_dismissed';
+  const HIGH_CONTRAST_KEY = 'clee_high_contrast';
+  
+  // Vérifier si la bannière a déjà été affichée/fermée
+  const isBannerDismissed = () => {
+    return localStorage.getItem(BANNER_DISMISSED_KEY) === 'true';
+  };
+  
+  // Vérifier si le contraste élevé est déjà activé
+  const isHighContrastEnabled = () => {
+    return localStorage.getItem(HIGH_CONTRAST_KEY) === 'true';
+  };
+  
+  // Appliquer le contraste élevé
+  const applyHighContrast = (enabled) => {
+    if (enabled) {
+      document.documentElement.classList.add('high-contrast');
+    } else {
+      document.documentElement.classList.remove('high-contrast');
+    }
+    localStorage.setItem(HIGH_CONTRAST_KEY, enabled);
+  };
+  
+  // Fermer la bannière
+  const dismissBanner = () => {
+    const banner = document.getElementById('accessibility-banner');
+    if (banner) {
+      banner.classList.add('hidden');
+      setTimeout(() => banner.remove(), 300);
+    }
+    localStorage.setItem(BANNER_DISMISSED_KEY, 'true');
+  };
+  
+  // Activer le contraste et fermer la bannière
+  const acceptHighContrast = () => {
+    applyHighContrast(true);
+    dismissBanner();
+  };
+  
+  // Refuser et fermer la bannière
+  const declineHighContrast = () => {
+    dismissBanner();
+  };
+  
+  // Créer et afficher la bannière
+  const showBanner = () => {
+    // Ne pas afficher si déjà fermée ou si contraste déjà activé
+    if (isBannerDismissed() || isHighContrastEnabled()) {
+      return;
+    }
+    
+    // Créer l'élément de bannière
+    const banner = document.createElement('div');
+    banner.id = 'accessibility-banner';
+    banner.className = 'accessibility-banner';
+    banner.setAttribute('role', 'dialog');
+    banner.setAttribute('aria-labelledby', 'banner-title');
+    banner.setAttribute('aria-describedby', 'banner-description');
+    
+    banner.innerHTML = `
+      <div class="accessibility-banner-content">
+        <div class="accessibility-banner-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+            <path d="M12 2V22" stroke="currentColor" stroke-width="2"/>
+            <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22V2Z" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="accessibility-banner-text">
+          <h3 id="banner-title" class="accessibility-banner-title">Mode Contraste Élevé</h3>
+          <p id="banner-description" class="accessibility-banner-description">
+            Améliorez la lisibilité du site avec un mode à fort contraste. 
+            Vous pouvez modifier ce paramètre à tout moment dans les 
+            <a href="${window.location.pathname.includes('/pages/') ? '' : 'pages/'}portail.html">options d'accessibilité</a>.
+          </p>
+        </div>
+        <div class="accessibility-banner-actions">
+          <button class="btn-banner btn-banner-accept" id="accept-contrast" aria-label="Activer le mode contraste élevé">
+            Activer
+          </button>
+          <button class="btn-banner btn-banner-decline" id="decline-contrast" aria-label="Non merci">
+            Non merci
+          </button>
+          <button class="btn-banner-close" id="close-banner" aria-label="Fermer la bannière">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    `;
+    
+    document.body.appendChild(banner);
+    
+    // Ajouter les événements
+    document.getElementById('accept-contrast').addEventListener('click', acceptHighContrast);
+    document.getElementById('decline-contrast').addEventListener('click', declineHighContrast);
+    document.getElementById('close-banner').addEventListener('click', dismissBanner);
+    
+    // Afficher la bannière avec animation après un court délai
+    setTimeout(() => {
+      banner.classList.add('visible');
+    }, 500);
+  };
+  
+  const init = () => {
+    // Appliquer le contraste s'il est déjà activé
+    if (isHighContrastEnabled()) {
+      applyHighContrast(true);
+    }
+    
+    // Afficher la bannière après un délai
+    setTimeout(showBanner, 1000);
+  };
+  
+  return { init };
+})();
+
+// ========================================
 // THEME MANAGER MODULE
 // ========================================
 
 const ThemeModule = (() => {
   const THEME_KEY = 'clee_theme';
-  const PROFILE_KEY = 'clee_user_profile';
   
   // Charger la feuille de style du thème étudiant
   const loadStudentTheme = () => {
@@ -330,81 +471,29 @@ const ThemeModule = (() => {
     document.documentElement.removeAttribute('data-theme');
   };
   
-  // Récupérer le thème actuel
+  // Récupérer le thème actuel (par défaut: étudiant)
   const getCurrentTheme = () => {
-    return localStorage.getItem(THEME_KEY) || 'professionnel';
-  };
-  
-  // Récupérer le profil actuel
-  const getCurrentProfile = () => {
-    return localStorage.getItem(PROFILE_KEY);
+    return localStorage.getItem(THEME_KEY) || 'etudiant';
   };
   
   // Appliquer le thème
   const applyTheme = () => {
     const theme = getCurrentTheme();
-    const profile = getCurrentProfile();
     
-    // Si aucun profil n'est défini et qu'on n'est pas sur le portail, rediriger
-    if (!profile && !window.location.pathname.includes('portail.html')) {
-      const isRootPage = !window.location.pathname.includes('/pages/');
-      window.location.href = isRootPage ? 'pages/portail.html' : 'portail.html';
-      return;
-    }
-    
+    // Le thème étudiant est maintenant le thème par défaut
     if (theme === 'etudiant') {
       loadStudentTheme();
-      addThemeBadge('etudiant');
     } else {
       removeStudentTheme();
-      addThemeBadge('professionnel');
     }
   };
   
-  // Ajouter un badge de changement de thème
-  const addThemeBadge = (currentTheme) => {
-    // Ne pas ajouter sur la page portail
-    if (window.location.pathname.includes('portail.html')) return;
-    
-    // Vérifier si le badge existe déjà
-    if (document.querySelector('.theme-badge')) return;
-    
-    const badge = document.createElement('div');
-    badge.className = 'theme-badge';
-    
-    // Contenu différent selon le thème
-    if (currentTheme === 'etudiant') {
-      badge.classList.add('theme-badge-student');
-      badge.innerHTML = `
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 3L1 9L5 11.18V17.18L12 21L19 17.18V11.18L21 10.09V17H23V9L12 3Z" fill="currentColor"/>
-        </svg>
-        <span>Mode Étudiant</span>
-      `;
-    } else {
-      badge.classList.add('theme-badge-pro');
-      badge.innerHTML = `
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M20 7H16V5C16 3.9 15.1 3 14 3H10C8.9 3 8 3.9 8 5V7H4C2.9 7 2 7.9 2 9V19C2 20.1 2.9 21 4 21H20C21.1 21 22 20.1 22 19V9C22 7.9 21.1 7 20 7ZM10 5H14V7H10V5Z" fill="currentColor"/>
-        </svg>
-        <span>Mode Professionnel</span>
-      `;
-    }
-    
-    badge.title = 'Changer de profil';
-    
-    badge.addEventListener('click', () => {
-      const isRootPage = !window.location.pathname.includes('/pages/');
-      window.location.href = isRootPage ? 'pages/portail.html' : 'portail.html';
-    });
-    
-    document.body.appendChild(badge);
-  };
-  
-  // Changer de thème
+  // Changer de thème (fonction conservée pour compatibilité)
   const switchTheme = () => {
-    const isRootPage = !window.location.pathname.includes('/pages/');
-    window.location.href = isRootPage ? 'pages/portail.html' : 'portail.html';
+    const currentTheme = getCurrentTheme();
+    const newTheme = currentTheme === 'etudiant' ? 'professionnel' : 'etudiant';
+    localStorage.setItem(THEME_KEY, newTheme);
+    applyTheme();
   };
   
   const init = () => {
@@ -415,8 +504,7 @@ const ThemeModule = (() => {
     init,
     applyTheme,
     switchTheme,
-    getCurrentTheme,
-    getCurrentProfile
+    getCurrentTheme
   };
 })();
 
@@ -428,12 +516,16 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialiser le gestionnaire de thème en premier
   ThemeModule.init();
   
+  // Initialiser la bannière d'accessibilité
+  AccessibilityBannerModule.init();
+  
   NavigationModule.init();
   SmoothScrollModule.init();
   HeaderScrollModule.init();
   ScrollAnimationModule.init();
   CounterModule.init();
   ActiveLinkModule.init();
+  FooterHeroImageModule.init();
 
   console.log('%c✓ CLEE Bordeaux Avenir - Core modules initialized', 'color: #314960; font-weight: bold;');
 });
