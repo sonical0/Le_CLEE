@@ -14,7 +14,7 @@ class CleeFooter extends HTMLElement {
         .footer {
           background-color: var(--primary-900);
           color: #ffffff;
-          padding: 60px 0 24px;
+          padding: 36px 0 16px; /* reduced vertical padding */
           position: relative;
           overflow: hidden;
         }
@@ -47,8 +47,8 @@ class CleeFooter extends HTMLElement {
         .footer-content {
           display: grid;
           grid-template-columns: 1fr 2fr;
-          gap: 60px;
-          margin-bottom: 40px;
+          gap: 32px; /* reduced vertical gap between columns */
+          margin-bottom: 24px; /* reduced bottom margin */
         }
 
         .footer-main {
@@ -59,8 +59,8 @@ class CleeFooter extends HTMLElement {
         .footer-logo {
           display: flex;
           flex-direction: column;
-          gap: 8px;
-          margin-bottom: 24px;
+          gap: 6px;
+          margin-bottom: 16px; /* reduced spacing */
         }
 
         .footer-logo img {
@@ -77,12 +77,12 @@ class CleeFooter extends HTMLElement {
         .footer-description {
           color: rgba(255, 255, 255, 0.8);
           font-size: 14px;
-          line-height: 1.6;
+          line-height: 1.4; /* tighter line-height */
         }
 
         .footer-medef-logo {
-          margin-top: 24px;
-          padding-top: 24px;
+          margin-top: 16px; /* reduced vertical spacing */
+          padding-top: 12px;
           border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
@@ -101,9 +101,9 @@ class CleeFooter extends HTMLElement {
 
         .footer-title {
           font-family: var(--titre-font-family);
-          font-size: 24px;
+          font-size: 22px;
           font-weight: 600;
-          margin-bottom: 12px;
+          margin-bottom: 8px;
         }
 
         .footer-text {
@@ -114,7 +114,7 @@ class CleeFooter extends HTMLElement {
         .footer-links {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
-          gap: 40px;
+          gap: 24px; /* reduced gap between link columns */
         }
 
         .footer-column ul {
@@ -122,7 +122,7 @@ class CleeFooter extends HTMLElement {
         }
 
         .footer-column li {
-          margin-bottom: 12px;
+          margin-bottom: 8px; /* less vertical space per link */
         }
 
         .footer-column a {
@@ -138,14 +138,14 @@ class CleeFooter extends HTMLElement {
 
         .footer-subtitle {
           font-weight: 600;
-          font-size: 16px;
-          margin-bottom: 16px;
+          font-size: 15px;
+          margin-bottom: 8px; /* tighter spacing */
           color: var(--primary-200);
         }
 
         .footer-bottom {
           text-align: center;
-          padding-top: 32px;
+          padding-top: 20px; /* reduced top padding */
           border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 

@@ -2,6 +2,11 @@ class CleeNavBar extends HTMLElement {
   constructor() {
     super();
     this.handleToggle = this.handleToggle.bind(this);
+    this._longPressTimer = null;
+    this._longPressTriggered = false;
+    this._handleLogoMouseDown = null;
+    this._handleLogoMouseUp = null;
+    this._handleLogoClick = null;
   }
 
   connectedCallback() {
@@ -13,6 +18,16 @@ class CleeNavBar extends HTMLElement {
     const toggle = this.querySelector('.menu-toggle');
     if (toggle) {
       toggle.removeEventListener('click', this.handleToggle);
+    }
+    const logo = this.querySelector('.logo');
+    if (logo) {
+      logo.removeEventListener('mousedown', this._handleLogoMouseDown);
+      logo.removeEventListener('touchstart', this._handleLogoMouseDown);
+      logo.removeEventListener('mouseup', this._handleLogoMouseUp);
+      logo.removeEventListener('mouseleave', this._handleLogoMouseUp);
+      logo.removeEventListener('touchend', this._handleLogoMouseUp);
+      logo.removeEventListener('touchcancel', this._handleLogoMouseUp);
+      logo.removeEventListener('click', this._handleLogoClick);
     }
   }
 
@@ -30,6 +45,57 @@ class CleeNavBar extends HTMLElement {
     const toggle = this.querySelector('.menu-toggle');
     if (toggle) {
       toggle.addEventListener('click', this.handleToggle);
+    }
+
+    const logo = this.querySelector('.logo');
+    // compute target for colors reference using same pages-path logic
+    const pagesPath = this.getAttribute('pages-path') ?? 'pages';
+    const colorsHref = pagesPath ? `${pagesPath}/colors-reference.html` : 'colors-reference.html';
+
+    if (logo) {
+      // cleanup previous handlers if any
+      if (this._handleLogoMouseDown) {
+        logo.removeEventListener('mousedown', this._handleLogoMouseDown);
+        logo.removeEventListener('touchstart', this._handleLogoMouseDown);
+        logo.removeEventListener('mouseup', this._handleLogoMouseUp);
+        logo.removeEventListener('mouseleave', this._handleLogoMouseUp);
+        logo.removeEventListener('touchend', this._handleLogoMouseUp);
+        logo.removeEventListener('touchcancel', this._handleLogoMouseUp);
+        logo.removeEventListener('click', this._handleLogoClick);
+      }
+
+      this._handleLogoMouseDown = (e) => {
+        this._longPressTriggered = false;
+        // start 3s timer
+        this._longPressTimer = setTimeout(() => {
+          this._longPressTriggered = true;
+          // navigate to colors reference
+          window.location.href = colorsHref;
+        }, 3000);
+      };
+
+      this._handleLogoMouseUp = (e) => {
+        if (this._longPressTimer) {
+          clearTimeout(this._longPressTimer);
+          this._longPressTimer = null;
+        }
+      };
+
+      // prevent the normal click navigation when long-press triggered
+      this._handleLogoClick = (e) => {
+        if (this._longPressTriggered) {
+          e.preventDefault();
+          this._longPressTriggered = false;
+        }
+      };
+
+      logo.addEventListener('mousedown', this._handleLogoMouseDown);
+      logo.addEventListener('touchstart', this._handleLogoMouseDown, {passive: true});
+      logo.addEventListener('mouseup', this._handleLogoMouseUp);
+      logo.addEventListener('mouseleave', this._handleLogoMouseUp);
+      logo.addEventListener('touchend', this._handleLogoMouseUp);
+      logo.addEventListener('touchcancel', this._handleLogoMouseUp);
+      logo.addEventListener('click', this._handleLogoClick);
     }
   }
 
