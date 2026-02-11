@@ -2,6 +2,13 @@
 
 Tous les messages de commit suivent la convention **Conventional Commits** (voir `.github/copilot-instructions.md`).
 
+## [11/02/2026] - Composant footer
+
+### Composants
+- **js/components/footer.js** : Création du composant footer avec CSS/HTML intégrés
+- **index.html** : Remplacement du footer statique par le composant
+- **pages/** : Remplacement du footer statique par le composant sur l'ensemble des pages
+
 ## [11/02/2026] - Généralisation du composant navbar
 
 ### Navigation
