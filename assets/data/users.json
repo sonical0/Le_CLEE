@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "id": "demo-001",
+      "email": "demo@clee-bordeaux.fr",
+      "password": "Demo1234",
+      "firstName": "Utilisateur",
+      "lastName": "Démo",
+      "userType": "etablissement",
+      "createdAt": "2026-01-15T10:00:00Z",
+      "active": true
+    }
+  ]
+}
