@@ -2,6 +2,21 @@
 
 Tous les messages de commit suivent la convention **Conventional Commits** (voir `.github/copilot-instructions.md`).
 
+## [11/02/2026] - Composant footer
+
+### Composants
+- **js/components/footer.js** : Création du composant footer avec CSS/HTML intégrés
+- **index.html** : Remplacement du footer statique par le composant
+- **pages/** : Remplacement du footer statique par le composant sur l'ensemble des pages
+
+## [11/02/2026] - Généralisation du composant navbar
+
+### Navigation
+- **pages/** : Remplacement de la navbar statique par le composant `clee-nav-bar` sur l'ensemble des pages
+- **pages/dashboard.html** : Réparation de la structure HTML/CSS endommagée et insertion du composant navbar
+- **pages/connexion.html** : Restauration de l'entête HTML après remplacement de la navbar
+- **pages/portail.html** : Restauration de l'entête HTML après remplacement de la navbar
+
 ## [11/02/2026] - Composant bouton principal centralisé
 
 ### Composants
@@ -15,6 +30,23 @@ Tous les messages de commit suivent la convention **Conventional Commits** (voir
 - **js/components/primary-button.js** : Support du rendu en bouton (submit/button) pour les formulaires
 - **pages/companies.html** : Remplacement des boutons btn-primary par le composant centralisé
 - **pages/establishments.html** : Remplacement des boutons btn-primary par le composant centralisé
+- **pages/contact.html** : Remplacement du bouton principal du formulaire par le composant
+- **pages/vie-clee.html** : Remplacement du CTA principal par le composant
+- **pages/orientation-insertion.html** : Remplacement du CTA principal par le composant
+- **pages/nos-actions.html** : Remplacement du CTA principal par le composant
+- **pages/documents-officiels.html** : Remplacement du CTA principal par le composant
+- **pages/inscription.html** : Remplacement du bouton de soumission par le composant
+- **pages/connexion.html** : Remplacement du bouton de soumission par le composant
+- **pages/theme-demo.html** : Remplacement des boutons primaires de démonstration
+- **pages/colors-reference.html** : Remplacement du bouton primaire de prévisualisation
+- **pages/dashboard.html** : Remplacement du bouton de déconnexion par le composant
+
+## [11/02/2026] - Composant navbar
+
+### Composants
+- **js/components/nav-bar.js** : Création d'un composant de navigation (HTML/CSS/JS) basé sur la navbar de l'accueil
+- **index.html** : Remplacement intégral de la navbar par le composant
+- **pages/agenda.html** : Remplacement de la navbar par le composant
 
 ## [11/02/2026] - Conformité hero et footer de l'agenda
 
