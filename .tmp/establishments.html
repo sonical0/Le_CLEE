@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Lycée Professionnel Talence - Découvrez nos formations et nos équipements - CLEE Bordeaux Avenir">
-    <title>Lycée Professionnel Talence - CLEE Bordeaux Avenir</title>
+    <meta name="description" content="Lyc├®e Professionnel Talence - D├®couvrez nos formations et nos ├®quipements - CLEE Bordeaux Avenir">
+    <title>Lyc├®e Professionnel Talence - CLEE Bordeaux Avenir</title>
     <link rel="stylesheet" href="../css/globals.css">
     <link rel="stylesheet" href="../css/establishments.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
@@ -25,7 +25,7 @@
             <nav class="breadcrumb" aria-label="Fil d'ariane">
                 <a href="../index.html">Accueil</a>
                 <span>/</span>
-                <span>Établissements</span>
+                <span>├ëtablissements</span>
             </nav>
         </div>
     </div>
@@ -34,13 +34,13 @@
         <div class="container">
             <h2 class="section-title">Rechercher une formation</h2>
             <form class="formations-search-bar" autocomplete="off">
-                <input type="text" id="formation-search-input" placeholder="Rechercher par nom de formation, mot-clé..." aria-label="Recherche formation">
+                <input type="text" id="formation-search-input" placeholder="Rechercher par nom de formation, mot-cl├®..." aria-label="Recherche formation">
                 <select id="formation-secteur-filter" aria-label="Filtrer par secteur">
                     <option value="tous">Tous les secteurs</option>
                     <option value="industrie">Industrie</option>
-                    <option value="numerique">Numérique</option>
+                    <option value="numerique">Num├®rique</option>
                     <option value="tertiaire">Tertiaire</option>
-                    <option value="batiment">Bâtiment</option>
+                    <option value="batiment">B├ótiment</option>
                 </select>
                 <select id="formation-niveau-filter" aria-label="Filtrer par niveau">
                     <option value="tous">Tous les niveaux</option>
@@ -50,12 +50,12 @@
                 </select>
                 <select id="formation-formations-filter" aria-label="Filtrer par formations">
                     <option value="tous">Toutes les formations</option>
-                    <option value="cap-electricien">CAP Électricien</option>
-                    <option value="bac-pro-sn">Bac Pro Systèmes Numériques</option>
+                    <option value="cap-electricien">CAP ├ëlectricien</option>
+                    <option value="bac-pro-sn">Bac Pro Syst├¿mes Num├®riques</option>
                     <option value="bac-pro-ga">Bac Pro Gestion Administrative</option>
-                    <option value="bts-cybersecurite">BTS Cybersécurité</option>
+                    <option value="bts-cybersecurite">BTS Cybers├®curit├®</option>
                     <option value="bts-sio">BTS SIO - Option SLAM</option>
-                    <option value="cap-macon">CAP Maçon</option>
+                    <option value="cap-macon">CAP Ma├ºon</option>
                 </select>
                 <clee-primary-button as="button" type="submit" text="Filtrer"></clee-primary-button>
             </form>
@@ -64,17 +64,17 @@
 
     <section class="hero-etablissement">
         <div class="hero-overlay hero-overlay-hidden" aria-hidden="true">
-            <!-- TODO: Remplacer l'image du calque du hero par la photo définitive -->
+            <!-- TODO: Remplacer l'image du calque du hero par la photo d├®finitive -->
             <img src="https://picsum.photos/1920/1080" alt="" loading="lazy">
         </div>
         <div class="container">
             <div class="hero-grid">
                 <div class="carte-ecoles-wrapper">
-                    <h2 class="carte-title">Établissements du CLEE</h2>
-                    <p class="carte-subtitle">Sélectionnez un établissement sur la carte</p>
+                    <h2 class="carte-title">├ëtablissements du CLEE</h2>
+                    <p class="carte-subtitle">S├®lectionnez un ├®tablissement sur la carte</p>
                     
                     <div class="carte-interactive">
-                        <div class="carte-map" id="establishmentsMap" role="application" aria-label="Carte interactive des établissements"></div>
+                        <div class="carte-map" id="establishmentsMap" role="application" aria-label="Carte interactive des ├®tablissements"></div>
                     </div>
 
                     <div class="ecoles-list" id="ecolesList"></div>
@@ -82,7 +82,7 @@
                 
                 <div class="etablissement-card" id="etablissement-content">
                     <div class="etablissement-content">
-                        <p>Chargement des établissements...</p>
+                        <p>Chargement des ├®tablissements...</p>
                     </div>
                 </div>
             </div>
@@ -91,32 +91,32 @@
 
     <section class="formations-section" id="formations" style="display: none;">
         <div class="container">
-            <h2 class="section-title">Formations proposées</h2>
+            <h2 class="section-title">Formations propos├®es</h2>
             
             <div class="formations-grid">
                 <article class="formation-card" data-secteur="industrie">
                     <div class="formation-header">
                         <div class="formation-image">
-                            <img src="https://picsum.photos/400/250?random=20" alt="CAP Électricien">
+                            <img src="https://picsum.photos/400/250?random=20" alt="CAP ├ëlectricien">
                             <span class="formation-niveau">CAP</span>
                         </div>
                         <div class="formation-badge" style="background: linear-gradient(135deg, var(--color-industrie) 0%, var(--color-industrie) 100%);">Industrie</div>
                     </div>
                     <div class="formation-content">
-                        <h3 class="formation-title">CAP Électricien</h3>
-                        <p class="formation-description">Formation aux bases de l'électricité et installations électriques</p>
+                        <h3 class="formation-title">CAP ├ëlectricien</h3>
+                        <p class="formation-description">Formation aux bases de l'├®lectricit├® et installations ├®lectriques</p>
                         
                         <div class="formation-details">
                             <div class="detail-section">
                                 <h4>Objectifs</h4>
                                 <ul>
-                                    <li>Réaliser des installations électriques</li>
-                                    <li>Assurer la maintenance préventive</li>
+                                    <li>R├®aliser des installations ├®lectriques</li>
+                                    <li>Assurer la maintenance pr├®ventive</li>
                                 </ul>
                             </div>
                         </div>
                         
-                        <button class="formation-toggle">Voir les détails</button>
+                        <button class="formation-toggle">Voir les d├®tails</button>
                     </div>
                 </article>
 
@@ -126,23 +126,23 @@
                             <img src="https://picsum.photos/400/250?random=21" alt="Bac Pro SN">
                             <span class="formation-niveau">BAC PRO</span>
                         </div>
-                        <div class="formation-badge" style="background: linear-gradient(135deg, var(--color-numerique) 0%, var(--color-numerique) 100%);">Numérique</div>
+                        <div class="formation-badge" style="background: linear-gradient(135deg, var(--color-numerique) 0%, var(--color-numerique) 100%);">Num├®rique</div>
                     </div>
                     <div class="formation-content">
-                        <h3 class="formation-title">Bac Pro Systèmes Numériques</h3>
-                        <p class="formation-description">Formation en informatique, réseaux et cybersécurité</p>
+                        <h3 class="formation-title">Bac Pro Syst├¿mes Num├®riques</h3>
+                        <p class="formation-description">Formation en informatique, r├®seaux et cybers├®curit├®</p>
                         
                         <div class="formation-details">
                             <div class="detail-section">
                                 <h4>Objectifs</h4>
                                 <ul>
-                                    <li>Développer des applications</li>
-                                    <li>Gérer les réseaux informatiques</li>
+                                    <li>D├®velopper des applications</li>
+                                    <li>G├®rer les r├®seaux informatiques</li>
                                 </ul>
                             </div>
                         </div>
                         
-                        <button class="formation-toggle">Voir les détails</button>
+                        <button class="formation-toggle">Voir les d├®tails</button>
                     </div>
                 </article>
 
@@ -162,13 +162,13 @@
                             <div class="detail-section">
                                 <h4>Objectifs</h4>
                                 <ul>
-                                    <li>Gérer l'administratif d'une entreprise</li>
-                                    <li>Participer à la gestion RH</li>
+                                    <li>G├®rer l'administratif d'une entreprise</li>
+                                    <li>Participer ├á la gestion RH</li>
                                 </ul>
                             </div>
                         </div>
                         
-                        <button class="formation-toggle">Voir les détails</button>
+                        <button class="formation-toggle">Voir les d├®tails</button>
                     </div>
                 </article>
 
@@ -178,23 +178,23 @@
                             <img src="https://picsum.photos/400/250?random=23" alt="BTS CRSA">
                             <span class="formation-niveau">BTS</span>
                         </div>
-                        <div class="formation-badge" style="background: linear-gradient(135deg, var(--color-numerique) 0%, #3BA561 100%);">Numérique</div>
+                        <div class="formation-badge" style="background: linear-gradient(135deg, var(--color-numerique) 0%, #3BA561 100%);">Num├®rique</div>
                     </div>
                     <div class="formation-content">
-                        <h3 class="formation-title">BTS Cybersécurité</h3>
-                        <p class="formation-description">Formation supérieure en cybersécurité et protection des données</p>
+                        <h3 class="formation-title">BTS Cybers├®curit├®</h3>
+                        <p class="formation-description">Formation sup├®rieure en cybers├®curit├® et protection des donn├®es</p>
                         
                         <div class="formation-details">
                             <div class="detail-section">
                                 <h4>Objectifs</h4>
                                 <ul>
-                                    <li>Sécuriser les systèmes informatiques</li>
+                                    <li>S├®curiser les syst├¿mes informatiques</li>
                                     <li>Analyser les menaces</li>
                                 </ul>
                             </div>
                         </div>
                         
-                        <button class="formation-toggle">Voir les détails</button>
+                        <button class="formation-toggle">Voir les d├®tails</button>
                     </div>
                 </article>
 
@@ -208,56 +208,124 @@
                     </div>
                     <div class="formation-content">
                         <h3 class="formation-title">BTS SIO - Option SLAM</h3>
-                        <p class="formation-description">Formation en informatique et développement logiciel</p>
+                        <p class="formation-description">Formation en informatique et d├®veloppement logiciel</p>
                         
                         <div class="formation-details">
                             <div class="detail-section">
                                 <h4>Objectifs</h4>
                                 <ul>
-                                    <li>Développer des logiciels</li>
+                                    <li>D├®velopper des logiciels</li>
                                     <li>Assurer le support utilisateur</li>
                                 </ul>
                             </div>
                         </div>
                         
-                        <button class="formation-toggle">Voir les détails</button>
+                        <button class="formation-toggle">Voir les d├®tails</button>
                     </div>
                 </article>
 
                 <article class="formation-card" data-secteur="batiment">
                     <div class="formation-header">
                         <div class="formation-image">
-                            <img src="https://picsum.photos/400/250?random=25" alt="CAP Maçon">
+                            <img src="https://picsum.photos/400/250?random=25" alt="CAP Ma├ºon">
                             <span class="formation-niveau">CAP</span>
                         </div>
-                        <div class="formation-badge" style="background: linear-gradient(135deg, var(--color-batiment) 0%, var(--color-batiment) 100%);">Bâtiment</div>
+                        <div class="formation-badge" style="background: linear-gradient(135deg, var(--color-batiment) 0%, var(--color-batiment) 100%);">B├ótiment</div>
                     </div>
                     <div class="formation-content">
-                        <h3 class="formation-title">CAP Maçon</h3>
-                        <p class="formation-description">Formation aux techniques de maçonnerie et construction</p>
+                        <h3 class="formation-title">CAP Ma├ºon</h3>
+                        <p class="formation-description">Formation aux techniques de ma├ºonnerie et construction</p>
                         
                         <div class="formation-details">
                             <div class="detail-section">
                                 <h4>Objectifs</h4>
                                 <ul>
-                                    <li>Construire des structures maçonnées</li>
+                                    <li>Construire des structures ma├ºonn├®es</li>
                                     <li>Assurer la finition</li>
                                 </ul>
                             </div>
                         </div>
                         
-                        <button class="formation-toggle">Voir les détails</button>
+                        <button class="formation-toggle">Voir les d├®tails</button>
                     </div>
                 </article>
             </div>
         </div>
     </section>
 
-    <clee-footer base-path=".." pages-path=""></clee-footer>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-logo">
+                        <img src="../assets/images/logo-clee.png" alt="CLEE Bordeaux Avenir">
+                        <p>Comit├® Local ├ëcole-Entreprise</p>
+                    </div>
+                    
+                    <p class="footer-description">
+                        Le CLEE Bordeaux Avenir ┼ôuvre pour renforcer les liens entre le monde ├®ducatif et professionnel, 
+                        accompagner les jeunes dans leur orientation et faciliter leur insertion dans le monde du travail.
+                    </p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-subtitle">Le CLEE</h4>
+                        <ul>
+                            <li><a href="le-clee.html">Qui sommes-nous ?</a></li>
+                            <li><a href="bureau-membres.html">Bureau et membres</a></li>
+                            <li><a href="nos-actions.html">Nos actions</a></li>
+                            <li><a href="documents-officiels.html">Documents officiels</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-subtitle">Pour les entreprises</h4>
+                        <ul>
+                            <li><a href="companies.html">Devenir partenaire</a></li>
+                            <li><a href="companies.html#sponsors">Nos sponsors</a></li>
+                            <li><a href="companies.html#actions">Actions pour les entreprises</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-subtitle">Pour les jeunes</h4>
+                        <ul>
+                            <li><a href="pfmp.html">Tout savoir sur les stages</a></li>
+                            <li><a href="orientation-insertion.html">Conseils orientation</a></li>
+                            <li><a href="vie-clee-eleves.html">Vie du CLEE pour les ├®l├¿ves</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-subtitle">Navigation</h4>
+                        <ul>
+                            <li><a href="establishments.html">├ëtablissements & Formations</a></li>
+                            <li><a href="vie-clee.html">Vie du CLEE</a></li>
+                            <li><a href="agenda.html">Agenda</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-subtitle">Contact</h4>
+                        <ul>
+                            <li><a href="contact.html">Nous contacter</a></li>
+                            <li><a href="portail.html">Options d'accessibilit├®</a></li>
+                            <li><a href="#">LinkedIn</a></li>
+                            <li><a href="mentions-legales.html">Mentions l├®gales</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 CLEE Bordeaux Avenir. Tous droits r├®serv├®s.</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="../js/components/nav-bar.js"></script>
     <script src="../js/components/primary-button.js"></script>
-    <script src="../js/components/footer.js"></script>
     <script src="../js/common.js"></script>
     <script src="../js/establishments.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>

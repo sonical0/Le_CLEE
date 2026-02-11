@@ -3,75 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CLEE Bordeaux Avenir - Options d'accessibilité">
-    <title>CLEE Bordeaux Avenir - Accessibilité</title>
+    <meta name="description" content="Options d'accessibilité pour personnaliser votre expérience CLEE Bordeaux Avenir">
+    <title>Options d'accessibilité - CLEE Bordeaux Avenir</title>
     <link rel="stylesheet" href="../css/globals.css">
     <link rel="stylesheet" href="../css/portail.css">
 </head>
-<body class="portail-body">
-    <header class="header">
-        <nav class="navigation" role="navigation" aria-label="Navigation principale">
-            <div class="container">
-                <a href="../index.html" class="logo" aria-label="Retour à l'accueil">
-                    <img src="../assets/images/logo-clee.png" alt="CLEE Bordeaux Avenir">
-                </a>
-                
-                <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                
-                <ul class="nav-links">
-                    <li class="nav-item nav-dropdown">
-                        <a href="le-clee.html" class="nav-link nav-link-bleu">Le CLEE</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="le-clee.html">Qui sommes-nous ?</a></li>
-                            <li><a href="bureau-membres.html">Bureau et membres</a></li>
-                            <li><a href="nos-actions.html">Nos actions</a></li>
-                            <li><a href="documents-officiels.html">Documents officiels</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item nav-dropdown">
-                        <a href="companies.html" class="nav-link nav-link-bleu">Entreprises & Partenaires</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="companies.html">Devenir partenaire</a></li>
-                            <li><a href="companies.html#sponsors">Nos sponsors</a></li>
-                            <li><a href="companies.html#actions">Actions pour les entreprises</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item nav-dropdown">
-                        <a href="establishments.html" class="nav-link nav-link-orange">Établissements & Formations</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="establishments.html">Établissements et formations</a></li>
-                            <li><a href="pfmp.html">Stages et/ou PFMP</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item nav-dropdown">
-                        <a href="jeunes-familles.html" class="nav-link nav-link-orange">Jeunes & Familles</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="jeunes-familles.html">Ressources jeunes</a></li>
-                            <li><a href="orientation-insertion.html">Orientation et insertion</a></li>
-                            <li><a href="vie-clee-eleves.html">Vie du CLEE - Élèves</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item nav-dropdown">
-                        <a href="vie-clee.html" class="nav-link nav-link-orange">Vie du CLEE</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="vie-clee.html">Événements et actualités</a></li>
-                            <li><a href="agenda.html">Agenda</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="connexion.html" class="nav-link nav-link-vert">Connexion</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+<body>
+    <clee-nav-bar base-path=".." pages-path=""></clee-nav-bar>
 
     <main>
         <div class="portail-header">
+            <div class="hero-overlay" aria-hidden="true">
+                <!-- TODO: Remplacer l'image du calque du hero par la photo définitive -->
+                <img src="https://picsum.photos/1920/1080" alt="" loading="lazy">
+            </div>
             <h1 class="portail-main-title">Options d'accessibilité</h1>
             <p class="portail-subtitle">Personnalisez votre expérience de navigation</p>
         </div>
@@ -178,77 +123,10 @@
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-main">
-                    <div class="footer-logo">
-                        <img src="../assets/images/logo-clee.png" alt="CLEE Bordeaux Avenir">
-                        <p>Comité Local École-Entreprise</p>
-                    </div>
-                    
-                    <p class="footer-description">
-                        Le CLEE Bordeaux Avenir œuvre pour renforcer les liens entre le monde éducatif et professionnel, 
-                        accompagner les jeunes dans leur orientation et faciliter leur insertion dans le monde du travail.
-                    </p>
-                </div>
-                
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4 class="footer-subtitle">Le CLEE</h4>
-                        <ul>
-                            <li><a href="le-clee.html">Qui sommes-nous ?</a></li>
-                            <li><a href="bureau-membres.html">Bureau et membres</a></li>
-                            <li><a href="nos-actions.html">Nos actions</a></li>
-                            <li><a href="documents-officiels.html">Documents officiels</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h4 class="footer-subtitle">Pour les entreprises</h4>
-                        <ul>
-                            <li><a href="companies.html">Devenir partenaire</a></li>
-                            <li><a href="companies.html#sponsors">Nos sponsors</a></li>
-                            <li><a href="companies.html#actions">Actions pour les entreprises</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h4 class="footer-subtitle">Pour les jeunes</h4>
-                        <ul>
-                            <li><a href="pfmp.html">Tout savoir sur les stages</a></li>
-                            <li><a href="orientation-insertion.html">Conseils orientation</a></li>
-                            <li><a href="vie-clee-eleves.html">Vie du CLEE pour les élèves</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h4 class="footer-subtitle">Navigation</h4>
-                        <ul>
-                            <li><a href="establishments.html">Établissements & Formations</a></li>
-                            <li><a href="vie-clee.html">Vie du CLEE</a></li>
-                            <li><a href="agenda.html">Agenda</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h4 class="footer-subtitle">Contact</h4>
-                        <ul>
-                            <li><a href="contact.html">Nous contacter</a></li>
-                            <li><a href="portail.html">Options d'accessibilité</a></li>
-                            <li><a href="#">LinkedIn</a></li>
-                            <li><a href="mentions-legales.html">Mentions légales</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2026 CLEE Bordeaux Avenir. Tous droits réservés.</p>
-            </div>
-        </div>
-    </footer>
+    <clee-footer base-path=".." pages-path=""></clee-footer>
 
+    <script src="../js/components/nav-bar.js"></script>
+    <script src="../js/components/footer.js"></script>
     <script src="../js/common.js"></script>
     <script src="../js/portail.js"></script>
 </body>

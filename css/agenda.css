@@ -3,11 +3,80 @@
 ======================================== */
 
 /* Hero Section - Spécifique à la page agenda */
-.agenda .hero {
-  background: linear-gradient(135deg, var(--primary-700) 0%, var(--primary-900) 100%);
-  padding: 20px 0 20px;
-  color: white;
+.hero {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-800) 100%);
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
   text-align: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero-overlay img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--primary-900);
+  opacity: 0.55;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -10%;
+  left: -5%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+.hero-description {
+  max-width: 650px;
+  margin: 0 auto;
 }
 
 /* Filters Section - Spécifique à l'agenda */
@@ -198,13 +267,15 @@
 
 .day-number {
   font-weight: 600;
-  color: var(--grey-800);
+  color: var(--orange-clee);
+  /* Charte originelle: var(--grey-800) */
   margin-bottom: 8px;
   font-size: 16px;
 }
 
 .calendar-day.today .day-number {
-  color: var(--primary-600);
+  color: var(--orange-clee);
+  /* Charte originelle: var(--primary-600) */
 }
 
 .day-events {
@@ -271,7 +342,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #ffffff;
+  /* Charte originelle: white */
 }
 
 .event-day {

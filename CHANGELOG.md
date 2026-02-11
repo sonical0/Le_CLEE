@@ -2,6 +2,58 @@
 
 Tous les messages de commit suivent la convention **Conventional Commits** (voir `.github/copilot-instructions.md`).
 
+## [11/02/2026] - Composant footer
+
+### Composants
+- **js/components/footer.js** : Création du composant footer avec CSS/HTML intégrés
+- **index.html** : Remplacement du footer statique par le composant
+- **pages/** : Remplacement du footer statique par le composant sur l'ensemble des pages
+
+## [11/02/2026] - Généralisation du composant navbar
+
+### Navigation
+- **pages/** : Remplacement de la navbar statique par le composant `clee-nav-bar` sur l'ensemble des pages
+- **pages/dashboard.html** : Réparation de la structure HTML/CSS endommagée et insertion du composant navbar
+- **pages/connexion.html** : Restauration de l'entête HTML après remplacement de la navbar
+- **pages/portail.html** : Restauration de l'entête HTML après remplacement de la navbar
+
+## [11/02/2026] - Composant bouton principal centralisé
+
+### Composants
+- **js/components/primary-button.js** : Création d'un composant bouton principal avec styles intégrés et propriétés configurables
+- **js/components/primary-button.js** : Ajout du thème étudiant optionnel pour le visuel du bouton
+- **js/components/primary-button.js** : Ajustement du rendu étudiant pour conserver le gradient et le hover dédié
+- **js/components/primary-button.js** : Valeurs par défaut dépendantes du thème avec overrides via attributs
+- **js/components/primary-button.js** : Correction du background gradient en thème étudiant pour les hovers
+- **js/components/primary-button.js** : Détection du thème étudiant sur html/body pour appliquer le gradient par défaut
+- **js/components/primary-button.js** : Re-render automatique lors du changement de thème + fallback localStorage
+- **js/components/primary-button.js** : Support du rendu en bouton (submit/button) pour les formulaires
+- **pages/companies.html** : Remplacement des boutons btn-primary par le composant centralisé
+- **pages/establishments.html** : Remplacement des boutons btn-primary par le composant centralisé
+- **pages/contact.html** : Remplacement du bouton principal du formulaire par le composant
+- **pages/vie-clee.html** : Remplacement du CTA principal par le composant
+- **pages/orientation-insertion.html** : Remplacement du CTA principal par le composant
+- **pages/nos-actions.html** : Remplacement du CTA principal par le composant
+- **pages/documents-officiels.html** : Remplacement du CTA principal par le composant
+- **pages/inscription.html** : Remplacement du bouton de soumission par le composant
+- **pages/connexion.html** : Remplacement du bouton de soumission par le composant
+- **pages/theme-demo.html** : Remplacement des boutons primaires de démonstration
+- **pages/colors-reference.html** : Remplacement du bouton primaire de prévisualisation
+- **pages/dashboard.html** : Remplacement du bouton de déconnexion par le composant
+
+## [11/02/2026] - Composant navbar
+
+### Composants
+- **js/components/nav-bar.js** : Création d'un composant de navigation (HTML/CSS/JS) basé sur la navbar de l'accueil
+- **index.html** : Remplacement intégral de la navbar par le composant
+- **pages/agenda.html** : Remplacement de la navbar par le composant
+
+## [11/02/2026] - Conformité hero et footer de l'agenda
+
+### Ajustements de mise en page
+- **pages/agenda.html** : Ajout du calque hero pour aligner la structure sur l'accueil
+- **css/agenda.css** : Harmonisation de la hauteur du hero et du calque pour synchroniser le footer avec l'image
+
 ## [10/02/2026] - Ajout de la bannière d'accessibilité
 
 ### Nouvelle fonctionnalité : Bannière de notification
@@ -76,6 +128,10 @@ Tous les messages de commit suivent la convention **Conventional Commits** (voir
 - Déplacement du bloc "Formations disponibles" de la page Entreprises vers la page stages (PFMP)
 - Positionnement du tableau juste après la section "Qu'est-ce qu'un stage ?"
 - Suppression du téléchargement PDF "Calendrier des stages"
+- Suppression du bloc "Calendriers des PFMP par Formation"
+- Correction du padding dans "Modèles pour vos Candidatures"
+- Liens utiles : grille 3x2
+- PFMP ou Stage : remplacement par 2 cartes dédiées
 
 ### Entreprises & Partenaires
 - Ajustement du style de la barre de recherche "Rechercher une formation" pour une hauteur fixe de 56px
@@ -86,10 +142,12 @@ Tous les messages de commit suivent la convention **Conventional Commits** (voir
 ### Accueil
 - Ajout d'un calque photo sur le bandeau hero avec image de remplacement
 
+### Pages principales
+- Portail : hauteur du hero alignée sur les autres pages
+- Portail : calque hero affiché sur l'en-tête
+
 ### Établissements & Formations
 - Intégration d'une carte Google Maps interactive dans le bloc carte
-- Activation des interactions (zoom/déplacement) sur la carte
-- Suppression des points et de la liste d'établissements codés en dur
 - Génération de la liste et des points de carte à partir du JSON
 - Remplacement de l'API Google Maps par un iframe Google Maps personnalisé
 - Masquage du panneau/banderole dans l'iframe de la carte
@@ -99,6 +157,7 @@ Tous les messages de commit suivent la convention **Conventional Commits** (voir
 - Points des collèges en rouge sur la carte
 - Génération dynamique des cartes établissement depuis le JSON
 - Mise en forme des informations (lignes distinctes, libellés en gras)
+- Footer synchronisé avec l'image du hero sur la page établissements
 
 ## [05/02/2026] - Système de pagination pour le tableau des formations
 

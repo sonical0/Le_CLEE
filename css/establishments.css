@@ -56,6 +56,32 @@
   padding-top: 20px;
   padding-bottom: 20px;
   background: linear-gradient(135deg, var(--primary-50) 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-etablissement .hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero-etablissement .hero-overlay img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-etablissement .hero-overlay-hidden {
+  opacity: 0;
+}
+
+.hero-etablissement .container {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-grid {

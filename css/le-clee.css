@@ -6,11 +6,14 @@
 /* Hero Section - Variante page Le CLEE */
 .hero {
     background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-700) 100%);
-    padding: 20px 0 20px;
+    padding: 60px 0 40px;
     color: white;
     text-align: center;
     position: relative;
     overflow: hidden;
+    min-height: 360px;
+    display: flex;
+    align-items: center;
 }
 
 .hero::before {
@@ -23,6 +26,29 @@
     background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.hero-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--primary-900);
+    opacity: 0.55;
 }
 
 .hero .container {

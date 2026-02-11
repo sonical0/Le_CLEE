@@ -226,6 +226,25 @@ const ScrollAnimationModule = (() => {
 })();
 
 /**
+ * Footer background from hero image
+ */
+const FooterHeroImageModule = (() => {
+  const init = () => {
+    const footer = document.querySelector('.footer');
+    const heroImage = document.querySelector('.hero-overlay img');
+
+    if (!footer || !heroImage || !heroImage.src) return;
+
+    footer.style.setProperty(
+      '--footer-hero-image',
+      `url("${heroImage.src}")`
+    );
+  };
+
+  return { init };
+})();
+
+/**
  * Counter Animation for Numbers
  */
 const CounterModule = (() => {
@@ -506,6 +525,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ScrollAnimationModule.init();
   CounterModule.init();
   ActiveLinkModule.init();
+  FooterHeroImageModule.init();
 
   console.log('%c✓ CLEE Bordeaux Avenir - Core modules initialized', 'color: #314960; font-weight: bold;');
 });

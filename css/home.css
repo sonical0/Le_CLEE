@@ -14,7 +14,7 @@ body {
   padding-top: 60px;
   padding-bottom: 40px;
   background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-800) 100%);
-  min-height: auto;
+  min-height: 360px;
   display: flex;
   align-items: center;
   position: relative;
