@@ -1,0 +1,437 @@
+[
+  {
+    "secteur": "industrie",
+    "niveau": "CAP",
+    "titre": "CAP Électricien",
+    "description": "Formation aux bases de l'électricité et installations électriques",
+    "etablissement": "Lycée Professionnel Les Menuts",
+    "image": "https://picsum.photos/400/250?random=20",
+    "imageAlt": "CAP Électricien",
+    "badgeLabel": "Industrie",
+    "badgeGradient": "linear-gradient(135deg, var(--color-industrie) 0%, var(--color-industrie) 100%)",
+    "objectifs": [
+      "Réaliser des installations électriques",
+      "Assurer la maintenance préventive"
+    ]
+  },
+  {
+    "secteur": "numerique",
+    "niveau": "BAC PRO",
+    "titre": "Bac Pro Systèmes Numériques",
+    "description": "Formation en informatique, réseaux et cybersécurité",
+    "etablissement": "Lycée Gustave Eiffel",
+    "image": "https://picsum.photos/400/250?random=21",
+    "imageAlt": "Bac Pro SN",
+    "badgeLabel": "Numérique",
+    "badgeGradient": "linear-gradient(135deg, var(--color-numerique) 0%, var(--color-numerique) 100%)",
+    "objectifs": [
+      "Développer des applications",
+      "Gérer les réseaux informatiques"
+    ]
+  },
+  {
+    "secteur": "tertiaire",
+    "niveau": "BAC PRO",
+    "titre": "Bac Pro Gestion Administrative",
+    "description": "Formation en gestion administrative et ressources humaines",
+    "etablissement": "Lycée François Magendie",
+    "image": "https://picsum.photos/400/250?random=22",
+    "imageAlt": "Bac Pro GA",
+    "badgeLabel": "Tertiaire",
+    "badgeGradient": "linear-gradient(135deg, var(--color-tertiaire) 0%, var(--color-tertiaire) 100%)",
+    "objectifs": [
+      "Gérer l'administratif d'une entreprise",
+      "Participer à la gestion RH"
+    ]
+  },
+  {
+    "secteur": "numerique",
+    "niveau": "BTS",
+    "titre": "BTS Cybersécurité",
+    "description": "Formation supérieure en cybersécurité et protection des données",
+    "etablissement": "Lycée Nicolas Brémontier",
+    "image": "https://picsum.photos/400/250?random=23",
+    "imageAlt": "BTS CRSA",
+    "badgeLabel": "Numérique",
+    "badgeGradient": "linear-gradient(135deg, var(--color-numerique) 0%, #3BA561 100%)",
+    "objectifs": [
+      "Sécuriser les systèmes informatiques",
+      "Analyser les menaces"
+    ]
+  },
+  {
+    "secteur": "industrie",
+    "niveau": "BTS",
+    "titre": "BTS SIO - Option SLAM",
+    "description": "Formation en informatique et développement logiciel",
+    "etablissement": "Lycée des Métiers de l'art Toulouse Lautre",
+    "image": "https://picsum.photos/400/250?random=24",
+    "imageAlt": "BTS SIO",
+    "badgeLabel": "Industrie",
+    "badgeGradient": "linear-gradient(135deg, var(--color-industrie) 0%, var(--color-industrie) 100%)",
+    "objectifs": [
+      "Développer des logiciels",
+      "Assurer le support utilisateur"
+    ]
+  },
+  {
+    "secteur": "batiment",
+    "niveau": "CAP",
+    "titre": "CAP Maçon",
+    "description": "Formation aux techniques de maçonnerie et construction",
+    "etablissement": "Lycée Michel de Montaigne",
+    "image": "https://picsum.photos/400/250?random=25",
+    "imageAlt": "CAP Maçon",
+    "badgeLabel": "Bâtiment",
+    "badgeGradient": "linear-gradient(135deg, var(--color-batiment) 0%, var(--color-batiment) 100%)",
+    "objectifs": [
+      "Construire des structures maçonnées",
+      "Assurer la finition"
+    ]
+  },
+  {
+    "secteur": "industrie",
+    "niveau": "CAP",
+    "titre": "CAP Maintenance des équipements industriels",
+    "description": "Formation aux bases de la maintenance et du diagnostic industriel",
+    "etablissement": "Lycée Gustave Eiffel",
+    "image": "https://picsum.photos/400/250?random=26",
+    "imageAlt": "CAP Maintenance industrielle",
+    "badgeLabel": "Industrie",
+    "badgeGradient": "linear-gradient(135deg, var(--color-industrie) 0%, var(--color-industrie) 100%)",
+    "objectifs": [
+      "Diagnostiquer des pannes",
+      "Réaliser des opérations de maintenance"
+    ]
+  },
+  {
+    "secteur": "numerique",
+    "niveau": "CAP",
+    "titre": "CAP Opérateur télécoms",
+    "description": "Découverte des réseaux et interventions sur installations télécoms",
+    "etablissement": "Lycée Nicolas Brémontier",
+    "image": "https://picsum.photos/400/250?random=27",
+    "imageAlt": "CAP Opérateur télécoms",
+    "badgeLabel": "Numérique",
+    "badgeGradient": "linear-gradient(135deg, var(--color-numerique) 0%, var(--color-numerique) 100%)",
+    "objectifs": [
+      "Intervenir sur des câblages",
+      "Assurer la continuité du réseau"
+    ]
+  },
+  {
+    "secteur": "tertiaire",
+    "niveau": "CAP",
+    "titre": "CAP Employé polyvalent de commerce",
+    "description": "Formation aux métiers de la vente et du service client",
+    "etablissement": "Lycée François Magendie",
+    "image": "https://picsum.photos/400/250?random=28",
+    "imageAlt": "CAP Employé de commerce",
+    "badgeLabel": "Tertiaire",
+    "badgeGradient": "linear-gradient(135deg, var(--color-tertiaire) 0%, var(--color-tertiaire) 100%)",
+    "objectifs": [
+      "Accueillir et conseiller la clientèle",
+      "Mettre en valeur les produits"
+    ]
+  },
+  {
+    "secteur": "batiment",
+    "niveau": "CAP",
+    "titre": "CAP Menuisier fabricant",
+    "description": "Apprentissage de la fabrication d'ouvrages en bois",
+    "etablissement": "Lycée des Métiers de l'art Toulouse Lautre",
+    "image": "https://picsum.photos/400/250?random=29",
+    "imageAlt": "CAP Menuisier fabricant",
+    "badgeLabel": "Bâtiment",
+    "badgeGradient": "linear-gradient(135deg, var(--color-batiment) 0%, var(--color-batiment) 100%)",
+    "objectifs": [
+      "Fabriquer des éléments d'agencement",
+      "Utiliser les machines d'atelier"
+    ]
+  },
+  {
+    "secteur": "industrie",
+    "niveau": "BAC PRO",
+    "titre": "Bac Pro Maintenance des systèmes",
+    "description": "Maintenance et amélioration des systèmes industriels",
+    "etablissement": "Lycée Gustave Eiffel",
+    "image": "https://picsum.photos/400/250?random=30",
+    "imageAlt": "Bac Pro Maintenance des systèmes",
+    "badgeLabel": "Industrie",
+    "badgeGradient": "linear-gradient(135deg, var(--color-industrie) 0%, var(--color-industrie) 100%)",
+    "objectifs": [
+      "Diagnostiquer les dysfonctionnements",
+      "Optimiser la disponibilité des machines"
+    ]
+  },
+  {
+    "secteur": "numerique",
+    "niveau": "BAC PRO",
+    "titre": "Bac Pro Métiers du numérique",
+    "description": "Parcours orienté développement web et réseaux",
+    "etablissement": "Lycée Nicolas Brémontier",
+    "image": "https://picsum.photos/400/250?random=31",
+    "imageAlt": "Bac Pro Métiers du numérique",
+    "badgeLabel": "Numérique",
+    "badgeGradient": "linear-gradient(135deg, var(--color-numerique) 0%, var(--color-numerique) 100%)",
+    "objectifs": [
+      "Concevoir des sites web",
+      "Administrer des réseaux locaux"
+    ]
+  },
+  {
+    "secteur": "tertiaire",
+    "niveau": "BAC PRO",
+    "titre": "Bac Pro Gestion des organisations",
+    "description": "Gestion administrative, comptable et relation client",
+    "etablissement": "Lycée François Magendie",
+    "image": "https://picsum.photos/400/250?random=32",
+    "imageAlt": "Bac Pro Gestion des organisations",
+    "badgeLabel": "Tertiaire",
+    "badgeGradient": "linear-gradient(135deg, var(--color-tertiaire) 0%, var(--color-tertiaire) 100%)",
+    "objectifs": [
+      "Assurer le suivi administratif",
+      "Gérer la relation client"
+    ]
+  },
+  {
+    "secteur": "batiment",
+    "niveau": "BAC PRO",
+    "titre": "Bac Pro Technicien du bâtiment",
+    "description": "Conception et suivi de chantiers",
+    "etablissement": "Lycée Michel de Montaigne",
+    "image": "https://picsum.photos/400/250?random=33",
+    "imageAlt": "Bac Pro Technicien du bâtiment",
+    "badgeLabel": "Bâtiment",
+    "badgeGradient": "linear-gradient(135deg, var(--color-batiment) 0%, var(--color-batiment) 100%)",
+    "objectifs": [
+      "Préparer un chantier",
+      "Coordonner les intervenants"
+    ]
+  },
+  {
+    "secteur": "industrie",
+    "niveau": "BAC PRO",
+    "titre": "Bac Pro Électrotechnique",
+    "description": "Étude et maintenance des installations électriques",
+    "etablissement": "Lycée Professionnel Les Menuts",
+    "image": "https://picsum.photos/400/250?random=34",
+    "imageAlt": "Bac Pro Électrotechnique",
+    "badgeLabel": "Industrie",
+    "badgeGradient": "linear-gradient(135deg, var(--color-industrie) 0%, var(--color-industrie) 100%)",
+    "objectifs": [
+      "Installer des équipements électriques",
+      "Mettre en service des systèmes"
+    ]
+  },
+  {
+    "secteur": "numerique",
+    "niveau": "BTS",
+    "titre": "BTS SIO - Option SISR",
+    "description": "Réseaux, systèmes et cybersécurité",
+    "etablissement": "Lycée Nicolas Brémontier",
+    "image": "https://picsum.photos/400/250?random=35",
+    "imageAlt": "BTS SIO SISR",
+    "badgeLabel": "Numérique",
+    "badgeGradient": "linear-gradient(135deg, var(--color-numerique) 0%, var(--color-numerique) 100%)",
+    "objectifs": [
+      "Administrer un réseau",
+      "Sécuriser les services"
+    ]
+  },
+  {
+    "secteur": "tertiaire",
+    "niveau": "BTS",
+    "titre": "BTS Support à l'action managériale",
+    "description": "Organisation et coordination des activités managériales",
+    "etablissement": "Lycée François Magendie",
+    "image": "https://picsum.photos/400/250?random=36",
+    "imageAlt": "BTS SAM",
+    "badgeLabel": "Tertiaire",
+    "badgeGradient": "linear-gradient(135deg, var(--color-tertiaire) 0%, var(--color-tertiaire) 100%)",
+    "objectifs": [
+      "Assister la direction",
+      "Piloter des projets"
+    ]
+  },
+  {
+    "secteur": "industrie",
+    "niveau": "BTS",
+    "titre": "BTS Maintenance des systèmes",
+    "description": "Maintenance avancée et amélioration continue",
+    "etablissement": "Lycée Gustave Eiffel",
+    "image": "https://picsum.photos/400/250?random=37",
+    "imageAlt": "BTS Maintenance des systèmes",
+    "badgeLabel": "Industrie",
+    "badgeGradient": "linear-gradient(135deg, var(--color-industrie) 0%, var(--color-industrie) 100%)",
+    "objectifs": [
+      "Planifier la maintenance",
+      "Analyser la performance"
+    ]
+  },
+  {
+    "secteur": "batiment",
+    "niveau": "BTS",
+    "titre": "BTS Bâtiment",
+    "description": "Conception, étude et gestion des projets bâtiment",
+    "etablissement": "Lycée des Métiers de l'art Toulouse Lautre",
+    "image": "https://picsum.photos/400/250?random=38",
+    "imageAlt": "BTS Bâtiment",
+    "badgeLabel": "Bâtiment",
+    "badgeGradient": "linear-gradient(135deg, var(--color-batiment) 0%, var(--color-batiment) 100%)",
+    "objectifs": [
+      "Concevoir des plans",
+      "Gérer les budgets"
+    ]
+  },
+  {
+    "secteur": "industrie",
+    "niveau": "CAP",
+    "titre": "CAP Chaudronnerie",
+    "description": "Fabrication d'ouvrages métalliques",
+    "etablissement": "Lycée Gustave Eiffel",
+    "image": "https://picsum.photos/400/250?random=39",
+    "imageAlt": "CAP Chaudronnerie",
+    "badgeLabel": "Industrie",
+    "badgeGradient": "linear-gradient(135deg, var(--color-industrie) 0%, var(--color-industrie) 100%)",
+    "objectifs": [
+      "Préparer des pièces",
+      "Assembler des structures"
+    ]
+  },
+  {
+    "secteur": "numerique",
+    "niveau": "CAP",
+    "titre": "CAP Signalétique et décors graphiques",
+    "description": "Création et pose de supports visuels",
+    "etablissement": "Lycée des Métiers de l'art Toulouse Lautre",
+    "image": "https://picsum.photos/400/250?random=40",
+    "imageAlt": "CAP Signalétique",
+    "badgeLabel": "Numérique",
+    "badgeGradient": "linear-gradient(135deg, var(--color-numerique) 0%, var(--color-numerique) 100%)",
+    "objectifs": [
+      "Réaliser des supports visuels",
+      "Installer la signalétique"
+    ]
+  },
+  {
+    "secteur": "tertiaire",
+    "niveau": "CAP",
+    "titre": "CAP Équipier polyvalent",
+    "description": "Polyvalence en accueil, logistique et service",
+    "etablissement": "Lycée privé Saint Vincent de Paul",
+    "image": "https://picsum.photos/400/250?random=41",
+    "imageAlt": "CAP Équipier polyvalent",
+    "badgeLabel": "Tertiaire",
+    "badgeGradient": "linear-gradient(135deg, var(--color-tertiaire) 0%, var(--color-tertiaire) 100%)",
+    "objectifs": [
+      "Assurer l'accueil",
+      "Gérer les opérations courantes"
+    ]
+  },
+  {
+    "secteur": "batiment",
+    "niveau": "CAP",
+    "titre": "CAP Peintre applicateur",
+    "description": "Techniques de peinture et finitions",
+    "etablissement": "Lycée Michel de Montaigne",
+    "image": "https://picsum.photos/400/250?random=42",
+    "imageAlt": "CAP Peintre applicateur",
+    "badgeLabel": "Bâtiment",
+    "badgeGradient": "linear-gradient(135deg, var(--color-batiment) 0%, var(--color-batiment) 100%)",
+    "objectifs": [
+      "Préparer les surfaces",
+      "Appliquer des revêtements"
+    ]
+  },
+  {
+    "secteur": "numerique",
+    "niveau": "BAC PRO",
+    "titre": "Bac Pro Réseaux informatiques",
+    "description": "Installation et maintenance des réseaux",
+    "etablissement": "Lycée Nicolas Brémontier",
+    "image": "https://picsum.photos/400/250?random=43",
+    "imageAlt": "Bac Pro Réseaux",
+    "badgeLabel": "Numérique",
+    "badgeGradient": "linear-gradient(135deg, var(--color-numerique) 0%, var(--color-numerique) 100%)",
+    "objectifs": [
+      "Mettre en service un réseau",
+      "Assurer la supervision"
+    ]
+  },
+  {
+    "secteur": "industrie",
+    "niveau": "BAC PRO",
+    "titre": "Bac Pro Pilote de ligne",
+    "description": "Conduite et optimisation des lignes de production",
+    "etablissement": "Lycée Professionnel Les Menuts",
+    "image": "https://picsum.photos/400/250?random=44",
+    "imageAlt": "Bac Pro Pilote de ligne",
+    "badgeLabel": "Industrie",
+    "badgeGradient": "linear-gradient(135deg, var(--color-industrie) 0%, var(--color-industrie) 100%)",
+    "objectifs": [
+      "Régler une ligne de production",
+      "Contrôler la qualité"
+    ]
+  },
+  {
+    "secteur": "tertiaire",
+    "niveau": "BAC PRO",
+    "titre": "Bac Pro Accueil",
+    "description": "Accueil physique et téléphonique, gestion des flux",
+    "etablissement": "Lycée privé Saint Vincent de Paul",
+    "image": "https://picsum.photos/400/250?random=45",
+    "imageAlt": "Bac Pro Accueil",
+    "badgeLabel": "Tertiaire",
+    "badgeGradient": "linear-gradient(135deg, var(--color-tertiaire) 0%, var(--color-tertiaire) 100%)",
+    "objectifs": [
+      "Accueillir les publics",
+      "Gérer l'information"
+    ]
+  },
+  {
+    "secteur": "batiment",
+    "niveau": "BTS",
+    "titre": "BTS Enveloppe du bâtiment",
+    "description": "Spécialisation façade et isolation",
+    "etablissement": "Lycée Michel de Montaigne",
+    "image": "https://picsum.photos/400/250?random=46",
+    "imageAlt": "BTS Enveloppe du bâtiment",
+    "badgeLabel": "Bâtiment",
+    "badgeGradient": "linear-gradient(135deg, var(--color-batiment) 0%, var(--color-batiment) 100%)",
+    "objectifs": [
+      "Concevoir des façades",
+      "Optimiser l'isolation"
+    ]
+  },
+  {
+    "secteur": "numerique",
+    "niveau": "BTS",
+    "titre": "BTS Services informatiques",
+    "description": "Services, support et gestion des applications",
+    "etablissement": "Lycée Gustave Eiffel",
+    "image": "https://picsum.photos/400/250?random=47",
+    "imageAlt": "BTS Services informatiques",
+    "badgeLabel": "Numérique",
+    "badgeGradient": "linear-gradient(135deg, var(--color-numerique) 0%, var(--color-numerique) 100%)",
+    "objectifs": [
+      "Assurer le support",
+      "Gérer un parc applicatif"
+    ]
+  },
+  {
+    "secteur": "tertiaire",
+    "niveau": "BTS",
+    "titre": "BTS Gestion des PME",
+    "description": "Gestion administrative, commerciale et financière",
+    "etablissement": "Lycée François Magendie",
+    "image": "https://picsum.photos/400/250?random=48",
+    "imageAlt": "BTS Gestion des PME",
+    "badgeLabel": "Tertiaire",
+    "badgeGradient": "linear-gradient(135deg, var(--color-tertiaire) 0%, var(--color-tertiaire) 100%)",
+    "objectifs": [
+      "Suivre les dossiers clients",
+      "Piloter la gestion courante"
+    ]
+  }
+]

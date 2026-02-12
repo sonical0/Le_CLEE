@@ -2,6 +2,72 @@
 
 Tous les messages de commit suivent la convention **Conventional Commits** (voir `.github/copilot-instructions.md`).
 
+## [12/02/2026] - Correction génération cartes formations
+
+### Scripts
+- **js/formations.js** : Correction du mapping des champs du répertoire pour l'affichage des cartes
+
+## [12/02/2026] - Source formations répertoire
+
+### Données
+- **assets/data/liste des tâches CLEE - Repertoire des formations.json** : Source principale des cartes formations
+- **assets/data/formations.json** : Vidé pour préparer sa suppression
+
+### Scripts
+- **js/formations.js** : Conversion des champs du répertoire en cartes formation
+
+## [12/02/2026] - Cartes formations dynamiques
+
+### Données
+- **assets/data/formations.json** : Ajout des données pour les cartes formations
+
+### Scripts
+- **js/formations.js** : Génération des cartes formations depuis le JSON
+- **js/establishments.js** : Rafraîchissement des interactions après rendu dynamique
+
+### Pages
+- **pages/establishments.html** : Remplacement des cartes statiques par un conteneur dynamique
+
+## [12/02/2026] - Filtre formations par établissement
+
+### Données
+- **assets/data/formations.json** : Ajout du champ établissement pour chaque formation
+
+### Scripts
+- **js/formations.js** : Génération du filtre établissement et data-etablissement
+- **js/establishments.js** : Filtrage des cartes par établissement sélectionné
+
+### Pages
+- **pages/establishments.html** : Ajout du filtre établissement dans la barre de recherche
+
+## [12/02/2026] - Ajout de formations
+
+### Données
+- **assets/data/formations.json** : Ajout de 20 formations supplémentaires réparties par établissement
+
+## [12/02/2026] - Filtre formations via liste établissements
+
+### Scripts
+- **js/establishments.js** : Filtrage des formations déclenché par la sélection d'un établissement
+
+### Pages
+- **pages/establishments.html** : Suppression du filtre établissement dans la barre de recherche
+
+## [12/02/2026] - Nettoyage CSS page d'accueil
+
+### Styles
+- **css/home.css** : Suppression des classes orphelines (sections actualités et agenda non utilisées)
+
+## [12/02/2026] - Nettoyage CSS page entreprises
+
+### Styles
+- **css/companies.css** : Suppression des classes orphelines (éléments non présents et section tableau non utilisée)
+
+## [12/02/2026] - Nettoyage CSS page contact
+
+### Styles
+- **css/contact.css** : Suppression des classes orphelines (sections info contact et styles de bouton inutilisés)
+
 ## [11/02/2026] - Composant footer
 
 ### Composants
