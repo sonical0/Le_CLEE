@@ -3,7 +3,7 @@
 ## Project Overview
 Multi-page static website for CLEE Bordeaux Avenir (school-business partnership organization) with **modular architecture**:
 - Index page (accueil) at project root: `index.html`
-- Static HTML pages in `pages/` directory (16 pages)
+- Static HTML pages in `pages/` directory (19 pages)
 - Shared and page-specific stylesheets in `css/` directory
 - Shared and page-specific JavaScript in `js/` directory
 
@@ -62,12 +62,13 @@ js/
 <!-- Page-specific JS only if needed -->
 ```
 
-### Page Hierarchy (17 pages total)
+### Page Hierarchy (20 pages total)
 See [PAGES-STRUCTURE.md](../PAGES-STRUCTURE.md) for complete structure:
 - **1 homepage at root**: index.html (Accueil)
-- **6 main navigation pages**: le-clee, companies, establishments, jeunes-familles, vie-clee, connexion
-- **9 sub-pages**: bureau-membres, nos-actions, documents-officiels, orientation-insertion, pfmp, vie-clee-eleves, agenda, connexion, inscription
-- **2 utility pages**: contact (accessible via footer/CTAs, not in main nav), mentions-legales (legal notice in footer)
+- **7 main navigation pages**: le-clee, companies, establishments, jeunes-familles, vie-clee, connexion, dashboard
+- **8 sub-pages**: bureau-membres, nos-actions, documents-officiels, orientation-insertion, pfmp, vie-clee-eleves, agenda, inscription
+- **4 utility pages**: portail (accessibility settings), contact (via footer/CTAs), dashboard (user space), mentions-legales (legal notice)
+- **1 demo page**: colors-reference (design system reference)
 - All pages share identical navigation header/footer structure
 
 ## Design System (CSS Variables)
@@ -178,9 +179,10 @@ When modifying pages, verify:
 - Don't modify the navigation structure without updating all 17 pages
 
 ## Project Stats
-- 17 HTML pages (~55KB total, 40% reduction vs duplicated structure)
+- 20 HTML pages total (1 index.html at root + 19 pages in pages/)
 - CSS shared caching improves load times across pages
 - All animations use GPU acceleration (transform/opacity)
+- ~40% code reduction through modular architecture
 
 ## Writing Style & Formatting Rules
 
