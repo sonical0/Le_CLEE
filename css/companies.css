@@ -1129,7 +1129,7 @@
 
 .liens-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 28px;
   max-width: 900px;
   margin: 0 auto;
@@ -1137,7 +1137,7 @@
 
 .lien-card {
   background-color: #ffffff;
-  padding: 48px 36px;
+  padding: 10px 33px;
   border-radius: 16px;
   box-shadow: var(--200);
   text-align: center;
