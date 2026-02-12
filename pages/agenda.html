@@ -23,20 +23,12 @@
         </div>
     </div>
 
-    <section class="hero">
-        <div class="hero-overlay" aria-hidden="true">
-            <!-- TODO: Remplacer l'image du calque du hero par la photo définitive -->
-            <img src="https://picsum.photos/1920/1080" alt="" loading="lazy">
-        </div>
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Agenda 2026</h1>
-                <p class="hero-description">
-                    Découvrez tous les événements, rencontres et activités organisés par le CLEE Bordeaux Avenir tout au long de l'année.
-                </p>
-            </div>
-        </div>
-    </section>
+    <clee-hero
+        base-path=".."
+        title="Agenda 2026"
+        description="Découvrez tous les événements, rencontres et activités organisés par le CLEE Bordeaux Avenir tout au long de l'année."
+        image-url="https://picsum.photos/1920/1080">
+    </clee-hero>
 
     <section class="filters-section">
         <div class="container">
@@ -131,6 +123,7 @@
 
     <script src="../js/components/nav-bar.js"></script>
     <script src="../js/components/footer.js"></script>
+    <script src="../js/components/hero.js"></script>
     <script src="../js/common.js"></script>
     <script src="../js/agenda.js"></script>
 </body>

@@ -5,6 +5,7 @@ const FormationsFilterModule = (() => {
   const niveauFilterSelector = '#formation-niveau-filter';
   const formationsGridSelector = '.formations-grid';
   const formationCardSelector = '.formation-card';
+  let etablissementValue = 'tous';
 
   function normalize(str) {
     return str
@@ -14,16 +15,21 @@ const FormationsFilterModule = (() => {
       .replace(/[^a-z0-9\s-]/g, '');
   }
 
+  function slugify(str) {
+    return normalize(str).trim().replace(/\s+/g, '-');
+  }
+
   function filterFormations() {
-    const searchValue = normalize(document.querySelector(searchInputSelector).value.trim());
-    const secteurValue = document.querySelector(secteurFilterSelector).value;
-    const niveauValue = document.querySelector(niveauFilterSelector).value;
+    const searchValue = normalize(document.querySelector(searchInputSelector)?.value?.trim() || '');
+    const secteurValue = document.querySelector(secteurFilterSelector)?.value || 'tous';
+    const niveauValue = document.querySelector(niveauFilterSelector)?.value || 'tous';
     const cards = document.querySelectorAll(formationCardSelector);
 
     cards.forEach(card => {
       const title = normalize(card.querySelector('.formation-title').textContent);
       const desc = normalize(card.querySelector('.formation-description').textContent);
       const secteur = card.getAttribute('data-secteur');
+      const etablissement = card.getAttribute('data-etablissement');
       const niveau = card.querySelector('.formation-niveau').textContent.trim();
 
       let visible = true;
@@ -31,6 +37,9 @@ const FormationsFilterModule = (() => {
         visible = false;
       }
       if (secteurValue !== 'tous' && secteur !== secteurValue) {
+        visible = false;
+      }
+      if (etablissementValue !== 'tous' && etablissement !== etablissementValue) {
         visible = false;
       }
       if (niveauValue !== 'tous' && niveau !== niveauValue) {
@@ -51,16 +60,26 @@ const FormationsFilterModule = (() => {
       e.preventDefault();
       filterFormations();
     });
-    [searchInput, secteurFilter, niveauFilter].forEach(el => {
-      el.addEventListener('input', filterFormations);
+    searchInput.addEventListener('input', filterFormations);
+    [secteurFilter, niveauFilter].forEach(el => {
+      el.addEventListener('change', filterFormations);
     });
   }
 
-  return { init };
+  const setEtablissement = (value) => {
+    etablissementValue = value || 'tous';
+    filterFormations();
+  };
+
+  return { init, applyFilters: filterFormations, setEtablissement, slugify };
 })();
 
 document.addEventListener('DOMContentLoaded', () => {
   FormationsFilterModule.init();
+});
+
+document.addEventListener('formations:loaded', () => {
+  FormationsFilterModule.applyFilters();
 });
 
 // ========================================
@@ -167,6 +186,9 @@ const EstablishmentsMapModule = (() => {
     marker.openPopup();
     setActiveListItem(index);
     updateCard(item);
+    if (FormationsFilterModule && item?.Nom) {
+      FormationsFilterModule.setEtablissement(FormationsFilterModule.slugify(item.Nom));
+    }
   };
 
   const renderList = () => {
@@ -249,11 +271,11 @@ const EstablishmentsPageModule = (() => {
 
   const initFilters = () => {
     const buttons = document.querySelectorAll('.secteur-btn');
-    const cards = document.querySelectorAll('.formation-card');
 
     buttons.forEach(btn => {
       btn.addEventListener('click', function() {
         const secteur = this.getAttribute('data-secteur');
+        const cards = document.querySelectorAll('.formation-card');
 
         buttons.forEach(b => b.classList.remove('active'));
         this.classList.add('active');
@@ -290,7 +312,11 @@ const EstablishmentsPageModule = (() => {
     });
   };
 
-  return { init };
+  const refreshFormations = () => {
+    initFormationToggles();
+  };
+
+  return { init, refreshFormations };
 })();
 
 // Initialize if on establishments page
@@ -299,4 +325,8 @@ document.addEventListener('DOMContentLoaded', () => {
     EstablishmentsMapModule.init();
     EstablishmentsPageModule.init();
   }
+});
+
+document.addEventListener('formations:loaded', () => {
+  EstablishmentsPageModule.refreshFormations();
 });

@@ -23,18 +23,12 @@
         </div>
     </div>
 
-    <section class="hero">
-        <div class="hero-overlay" aria-hidden="true">
-            <!-- TODO: Remplacer l'image du calque du hero par la photo définitive -->
-            <img src="https://picsum.photos/1920/1080" alt="" loading="lazy">
-        </div>
-        <div class="container">
-            <h1 class="hero-title">Vie du CLEE pour les Élèves</h1>
-            <p class="hero-description">
-                Découvrez les événements, projets et initiatives portés par les élèves de notre réseau
-            </p>
-        </div>
-    </section>
+    <clee-hero
+        base-path=".."
+        title="Vie du CLEE pour les Élèves"
+        description="Découvrez les événements, projets et initiatives portés par les élèves de notre réseau"
+        image-url="https://picsum.photos/1920/1080">
+    </clee-hero>
 
     <section class="section-content">
         <div class="container">
@@ -349,6 +343,7 @@
 
     <script src="../js/components/nav-bar.js"></script>
     <script src="../js/components/footer.js"></script>
+    <script src="../js/components/hero.js"></script>
     <script src="../js/common.js"></script>
 </body>
 </html>

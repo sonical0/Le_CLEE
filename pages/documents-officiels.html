@@ -23,18 +23,12 @@
         </div>
     </div>
 
-    <section class="hero">
-        <div class="hero-overlay" aria-hidden="true">
-            <!-- TODO: Remplacer l'image du calque du hero par la photo définitive -->
-            <img src="https://picsum.photos/1920/1080" alt="" loading="lazy">
-        </div>
-        <div class="container">
-            <h1 class="hero-title">Documents Officiels</h1>
-            <p class="hero-description">
-                Accédez aux documents institutionnels, statuts et plans d'action du CLEE Bordeaux Avenir
-            </p>
-        </div>
-    </section>
+    <clee-hero
+        base-path=".."
+        title="Documents Officiels"
+        description="Accédez aux documents institutionnels, statuts et plans d'action du CLEE Bordeaux Avenir"
+        image-url="https://picsum.photos/1920/1080">
+    </clee-hero>
 
     <section class="documents-section">
         <div class="container">
@@ -195,6 +189,20 @@
             <div class="document-category">
                 <h2 class="category-title">
                     Comptes-rendus
+                </h2>
+                <p class="category-description">
+                    Comptes-rendus des assemblées générales et réunions institutionnelles du CLEE Bordeaux Avenir.
+                </p>
+                
+                <div class="documents-grid">
+                    <div class="document-card">
+                        <div class="document-info">
+                            <h3 class="document-title">Compte-rendu AG 2025</h3>
+                            <p class="document-meta">
+                                <span class="document-date">Date : Décembre 2025</span>
+                                <span class="document-size">Format : PDF - 1.1 Mo</span>
+                            </p>
+                            <p class="document-description">
                                 Compte-rendu de l'Assemblée Générale annuelle 2025 avec bilan d'activité 
                                 et orientations stratégiques.
                             </p>
@@ -226,6 +234,7 @@
     <script src="../js/components/nav-bar.js"></script>
     <script src="../js/components/footer.js"></script>
     <script src="../js/components/primary-button.js"></script>
+    <script src="../js/components/hero.js"></script>
     <script src="../js/common.js"></script>
 </body>
 </html>

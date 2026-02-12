@@ -21,21 +21,12 @@
         </div>
     </div>
 
-    <section class="hero-vie-clee">
-        <div class="hero-overlay" aria-hidden="true">
-            <!-- TODO: Remplacer l'image du calque du hero par la photo définitive -->
-            <img src="https://picsum.photos/1920/1080" alt="" loading="lazy">
-        </div>
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Vie du CLEE</h1>
-                <p class="hero-description">
-                    Découvrez les derniers événements, actualités et initiatives qui animent notre communauté. 
-                    Le CLEE est un réseau vivant qui connecte étudiants, écoles et entreprises.
-                </p>
-            </div>
-        </div>
-    </section>
+    <clee-hero
+        base-path=".."
+        title="Vie du CLEE"
+        description="Découvrez les derniers événements, actualités et initiatives qui animent notre communauté. Le CLEE est un réseau vivant qui connecte étudiants, écoles et entreprises."
+        image-url="https://picsum.photos/1920/1080">
+    </clee-hero>
 
     <section class="actualites" id="actualites">
         <div class="container">
@@ -145,6 +136,7 @@
     <script src="../js/components/nav-bar.js"></script>
     <script src="../js/components/footer.js"></script>
     <script src="../js/components/primary-button.js"></script>
+    <script src="../js/components/hero.js"></script>
     <script src="../js/common.js"></script>
     <script src="../js/agenda.js"></script>
     <script src="../js/vie-clee.js"></script>
