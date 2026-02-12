@@ -94,21 +94,23 @@ pages/
 |------|---------|-------------|
 | Accessibilité | `portail.html` | Options d'accessibilité (taille de police, contraste, animations) |
 | Contact | `contact.html` | Formulaire de contact (accessible depuis footer et CTAs) |
+| Dashboard | `dashboard.html` | Tableau de bord utilisateur (espace privé) |
 | Mentions légales | `mentions-legales.html` | Mentions légales et conditions d'utilisation |
 
 #### Pages de Démonstration
 | Page | Fichier | Description |
 |------|---------|-------------|
-| Démonstration des thèmes | `theme-demo.html` | Page permettant de comparer les thèmes Étudiant et Professionnel |
 | Référence des couleurs | `colors-reference.html` | Référence visuelle de la charte graphique |
 
 ---
 
-**Total : 19 pages HTML**
+**Total : 20 pages HTML**
 - 7 pages principales (dans la navigation)
 - 8 sous-pages (accessibles depuis les pages principales)
-- 3 pages utilitaires (accessibilité, contact et mentions légales)
-- 2 pages de démonstration (theme-demo et colors-reference)
+- 4 pages utilitaires (accessibilité, contact, dashboard, mentions légales)
+- 1 page de démonstration (colors-reference)
+
+**Note** : La page `test-banner-demo.html` (racine du projet) est une page de test pour la bannière d'accessibilité et n'est pas comptabilisée dans le total des pages du site.
 
 ---
 

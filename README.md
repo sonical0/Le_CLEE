@@ -41,41 +41,6 @@ docs(readme): update installation instructions
 
 Voir `.github/copilot-instructions.md` pour plus de détails.
 
-## Liste de tâches - Retour entretien CLEE
-
-### Modifications prioritaires
-- [x] Retirer MEDEF du footer
-- [x] Diminuer le scroll de l'accueil
-- [x] Rendre chaque icône/logo du carrousel cliquable vers le site correspondant
-- [ ] Ajouter une page ressources rassemblant les entreprises d'information qui ne sont pas autour de la table
-- [x] Supprimer les options téléphone et adresse ainsi que l'engagement de délai de la page Contact
-- [ ] Objet du formulaire de contact à customiser côté administrateur
-- [x] Déplacer l'agenda directement dans la page Vie du CLEE pour éviter le publipostage sur plusieurs pages
-- [x] Retirer les majuscules en milieu de phrase
-- [x] Remplacer le logo du CLEE par celui de la charte graphique
-- [ ] Décider et uniformiser : CLEE ou CLEE ou Clée pour le SEO
-- [x] Retirer convention de stage et livret de suivi, remplacer par les documents officiels
-
-### Améliorations UX/UI
-- [x] Ajouter une barre de recherche avec option filtre dans la page établissements et formations
-- [x] Remplacer le terme PFMP par "stage" pour vulgariser
-- [x] Améliorer le header pour ajouter les sous-pages par catégorie en liste déroulante
-- [x] Adapter la surbrillance des boutons avec les couleurs de la charte graphique
-- [x] Faire un portail étudiant/pro avec un style CSS qui change selon la catégorie d'utilisateur (transformé en page d'accessibilité)
-- [x] Améliorer la lisibilité de la section "Notre impact" en mode étudiant avec surbrillance adoucie
-- [x] Ajouter une barre de recherche sur la page Entreprises & Partenaires
-- [ ] Sur le ruban sous le header, ajouter un calque avec une photo et reprendre les couleurs de la charte graphique
-- [ ] **ATTENTION : Respecter les règles d'accessibilité pour les couleurs**
-
-### Mentions légales et contenu
-- [ ] Déplacer le bloc crédit photos dans les mentions légales
-
-### Validation et présentation
-- [ ] Mettre en place la maquette sur Cercle pour que les clients puissent la consulter avec leurs associés
-- [ ] **13 mars : Nouvelle présentation de la maquette**
-
----
-
 ## À propos du projet
 
 **CLEE Bordeaux Avenir** est une organisation qui renforce les ponts entre le monde éducatif et le tissu économique local. Ce projet est le site web institutionnel de l'organisation, conçu pour faciliter les interactions entre :
@@ -209,12 +174,13 @@ Le site utilise une **architecture modulaire** pour optimiser la maintenance et 
 - **CSS page-specific** : Styles uniques à chaque page
 - **common.js** : Modules JavaScript réutilisables
 - **JS page-specific** : Logique spécifique aux pages
-- **Composants JS** : Web Components centralisés dans `js/components/` (ex: bouton principal, navbar et footer, navbar/footer utilisés sur l'ensemble des pages)
+- **Composants JS** : Web Components centralisés dans `js/components/` (ex: bouton principal, navbar et footer utilisés sur l'ensemble des pages)
 
 ### Avantages
 - Mise en cache optimale (globals.css chargé une fois pour toutes les pages)
 - Maintenance simplifiée (modifier globals.css = impact sur tout le site)
-- Performance maximale (~55KB total, réduction de 40% vs code dupliqué)
+- Performance maximale (réduction de ~40% du code dupliqué)
+- 20 pages HTML au total (1 index.html à la racine + 19 pages dans pages/)
 
 ---
 
@@ -433,29 +399,31 @@ touch js/nouvelle-page.js
     <link rel="stylesheet" href="../css/nouvelle-page.css">
 </head>
 <body>
-    <!-- OBLIGATOIRE : Copier le header depuis une autre page -->
-    <header class="header">
-        <!-- ... navigation ... -->
-    </header>
+    <!-- OBLIGATOIRE : Composant navbar -->
+    <clee-nav-bar current-page="nouvelle-page"></clee-nav-bar>
     
     <!-- Contenu spécifique de la page -->
     <main>
         <!-- ... -->
     </main>
     
-    <!-- OBLIGATOIRE : Copier le footer depuis une autre page -->
-    <footer class="footer">
-        <!-- ... -->
-    </footer>
+    <!-- OBLIGATOIRE : Composant footer -->
+    <clee-footer></clee-footer>
     
     <!-- OBLIGATOIRE : common.js -->
     <script src="../js/common.js"></script>
     
-    <!-- Page-specific JS -->
+    <!-- OBLIGATOIRE : Composants (navbar et footer) -->
+    <script src="../js/components/nav-bar.js"></script>
+    <script src="../js/components/footer.js"></script>
+    
+    <!-- Page-specific JS (optionnel) -->
     <script src="../js/nouvelle-page.js"></script>
 </body>
 </html>
 ```
+
+**Note importante** : Les composants `<clee-nav-bar>` et `<clee-footer>` sont des Web Components centralisés. Il n'est plus nécessaire de copier/coller le HTML de la navigation et du footer. L'attribut `current-page` sur la navbar permet d'activer la surbrillance de la page courante.
 
 ### Modifier des styles partagés
 
@@ -635,14 +603,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 ---
 
-## 📖 Documentation complémentaire
+## Documentation complémentaire
 
-- 📄 [PAGES-STRUCTURE.md](PAGES-STRUCTURE.md) - Hiérarchie complète des pages
-- 📄 [ACCESSIBILITE-GUIDE.md](ACCESSIBILITE-GUIDE.md) - Guide des options d'accessibilité
-- 📄 [PORTAIL-GUIDE.md](PORTAIL-GUIDE.md) - Ancien système de portail (obsolète, voir ACCESSIBILITE-GUIDE.md)
-- 📄 [IMPLEMENTATION-SUMMARY.md](IMPLEMENTATION-SUMMARY.md) - Résumé des implémentations principales
-- 📄 [CHANGELOG.md](CHANGELOG.md) - Historique détaillé des modifications
-- 📄 [.github/copilot-instructions.md](.github/copilot-instructions.md) - Instructions pour AI agents
+- [PAGES-STRUCTURE.md](PAGES-STRUCTURE.md) - Hiérarchie complète des pages
+- [ACCESSIBILITE-GUIDE.md](ACCESSIBILITE-GUIDE.md) - Guide des options d'accessibilité
+- [TEST-ACCESSIBILITY-BANNER.md](TEST-ACCESSIBILITY-BANNER.md) - Guide de test de la bannière d'accessibilité
+- [Charte graphique.md](Charte%20graphique.md) - Charte graphique et palette de couleurs
+- [CHANGELOG.md](CHANGELOG.md) - Historique détaillé des modifications
+- [.github/copilot-instructions.md](.github/copilot-instructions.md) - Instructions pour AI agents
 
 ---
 
@@ -751,9 +719,8 @@ git push origin feature/nouvelle-fonctionnalite
 - Issues : [GitHub Issues](https://github.com/votre-org/clee-bordeaux-site/issues)
 
 **Pour les questions sur l'organisation CLEE** :
-- Site web : https://clee-bordeaux.fr
+- Site web : https://cleebordeauxavenir.org/ *En cours de construction*
 - Email : contact@clee-bordeaux.fr
-- Adresse : [Adresse du CLEE Bordeaux]
 
 ---
 
@@ -786,8 +753,19 @@ Ce projet est la propriété de CLEE Bordeaux Avenir. Toute reproduction, distri
 
 ## Historique des versions principales
 
-### Version 2.2 (Février 2026) - Transformation du portail en page d'accessibilité
-- **Changement majeur** : Transformation de portail.html en page d'options d'accessibilité
+### Version 2.3 (11 Février 2026) - Web Components et documentation
+- **Composants centralisés** : Migration vers Web Components pour navbar et footer
+- Création de `<clee-nav-bar>` et `<clee-footer>` dans `js/components/`
+- Création du composant `<clee-primary-button>` avec support thème étudiant
+- Élimination du copier/coller HTML sur les 20 pages
+- Mise à jour complète de la documentation (README, PAGES-STRUCTURE, CHANGELOG)
+- Correction du nombre total de pages (20 pages au lieu de 17)
+- Enrichissement de la charte graphique avec design system CSS complet
+- Suppression des fichiers de documentation obsolètes
+
+### Version 2.2 (10 Février 2026) - Accessibilité et bannière de notification
+- **Bannière d'accessibilité** : Notification au premier lancement pour activer le contraste élevé
+- **Transformation du portail** : portail.html devient une page d'options d'accessibilité
 - Thème étudiant défini comme thème par défaut pour tous les utilisateurs
 - Suppression de la redirection automatique vers le portail
 - Nouvelles options d'accessibilité : taille de texte (4 niveaux), contraste élevé, réduction d'animations
@@ -802,6 +780,7 @@ Ce projet est la propriété de CLEE Bordeaux Avenir. Toute reproduction, distri
 - Cartes formations générées depuis un JSON sur la page établissements
 - Correction de la génération des cartes formations depuis le répertoire
 - Données formations basées sur le répertoire officiel (Repertoire des formations)
+- Création du guide ACCESSIBILITE-GUIDE.md et TEST-ACCESSIBILITY-BANNER.md
 
 ### Version 2.1 (Février 2026) - Améliorations UX et recherche
 - Ajout barre de recherche partenaires en temps réel
@@ -816,7 +795,7 @@ Ce projet est la propriété de CLEE Bordeaux Avenir. Toute reproduction, distri
 - Réduction ~40% de code dupliqué
 - Design system centralisé (CSS variables)
 - Modules JavaScript IIFE
-- 19 pages complètes
+- 20 pages complètes
 - Système de portail étudiant/professionnel
 - Carte interactive établissements
 - Système de filtrage avancé
