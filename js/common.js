@@ -241,14 +241,45 @@ const ScrollAnimationModule = (() => {
 const FooterHeroImageModule = (() => {
   const init = () => {
     const footer = document.querySelector('.footer');
-    const heroImage = document.querySelector('.hero-overlay img');
+    if (!footer) return;
 
-    if (!footer || !heroImage || !heroImage.src) return;
+    const resolveHeroImage = () => {
+      const lightDomImage = document.querySelector('.hero-overlay img');
+      if (lightDomImage) return lightDomImage;
 
-    footer.style.setProperty(
-      '--footer-hero-image',
-      `url("${heroImage.src}")`
-    );
+      const heroComponent = document.querySelector('clee-hero');
+      if (heroComponent && heroComponent.shadowRoot) {
+        return heroComponent.shadowRoot.querySelector('.hero-overlay img');
+      }
+
+      return null;
+    };
+
+    const applyFooterImage = (image) => {
+      if (!image || !image.src) return;
+      footer.style.setProperty(
+        '--footer-hero-image',
+        `url("${image.src}")`
+      );
+    };
+
+    const heroImage = resolveHeroImage();
+    if (!heroImage) {
+      if (window.customElements && customElements.whenDefined) {
+        customElements.whenDefined('clee-hero').then(() => {
+          applyFooterImage(resolveHeroImage());
+        });
+      }
+      return;
+    }
+
+    applyFooterImage(heroImage);
+    heroImage.addEventListener('load', () => applyFooterImage(heroImage));
+
+    if (window.MutationObserver) {
+      const observer = new MutationObserver(() => applyFooterImage(heroImage));
+      observer.observe(heroImage, { attributes: true, attributeFilter: ['src'] });
+    }
   };
 
   return { init };

@@ -90,6 +90,9 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
 - Connexion : footer synchronisé via hero masqué
 - Footer synchronisé avec le hero sur toutes les pages (y compris Vie du CLEE)
 - Footer synchronisé avec l'image du hero (calque partagé, bas de l'image visible)
+- Hero : cadrage de l'image centré par défaut
+- Synchronisation hero/footer compatible avec le composant `clee-hero`
+- Alignement hero/footer sur la même image (ancrage bas)
 
 ### Espace Entreprises & Partenaires
 - **Catalogue des entreprises partenaires** avec système de filtrage multi-critères

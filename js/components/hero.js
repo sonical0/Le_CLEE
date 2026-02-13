@@ -58,6 +58,7 @@ class CLEEHero extends HTMLElement {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                object-position: center;
                 display: block;
                 opacity: 0;
                 transition: opacity 0.5s ease;
