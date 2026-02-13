@@ -2,6 +2,11 @@
 
 Tous les messages de commit suivent la convention **Conventional Commits** (voir `.github/copilot-instructions.md`).
 
+## [13/02/2026] - Correction menu burger responsive
+
+### Scripts
+- [js/common.js](js/common.js) : Évite le double binding du menu burger quand le composant `clee-nav-bar` est utilisé
+
 ## [12/02/2026] - Correction génération cartes formations
 
 ### Scripts

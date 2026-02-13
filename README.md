@@ -176,6 +176,8 @@ Le site utilise une **architecture modulaire** pour optimiser la maintenance et 
 - **JS page-specific** : Logique spécifique aux pages
 - **Composants JS** : Web Components centralisés dans `js/components/` (ex: bouton principal, navbar et footer utilisés sur l'ensemble des pages)
 
+Navigation responsive : le composant `clee-nav-bar` gère le menu burger, et [js/common.js](js/common.js) évite les doubles écouteurs pour ne pas annuler l'ouverture.
+
 ### Avantages
 - Mise en cache optimale (globals.css chargé une fois pour toutes les pages)
 - Maintenance simplifiée (modifier globals.css = impact sur tout le site)

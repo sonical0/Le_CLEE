@@ -88,23 +88,31 @@ document.addEventListener('DOMContentLoaded', () => {
  * Navigation Toggle Utility
  */
 const NavigationModule = (() => {
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
+  let menuToggle;
+  let navLinks;
+  let isComponentNav = false;
 
   const init = () => {
+    menuToggle = document.querySelector('.menu-toggle');
+    navLinks = document.querySelector('.nav-links');
+    isComponentNav = Boolean(menuToggle && menuToggle.closest('clee-nav-bar'));
+
     if (menuToggle && navLinks) {
-      menuToggle.addEventListener('click', toggleMenu);
+      if (!isComponentNav) {
+        menuToggle.addEventListener('click', toggleMenu);
+      }
+
       document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', closeMenu);
       });
-      
+
       // Close menu when clicking outside
       document.addEventListener('click', (e) => {
         if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
           closeMenu();
         }
       });
-      
+
       // Close menu on escape key
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
@@ -115,9 +123,10 @@ const NavigationModule = (() => {
   };
 
   const toggleMenu = () => {
+    if (!navLinks || !menuToggle) return;
     const isActive = navLinks.classList.toggle('active');
     menuToggle.classList.toggle('active');
-    
+
     // Prevent body scroll when menu is open on mobile
     if (isActive && window.innerWidth <= 992) {
       document.body.style.overflow = 'hidden';
@@ -127,6 +136,7 @@ const NavigationModule = (() => {
   };
 
   const closeMenu = () => {
+    if (!navLinks || !menuToggle) return;
     navLinks.classList.remove('active');
     menuToggle.classList.remove('active');
     document.body.style.overflow = '';
