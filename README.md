@@ -745,8 +745,8 @@ Ce projet est la propriété de CLEE Bordeaux Avenir. Toute reproduction, distri
 
 ---
 
-**Dernière mise à jour** : 11 février 2026  
-**Version** : 2.3  
+**Dernière mise à jour** : 12 février 2026  
+**Version** : 2.2  
 **Statut** : Production Ready
 
 ---
@@ -770,6 +770,16 @@ Ce projet est la propriété de CLEE Bordeaux Avenir. Toute reproduction, distri
 - Suppression de la redirection automatique vers le portail
 - Nouvelles options d'accessibilité : taille de texte (4 niveaux), contraste élevé, réduction d'animations
 - Persistance des préférences d'accessibilité via localStorage
+- Création du guide ACCESSIBILITE-GUIDE.md
+- Nettoyage CSS de la page contact avec suppression des classes orphelines
+- Nettoyage CSS de la page entreprises avec suppression des classes orphelines
+- Nettoyage CSS de la page d'accueil avec suppression des classes orphelines
+- Filtre par établissement appliqué aux formations issues du JSON
+- Ajout de 20 formations supplémentaires réparties par établissement
+- Filtrage des formations via la liste des établissements
+- Cartes formations générées depuis un JSON sur la page établissements
+- Correction de la génération des cartes formations depuis le répertoire
+- Données formations basées sur le répertoire officiel (Repertoire des formations)
 - Création du guide ACCESSIBILITE-GUIDE.md et TEST-ACCESSIBILITY-BANNER.md
 
 ### Version 2.1 (Février 2026) - Améliorations UX et recherche

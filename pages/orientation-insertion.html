@@ -23,18 +23,12 @@
         </div>
     </div>
 
-    <section class="hero">
-        <div class="hero-overlay" aria-hidden="true">
-            <!-- TODO: Remplacer l'image du calque du hero par la photo définitive -->
-            <img src="https://picsum.photos/1920/1080" alt="" loading="lazy">
-        </div>
-        <div class="container">
-            <h1 class="hero-title">Conseils Orientation & Insertion</h1>
-            <p class="hero-description">
-                Tous les conseils pratiques pour réussir votre parcours professionnel et votre insertion
-            </p>
-        </div>
-    </section>
+    <clee-hero
+        base-path=".."
+        title="Conseils Orientation & Insertion"
+        description="Tous les conseils pratiques pour réussir votre parcours professionnel et votre insertion"
+        image-url="https://picsum.photos/1920/1080">
+    </clee-hero>
 
     <section class="section-content">
         <div class="container">
@@ -369,6 +363,7 @@
 
     <script src="../js/components/nav-bar.js"></script>
     <script src="../js/components/primary-button.js"></script>
+    <script src="../js/components/hero.js"></script>
     <script src="../js/common.js"></script>
 </body>
 </html>

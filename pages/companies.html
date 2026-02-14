@@ -25,21 +25,13 @@
         </div>
     </div>
 
-    <section class="hero-entreprises">
-        <div class="hero-overlay" aria-hidden="true">
-            <!-- TODO: Remplacer l'image du calque du hero par la photo définitive -->
-            <img src="https://picsum.photos/1920/1080" alt="" loading="lazy">
-        </div>
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Entreprises & Partenaires</h1>
-                <p class="hero-description">
-                    Rejoignez un réseau dynamique d'entreprises engagées pour l'avenir des jeunes et le développement
-                    des compétences sur le territoire bordelais.
-                </p>
-            </div>
-        </div>
-    </section>
+
+    <clee-hero
+        base-path=".."
+        title="Entreprises & Partenaires"
+        description="Découvrez les entreprises et partenaires du CLEE Bordeaux Avenir"
+        image-url="https://picsum.photos/1920/1080">
+    </clee-hero>
 
     <section class="pourquoi-section" id="devenir-partenaire">
         <div class="container">
@@ -1053,6 +1045,7 @@
 
     <clee-footer base-path=".." pages-path=""></clee-footer>
 
+    <script src="../js/components/hero.js"></script>
     <script src="../js/components/nav-bar.js"></script>
     <script src="../js/components/footer.js"></script>
     <script src="../js/components/primary-button.js"></script>

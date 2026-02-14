@@ -23,19 +23,12 @@
         </div>
     </div>
 
-    <section class="hero">
-        <div class="hero-overlay" aria-hidden="true">
-            <!-- TODO: Remplacer l'image du calque du hero par la photo définitive -->
-            <img src="https://picsum.photos/1920/1080" alt="" loading="lazy">
-        </div>
-        <div class="container">
-            <h1 class="hero-title">Nos Actions</h1>
-            <p class="hero-description">
-                Découvrez les différentes initiatives que nous mettons en œuvre pour favoriser 
-                la relation école-entreprise
-            </p>
-        </div>
-    </section>
+    <clee-hero
+        base-path=".."
+        title="Nos Actions"
+        description="Découvrez les différentes initiatives que nous mettons en œuvre pour favoriser la relation école-entreprise"
+        image-url="https://picsum.photos/1920/1080">
+    </clee-hero>
 
     <section class="actions-section">
         <div class="container">
@@ -143,6 +136,7 @@
     <script src="../js/components/nav-bar.js"></script>
     <script src="../js/components/footer.js"></script>
     <script src="../js/components/primary-button.js"></script>
+    <script src="../js/components/hero.js"></script>
     <script src="../js/common.js"></script>
 </body>
 </html>
