@@ -391,7 +391,6 @@ class CleeNavBar extends HTMLElement {
               <li class="nav-item nav-dropdown">
                 <a href="${page('jeunes-familles.html')}" class="nav-link nav-link-rouge">Jeunes & Familles</a>
                 <ul class="dropdown-menu">
-                  <li><a href="${page('pfmp.html')}">Tout savoir sur les stages</a></li>
                   <li><a href="${page('orientation-insertion.html')}">Conseils orientation</a></li>
                   <li><a href="${page('vie-clee-eleves.html')}">Vie du CLEE pour les élèves</a></li>
                 </ul>

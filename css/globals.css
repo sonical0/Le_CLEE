@@ -184,6 +184,7 @@
   --grey-200: rgba(229, 231, 235, 1);
   --grey-100: rgba(243, 244, 246, 1);
   --grey-50: rgba(249, 250, 251, 1);
+  --white: #ffffff;
   
   /* Typography - Navbar */
   --navbar-text-font-family: "Kodchasan", Helvetica, Arial, sans-serif;
@@ -492,30 +493,30 @@ button {
   align-items: center;
   gap: 8px;
   font-size: 14px;
-  color: var(--grey-900);
+  color: var(--white);
   /* Charte originelle: rgba(255, 255, 255, 0.9) */
 }
 
 .breadcrumb a {
-  color: var(--grey-900);
+  color: var(--white);
   /* Charte originelle: rgba(255, 255, 255, 0.9) */
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .breadcrumb a:hover {
-  color: var(--grey-900);
+  color: var(--white);
   /* Charte originelle: #ffffff */
   text-decoration: underline;
 }
 
 .breadcrumb span {
-  color: color-mix(in srgb, var(--grey-900) 70%, transparent);
+  color: var(--white);
   /* Charte originelle: rgba(255, 255, 255, 0.6) */
 }
 
 .breadcrumb span:last-child {
-  color: var(--grey-900);
+  color: var(--white);
   /* Charte originelle: #ffffff */
   font-weight: 500;
 }
