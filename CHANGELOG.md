@@ -2,6 +2,106 @@
 
 Tous les messages de commit suivent la convention **Conventional Commits** (voir `.github/copilot-instructions.md`).
 
+## [13/02/2026] - Cadrage image hero
+
+### Styles
+- [css/globals.css](css/globals.css) : Centrage de l'image hero
+
+### Composants
+- [js/components/hero.js](js/components/hero.js) : Centrage de l'image hero dans le composant
+
+## [13/02/2026] - Correction menu burger responsive
+
+### Scripts
+- [js/common.js](js/common.js) : Évite le double binding du menu burger quand le composant `clee-nav-bar` est utilisé
+
+## [13/02/2026] - Synchronisation image hero/footer
+
+### Scripts
+- [js/common.js](js/common.js) : Synchronisation de l'image du footer avec les heros en Shadow DOM et leurs rotations
+
+## [12/02/2026] - Correction génération cartes formations
+
+### Scripts
+- **js/formations.js** : Correction du mapping des champs du répertoire pour l'affichage des cartes
+
+## [12/02/2026] - Source formations répertoire
+
+### Données
+- **assets/data/liste des tâches CLEE - Repertoire des formations.json** : Source principale des cartes formations
+- **assets/data/formations.json** : Vidé pour préparer sa suppression
+
+### Scripts
+- **js/formations.js** : Conversion des champs du répertoire en cartes formation
+
+## [12/02/2026] - Cartes formations dynamiques
+
+### Données
+- **assets/data/formations.json** : Ajout des données pour les cartes formations
+
+### Scripts
+- **js/formations.js** : Génération des cartes formations depuis le JSON
+- **js/establishments.js** : Rafraîchissement des interactions après rendu dynamique
+
+### Pages
+- **pages/establishments.html** : Remplacement des cartes statiques par un conteneur dynamique
+
+## [12/02/2026] - Filtre formations par établissement
+
+### Données
+- **assets/data/formations.json** : Ajout du champ établissement pour chaque formation
+
+### Scripts
+- **js/formations.js** : Génération du filtre établissement et data-etablissement
+- **js/establishments.js** : Filtrage des cartes par établissement sélectionné
+
+### Pages
+- **pages/establishments.html** : Ajout du filtre établissement dans la barre de recherche
+
+## [12/02/2026] - Ajout de formations
+
+### Données
+- **assets/data/formations.json** : Ajout de 20 formations supplémentaires réparties par établissement
+
+## [12/02/2026] - Filtre formations via liste établissements
+
+### Scripts
+- **js/establishments.js** : Filtrage des formations déclenché par la sélection d'un établissement
+
+### Pages
+- **pages/establishments.html** : Suppression du filtre établissement dans la barre de recherche
+
+## [12/02/2026] - Nettoyage CSS page d'accueil
+
+### Styles
+- **css/home.css** : Suppression des classes orphelines (sections actualités et agenda non utilisées)
+
+## [12/02/2026] - Nettoyage CSS page entreprises
+
+### Styles
+- **css/companies.css** : Suppression des classes orphelines (éléments non présents et section tableau non utilisée)
+
+## [12/02/2026] - Nettoyage CSS page contact
+
+### Styles
+- **css/contact.css** : Suppression des classes orphelines (sections info contact et styles de bouton inutilisés)
+## [11/02/2026] - Mise à jour de la documentation
+
+### Documentation
+- **README.md** : Suppression des références à des fichiers obsolètes (PORTAIL-GUIDE.md, IMPLEMENTATION-SUMMARY.md)
+- **README.md** : Correction du nombre total de pages (20 pages au lieu de 17)
+- **PAGES-STRUCTURE.md** : Ajout de dashboard.html dans les pages utilitaires
+- **PAGES-STRUCTURE.md** : Correction du total de pages (20 au lieu de 19)
+- **copilot-instructions.md** : Mise à jour du nombre de pages (19 dans pages/ au lieu de 16)
+- **copilot-instructions.md** : Mise à jour de la hiérarchie des pages pour inclure dashboard
+- **Charte graphique.md** : Enrichissement avec le design system complet (CSS variables, tokens, typographie)
+- **ACCESSIBILITY-BANNER-SUMMARY.md** : Suppression du fichier (redondant avec README et CHANGELOG)
+
+### Améliorations
+- Élimination des répétitions entre fichiers de documentation
+- Cohérence des informations sur le nombre de pages
+- Documentation complète de la charte graphique avec exemples CSS
+
 ## [11/02/2026] - Composant footer
 
 ### Composants

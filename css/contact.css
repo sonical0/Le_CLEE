@@ -32,67 +32,6 @@
 }
 
 /* ========================================
-   CONTACT INFO SECTION
-======================================== */
-
-.contact-info-section {
-  padding: 60px 0;
-  background: var(--grey-50);
-}
-
-.contact-info-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.contact-info-card {
-  background: #ffffff;
-  padding: 40px 30px;
-  border-radius: 16px;
-  text-align: center;
-  box-shadow: var(--200);
-  transition: all 0.3s ease;
-  animation: fadeInUp 0.6s ease both;
-}
-
-.contact-info-card:nth-child(1) { animation-delay: 0.1s; }
-.contact-info-card:nth-child(2) { animation-delay: 0.2s; }
-.contact-info-card:nth-child(3) { animation-delay: 0.3s; }
-
-.contact-info-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--400);
-}
-
-.contact-icon {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-.contact-info-title {
-  font-family: var(--titre-font-family);
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--primary-900);
-  margin-bottom: 12px;
-}
-
-.contact-info-text {
-  font-size: 16px;
-  color: var(--grey-700);
-  margin-bottom: 8px;
-  font-weight: 500;
-}
-
-.contact-info-note {
-  font-size: 14px;
-  color: var(--grey-500);
-}
-
-/* ========================================
    CONTACT FORM SECTION
 ======================================== */
 
@@ -203,20 +142,6 @@
   margin-top: 12px;
 }
 
-.btn-submit {
-  width: 100%;
-  max-width: 350px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  padding: 16px 40px;
-}
-
-.btn-icon {
-  font-size: 22px;
-}
-
 .form-note {
   font-size: 14px;
   color: var(--grey-500);
@@ -284,19 +209,6 @@
     padding-bottom: 40px;
   }
 
-  .contact-info-section {
-    padding: 40px 0;
-  }
-
-  .contact-info-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .contact-info-card {
-    padding: 30px 20px;
-  }
-
   .contact-form-section {
     padding: 60px 0;
   }
@@ -310,10 +222,6 @@
     gap: 16px;
   }
 
-  .btn-submit {
-    width: 100%;
-    max-width: none;
-  }
 }
 
 @media (max-width: 480px) {
@@ -323,14 +231,6 @@
 
   .hero-description {
     font-size: 16px;
-  }
-
-  .contact-info-card {
-    padding: 25px 15px;
-  }
-
-  .contact-icon {
-    font-size: 40px;
   }
 
   .form-container {

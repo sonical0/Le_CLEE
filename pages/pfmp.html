@@ -25,18 +25,12 @@
         </div>
     </div>
 
-    <section class="hero">
-        <div class="hero-overlay" aria-hidden="true">
-            <!-- TODO: Remplacer l'image du calque du hero par la photo définitive -->
-            <img src="https://picsum.photos/1920/1080" alt="" loading="lazy">
-        </div>
-        <div class="container">
-            <h1 class="hero-title">PFMP et Stages : Tout savoir</h1>
-            <p class="hero-description">
-                PFMP (lycée professionnel) ou stage (lycée général) : des périodes de formation en entreprise essentielles pour votre avenir professionnel
-            </p>
-        </div>
-    </section>
+    <clee-hero
+        base-path=".."
+        title="PFMP et Stages : Tout savoir"
+        description="PFMP (lycée professionnel) ou stage (lycée général) : des périodes de formation en entreprise essentielles pour votre avenir professionnel"
+        image-url="https://picsum.photos/1920/1080">
+    </clee-hero>
 
     <section class="section-content">
         <div class="container">
@@ -68,7 +62,6 @@
             <p class="section-subtitle">Explorez toutes les formations proposées par les établissements partenaires du
                 CLEE</p>
 
-            <!-- Filtres du tableau -->
             <div class="tableau-filtres">
                 <div class="filtre-group">
                     <label for="filtreEtablissement" class="filtre-label">Établissement :</label>
@@ -117,7 +110,6 @@
                 </div>
             </div>
 
-            <!-- Tableau responsive -->
             <div class="tableau-container">
                 <table class="formations-table" id="formationsTable">
                     <thead>
@@ -367,7 +359,9 @@
 
     <clee-footer base-path=".." pages-path=""></clee-footer>
 
+    <script src="../js/components/footer.js"></script>
     <script src="../js/components/nav-bar.js"></script>
+    <script src="../js/components/hero.js"></script>
     <script src="../js/common.js"></script>
     <script src="../js/companies.js"></script>
 </body>
