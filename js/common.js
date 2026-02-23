@@ -88,23 +88,31 @@ document.addEventListener('DOMContentLoaded', () => {
  * Navigation Toggle Utility
  */
 const NavigationModule = (() => {
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
+  let menuToggle;
+  let navLinks;
+  let isComponentNav = false;
 
   const init = () => {
+    menuToggle = document.querySelector('.menu-toggle');
+    navLinks = document.querySelector('.nav-links');
+    isComponentNav = Boolean(menuToggle && menuToggle.closest('clee-nav-bar'));
+
     if (menuToggle && navLinks) {
-      menuToggle.addEventListener('click', toggleMenu);
+      if (!isComponentNav) {
+        menuToggle.addEventListener('click', toggleMenu);
+      }
+
       document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', closeMenu);
       });
-      
+
       // Close menu when clicking outside
       document.addEventListener('click', (e) => {
         if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
           closeMenu();
         }
       });
-      
+
       // Close menu on escape key
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
@@ -115,9 +123,10 @@ const NavigationModule = (() => {
   };
 
   const toggleMenu = () => {
+    if (!navLinks || !menuToggle) return;
     const isActive = navLinks.classList.toggle('active');
     menuToggle.classList.toggle('active');
-    
+
     // Prevent body scroll when menu is open on mobile
     if (isActive && window.innerWidth <= 992) {
       document.body.style.overflow = 'hidden';
@@ -127,6 +136,7 @@ const NavigationModule = (() => {
   };
 
   const closeMenu = () => {
+    if (!navLinks || !menuToggle) return;
     navLinks.classList.remove('active');
     menuToggle.classList.remove('active');
     document.body.style.overflow = '';
@@ -231,14 +241,45 @@ const ScrollAnimationModule = (() => {
 const FooterHeroImageModule = (() => {
   const init = () => {
     const footer = document.querySelector('.footer');
-    const heroImage = document.querySelector('.hero-overlay img');
+    if (!footer) return;
 
-    if (!footer || !heroImage || !heroImage.src) return;
+    const resolveHeroImage = () => {
+      const lightDomImage = document.querySelector('.hero-overlay img');
+      if (lightDomImage) return lightDomImage;
 
-    footer.style.setProperty(
-      '--footer-hero-image',
-      `url("${heroImage.src}")`
-    );
+      const heroComponent = document.querySelector('clee-hero');
+      if (heroComponent && heroComponent.shadowRoot) {
+        return heroComponent.shadowRoot.querySelector('.hero-overlay img');
+      }
+
+      return null;
+    };
+
+    const applyFooterImage = (image) => {
+      if (!image || !image.src) return;
+      footer.style.setProperty(
+        '--footer-hero-image',
+        `url("${image.src}")`
+      );
+    };
+
+    const heroImage = resolveHeroImage();
+    if (!heroImage) {
+      if (window.customElements && customElements.whenDefined) {
+        customElements.whenDefined('clee-hero').then(() => {
+          applyFooterImage(resolveHeroImage());
+        });
+      }
+      return;
+    }
+
+    applyFooterImage(heroImage);
+    heroImage.addEventListener('load', () => applyFooterImage(heroImage));
+
+    if (window.MutationObserver) {
+      const observer = new MutationObserver(() => applyFooterImage(heroImage));
+      observer.observe(heroImage, { attributes: true, attributeFilter: ['src'] });
+    }
   };
 
   return { init };

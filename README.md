@@ -90,6 +90,9 @@ Voir `.github/copilot-instructions.md` pour plus de détails.
 - Connexion : footer synchronisé via hero masqué
 - Footer synchronisé avec le hero sur toutes les pages (y compris Vie du CLEE)
 - Footer synchronisé avec l'image du hero (calque partagé, bas de l'image visible)
+- Hero : cadrage de l'image centré par défaut
+- Synchronisation hero/footer compatible avec le composant `clee-hero`
+- Alignement hero/footer sur la même image (ancrage bas)
 
 ### Espace Entreprises & Partenaires
 - **Catalogue des entreprises partenaires** avec système de filtrage multi-critères
@@ -175,6 +178,8 @@ Le site utilise une **architecture modulaire** pour optimiser la maintenance et 
 - **common.js** : Modules JavaScript réutilisables
 - **JS page-specific** : Logique spécifique aux pages
 - **Composants JS** : Web Components centralisés dans `js/components/` (ex: bouton principal, navbar et footer utilisés sur l'ensemble des pages)
+
+Navigation responsive : le composant `clee-nav-bar` gère le menu burger, et [js/common.js](js/common.js) évite les doubles écouteurs pour ne pas annuler l'ouverture.
 
 ### Avantages
 - Mise en cache optimale (globals.css chargé une fois pour toutes les pages)

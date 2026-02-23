@@ -2,6 +2,24 @@
 
 Tous les messages de commit suivent la convention **Conventional Commits** (voir `.github/copilot-instructions.md`).
 
+## [13/02/2026] - Cadrage image hero
+
+### Styles
+- [css/globals.css](css/globals.css) : Centrage de l'image hero
+
+### Composants
+- [js/components/hero.js](js/components/hero.js) : Centrage de l'image hero dans le composant
+
+## [13/02/2026] - Correction menu burger responsive
+
+### Scripts
+- [js/common.js](js/common.js) : Évite le double binding du menu burger quand le composant `clee-nav-bar` est utilisé
+
+## [13/02/2026] - Synchronisation image hero/footer
+
+### Scripts
+- [js/common.js](js/common.js) : Synchronisation de l'image du footer avec les heros en Shadow DOM et leurs rotations
+
 ## [12/02/2026] - Correction génération cartes formations
 
 ### Scripts
