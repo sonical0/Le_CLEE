@@ -241,10 +241,6 @@ class CleeFooter extends HTMLElement {
               </div>
             </div>
           </div>
-
-          <div class="footer-bottom">
-            <p>&copy; 2026 CLEE Bordeaux Avenir. Tous droits réservés.</p>
-          </div>
         </div>
       </footer>
     `;
