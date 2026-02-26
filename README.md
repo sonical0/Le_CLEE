@@ -5,8 +5,6 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)](https://developer.mozilla.org/fr/docs/Web/JavaScript)
 [![Responsive](https://img.shields.io/badge/Responsive-Mobile%20First-blue)](https://web.dev/responsive-web-design-basics/)
 
-> **Note importante** : Ce projet se concentre désormais exclusivement sur le développement statique HTML/CSS/JS. La version WordPress (anciennement dans `php/`) a été retirée pour simplifier la maintenance et améliorer les performances. Le site est maintenant déployable sur n'importe quel serveur web ou hébergement statique (GitHub Pages, Netlify, Vercel, etc.).
-
 ---
 
 
