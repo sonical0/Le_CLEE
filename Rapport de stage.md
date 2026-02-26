@@ -74,7 +74,7 @@ Le CLEE Bordeaux Avenir veut un nouveau site pour le représenter sur Internet e
 		+ Menu responsive avec burger mobile (écran < 1200px)
 		
 		+ Menu déroulant sur desktop avec 5 sections principales
-		
+		 
 		+ Surbrillance de la page active
 		
 		+ Lien de connexion dans la navbar
@@ -93,7 +93,7 @@ Le CLEE Bordeaux Avenir veut un nouveau site pour le représenter sur Internet e
 		
 		+ Image de fond alignée sur le bas du hero
 	
-	+ **Système d'accessibilité**
+	+ **<mark style="background:rgba(240, 200, 0, 0.2)">Système d'accessibilité</mark>**
 	
 		+ Bannière de notification au premier lancement (localStorage)
 		
@@ -109,7 +109,7 @@ Le CLEE Bordeaux Avenir veut un nouveau site pour le représenter sur Internet e
 		
 		+ Persistance des préférences dans le navigateur
 	
-	+ **Page d'accueil (index.html)**
+	+ **<mark style="background:rgba(240, 200, 0, 0.2)">Page d'accueil (index.html)</mark>**
 	
 		+ Hero section dynamique avec calque photo
 		
@@ -123,7 +123,7 @@ Le CLEE Bordeaux Avenir veut un nouveau site pour le représenter sur Internet e
 		
 		+ Fil d'Ariane superposé au hero
 	
-	+ **Page Entreprises & Partenaires**
+	+ <mark style="background:rgba(240, 200, 0, 0.2)">**Page Entreprises & Partenaires**</mark>
 	
 		+ Catalogue complet des entreprises partenaires (chargé depuis JSON)
 		
@@ -141,7 +141,7 @@ Le CLEE Bordeaux Avenir veut un nouveau site pour le représenter sur Internet e
 		
 		+ Formulaire de contact dédié avec validation
 	
-	+ **Page Établissements & Formations**
+	+ <mark style="background:rgba(240, 200, 0, 0.2)">**Page Établissements & Formations**</mark>
 	
 		+ Carte interactive basée sur Leaflet/OpenStreetMap (sans clé API)
 		
@@ -179,7 +179,7 @@ Le CLEE Bordeaux Avenir veut un nouveau site pour le représenter sur Internet e
 		
 		+ Grille de liens utiles 3x2
 	
-	+ **Page Jeunes & Familles**
+	+ <mark style="background:rgba(240, 200, 0, 0.2)">**Page Jeunes & Familles**</mark>
 	
 		+ Ressources d'orientation professionnelle détaillées
 		
@@ -209,7 +209,7 @@ Le CLEE Bordeaux Avenir veut un nouveau site pour le représenter sur Internet e
 	
 	+ **Page Agenda**
 	
-		+ Calendrier interactif des événements 2026
+		+ **Calendrier interactif des événements 2026**
 		
 		+ Vue mensuelle avec navigation mois par mois
 		
@@ -259,11 +259,11 @@ Le CLEE Bordeaux Avenir veut un nouveau site pour le représenter sur Internet e
 		
 		+ Messages de succès/erreur après soumission
 		
-		+ Accessible depuis le footer et divers CTAs du site
+		+ **Accessible depuis le footer et divers CTAs du site**
 	
 	+ **Modules JavaScript partagés (common.js)**
 	
-		+ NavigationModule : gestion du menu burger mobile
+		+ **NavigationModule : gestion du menu burger mobile**
 		
 		+ DropdownMenuModule : menus déroulants sur desktop
 		
@@ -277,13 +277,13 @@ Le CLEE Bordeaux Avenir veut un nouveau site pour le représenter sur Internet e
 		
 		+ ActiveLinkModule : surbrillance de la page active dans la nav
 		
-		+ ThemeModule : gestion du thème étudiant et des préférences
+		+ <mark style="background:rgba(240, 200, 0, 0.2)">ThemeModule : gestion du thème étudiant et des préférences</mark>
 		
 		+ FooterHeroImageModule : synchronisation automatique footer/hero
 		
 		+ AccessibilityBannerModule : bannière de notification accessibilité
 	
-	+ **Web Components (js/components/)**
+	+ **<mark style="background:rgba(240, 200, 0, 0.2)">Web Components (js/components/)</mark>**
 	
 		+ clee-nav-bar : composant de navigation réutilisable
 		
@@ -313,27 +313,34 @@ Le CLEE Bordeaux Avenir veut un nouveau site pour le représenter sur Internet e
 		
 		+ Page Mentions légales : informations légales et RGPD
 		
-		+ Page Portail : options d'accessibilité complètes
+		+ <mark style="background:rgba(240, 200, 0, 0.2)">Page Portail : options d'accessibilité complètes</mark>
 		
-		+ Page Colors Reference : documentation du design system (pour développeurs)
+		+ <mark style="background:rgba(240, 200, 0, 0.2)">Page Colors Reference : documentation du design system (pour développeurs)</mark>
 	
 	+ **Optimisations et performance**
 	
-		+ Architecture modulaire (40% de réduction du code dupliqué)
+		+ **<mark style="background:rgba(240, 200, 0, 0.2)">Architecture modulaire (40% de réduction du code dupliqué)</mark>**
 		
 		+ Mise en cache optimale des CSS/JS partagés
 		
-		+ Images avec lazy loading
+		+ Images avec lazy loading (*en attendant la banque d'images de l'association*)
 		
 		+ Chargement asynchrone des données JSON
 		
 		+ Animations GPU-accélérées (transform/opacity)
 		
 		+ Responsive design mobile-first (breakpoints 480px, 768px, 1024px)
+		  
 		+ Mise en place : outils mis en œuvre, déroulement et incidents
 ## IV. Évaluation des réalisations et des compétences mobilisées (3/5 pages)
 ### A - Adéquation du travail
 + Réaction des demandeurs et intéressés : partir de la mission pour aboutir à l’intérêt général de l’entreprise: 
+	+ les clients voulaient un <mark style="background:rgba(240, 200, 0, 0.2)">site web leur permettant d'être représenté </mark>sur le web et <mark style="background:rgba(240, 200, 0, 0.2)">sont donc passés par l'EPSI</mark> pour l'effectuer.
+	+ Notre mission fut donc de concevoir une maquette de site fonctionnel imitant le fonctionnement du futur site sur <mark style="background:rgba(240, 200, 0, 0.2)">wordpress</mark> que livreront <mark style="background:rgba(240, 200, 0, 0.2)">les prochains stagiaires en Mai/Juin</mark>
+	+ nous avons commencé par travaillé sur <mark style="background:rgba(240, 200, 0, 0.2)">Figma</mark> pour la dite maquette en nous inspirant <mark style="background:rgba(240, 200, 0, 0.2)">des demandes fournis par les clients </mark>et la norme générale présente sur d'autres sites
+	+ nous sommes passé en meme temps sur le developpement de la dite maquette <mark style="background:rgba(240, 200, 0, 0.2)">en html/css</mark> au debut par curiosité puis ensuite par praticité car il était beaucoup plus pratique de réaliser dans ce cas ci precisemment une maquette interactive avec l'ajout ou non de fonctionnalités. 
+	+ <mark style="background:rgba(240, 200, 0, 0.2)">A la suite de notre premier entretien avec les clients</mark>, nous avons eu la confirmation de pouvoir nous concentrer le modele html, ce qui permettrait aux client d'avoir un aperçu en temps réel des modifications apportés au cours du temps une fois celui ci hébergé en ligne (*Vercel ici*)
+	+ 
 + Proposition d’amélioration: 
 ### B – Compétences mises en œuvre
 Rétrospective des compétences exploitées :
