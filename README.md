@@ -724,7 +724,7 @@ git push origin feature/nouvelle-fonctionnalite
 - Issues : [GitHub Issues](https://github.com/votre-org/clee-bordeaux-site/issues)
 
 **Pour les questions sur l'organisation CLEE** :
-- Site web : https://cleebordeauxavenir.org/ *En cours de construction*
+- Site web : https://le-clee-five.vercel.app/
 - Email : contact@clee-bordeaux.fr
 
 ---

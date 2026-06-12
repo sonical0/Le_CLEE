@@ -2,6 +2,11 @@
 
 Tous les messages de commit suivent la convention **Conventional Commits** (voir `.github/copilot-instructions.md`).
 
+## [12/06/2026] - Mise à jour URL du site
+
+### Documentation
+- [README.md](README.md) : Remplacement du lien public par `https://le-clee-five.vercel.app/`
+
 ## [13/02/2026] - Cadrage image hero
 
 ### Styles
